@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="utf8"?>
+<root>
+	<item type="dict">
+		<title type="str">画布 1</title>
+		<topic type="dict">
+			<title type="str">library页重构（iOS版本）</title>
+			<topics type="list">
+				<item type="dict">
+					<title type="str">library页面功能</title>
+					<topics type="list">
+						<item type="dict">
+							<title type="str">分类</title>
+							<topics type="list">
+								<item type="dict">
+									<title type="str">我的分类tab</title>
+									<topics type="list">
+										<item type="dict">
+											<title type="str">切换、添加、删除</title>
+										</item>
+									</topics>
+								</item>
+								<item type="dict">
+									<title type="str">所有分类</title>
+								</item>
+								<item type="dict">
+									<title type="str">分类切换</title>
+								</item>
+								<item type="dict">
+									<title type="str">分类tab交互</title>
+								</item>
+								<item type="dict">
+									<title type="str">编辑入口ab测</title>
+								</item>
+							</topics>
+						</item>
+						<item type="dict">
+							<title type="str">轮播图广告位</title>
+							<topics type="list">
+								<item type="dict">
+									<title type="str">轮播图的列表</title>
+									<topics type="list">
+										<item type="dict">
+											<title type="str">轮播图数量</title>
+											<topics type="list">
+												<item type="dict">
+													<title type="str">0</title>
+												</item>
+												<item type="dict">
+													<title type="str">只有1张</title>
+												</item>
+												<item type="dict">
+													<title type="str">超过1张</title>
+												</item>
+											</topics>
+										</item>
+										<item type="dict">
+											<title type="str">轮播图滑动效果</title>
+											<topics type="list">
+												<item type="dict">
+													<title type="str">滑动手势</title>
+												</item>
+												<item type="dict">
+													<title type="str">滑动速度</title>
+												</item>
+												<item type="dict">
+													<title type="str">滑动区域（锁定不影响tab滑动）</title>
+												</item>
+											</topics>
+										</item>
+										<item type="dict">
+											<title type="str">轮播图自动播放效果</title>
+										</item>
+									</topics>
+								</item>
+								<item type="dict">
+									<title type="str">轮播图的类型</title>
+									<topics type="list">
+										<item type="dict">
+											<title type="str">线上配置</title>
+										</item>
+										<item type="dict">
+											<title type="str">本地配置</title>
+										</item>
+									</topics>
+								</item>
+								<item type="dict">
+									<title type="str">轮播图点击跳转及返回定位</title>
+								</item>
+								<item type="dict">
+									<title type="null"/>
+								</item>
+							</topics>
+						</item>
+						<item type="dict">
+							<title type="str">素材列表</title>
+							<topics type="list">
+								<item type="dict">
+									<title type="str">缩略图列表逻辑</title>
+									<topics type="list">
+										<item type="dict">
+											<title type="str">列表刷新逻辑</title>
+											<topics type="list">
+												<item type="dict">
+													<title type="str">主动刷新时机？？</title>
+												</item>
+											</topics>
+										</item>
+										<item type="dict">
+											<title type="str">上下滑动加载</title>
+											<topics type="list">
+												<item type="dict">
+													<title type="str">分页加载</title>
+												</item>
+											</topics>
+										</item>
+										<item type="dict">
+											<title type="str">左右滑动切换分类</title>
+											<topics type="list">
+												<item type="dict">
+													<title type="str">有无缓冲场景</title>
+												</item>
+											</topics>
+										</item>
+										<item type="dict">
+											<title type="str">bonus分类单独写用例</title>
+										</item>
+									</topics>
+								</item>
+								<item type="dict">
+									<title type="str">素材缩略图类型</title>
+								</item>
+								<item type="dict">
+									<title type="str">素材缩略图样式</title>
+									<topics type="list">
+										<item type="dict">
+											<title type="str">填充进度展示</title>
+											<topics type="list">
+												<item type="dict">
+													<title type="str">未开始填充</title>
+												</item>
+												<item type="dict">
+													<title type="str">部分填充</title>
+												</item>
+												<item type="dict">
+													<title type="str">填充完成</title>
+												</item>
+											</topics>
+										</item>
+										<item type="dict">
+											<title type="str">缩略图左上角角标</title>
+											<topics type="list">
+												<item type="dict">
+													<title type="str">填充完成角标</title>
+												</item>
+												<item type="dict">
+													<title type="str">音乐标示角标</title>
+												</item>
+												<item type="dict">
+													<title type="str">blend/Jigsaw/wallpaper</title>
+												</item>
+												<item type="dict">
+													<title type="str">new</title>
+												</item>
+												<item type="dict">
+													<title type="str">hot </title>
+												</item>
+											</topics>
+										</item>
+										<item type="dict">
+											<title type="str">缩略图右上角图标</title>
+											<topics type="list">
+												<item type="dict">
+													<title type="str">收藏</title>
+												</item>
+											</topics>
+										</item>
+										<item type="dict">
+											<title type="str">右下角角标</title>
+											<topics type="list">
+												<item type="dict">
+													<title type="str">播放视频角标</title>
+												</item>
+											</topics>
+										</item>
+									</topics>
+								</item>
+								<item type="dict">
+									<title type="str">缩略图点击跳转功能</title>
+								</item>
+								<item type="dict">
+									<title type="str">缩略图长按隐藏功能</title>
+									<topics type="list">
+										<item type="dict">
+											<title type="str">收藏</title>
+										</item>
+										<item type="dict">
+											<title type="str">feedback</title>
+										</item>
+										<item type="dict">
+											<title type="str">找相似</title>
+										</item>
+									</topics>
+								</item>
+							</topics>
+						</item>
+						<item type="dict">
+							<title type="str">钻石入口</title>
+							<topics type="list">
+								<item type="dict">
+									<title type="str">礼物盒角标</title>
+								</item>
+								<item type="dict">
+									<title type="str">点击跳转</title>
+								</item>
+								<item type="dict">
+									<title type="str">展示样式</title>
+									<topics type="list">
+										<item type="dict">
+											<title type="str">UI检查、动效</title>
+										</item>
+										<item type="dict">
+											<title type="str">余额为0</title>
+										</item>
+										<item type="dict">
+											<title type="str">余额非0</title>
+										</item>
+										<item type="dict">
+											<title type="str">余额变化刷新逻辑</title>
+										</item>
+									</topics>
+								</item>
+							</topics>
+						</item>
+						<item type="dict">
+							<title type="str">library弹窗逻辑</title>
+							<topics type="list">
+								<item type="dict">
+									<title type="str">曼陀罗弹窗</title>
+								</item>
+								<item type="dict">
+									<title type="str">抽测，主要的弹窗交互表现</title>
+								</item>
+								<item type="dict">
+									<title type="str">运营弹窗</title>
+									<topics type="list">
+										<item type="dict">
+											<title type="str">客户端启动拉取</title>
+										</item>
+									</topics>
+								</item>
+								<item type="dict">
+									<title type="str">浮窗</title>
+								</item>
+							</topics>
+						</item>
+					</topics>
+				</item>
+				<item type="dict">
+					<title type="str">library页面逻辑</title>
+					<topics type="list">
+						<item type="dict">
+							<title type="str">搜索</title>
+							<topics type="list">
+								<item type="dict">
+									<title type="str">AB测</title>
+									<topics type="list">
+										<item type="dict">
+											<title type="str">字段：search</title>
+										</item>
+										<item type="dict">
+											<title type="str">on：展示搜索入口 off：不展示搜索入口</title>
+										</item>
+									</topics>
+								</item>
+								<item type="dict">
+									<title type="str">基本功能回归，主要关心入口逻辑</title>
+								</item>
+							</topics>
+						</item>
+						<item type="dict">
+							<title type="str">主列表</title>
+							<topics type="list">
+								<item type="dict">
+									<title type="str">0点更新逻辑</title>
+									<topics type="list">
+										<item type="dict">
+											<title type="str">顶部显示更新内容</title>
+										</item>
+										<item type="dict">
+											<title type="str">素材列表刷新</title>
+										</item>
+									</topics>
+								</item>
+								<item type="dict">
+									<title type="str">图标状态刷新</title>
+									<topics type="list">
+										<item type="dict">
+											<title type="str">观看激励视频</title>
+										</item>
+										<item type="dict">
+											<title type="str">购买宝石</title>
+										</item>
+										<item type="dict">
+											<title type="str">VIP订阅</title>
+										</item>
+										<item type="dict">
+											<title type="str">开关隐藏已着色素材</title>
+										</item>
+										<item type="dict">
+											<title type="str">着色页进度显示</title>
+										</item>
+									</topics>
+								</item>
+								<item type="dict">
+									<title type="str">左右列表预加载</title>
+									<topics type="list">
+										<item type="dict">
+											<title type="str">相邻两边的分类</title>
+										</item>
+										<item type="dict">
+											<title type="str">有无数据缓存</title>
+										</item>
+									</topics>
+								</item>
+								<item type="dict">
+									<title type="str">内置列表</title>
+									<topics type="list">
+										<item type="dict">
+											<title type="str">New</title>
+										</item>
+										<item type="dict">
+											<title type="str">内置分类</title>
+											<topics type="list">
+												<item type="dict">
+													<title type="str">初次安装启动断网加载</title>
+												</item>
+											</topics>
+										</item>
+										<item type="dict">
+											<title type="str">问研发要一张表</title>
+										</item>
+									</topics>
+								</item>
+								<item type="dict">
+									<title type="str">缓存列表</title>
+									<topics type="list">
+										<item type="dict">
+											<title type="str">加载后，缓存一页数据</title>
+										</item>
+										<item type="dict">
+											<title type="str">断网检查，细节再补充</title>
+										</item>
+									</topics>
+								</item>
+							</topics>
+						</item>
+						<item type="dict">
+							<title type="str">推荐</title>
+							<topics type="list">
+								<item type="dict">
+									<title type="str">hot 素材</title>
+									<topics type="list">
+										<item type="dict">
+											<title type="str">AB测</title>
+											<topics type="list">
+												<item type="dict">
+													<title type="str">new列表旧运营图推荐，s%表示day&gt;=X</title>
+													<topics type="list">
+														<item type="dict">
+															<title type="str">recommend_old_pic_day</title>
+														</item>
+													</topics>
+												</item>
+												<item type="dict">
+													<title type="str">hot推荐素材（老旧运营素材）配置分数X</title>
+													<topics type="list">
+														<item type="dict">
+															<title type="str">floor_score</title>
+														</item>
+													</topics>
+												</item>
+												<item type="dict">
+													<title type="str">hot推荐素材（老旧运营素材）显示张数X</title>
+													<topics type="list">
+														<item type="dict">
+															<title type="str">max_rec_num</title>
+														</item>
+													</topics>
+												</item>
+												<item type="dict">
+													<title type="str">hot中的video解锁视频是否需要视频激励解锁</title>
+													<topics type="list">
+														<item type="dict">
+															<title type="str">hot_unlock_video</title>
+															<topics type="list">
+																<item type="dict">
+																	<title type="str">写死</title>
+																</item>
+															</topics>
+														</item>
+													</topics>
+												</item>
+												<item type="dict">
+													<title type="str">素材位置</title>
+													<topics type="list">
+														<item type="dict">
+															<title type="str">hot_place</title>
+															<topics type="list">
+																<item type="dict">
+																	<title type="str">&quot;0，hot素材展示在当日new列表的前面
+1，hot素材展示在当日new列表的后面&quot;</title>
+																</item>
+															</topics>
+														</item>
+													</topics>
+												</item>
+												<item type="dict">
+													<title type="str">使用内容标签排序的方式在hot图推荐位推荐素材</title>
+													<topics type="list">
+														<item type="dict">
+															<title type="str">hot_tag</title>
+														</item>
+													</topics>
+												</item>
+											</topics>
+										</item>
+										<item type="dict">
+											<title type="str">推荐素材类型检查</title>
+											<topics type="list">
+												<item type="dict">
+													<title type="str">未影响</title>
+												</item>
+											</topics>
+										</item>
+										<item type="dict">
+											<title type="str">推荐素材填着色功能</title>
+										</item>
+										<item type="dict">
+											<title type="str">主要缩略图的表现，查看完成填色流程</title>
+										</item>
+									</topics>
+								</item>
+								<item type="dict">
+									<title type="str">完成后推荐素材插入Library列表</title>
+									<topics type="list">
+										<item type="dict">
+											<title type="str">功能已删除，验证有无影响</title>
+										</item>
+									</topics>
+								</item>
+							</topics>
+						</item>
+						<item type="dict">
+							<title type="str">跑图位</title>
+							<topics type="list">
+								<item type="dict">
+									<title type="str">展示位置：new列表固定第6个</title>
+								</item>
+								<item type="dict">
+									<title type="str">客户端触发逻辑待确定</title>
+									<topics type="list">
+										<item type="dict">
+											<title type="str">本地写死day大于等于3</title>
+										</item>
+										<item type="dict">
+											<title type="str">素材更新时机为下一天</title>
+										</item>
+										<item type="dict">
+											<title type="str">与服务端联调流程，待确定</title>
+											<topics type="list">
+												<item type="dict">
+													<title type="str">注意去重</title>
+													<topics type="list">
+														<item type="dict">
+															<title type="str">当前列表素材</title>
+														</item>
+														<item type="dict">
+															<title type="str">my work里面已完成素材</title>
+														</item>
+													</topics>
+												</item>
+												<item type="dict">
+													<title type="str">客户端随机取</title>
+												</item>
+												<item type="dict">
+													<title type="str">改图计划，改图逻辑</title>
+												</item>
+											</topics>
+										</item>
+									</topics>
+								</item>
+							</topics>
+						</item>
+						<item type="dict">
+							<title type="str">campaign</title>
+							<topics type="list">
+								<item type="dict">
+									<title type="str">deeplink</title>
+								</item>
+								<item type="dict">
+									<title type="str">素材包弹框</title>
+								</item>
+								<item type="dict">
+									<title type="str">素材弹框</title>
+								</item>
+								<item type="dict">
+									<title type="str">弹窗流程样式与之前版本保持一致</title>
+									<topics type="list">
+										<item type="dict">
+											<title type="str">day</title>
+										</item>
+										<item type="dict">
+											<title type="str">列表数据同步刷新</title>
+										</item>
+										<item type="dict">
+											<title type="str">弹窗的逻辑点</title>
+										</item>
+									</topics>
+								</item>
+							</topics>
+						</item>
+						<item type="dict">
+							<title type="str">信息流</title>
+							<topics type="list">
+								<item type="dict">
+									<title type="str">引流位</title>
+								</item>
+							</topics>
+						</item>
+					</topics>
+				</item>
+				<item type="dict">
+					<title type="str">library页接口联调</title>
+					<topics type="list">
+						<item type="dict">
+							<title type="str">下载资源文件</title>
+							<topics type="list">
+								<item type="dict">
+									<title type="str">接口地址：pbn-cdn.dailyinnovation.biz/imageView/512/512/paintByNumber/</title>
+								</item>
+								<item type="dict">
+									<title type="str">触发时机：按列表顺序实时请求</title>
+								</item>
+								<item type="dict">
+									<title type="str">入参：图片尺寸</title>
+								</item>
+								<item type="dict">
+									<title type="str">出参：图片资源</title>
+								</item>
+							</topics>
+						</item>
+						<item type="dict">
+							<title type="str">library页列表数据</title>
+							<topics type="list">
+								<item type="dict">
+									<title type="str">接口地址：//paint-api-stage.dailyinnovation.biz/paint/v1/</title>
+									<topics type="list">
+										<item type="dict">
+											<title type="str">operation/banner</title>
+										</item>
+										<item type="dict">
+											<title type="str">paintCategory</title>
+										</item>
+										<item type="dict">
+											<title type="str">paintCategory/{categoryId}/paints</title>
+											<topics type="list">
+												<item type="dict">
+													<title type="str">切换分类</title>
+												</item>
+											</topics>
+										</item>
+										<item type="dict">
+											<title type="str">paint/resource_update</title>
+											<topics type="list">
+												<item type="dict">
+													<title type="str">这个无影响</title>
+												</item>
+											</topics>
+										</item>
+										<item type="dict">
+											<title type="str">paint/recommand_pool</title>
+										</item>
+										<item type="dict">
+											<title type="str">recommend_v2</title>
+										</item>
+										<item type="dict">
+											<title type="str">paint/recommend</title>
+										</item>
+										<item type="dict">
+											<title type="str">/paint/blacklist</title>
+										</item>
+										<item type="dict">
+											<title type="str">operation/bonus/{linkId}</title>
+											<topics type="list">
+												<item type="dict">
+													<title type="str">bonus分类</title>
+												</item>
+												<item type="dict">
+													<title type="str">领取时触发</title>
+												</item>
+											</topics>
+										</item>
+									</topics>
+								</item>
+								<item type="dict">
+									<title type="str">触发时机：</title>
+								</item>
+								<item type="dict">
+									<title type="str">入参</title>
+								</item>
+								<item type="dict">
+									<title type="str">出参</title>
+								</item>
+							</topics>
+						</item>
+						<item type="dict">
+							<title type="str">A/B测接口</title>
+							<topics type="list">
+								<item type="dict">
+									<title type="str">/testmatrix.dailyinnovation.biz /matrix/v4.3/abtest/</title>
+								</item>
+							</topics>
+						</item>
+					</topics>
+				</item>
+				<item type="dict">
+					<title type="str">library页AB测</title>
+					<topics type="list">
+						<item type="dict">
+							<title type="str">去掉Library页图片视频锁标签及逻辑</title>
+							<topics type="list">
+								<item type="dict">
+									<title type="str">unlock_lib_video_pic</title>
+									<topics type="list">
+										<item type="dict">
+											<title type="str">激励视频容忍度低：on
+全球：off
+本地默认off</title>
+										</item>
+									</topics>
+								</item>
+							</topics>
+						</item>
+						<item type="dict">
+							<title type="str">tab栏上滑隐藏</title>
+							<topics type="list">
+								<item type="dict">
+									<title type="str">hide_tabbar</title>
+									<topics type="list">
+										<item type="dict">
+											<title type="str">已删除</title>
+										</item>
+									</topics>
+								</item>
+							</topics>
+						</item>
+						<item type="dict">
+							<title type="str">Lib0点自动更新</title>
+							<topics type="list">
+								<item type="dict">
+									<title type="str">auto_update_lib</title>
+									<topics type="list">
+										<item type="dict">
+											<title type="str">已删除</title>
+											<topics type="list">
+												<item type="dict">
+													<title type="str">功能存在</title>
+												</item>
+											</topics>
+										</item>
+									</topics>
+								</item>
+							</topics>
+						</item>
+						<item type="dict">
+							<title type="str">搜索框的展示</title>
+							<topics type="list">
+								<item type="dict">
+									<title type="str">search</title>
+									<topics type="list">
+										<item type="dict">
+											<title type="str">&quot;on：展示搜索入口
+off：不展示搜索入口&quot;
+本地默认值off</title>
+										</item>
+									</topics>
+								</item>
+							</topics>
+						</item>
+						<item type="dict">
+							<title type="str">二级分类显隐</title>
+							<topics type="list">
+								<item type="dict">
+									<title type="str">tag_filter</title>
+									<topics type="list">
+										<item type="dict">
+											<title type="str">本地默认off</title>
+											<topics type="list">
+												<item type="dict">
+													<title type="str">功能要删除</title>
+												</item>
+											</topics>
+										</item>
+									</topics>
+								</item>
+							</topics>
+						</item>
+						<item type="dict">
+							<title type="str">for you分类展示</title>
+							<topics type="list">
+								<item type="dict">
+									<title type="str">foryou_lib</title>
+									<topics type="list">
+										<item type="dict">
+											<title type="str">本地默认off</title>
+											<topics type="list">
+												<item type="dict">
+													<title type="str">ab测删除，功能存在，默认x天开启？</title>
+												</item>
+											</topics>
+										</item>
+									</topics>
+								</item>
+							</topics>
+						</item>
+						<item type="dict">
+							<title type="str">曼陀罗弹窗</title>
+							<topics type="list">
+								<item type="dict">
+									<title type="str">首次切换至分类，弹出此弹窗</title>
+								</item>
+							</topics>
+						</item>
+						<item type="dict">
+							<title type="str">分类编辑</title>
+							<topics type="list">
+								<item type="dict">
+									<title type="str">默认off</title>
+								</item>
+							</topics>
+						</item>
+						<item type="dict">
+							<title type="str">一级分类tittle bar</title>
+						</item>
+						<item type="dict">
+							<title type="str">根据系统字体，判断字号</title>
+						</item>
+						<item type="dict">
+							<title type="str">VIP体验</title>
+							<topics type="list">
+								<item type="dict">
+									<title type="str">已写死</title>
+								</item>
+							</topics>
+						</item>
+					</topics>
+				</item>
+				<item type="dict">
+					<title type="str">library页新手引导</title>
+					<topics type="list">
+						<item type="dict">
+							<title type="str">触发时机：首次安装启动</title>
+						</item>
+						<item type="dict">
+							<title type="str">引导样式、流程检查</title>
+						</item>
+						<item type="dict">
+							<title type="str">隐藏已填色素材的功能点</title>
+						</item>
+					</topics>
+				</item>
+				<item type="dict">
+					<title type="str">library页异常场景</title>
+					<topics type="list">
+						<item type="dict">
+							<title type="str">无网启动app</title>
+						</item>
+						<item type="dict">
+							<title type="str">弱网、无网刷新列表</title>
+						</item>
+						<item type="dict">
+							<title type="str">首页接口异常，页面展示</title>
+						</item>
+						<item type="dict">
+							<title type="str">断网后刷新，首页数据恢复</title>
+						</item>
+					</topics>
+				</item>
+				<item type="dict">
+					<title type="str">兼容性适配</title>
+					<topics type="list">
+						<item type="dict">
+							<title type="str">机型</title>
+							<topics type="list">
+								<item type="dict">
+									<title type="str">手机</title>
+									<topics type="list">
+										<item type="dict">
+											<title type="str">全面屏</title>
+										</item>
+										<item type="dict">
+											<title type="str">有无home键</title>
+										</item>
+									</topics>
+								</item>
+								<item type="dict">
+									<title type="str">平板</title>
+									<topics type="list">
+										<item type="dict">
+											<title type="str">iPad的横竖屏，转屏操作</title>
+										</item>
+									</topics>
+								</item>
+							</topics>
+						</item>
+						<item type="dict">
+							<title type="str">屏幕尺寸</title>
+							<topics type="list">
+								<item type="dict">
+									<title type="str">6.7</title>
+								</item>
+								<item type="dict">
+									<title type="str">6.5</title>
+								</item>
+								<item type="dict">
+									<title type="str">6.1</title>
+								</item>
+								<item type="dict">
+									<title type="str">5.8</title>
+								</item>
+								<item type="dict">
+									<title type="str">5.5</title>
+								</item>
+								<item type="dict">
+									<title type="str">5.4</title>
+								</item>
+								<item type="dict">
+									<title type="str">4.7</title>
+								</item>
+								<item type="dict">
+									<title type="str">4.4</title>
+								</item>
+							</topics>
+						</item>
+						<item type="dict">
+							<title type="str">系统版本</title>
+						</item>
+					</topics>
+				</item>
+				<item type="dict">
+					<title type="str">埋点和UI验收</title>
+				</item>
+			</topics>
+		</topic>
+		<structure type="str">org.xmind.ui.logic.right</structure>
+	</item>
+</root>

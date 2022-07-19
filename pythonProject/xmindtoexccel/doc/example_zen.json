@@ -1,0 +1,129 @@
+[
+  {
+    "title": "Map 1",
+    "topic": {
+      "title": "Central Topic",
+      "image": {
+        "src": "xap:resources/6cca606c3f2028e5ee7794459510ce1fd8855e5e8af44c5af91a212bc7f71462.svg",
+        "type": "image"
+      },
+      "topics": [
+        {
+          "title": "topic 1",
+          "makers": [
+            "priority-1"
+          ],
+          "topics": [
+            {
+              "title": "note topic",
+              "note": "note info\nnew line of note"
+            },
+            {
+              "title": "label topic",
+              "labels": [
+                "great"
+              ],
+              "topics": [
+                {
+                  "title": "formatted note",
+                  "note": "hello world"
+                }
+              ]
+            },
+            {
+              "title": "link topic",
+              "link": "http://www.link.com"
+            },
+            {
+              "title": "callout topic",
+              "callout": [
+                "Callout"
+              ]
+            },
+            {
+              "title": "makers topic",
+              "makers": [
+                "priority-2",
+                "smiley-smile",
+                "task-oct",
+                "flag-orange"
+              ]
+            },
+            {
+              "title": "sticker topic",
+              "image": {
+                "src": "xap:resources/82d831f17e8c6cad32ff1791060d24488fab8c64186b07894e38b3a35013f736.svg",
+                "type": "image"
+              }
+            },
+            {
+              "title": "image topic",
+              "image": {
+                "src": "xap:resources/40af36d11c22d4747e35dd2d82cfa2c0e6ed91a333fa77b18c8d2e675e7b9fa0.png",
+                "type": "image"
+              }
+            },
+            {
+              "title": "attachment topic",
+              "topics": [
+                {
+                  "title": "test.txt",
+                  "link": "xap:resources/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.txt"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "topic 2",
+          "makers": [
+            "priority-2"
+          ],
+          "topics": [
+            {
+              "title": "123"
+            },
+            {
+              "title": "",
+              "topics": [
+                {
+                  "title": "topic after empty"
+                }
+              ]
+            },
+            {
+              "title": "\u4e2d\u6587"
+            },
+            {
+              "title": "<>{}*&^^&*^%@!",
+              "topics": [
+                {
+                  "title": "topic with special chars"
+                }
+              ]
+            },
+            {
+              "title": "formatted topic"
+            }
+          ]
+        }
+      ]
+    },
+    "structure": "org.xmind.ui.map.unbalanced"
+  },
+  {
+    "title": "Map 2",
+    "topic": {
+      "title": "another sheet",
+      "topics": [
+        {
+          "title": "Main Topic 1"
+        },
+        {
+          "title": "Main Topic 2"
+        }
+      ]
+    },
+    "structure": "org.xmind.ui.map.unbalanced"
+  }
+]
