@@ -4,6 +4,7 @@ import zipfile
 import tempfile
 import hashlib
 from PIL import Image
+'''下载列表素材的zip包'''
 
 
 # 'https://paint-api.dailyinnovation.biz/paint/v1/paintCategory/5ba31d31fe401a000102966e/paints?day=0&groupNumber=ios_c&limit=40&offset=0&pic_sort_new=a&require_cache=0&test_paint=1': {
@@ -26,40 +27,24 @@ from PIL import Image
 # app_alias = "PBN";
 # Cookie = "user="2|1:0|10:1627028981|4:user|116:eyJ1c2VySWQiOiI2MGZhN2RmNTYxMTM4ODY0MjY2ZjQyODIiLCJkZXZpY2VUb2tlbiI6ImJmODk2MDM1OTYwYjQzZDc5ODk3ODAxNjFmZjdjNTI0In0=|8fe50cfd6e6d13c978b0168461cefbdf83d03794c2d7b69a806ee88749a30ab8"";
 # }
-def getJson(precache: bool):
+def getJson():
+    # 获取素材列表数据
     headers = {
-        "uuid": "6d4ff2bbc8424f67822500c27218e066",
-        "font_size": "17",
-        "version": "2.60.1",
-        "abtest_zip": "true",
-        "luid": "116937f6e09811eb8abb0242ac110005",
-        "versionNum": "2345",
-        "support-blend": "true",
-        "device-type": "phone",
-        "apiVersion": "2",
-        "app": "com.paint.bynumber",
-        "Accept-Language": "en;q=1",
-        "platform": "ios",
-        "User-Agent": "PaintByNumber/2.60.1 (iPhone; iOS 14.5; Scale/3.00)",
-        "language": "en",
-        "timezone": "Asia/Shanghai",
-        "country": "US",
-        "app_alias": "PBN",
-        "Cookie": 'user="2|1:0|10:1627028981|4:user|116:eyJ1c2VySWQiOiI2MGZhN2RmNTYxMTM4ODY0MjY2ZjQyODIiLCJkZXZpY2VUb2tlbiI6ImJmODk2MDM1OTYwYjQzZDc5ODk3ODAxNjFmZjdjNTI0In0=|8fe50cfd6e6d13c978b0168461cefbdf83d03794c2d7b69a806ee88749a30ab8"'
-    }
-    url = "https://paint-api.dailyinnovation.biz/paint/v1/paintCategory/5ba31d31fe401a000102966e/paints?day=0&groupNumber=ios_c&limit=40&offset=0&pic_sort_new=a&require_cache=%d&test_paint=0" % (
-        1 if precache else 0)
+   }
+    url = "https://api.colorflow.app/colorflow/v1/paintcategory/all/paints?offset=0&limit=50&ab_ignore_scheduled_paints=off"
     response = requests.get(url, headers=headers)
     return response.json()
 
 
 def getPaintDetail(pbnid):
+    #获取素材详情接口内容
     url = "https://paint-api.dailyinnovation.biz/paint/v1/paint/%s" % (pbnid)
     res = requests.get(url)
     return res.json()
 
 
 def getZipFronResource(responce):
+    #获取素材各种属性
     if responce is None:
         print("responce is None")
         return None
@@ -85,7 +70,6 @@ def getZipFronResource(responce):
             "category": categoryStr
         }
         result.append(temp)
-
     return result
 
 
@@ -101,6 +85,7 @@ def convert(path):
 
 
 def downLoadZip(path, paintList):
+    #下载并解压素材zip包
     if len(paintList) == 0:
         print("download zip list none")
         return
@@ -119,7 +104,6 @@ def downLoadZip(path, paintList):
         pwd = hashlib.md5(password.encode()).hexdigest()
         zf = zipfile.ZipFile(tempFile, mode='r')
         zf.setpassword(pwd.encode())
-        print(zf.namelist())
         for name in zf.namelist():
             f = zf.extract(name, './%s/%s' % (path, paintId))
         zf.close()
@@ -149,7 +133,6 @@ def downLoadZip(path, paintList):
         regionPath = basePath + "_region"
         if os.path.exists(regionPath):
             convert(regionPath)
-
 
 if __name__ == '__main__':
     day0paints = getJson(False)

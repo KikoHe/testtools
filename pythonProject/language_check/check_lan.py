@@ -2,7 +2,7 @@ import os, openpyxl
 from openpyxl.styles import NamedStyle, Font, Border, Side, PatternFill, colors
 from openpyxl.comments import Comment
 
-
+'''检查多语言文档格式是否正确'''
 # 从xlutils模块中导入copy这个函数
 
 def updateExcel(file_path):

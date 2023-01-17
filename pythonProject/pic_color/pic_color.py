@@ -3,7 +3,7 @@
 from PIL import Image
 import colorsys
 import sys
-
+'''提取图标色值'''
 
 def extract(f):
     image = f if isinstance(f, Image.Image) else Image.open(f)
