@@ -1,14 +1,16 @@
 import os, openpyxl,argparse
 from openpyxl.styles import NamedStyle, Font, Border, Side, PatternFill, colors
 from openpyxl.comments import Comment
+# from langid.langid import LanguageIdentifier, model
 
-'''检查多语言文档格式是否正确'''
 # 从xlutils模块中导入copy这个函数
 
 def updateExcel(file_path,x,y):
     '''''
-    读取excel测试用例的函数
+    检查多语言文档中的文案格式是否正确
     :param file_path:传入一个excel文件，或者文件的绝对路径
+    :param x：传入一个开始执行的行数
+    :param y：传入一个开始执行的列数
     '''
     try:
         book = openpyxl.load_workbook(file_path)
@@ -24,6 +26,8 @@ def updateExcel(file_path,x,y):
             for c in list(range(clos_num))[y:]:  # 取第9列到最后一行
                 b = sheet.cell(row=r, column=c)
                 a = b.value
+                b.fill = None #清空Excel背景色
+                b.comment = None #清空Excel备注
 
                 ##检查是否有内容为空###
                 if a == None:
@@ -39,6 +43,13 @@ def updateExcel(file_path,x,y):
                 # else:
                 #     if len(str(a)) > int(length):
                 #         commentexcel(b, r, c, '超出预定字符')
+
+                # identifier = LanguageIdentifier.from_modelstring(model, norm_probs=True)
+                # language, confidence = identifier.classify(a)
+                # lan = sheet.cell(row=3, column=c).value
+                # print(lan)
+                # if language != lan and confidence == 1:
+                #     commentexcel(b, r, c, '该文案不是' + lan + '语言,是' + language + '语言' + str(confidence))
 
                 ###检查是否有多余的空格###
                 word = a.split(' ')
@@ -149,6 +160,39 @@ def updateExcel(file_path,x,y):
                     continue
         book.save(file_path)
 
+def CompairText(file_path,x,y):
+    '''''
+    检查多语言文档中的文案是否匹配
+    :param file_path:传入一个excel文件，或者文件的绝对路径
+    :param x：传入一个开始执行的行数
+    :param y：传入一个开始执行的列数
+    '''
+    try:
+        book = openpyxl.load_workbook(file_path)
+    except Exception as e:
+        # 如果路径不在或者excel不正确，返回报错信息
+        print('路径不在或者excel不正确', e)
+        return e
+    else:
+        sheet = book.active  # 取第一个sheet页
+        clos_num = sheet.max_column + 1 # 取这个sheet页的所有列数
+        for c in list(range(clos_num))[y:]:  # 取第9列到最后一行
+            b16 = sheet.cell(row=7, column=c)
+            b17 = sheet.cell(row=9, column=c)
+            b18 = sheet.cell(row=10, column=c)
+
+            b18.fill = None  # 清空Excel背景色
+            b.comment = None  # 清空Excel备注
+
+            if b17.value not in b16.value:
+                commentexcel(b17, 9, c, '内容不匹配')
+            if b18.value not in b16.value:
+                commentexcel(b18, 10, c, '内容不匹配')
+            else:
+                continue
+        book.save(file_path)
+
+
 
 def commentexcel(b, r, c, string):
     fill_3 = PatternFill("solid", fgColor="ffc7ce")  # 红色
@@ -180,4 +224,5 @@ x = args.row
 y = args.clos
 
 # 检查文件格式
-updateExcel(file_path,x,y)
+# updateExcel(file_path,x,y)
+CompairText(file_path,x,y)
