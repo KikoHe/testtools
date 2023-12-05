@@ -1,0 +1,4 @@
+1、Appium服务 + 客户端装好后，需要Android和Java环境
+2、Python里面的appium+appium版本要合适，目前python-appium-cliend是2.11.0，selenium用的4.10.0，抄的网上的
+3、需要启动Appium客户端来开启服务才能正常运行的样子～
+4、运行成功需要看到测试设备上自动安装好Appium setting app
