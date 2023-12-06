@@ -2,8 +2,6 @@ import requests,pandas
 
 f = pandas.read_excel("/Users/ht/Downloads/11.xlsx")
 testid = f.values[:, 2]
-# print(testid[0])
-# print(testid[len(testid)-2])
 
 ids1 = '+'.join(testid[0:600])
 ids2 = '+'.join(testid[601:len(testid)-2])

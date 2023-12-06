@@ -87,7 +87,7 @@ def convert(path):
 def downLoadZip(path, paintList):
     #下载并解压素材zip包
     if len(paintList) == 0:
-        print("Zip_Download zip list none")
+        print("Pic_Check zip list none")
         return
 
     home = os.getcwd() + "/" + path
