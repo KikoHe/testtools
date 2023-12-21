@@ -1,26 +1,13 @@
-import Get_Detail, Get_PicID, Common_Fun
-import sys
+import Get_Pic, Common_Fun
 
-def test_number_equal():
-    #Plan = Center
-    Project = "PBN"
-    limit = 1000
-    ids = Get_PicID.Get_PicIDList(Project,limit)
+def test_number_error(address,limit=10):
+    # 测试范围：address素材列表中今天的素材
+    # 测试内容：plan和center的元素是否一致
+    ids = Get_Pic.Get_Picid(address,limit)
     failed_ids = []
     for id_ in ids:
-            data = Get_Detail.Get_Zip(id_, Project)
-            if sorted(Get_Detail.Get_Number_From_Center(data)) != sorted(Get_Detail.Get_Number_From_Plan(data)):
-                failed_ids.insert(-1, id_)
-            continue
-
-def test_number_error(Project,limit=10):
-    # Plan > Center
-    ids = Get_PicID.Get_PicIDList(Project,limit)
-    print(len(ids))
-    failed_ids = []
-    for id_ in ids:
-        data = Get_Detail.Get_Zip(id_, Project)
-        difference = set(Get_Detail.Get_Number_From_Plan(data))-set(Get_Detail.Get_Number_From_Center(data))
+        data = Get_Pic.Get_Zip(id_, address)
+        difference = set(Get_Pic.Get_Number_From_Plan(data))-set(Get_Pic.Get_Number_From_Center(data))
         if difference:
             # raise ValueError(f"Plan中含有Center中没有的元素: {difference}")
             # failed_ids.insert(-1, id_)
@@ -29,39 +16,17 @@ def test_number_error(Project,limit=10):
             Common_Fun.remove_zip_files_and_directories(id_)
     return failed_ids
 
-def test_one_pic(Project, PicID):
-    data = Get_Detail.Get_Zip(PicID, Project)
-    difference = set(Get_Detail.Get_Number_From_Plan(data)) - set(Get_Detail.Get_Number_From_Center(data))
+def test_one_pic(address, PicID):
+    # 测试范围：PicID
+    # 测试内容：plan和center的元素是否一致
+    data = Get_Pic.Get_Zip(PicID, address)
+    difference = set(Get_Pic.Get_Number_From_Plan(data)) - set(Get_Pic.Get_Number_From_Center(data))
     if difference:
         raise ValueError(f"Plan中含有Center中没有的元素: {difference}")
 
-if __name__ == '__main__':
-    if len(sys.argv) < 2:
-        print("用法: python script.py <function> [<Project>] [<PicID> | <Limit>]")
-        sys.exit(1)
-
-    function_to_run = sys.argv[1]
-
-    if function_to_run == 'test_number_error':
-        if len(sys.argv) != 4:
-            print("缺少必要的参数。用法: python script.py test_number_error <Project> <Limit>")
-            sys.exit(1)
-        Project_input = sys.argv[2]
-        Limit_input = int(sys.argv[3])
-        print(test_number_error(Project_input, Limit_input))
-
-    elif function_to_run == 'test_one_pic':
-        if len(sys.argv) != 4:
-            print("缺少必要的参数。用法: python script.py test_one_pic <Project> <PicID>")
-            sys.exit(1)
-        Project_input = sys.argv[2]
-        PicID_input = sys.argv[3]
-        try:
-            test_one_pic(Project_input, PicID_input)
-        except ValueError as e:
-            print(e)
-            sys.exit(1)
-
+def test_picupdate(address,limit):
+    ids = Get_Pic.Get_Picid(address,limit)
+    if ids == []:
+        print(f"今天{address}未更新素材！！！" )
     else:
-        print("无效的函数。请选择 test_number_error 或 test_one_pic 作为第一个参数。")
-        sys.exit(1)
+        print(f"今天{address}一共更新{len(ids)}张素材。 ")
