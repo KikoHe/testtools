@@ -84,9 +84,12 @@ def Get_Picid(address,limit):
 def Get_Zip(PicID, Project):
     #获取素材详情地址，并下载zip资源
     url_prefixes = {
-        "ZC": "https://api.colorflow.app/colorflow/v1/paint/",
+        "ZC_Daily": "https://api.colorflow.app/colorflow/v1/paint/",
+        "ZC_Lib": "https://api.colorflow.app/colorflow/v1/paint/",
         "PBN_Lib": "https://paint-api.dailyinnovation.biz/paint/v1/paint/",
-        "VC": "https://vitacolor-api.vitastudio.ai/vitacolor/v1/paint/"
+        "PBN_Daily": "https://paint-api.dailyinnovation.biz/paint/v1/paint/",
+        "VC_Lib": "https://vitacolor-api.vitastudio.ai/vitacolor/v1/paint/",
+        "VC_Daily": "https://vitacolor-api.vitastudio.ai/vitacolor/v1/paint/"
     }
     url_Pre = url_prefixes.get(Project, "https://paint-api.dailyinnovation.biz/paint/v1/paint/")
     url = url_Pre + PicID

@@ -7,7 +7,7 @@ def remove_zip_files_and_directories(PicID):
     for zip_file in zip_files:
         try:
             os.remove(zip_file)
-            print(f"已删除文件：{zip_file}")
+            # print(f"已删除文件：{zip_file}")
         except OSError as e:
             print(f"无法删除文件 {zip_file}。原因：{e.strerror}")
 
@@ -17,7 +17,7 @@ def remove_zip_files_and_directories(PicID):
         if os.path.isdir(directory):  # 确认这是一个目录
             try:
                 shutil.rmtree(directory)
-                print(f"已删除目录：{directory}")
+                # print(f"已删除目录：{directory}")
             except OSError as e:
                 print(f"无法删除目录 {directory}。原因：{e.strerror}")
 

@@ -26,7 +26,4 @@ def test_one_pic(address, PicID):
 
 def test_picupdate(address,limit):
     ids = Get_Pic.Get_Picid(address,limit)
-    if ids == []:
-        print(f"今天{address}未更新素材！！！" )
-    else:
-        print(f"今天{address}一共更新{len(ids)}张素材。 ")
+    print(len(ids))
