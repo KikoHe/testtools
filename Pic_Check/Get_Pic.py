@@ -1,12 +1,16 @@
 from datetime import datetime
-import json
+import json,pytz
 import requests
 import hashlib, zipfile, os
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
-today = datetime.now()
+timezone = "Pacific/Apia"
+today = datetime.now(pytz.timezone(timezone))
 formatted_date1 = today.strftime("%Y-%m-%d")
 formatted_date2 = today.strftime("%Y%m%d")
+
+home = os.path.join(os.getcwd(), "Pic")  ##下载的zip文件存放路径
+
 
 def Get_List(address, limit):
     # 设置重试次数以及回退策略
@@ -35,7 +39,7 @@ def Get_List(address, limit):
     headers = {
         "platform": "android",
         "install_day": "100",
-        "timezone": "Asia/Shanghai",
+        "timezone": timezone,
         "today": formatted_date2,
         "country": "CN",
         "version": "4.4.10",
@@ -81,7 +85,7 @@ def Get_Picid(address,limit):
                     Pic_ids.append(detail_content["detail"][0]["id"])
     return Pic_ids
 
-def Get_Zip(PicID, Project):
+def Get_Zip(PicID, address):
     #获取素材详情地址，并下载zip资源
     url_prefixes = {
         "ZC_Daily": "https://api.colorflow.app/colorflow/v1/paint/",
@@ -91,13 +95,13 @@ def Get_Zip(PicID, Project):
         "VC_Lib": "https://vitacolor-api.vitastudio.ai/vitacolor/v1/paint/",
         "VC_Daily": "https://vitacolor-api.vitastudio.ai/vitacolor/v1/paint/"
     }
-    url_Pre = url_prefixes.get(Project, "https://paint-api.dailyinnovation.biz/paint/v1/paint/")
+    url_Pre = url_prefixes.get(address, "https://paint-api.dailyinnovation.biz/paint/v1/paint/")
     url = url_Pre + PicID
     headers = {"platform": "ios"}
     response = requests.get(url, headers=headers)
-    if Project.startswith("PBN"):
+    if address.startswith("PBN"):
         zip = response.json()["data"]["vector_zip_file"]
-    elif Project.startswith(("VC", "ZC")):
+    elif address.startswith(("VC", "ZC")):
         zip = response.json()["data"]["resource"]["zip"]
 
     # 计算密码
@@ -105,7 +109,6 @@ def Get_Zip(PicID, Project):
     pwd = hashlib.md5(passwordid.encode()).hexdigest()
 
     #创建下载目录
-    home = os.getcwd() + "/" + "Pic"
     if os.path.exists(home) == False:
         os.mkdir(home)
         print("mkdir pic dir ~")
@@ -128,11 +131,22 @@ def Get_Zip(PicID, Project):
         f = zf.extract(name, './%s/%s' % ("Pic", PicID))
     zf.close()
 
-    # 打开detal.json
+def Get_detailjson(PicID, address):
+    Get_Zip(PicID, address)
     filename = home + "/" + str(PicID) + "/" + "detail.json"
     with open(filename, "r") as file:
         data = json.load(file)
         return data
+
+def Get_PDF(PicID, address):
+    Get_Zip(PicID, address)
+    pic_region_path = os.path.join(home, str(PicID), f"{PicID}_origin")
+    pic_pdf_path = f"{pic_region_path}.pdf"
+    if os.path.exists(pic_region_path):
+        os.rename(pic_region_path,pic_pdf_path)
+        return pic_pdf_path
+
+# Get_Zip("6581275191c3e3b9171f09fd", "VC_Daily")
 
 def Get_Number_From_Center(data):
     center = data["center"]

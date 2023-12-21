@@ -1,6 +1,6 @@
 import sys
 from Check_Detail_Json import *
-
+### 执行脚本
 if len(sys.argv) < 2:
     print("用法: python script.py <function> [<Project>] [<PicID> | <Limit>]")
     sys.exit(1)
@@ -23,6 +23,17 @@ elif function_to_run == 'test_picupdate':
     PicID_input = sys.argv[3]
     try:
         test_picupdate(Project_input, PicID_input)
+    except ValueError as e:
+        print(e)
+        sys.exit(1)
+elif function_to_run == 'test_pdf':
+    if len(sys.argv) != 4:
+        print("缺少必要的参数。用法: python script.py test_one_pic <Project> <PicID>")
+        sys.exit(1)
+    Project_input = sys.argv[2]
+    PicID_input = sys.argv[3]
+    try:
+        test_pdf(Project_input, PicID_input)
     except ValueError as e:
         print(e)
         sys.exit(1)
