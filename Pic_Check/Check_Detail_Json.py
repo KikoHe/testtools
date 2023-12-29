@@ -1,49 +1,60 @@
 from Get_Pic import *
-from Common_Fun import *
 import PyPDF2
 from PyPDF2 import errors
 
 def test_number_error(address,limit=10):
     # 测试范围：address素材列表中今天的素材
     # 测试内容：plan和center的元素是否一致
-    ids = Get_Picid(address,limit)
+    if address == "PBN_Story":
+        storyupdatepic = Get_stroyupdatepicid()
+        ids = list(storyupdatepic.keys())
+        Zip_url = list(storyupdatepic.values())
+    else:
+        ids, Zip_url = Get_id_Zipurl(address,limit)
     failed_ids = []
-    for id_ in ids:
-        data = Get_detailjson(id_, address)
-        difference = set(Get_Number_From_Plan(data))-set(Get_Number_From_Center(data))
-        if difference:
+    for ids_, Zip_url_ in zip(ids, Zip_url):
+        data = Get_detailjson(ids_, Zip_url_, address)
+        if Get_Number_From_Plan(data, address) == [] or Get_Number_From_Center(data) == []:
+            failed_ids.append(ids_)
+        elif set(Get_Number_From_Plan(data, address))-set(Get_Number_From_Center(data)):
             # raise ValueError(f"Plan中含有Center中没有的元素: {difference}")
             # failed_ids.insert(-1, id_)
-            failed_ids.append(id_)
-        else:
-            remove_zip_files_and_directories(id_)
+            failed_ids.append(ids_)
     return failed_ids
 
-def test_picupdate(address,limit):
-    ids = Get_Picid(address,limit)
+def test_picupdate(address, limit=10):
+    ###更新的素材张数
+    if address == "PBN_Story":
+        updatepic = Get_stroyupdatepicid()
+        ids = list(updatepic.keys())
+    else:
+        ids, _ = Get_id_Zipurl(address, limit)
     print(len(ids))
 
-def test_pdf(address,limit):
-    ### 检查PDF文件
-    ids = Get_Picid(address, limit)
+def test_pdf(address, limit=10):
+    ### 检查PDF文件是否能正常打开
+    if address == "PBN_Story":
+        storyupdatepic = Get_stroyupdatepicid()
+        ids = list(storyupdatepic.keys())
+        Zip_url = list(storyupdatepic.values())
+    else:
+        ids, Zip_url = Get_id_Zipurl(address, limit)
     failed_ids = []
-    for id_ in ids:
-        pdf = Get_PDF(id_, address)
+    for ids_, Zip_url_ in zip(ids, Zip_url):
+        pdf = Get_PDF(ids_, Zip_url_, address)
         if pdf:
             try:
                 with open(pdf, 'rb') as file:
                     reader = PyPDF2.PdfReader(file)
                     if reader.is_encrypted:
-                        print(f"文件 {pdf} 已加密。")
+                        # print(f"文件 {pdf} 已加密。")
                         continue
                     # 尝试读取PDF的每一页
                     for page in range(len(reader.pages)):
                         _ = reader.pages[page]  # 获取页面的方法也有变更
-                    print(f"文件 {pdf} 可以正常打开。")
+                    # success_ids.append(ids_)  ##测试代码
             except PyPDF2.errors.PdfReadError as e:  # 更新异常处理
-                print(f"无法打开文件 {pdf}: {e}")
+                failed_ids.append(ids_)
             except OSError as e:  # OSError 保持不变
-                print(f"操作系统错误 {pdf}: {e}")
-                failed_ids.append(id_)
-        else:
-            print("没有PDF资源")
+                failed_ids.append(ids_)
+    return failed_ids
