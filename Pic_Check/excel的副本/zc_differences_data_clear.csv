@@ -1,0 +1,71 @@
+cms_id,content_tag_list_x,operations_tag_list_x,content_tag_list_y,operations_tag_list_y,Difference
+64267a49d154e087d23fcfc2,[],"['收集活动-艺术家的画', 'Zc成就奖励']",[],"['收集活动-艺术家的画', 'Zc成就奖励', '宁静']",True
+62f0ca91ddee5b0001a0c5c3,[],['ZenColor彩绘图'],[],"['宁静', 'ZenColor彩绘图']",True
+62d62a85814fa10001c3d23b,['女人'],['ZenColor速写图'],['女人'],"['ZenColor速写图', '宁静']",True
+62fe0e14741f9700015ba6a4,[],['ZenColor速写图'],[],"['宁静', 'ZenColor速写图']",True
+6368d550b002e06727113db1,[],['ZenColor速写图'],[],"['ZenColor速写图', '宁静']",True
+631088cd3fe5b8000127122b,['无名花'],['ZenColor速写图'],['无名花'],"['ZenColor速写图', '宁静']",True
+6306367dcd105600013459cd,['树木'],['ZenColor速写图'],['树木'],"['ZenColor速写图', '宁静']",True
+63063641cd105600013459c4,['滑雪'],['ZenColor彩绘图'],['滑雪'],"['ZenColor彩绘图', '兴趣']",True
+63063640cd105600013459c2,[],['ZenColor彩绘图'],[],"['ZenColor彩绘图', '兴趣']",True
+63033d96741f9700015c11e3,['城市小镇'],['ZenColor速写图'],['城市小镇'],"['ZenColor速写图', '宁静']",True
+63033d9e741f9700015c11fd,['女人'],['ZenColor速写图'],['女人'],"['ZenColor速写图', '兴趣']",True
+63033d9a741f9700015c11ea,['猫'],['ZenColor速写图'],['猫'],"['ZenColor速写图', '宁静']",True
+63033d99741f9700015c11e7,['厅堂内景'],['ZenColor速写图'],['厅堂内景'],"['ZenColor速写图', '宁静']",True
+62fe0e56741f9700015ba6df,['足球橄榄球'],['ZenColor速写图'],['足球橄榄球'],"['兴趣', 'ZenColor速写图']",True
+62fe0e48741f9700015ba6cd,['厅堂内景'],['Zen调性'],['厅堂内景'],"['宁静', 'Zen调性']",True
+62fe0e3a741f9700015ba6be,['厅堂内景'],['ZenColor速写图'],['厅堂内景'],"['宁静', 'ZenColor速写图']",True
+62fe0e0b741f9700015ba692,['汽车'],['Zen调性'],['汽车'],"['兴趣', 'Zen调性']",True
+62fe0e09741f9700015ba68e,['女人'],['ZenColor速写图'],['女人'],"['宁静', 'ZenColor速写图']",True
+62fe0e12741f9700015ba6a0,['河'],['ZenColor速写图'],['河'],"['宁静', 'ZenColor速写图']",True
+62fe0e0a741f9700015ba690,['女人'],['ZenColor速写图'],['女人'],"['兴趣', 'ZenColor速写图']",True
+62fe0e00741f9700015ba67c,['桥梁灯塔'],['ZenColor速写图'],['桥梁灯塔'],"['宁静', 'ZenColor速写图']",True
+62fb75fc741f9700015b1d60,['城市小镇'],['Zen调性'],['城市小镇'],"['宁静', 'Zen调性']",True
+62fb75fe741f9700015b1d64,['鹿'],['ZenColor速写图'],['鹿'],"['宁静', 'ZenColor速写图']",True
+62f9efd8ddee5b0001a244f1,['猫'],['ZenColor速写图'],['猫'],"['宁静', 'ZenColor速写图']",True
+62f5fd6fddee5b0001a1f38e,['公园'],['ZenColor速写图'],['公园'],"['宁静', 'ZenColor速写图']",True
+62f5fd7cddee5b0001a1f3a5,['湖'],['ZenColor速写图'],['湖'],"['宁静', 'ZenColor速写图']",True
+62f4de87ddee5b0001a1c5e5,['女人'],['ZenColor速写图'],['女人'],"['宁静', 'ZenColor速写图']",True
+62f4de75ddee5b0001a1c5cc,['日式建筑'],['ZenColor速写图'],['日式建筑'],"['宁静', 'ZenColor速写图']",True
+62f085d4ddee5b0001a0ad43,['城堡宫殿'],['Zen调性'],['城堡宫殿'],"['宁静', 'Zen调性']",True
+62eceaffddee5b0001a08665,[],['ZenColor彩绘图'],[],"['ZenColor彩绘图', '兴趣']",True
+62ec91955b8089000159f846,['女人'],['Zen调性'],['女人'],"['Zen调性', '宁静']",True
+62ec91805b8089000159f83d,['湖'],['Zen调性'],['湖'],"['宁静', 'Zen调性']",True
+62ec917d5b8089000159f839,['汽车'],['Zen调性'],['汽车'],"['Zen调性', '兴趣']",True
+62ec8fe35b8089000159f75c,['女人'],['ZenColor速写图'],['女人'],"['兴趣', 'ZenColor速写图']",True
+62ec8f375b8089000159f6a5,['厅堂内景'],"['空港格物-PM', 'Zen调性']",['厅堂内景'],"['空港格物-PM', 'Zen调性', '宁静']",True
+62ec8f2a5b8089000159f6a2,['女人'],['Zen调性'],['女人'],"['宁静', 'Zen调性']",True
+62ec8bbe5b8089000159f503,['教堂'],['Zen调性'],['教堂'],"['Zen调性', '宁静']",True
+62ec89e25b8089000159f3f9,['厅堂内景'],['ZenColor速写图'],['厅堂内景'],"['宁静', 'ZenColor速写图']",True
+62eb7d185b8089000159bd87,['日式建筑'],['ZenColor速写图'],['日式建筑'],"['宁静', 'ZenColor速写图']",True
+62eb7d0e5b8089000159bd7b,['河'],['ZenColor速写图'],['河'],"['宁静', 'ZenColor速写图']",True
+62e8c8965b80890001593248,['女人'],['ZenColor速写图'],['女人'],"['ZenColor速写图', '宁静']",True
+62e8c8985b80890001593252,['厅堂内景'],['ZenColor速写图'],['厅堂内景'],"['ZenColor速写图', '宁静']",True
+62e7ac075b808900015906d4,['湖'],['ZenColor速写图'],['湖'],"['宁静', 'ZenColor速写图']",True
+62e26ff15b80890001586842,['[]'],['ZenColor速写图'],['[]'],"['宁静', 'ZenColor速写图']",True
+62e2582c5b808900015856fa,['汽车'],['ZenColor速写图'],['汽车'],"['兴趣', 'ZenColor速写图']",True
+62e0b3d45b8089000157f43f,['女人'],['ZenColor普通图'],['女人'],"['兴趣', 'ZenColor普通图']",True
+62df87395b8089000157a308,['树木'],['ZenColor速写图'],['树木'],"['宁静', 'ZenColor速写图']",True
+62de68015b808900015764ee,['树木'],['ZenColor普通图'],['树木'],"['ZenColor普通图', '宁静']",True
+62de67dd5b808900015764b3,['树木'],['ZenColor普通图'],['树木'],"['宁静', 'ZenColor普通图']",True
+62de67d85b8089000157649c,['树木'],['ZenColor普通图'],['树木'],"['宁静', 'ZenColor普通图']",True
+62de66925b80890001576388,['女人'],['ZenColor速写图'],['女人'],"['宁静', 'ZenColor速写图']",True
+62de66905b80890001576385,['无名花'],['ZenColor速写图'],['无名花'],"['宁静', 'ZenColor速写图']",True
+62da0f34e77a020001f69795,['无名花'],['ZenColor速写图'],['无名花'],"['ZenColor速写图', '宁静']",True
+62d764b3e77a020001f5d5c4,['人与自然'],['ZenColor普通图'],['人与自然'],"['ZenColor普通图', '宁静']",True
+62d66fcf814fa10001c3e92f,['猫'],['ZenColor普通图'],['猫'],"['ZenColor普通图', '宁静']",True
+62d66fc7814fa10001c3e927,['河'],['ZenColor速写图'],['河'],"['ZenColor速写图', '宁静']",True
+62d62a64814fa10001c3d21c,['盆栽'],['ZenColor速写图'],['盆栽'],"['宁静', 'ZenColor速写图']",True
+62d62a3f814fa10001c3d1ff,['城堡宫殿'],['ZenColor普通图'],['城堡宫殿'],"['ZenColor普通图', '宁静']",True
+62d62a2b814fa10001c3d1da,['厅堂内景'],['ZenColor速写图'],['厅堂内景'],"['ZenColor速写图', '宁静']",True
+62d62a28814fa10001c3d1d7,['女人'],['ZenColor速写图'],['女人'],"['ZenColor速写图', '宁静']",True
+62cfc3222ddfb300013d7032,['女人'],['ZenColor速写图'],['女人'],"['ZenColor速写图', '宁静']",True
+62cfc3152ddfb300013d7027,['[]'],['ZenColor普通图'],['[]'],"['宁静', 'ZenColor普通图']",True
+62ccd34544dffc0001cd1a5a,['火车'],['普通'],['火车'],"['普通', '宁静']",True
+62aaa62e5f0b540001ff493a,['汽车'],['Zen调性'],['汽车'],"['Zen调性', '宁静']",True
+6284630447b1940001b08f65,[],['音乐图'],[],"['音乐图', '宁静']",True
+632045a63fe5b8000128dff8,['日式建筑'],['ZenColor Daily'],['日式建筑'],"['宁静', 'ZenColor Daily']",True
+62fb75f7741f9700015b1d56,['足球橄榄球'],['ZenColor Daily'],['足球橄榄球'],"['ZenColor Daily', '兴趣']",True
+62f9efd1ddee5b0001a244e6,['树木'],['ZenColor Daily'],['树木'],"['ZenColor Daily', '宁静']",True
+62fe0e4d741f9700015ba6d3,['树木'],['ZenColor Daily'],['树木'],"['宁静', 'ZenColor Daily']",True
+62f5fd74ddee5b0001a1f393,['汽车'],['ZenColor Daily'],['汽车'],"['ZenColor Daily', '宁静']",True

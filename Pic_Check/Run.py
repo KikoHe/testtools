@@ -10,14 +10,12 @@ def parse_args(expected_length, usage_message):
         sys.exit(1)
     return sys.argv[2], sys.argv[3]
 
-
 # 函数映射字典
 function_mappings = {
     'test_number_error': (test_number_error, "用法: python script.py test_number_error <Project> <Limit>"),
     'test_picupdate': (test_picupdate, "用法: python script.py test_picupdate <Project> <Limit>"),
     'test_pdf': (test_pdf, "用法: python script.py test_pdf <Project> <Limit>")
 }
-
 
 def main():
     # 检查最基本的参数长度

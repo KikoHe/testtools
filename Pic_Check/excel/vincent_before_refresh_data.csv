@@ -1,0 +1,1101 @@
+platform,status,number,cms_id,supplement_tag_list,content_tag_list,operations_tag_list
+ColorPad,LINGING,2024W040145,,[],[],[]
+VitaColor,FAILURE,2024W090075,,[],[],['现实想象创意']
+VitaColor,FAILURE,2024W090074,,[],[],['幻想主题创意']
+VitaColor,FAILURE,2024W090073,,[],[],['色彩之美']
+VitaColor,FAILURE,2024W090072,,[],[],['自然与生态']
+VitaColor,FAILURE,2024W090071,,[],[],['自然与生态']
+VitaColor,FAILURE,2024W090070,,[],[],[]
+VitaColor,FAILURE,2024W090069,,[],[],[]
+VitaColor,FAILURE,2024W090068,,[],[],['成就时刻的喜悦']
+VitaColor,FAILURE,2024W090067,,[],[],['幻想主题创意']
+VitaColor,FAILURE,2024W090066,,[],[],['文化与图腾']
+VitaColor,FAILURE,2024W090065,,[],[],['原创幻想']
+VitaColor,FAILURE,2024W090064,,[],[],['现实重构']
+VitaColor,FAILURE,2024W090063,,[],[],[]
+VitaColor,FAILURE,2024W090062,,[],[],[]
+PBN,FAILURE,2024W090061,,[],['仙女精灵'],['魔法']
+ColorPad,FAILURE,2024W090060,,[],[],['现实想象创意']
+ColorPad,FAILURE,2024W090059,,[],[],['幻想主题创意']
+ColorPad,FAILURE,2024W090058,,[],[],['色彩之美']
+ColorPad,FAILURE,2024W090057,,[],[],['自然与生态']
+ColorPad,FAILURE,2024W090056,,[],[],['自然与生态']
+PBN,FAILURE,2024W090055,,[],['山陵'],"['ZenColor速写图', '自然环境的宁静']"
+PBN,FAILURE,2024W090054,,[],['扇子'],"['ZenColor速写图', '禅意物品']"
+PBN,FAILURE,2024W090053,,[],['其他花'],"['ZenColor普通图', '生机带来的希望']"
+ColorPad,FAILURE,2024W090052,,[],[],['生机带来的希望']
+ColorPad,FAILURE,2024W090051,,[],[],['生机带来的希望']
+ColorPad,FAILURE,2024W090050,,[],[],['成就时刻的喜悦']
+ColorPad,FAILURE,2024W090049,,[],[],['幻想主题创意']
+ColorPad,FAILURE,2024W090048,,[],[],['文化与图腾']
+ColorPad,FAILURE,2024W090047,,[],[],['原创幻想']
+ColorPad,FAILURE,2024W090046,,[],[],['现实重构']
+ColorPad,FAILURE,2024W090045,,[],['狮子'],['生机带来的希望']
+ColorPad,FAILURE,2024W090044,,[],['面包店'],[]
+ColorPad,FAILURE,2024W090043,,[],['仙女精灵'],['魔法']
+VitaColor,FAILURE,2024W090042,,[],[],[]
+ColorPad,FAILURE,2024W090041,,[],['欧美时尚女性'],"['iPad付费包', '美学风格']"
+ColorPad,COLORING,2024W050304,,[],['平铺图案'],"['ZenColor普通图', '秩序化图案']"
+ColorPad,COLORING,2024W030348,,[],[],[]
+VitaColor,TESTED,2024W030058,,[],['鸭'],['VitaColor速写图']
+PBN,COLORING,2024W050559,,[],[],['故事线']
+PBN,COLORING,2024W050437,,[],[],['生活环境的宁静']
+PBN,LINGING,2024W050392,,[],['皮卡'],"['ZenColor Daily', '美好事物带来的愉悦']"
+VitaColor,COLORING,2024W070012,,[],[],[]
+ColorPad,FAILURE,2024W090037,,[],[],[]
+ColorPad,COLORING,2024W030347,,[],[],[]
+PBN,COMPLETED,2024W050558,,[],[],['故事线']
+PBN,PUBLISHED,2024W040708-2024W090036,65dc3596a64b6582fe05da7b,[],['其他鸟'],['投放需求']
+PBNPlus,PUBLISHED,2024W040708,65b33c58a64b6582fe03a6bc,[],['其他鸟'],['投放需求']
+PBNPlus,PUBLISHED,2024W030007,65aa171a73358196a164c6bc,[],['平铺图案'],['投放需求']
+PBNPlus,PUBLISHED,2024W030005,65aa171a73358196a164c6bb,"['方形', '普通', '中等']",['平铺图案'],['投放需求']
+ColorPad,COMPLETED,2024W050325,,[],[],['故事线']
+BPBN,PUBLISHED,2024W050455-2024W090032,65dc30afa64b6582fe05d9e0,[],[],"['Non-religious', 'Animal']"
+BPBN,PUBLISHED,2024W050448-2024W090029,65dc30afa64b6582fe05d9dd,[],[],"['Non-religious', 'House']"
+BPBN,PUBLISHED,2024W050450-2024W090030,65dc30afa64b6582fe05d9de,[],[],"['Non-religious', 'Olds']"
+BPBN,PUBLISHED,2024W050454-2024W090031,65dc30afa64b6582fe05d9df,[],[],"['Non-religious', 'Owl']"
+BPBN,PUBLISHED,2024W050462-2024W090033,65dc30afa64b6582fe05d9e1,[],[],"['Non-religious', 'Food']"
+BPBN,PUBLISHED,2024W050424-2024W090014,65dc30afa64b6582fe05d9da,[],[],"['Non-religious', 'Board']"
+BPBN,PUBLISHED,2024W050442-2024W090028,65dc30afa64b6582fe05d9dc,[],[],"['Non-religious', 'Fairy Tale']"
+BPBN,PUBLISHED,2024W050439-2024W090027,65dc30afa64b6582fe05d9db,[],[],"['Non-religious', 'Butterfly']"
+BPBN,PUBLISHED,2024W050422-2024W090013,65dc30afa64b6582fe05d9d9,[],[],"['Non-religious', 'Building']"
+BPBN,PUBLISHED,2024W050302-2024W090012,65dc30afa64b6582fe05d9d8,[],[],"['Non-religious', 'Mandala']"
+PBN,PUBLISHED,2024W050455-2024W090020,65dc2f32a64b6582fe05d9b7,[],['牛'],"['iPad速写图', '生机带来的希望']"
+PBN,PUBLISHED,2024W050448-2024W090017,65dc2f32a64b6582fe05d9b4,[],['多家庭房屋'],"['生活环境的宁静', 'iPad速写图']"
+PBN,PUBLISHED,2024W050454-2024W090019,65dc2f32a64b6582fe05d9b6,[],['猫头鹰'],"['生机带来的希望', 'iPad速写图']"
+PBN,PUBLISHED,2024W050462-2024W090021,65dc2f32a64b6582fe05d9b8,[],['其他食物'],"['美好事物带来的愉悦', 'iPad速写图']"
+PBN,PUBLISHED,2024W050442-2024W090016,65dc2f32a64b6582fe05d9b3,[],['龙蛋'],"['原创幻想', 'iPad速写图']"
+PBN,PUBLISHED,2024W050450-2024W090018,65dc2f32a64b6582fe05d9b5,[],['老人'],"['美好生活的喜悦', 'iPad速写图']"
+PBN,PUBLISHED,2024W050424,65dc2f32a64b6582fe05d9b1,"['方形', '普通', '困难']",['其他物品'],"['ZenColor Daily', '美好事物带来的愉悦', '高挑战图']"
+PBN,PUBLISHED,2024W050439-2024W090015,65dc2f32a64b6582fe05d9b2,[],['其他幻想主体'],"['科幻朋克', 'iPad速写图']"
+PBN,PUBLISHED,2024W050422,65dc2f32a64b6582fe05d9b0,"['方形', '普通', '困难']",['联排别墅'],"['ZenColor Daily', '生活环境的宁静', '高挑战图']"
+PBN,PUBLISHED,2024W050302,65dc2f32a64b6582fe05d9af,"['方形', '普通', '困难']",['曼陀罗'],"['ZenColor普通图', '曼陀罗']"
+PBNPlus,PUBLISHED,2024W050454-2024W090024,65dc2e7e73358196a167e39c,[],['猫头鹰'],"['生机带来的希望', 'iPad速写图']"
+PBNPlus,PUBLISHED,2024W050462-2024W090026,65dc2e7e73358196a167e39e,[],['其他食物'],"['美好事物带来的愉悦', 'iPad速写图']"
+PBNPlus,PUBLISHED,2024W050455-2024W090025,65dc2e7e73358196a167e39d,[],['牛'],"['iPad速写图', '生机带来的希望']"
+PBNPlus,PUBLISHED,2024W050450-2024W090023,65dc2e7e73358196a167e39b,[],['老人'],"['美好生活的喜悦', 'iPad速写图']"
+PBNPlus,PUBLISHED,2024W050448-2024W090022,65dc2e7e73358196a167e39a,[],['多家庭房屋'],"['生活环境的宁静', 'iPad速写图']"
+ColorPad,TESTING,2024W030346,,[],[],[]
+ColorPad,TESTING,2024W050296,,[],['多种宠物'],['美好生活的喜悦']
+PBNPlus,PUBLISHED,2024W050422-2024W090010,65dc2e7e73358196a167e398,"['方形', '普通', '困难']",['联排别墅'],"['ZenColor Daily', '生活环境的宁静', '高挑战图']"
+ColorPad,TESTING,2024W050303,,[],['曼陀罗'],"['ZenColor普通图', '曼陀罗']"
+ColorPad,TESTING,2024W050323,,[],[],['故事线']
+PBNPlus,PUBLISHED,2024W050424-2024W090011,65dc2e7e73358196a167e399,"['方形', '普通', '困难']",['其他物品'],"['ZenColor Daily', '美好事物带来的愉悦', '高挑战图']"
+ColorPad,TESTING,2024W050340,,[],['河流'],['自然环境的宁静']
+ColorPad,TESTING,2024W050332,,[],['洗衣机'],['现实重构']
+ColorPad,TESTING,2024W050348,,[],['仙人掌'],['生机带来的希望']
+PBNPlus,PUBLISHED,2024W050302-2024W090009,65dc2e7e73358196a167e397,"['方形', '普通', '困难']",['曼陀罗'],"['ZenColor普通图', '曼陀罗']"
+VitaColor,PUBLISHED,2024W050302-2024W090008,65dc2da173358196a167e351,"['方形', '普通', '困难']",['曼陀罗'],"['ZenColor普通图', '曼陀罗']"
+VitaColor,PUBLISHED,2024W050455,65dc2da173358196a167e34f,[],['牛'],"['iPad速写图', '生机带来的希望']"
+VitaColor,COLORING,2024W080289,,[],[],['VitaColor速写图']
+VitaColor,PUBLISHED,2024W050462,65dc2da173358196a167e350,[],['其他食物'],"['美好事物带来的愉悦', 'iPad速写图']"
+VitaColor,PUBLISHED,2024W050450,65dc2da173358196a167e34d,[],['老人'],"['美好生活的喜悦', 'iPad速写图']"
+VitaColor,PUBLISHED,2024W050448,65dc2da173358196a167e34c,[],['多家庭房屋'],"['生活环境的宁静', 'iPad速写图']"
+VitaColor,PUBLISHED,2024W050454,65dc2da173358196a167e34e,[],['猫头鹰'],"['生机带来的希望', 'iPad速写图']"
+VitaColor,PUBLISHED,2024W050442,65dc2da173358196a167e34b,[],['龙蛋'],"['原创幻想', 'iPad速写图']"
+VitaColor,PUBLISHED,2024W050439,65dc2da173358196a167e34a,[],['其他幻想主体'],"['科幻朋克', 'iPad速写图']"
+PBN,COLORING,2024W050309,,[],['港口码头'],"['ZenColor速写图', '生活环境的宁静']"
+PBN,PUBLISHED,2024W050365,65dc29c473358196a167e250,"['方形', '普通', '困难']",['字母文案'],"['收集活动', '生活与节日']"
+PBN,PUBLISHED,2024W050482,65dc29c473358196a167e254,"['壁纸', '彩绘', '中等']",['其他奇幻人物'],"['魔法', '彩绘作者包-Yumeko_Fujiwara']"
+PBN,PUBLISHED,2024W050479,65dc29c473358196a167e252,"['壁纸', '彩绘', '中等']",['情侣'],"['爱情', '彩绘作者包-Gabrielle_Monet']"
+PBN,PUBLISHED,2024W050480,65dc29c473358196a167e253,"['壁纸', '彩绘', '中等']",['美人鱼'],"['魔法', '彩绘作者包-Bessie_Raphson']"
+PBN,PUBLISHED,2024W050557,65dc29c473358196a167e256,"['方形', '彩绘', '困难']",['多人'],['故事线-倒带人生']
+PBN,PUBLISHED,2024W050362,65dc29c473358196a167e24f,"['方形', '普通', '困难']",['字母文案'],"['收集活动', '生活与节日']"
+PBN,PUBLISHED,2024W050361,65dc29c473358196a167e24e,"['方形', '普通', '困难']",['字母文案'],"['收集活动', '生活与节日']"
+PBN,PUBLISHED,2024W050555,65dc29c473358196a167e255,"['方形', '彩绘', '困难']",['面具'],['故事线-倒带人生']
+PBN,PUBLISHED,2024W050281,65dc29c473358196a167e24d,"['方形', '普通', '困难']",['其他物品'],"['收集活动', '生活与节日']"
+PBN,PUBLISHED,2024W050409,65dc29c473358196a167e251,"['壁纸', '彩绘', '困难']",['蛋糕'],"['PBN daily素材', '生活与节日']"
+PBN,PUBLISHED,2024W050280,65dc29c473358196a167e24c,"['方形', '普通', '困难']",['其他物品'],"['收集活动', '生活与节日']"
+ColorPad,PUBLISHED,2024W050322,65dc23db73358196a167e1f4,[],['面具'],['故事线-倒带人生']
+ColorPad,PUBLISHED,2024W050346,65dc23db73358196a167e1fb,[],['牛'],['生机带来的希望']
+ColorPad,PUBLISHED,2024W050345,65dc23db73358196a167e1fa,[],['猫头鹰'],['生机带来的希望']
+ColorPad,PUBLISHED,2024W050353,65dc23db73358196a167e1fc,[],['蛋'],['美好事物带来的愉悦']
+ColorPad,PUBLISHED,2024W050341,65dc23db73358196a167e1f9,[],['老人'],['美好生活的喜悦']
+ColorPad,PUBLISHED,2024W050339,65dc23db73358196a167e1f8,[],['联排别墅'],['生活环境的宁静']
+ColorPad,PUBLISHED,2024W050333,65dc23db73358196a167e1f7,[],['龙蛋'],['原创幻想']
+ColorPad,PUBLISHED,2024W050330,65dc23db73358196a167e1f6,[],['其他幻想主体'],['科幻朋克']
+ColorPad,PUBLISHED,2024W050324,65dc23db73358196a167e1f5,[],['多人'],['故事线-倒带人生']
+VitaColor,COLORING,2024W080290,,[],[],['VitaColor速写图']
+PBN,AUDITED,2024W050556,,"['方形', '彩绘', '困难']",[],['故事线']
+VitaColor,AUDITED,2024W050457,,[],[],[]
+VitaColor,AUDITED,2024W050449,,[],[],['自然环境的宁静']
+VitaColor,AUDITED,2024W050441,,[],['洗衣机'],['现实重构']
+PBN,AUDITED,2024W050432,,"['方形', '普通', '困难']",['曼陀罗'],"['ZenColor普通图', '曼陀罗']"
+PBN,AUDITED,2024W050431,,"['方形', '彩绘', '中等']",['多种宠物'],['美好生活的喜悦']
+VitaColor,COLORING,2024W080288,,[],[],['VitaColor速写图']
+BPBN,PUBLISHED,2024W050461-2024W090007,65dc0d5373358196a167e014,[],[],"['Non-religious', 'Desert']"
+BPBN,PUBLISHED,2024W050389-2024W090004,65dc0d5373358196a167e013,[],[],"['Non-religious', 'House']"
+PBN,PUBLISHED,2024W050290,65dc0cdd73358196a167dfe0,"['方形', '普通', '困难']",['其他奇幻物品'],"['PBN速写图', '幻想主题创意']"
+PBN,PUBLISHED,2024W050461-2024W090005,65dc0cdd73358196a167dfe2,[],['甜品组合'],"['iPad速写图', '美好事物带来的愉悦']"
+PBN,PUBLISHED,2024W050389,65dc0cdd73358196a167dfe1,"['方形', '普通', '困难']",['独栋房屋'],"['ZenColor速写图', '生活环境的宁静', '极限挑战图']"
+PBN,PUBLISHED,2024W050271,65dc0cdd73358196a167dfdf,"['壁纸', '彩绘', '困难']",['河流湖泊'],"['PBN daily素材', '自然与生态']"
+PBN,COMPLETED,2024W050436,,[],[],"['神秘图', '美好事物带来的愉悦']"
+PBNPlus,PUBLISHED,2024W050461-2024W090006,65dc0c7273358196a167dfca,[],['甜品组合'],"['iPad速写图', '美好事物带来的愉悦']"
+ColorPad,COMPLETED,2024W050327,,[],[],"['神秘图', '美好事物带来的愉悦']"
+PBNPlus,PUBLISHED,2024W050389-2024W090003,65dc0c7273358196a167dfc9,"['方形', '普通', '困难']",['独栋房屋'],"['ZenColor速写图', '生活环境的宁静', '极限挑战图']"
+ColorPad,COLORING,2024W050328,,[],[],['生活环境的宁静']
+PBN,COMPLETED,2024W070004,,[],['多种宠物'],"['彩绘作者包', '美好生活的喜悦']"
+ColorPad,COLORING,2024W070036,,[],['玛雅金字塔'],['架空世界']
+ColorPad,PUBLISHED,2024W050352,65dc0ba773358196a167df8c,[],['蛋糕'],['美好事物带来的愉悦']
+VitaColor,PUBLISHED,2024W050461,65dc0b5a73358196a167df72,[],['甜品组合'],"['iPad速写图', '美好事物带来的愉悦']"
+PBN,PUBLISHED,2024W040440,65dc0872a64b6582fe05d4ad,"['方形', '彩绘', '困难']",['欧美日常女性'],['故事线-倒带人生']
+PBN,PUBLISHED,2024W050553,65dc0872a64b6582fe05d4ae,"['方形', '彩绘', '困难']",['多人'],['故事线-倒带人生']
+PBN,PUBLISHED,2024W040439,65dc0872a64b6582fe05d4ac,"['方形', '彩绘', '困难']",['孩子'],['故事线-倒带人生']
+PBN,PUBLISHED,2023W250080-2024W090002,65dc061ca64b6582fe05d423,"['ZenColor普通图', '方形', '普通', '困难']",['抽象线条'],"['ZenColor普通图', '秩序化图案']"
+PBNCN,COLORING,2024W050297-2024W090001,,[],[],[]
+ColorPad,COLORING,2024W070068,,[],['其他奇幻人物'],['魔法']
+PBN,COLORING,2024W070111,,[],['其他奇幻人物'],['魔法']
+VitaColor,COLORING,2024W080296,,[],[],['美好生活的喜悦']
+PBN,COLORING,2024W080287,,[],['欧美日常女性'],"['收集活动', '生活与节日']"
+VitaColor,COLORING,2024W070117,,[],[],['自然环境的宁静']
+ColorPad,COLORING,2024W070074,,[],['其他独立屋'],['自然环境的宁静']
+VitaColor,COLORING,2024W080297,,[],[],[]
+PBN,COLORING,2024W080280,,[],['其他花'],"['ZenColor普通图', '生机带来的希望']"
+PBN,COLORING,2024W080285,,[],['多种宠物'],"['ZenColor Daily', '美好生活的喜悦']"
+PBN,COLORING,2024W080284,,[],['杯碟水壶'],"['ZenColor Daily', '美好事物带来的愉悦']"
+ColorPad,PUBLISHED,2024W050320,65d8831e73358196a167d42c,[],['欧美男性'],['故事线-倒带人生']
+ColorPad,PUBLISHED,2024W050293,65d8831fa64b6582fe05ca48,[],['狐狸'],['生机带来的希望']
+ColorPad,COLORING,2024W070065,,[],['其他奇幻场景'],['现实重构']
+PBN,COLORING,2024W080286,,[],['天主大教堂'],"['收集活动', '生活与节日']"
+PBNPlus,COLORING,2024W080294,,[],['田野'],"['ZenColor Daily', '自然环境的宁静']"
+PBN,COLORING,2024W080298,,[],['其他物品'],"['ZenColor Daily', '美好事物带来的愉悦']"
+PBNPlus,COLORING,2024W080292,,[],['湖泊'],"['ZenColor速写图', '自然环境的宁静']"
+PBN,COLORING,2024W070109,,[],['其他奇幻动物'],['魔法']
+PBNPlus,COLORING,2024W080293,,[],['森林'],"['ZenColor速写图', '自然环境的宁静']"
+VitaColor,COLORING,2024W080248,,[],[],['美好生活的喜悦']
+ColorPad,COLORING,2024W070072,,[],['浴室'],['生活环境的宁静']
+VitaColor,COLORING,2024W070114,,[],[],['生活环境的宁静']
+ColorPad,COLORING,2024W070071,,[],['现代简约卧室'],['生活环境的宁静']
+PBNPlus,COLORING,2024W080333,,[],[],[]
+ColorPad,COLORING,2024W070075,,[],['湖泊'],['自然环境的宁静']
+VitaColor,COLORING,2024W070118,,[],[],['自然环境的宁静']
+ColorPad,COLORING,2024W080299,,[],['街道'],"['iPad付费包', '美学风格']"
+PBN,LINGING,2024W020037,,[],[],[]
+VitaColor,COLORING,2024W080291,,[],[],['VitaColor速写图']
+ColorPad,COLORING,2024W070066,,[],['其他奇幻动物'],['魔法']
+VitaColor,COLORING,2024W070115,,[],[],['生活环境的宁静']
+PBN,PUBLISHED,2024W040438,65d862f9a64b6582fe05c2f8,"['方形', '彩绘', '困难']",['孩子'],['故事线-倒带人生']
+VitaColor,COLORING,2024W070116,,[],[],['生活环境的宁静']
+ColorPad,COLORING,2024W070073,,[],['独栋房屋'],['生活环境的宁静']
+PBNPlus,LINGING,2024W080332,,[],[],[]
+PBN,COLORING,2024W050358,,"['壁纸', '彩绘', '困难']",['孩子'],"['PBN daily素材', '宠物情']"
+ColorPad,TESTING,2024W050425,,[],['其他奇幻人物'],"['iPad付费包', '现实想象创意']"
+VitaColor,PUBLISHED,2024W040554-2024W080331,65d84c98a64b6582fe05c0b2,"['方形', '普通', '困难']",['抽象线条'],"['秩序化图案', 'ZenColor普通图']"
+VitaColor,PUBLISHED,2024W040108-2024W080330,65d84c98a64b6582fe05c0b1,"['复用至ZC', '复用至VC']",['抽象线条'],"['秩序化图案', 'ZenColor普通图']"
+VitaColor,COLORING,2024W080252,,[],[],[]
+PBN,COLORING,2024W080253,,[],['独栋房屋'],"['ZenColor速写图', '生活环境的宁静']"
+BPBN,PUBLISHED,2024W050460-2024W080329,65d82a3da64b6582fe05bda1,[],[],"['Non-religious', 'Food']"
+BPBN,PUBLISHED,2024W050452-2024W080327,65d82a3da64b6582fe05bd9f,[],[],"['Non-religious', 'Love']"
+BPBN,PUBLISHED,2024W050453-2024W080328,65d82a3da64b6582fe05bda0,[],[],"['Non-religious', 'Kid']"
+BPBN,PUBLISHED,2024W050447-2024W080326,65d82a3da64b6582fe05bd9e,[],[],"['Non-religious', 'Dog']"
+BPBN,PUBLISHED,2024W050438-2024W080325,65d82a3da64b6582fe05bd9d,[],[],"['Non-religious', 'Bird']"
+BPBN,PUBLISHED,2024W050428-2024W080316,65d82a3da64b6582fe05bd9c,[],[],"['Non-religious', 'Fox']"
+BPBN,PUBLISHED,2024W050426-2024W080315,65d82a3da64b6582fe05bd9b,[],[],"['Non-religious', 'Train']"
+BPBN,PUBLISHED,2024W050319-2024W080314,65d82a3da64b6582fe05bd9a,[],[],"['Non-religious', 'Drink']"
+ColorPad,PUBLISHED,2024W050351,65d828f7a64b6582fe05bd89,[],['野餐'],['美好事物带来的愉悦']
+ColorPad,PUBLISHED,2024W050344,65d828f7a64b6582fe05bd88,[],['孩子'],['宠物情']
+ColorPad,PUBLISHED,2024W050343,65d828f7a64b6582fe05bd87,[],['情侣'],['爱情']
+ColorPad,PUBLISHED,2024W050329,65d828f7a64b6582fe05bd85,[],['凤凰'],['神话']
+ColorPad,PUBLISHED,2024W050338,65d828f7a64b6582fe05bd86,[],['柴犬'],['色彩之美']
+ColorPad,PUBLISHED,2024W040384,65d828f7a64b6582fe05bd83,[],['街景一角'],['ColorPad付费包-全景大发现']
+ColorPad,PUBLISHED,2024W050292,65d828f7a64b6582fe05bd84,[],['獾'],['生机带来的希望']
+PBNPlus,PUBLISHED,2024W050460-2024W080324,65d8279673358196a167c755,[],['野餐'],"['iPad速写图', '美好事物带来的愉悦']"
+PBNPlus,PUBLISHED,2024W050453-2024W080323,65d8279673358196a167c754,[],['孩子'],"['iPad速写图', '宠物情']"
+PBNPlus,PUBLISHED,2024W050428-2024W080313,65d8279673358196a167c752,"['方形', '彩绘', '困难']",['狐狸'],"['生机带来的希望', '彩绘作者包-徐同舟', 'iPad彩绘图']"
+PBNPlus,PUBLISHED,2024W050426-2024W080312,65d8279673358196a167c751,"['方形', '普通', '困难']",['蒸汽火车'],"['ZenColor Daily', '美好事物带来的愉悦', '高挑战图']"
+PBNPlus,PUBLISHED,2024W050452-2024W080322,65d8279673358196a167c753,[],['情侣'],"['爱情', 'iPad速写图']"
+PBNPlus,PUBLISHED,2024W050319-2024W080311,65d8279673358196a167c750,"['方形', '普通', '困难']",['果汁饮料'],"['ZenColor Daily', '美好事物带来的愉悦', '高挑战图']"
+PBNPlus,PUBLISHED,2024W050310-2024W080310,65d8279673358196a167c74f,"['方形', '普通', '困难']",['洞穴'],"['自然环境的宁静', '神秘图']"
+PBN,PUBLISHED,2024W050426,65d82687a64b6582fe05bd41,"['方形', '普通', '困难']",['蒸汽火车'],"['ZenColor Daily', '美好事物带来的愉悦', '高挑战图']"
+PBN,PUBLISHED,2024W050319,65d82687a64b6582fe05bd40,"['方形', '普通', '困难']",['果汁饮料'],"['ZenColor Daily', '美好事物带来的愉悦', '高挑战图']"
+PBN,PUBLISHED,2024W050453-2024W080320,65d82687a64b6582fe05bd46,[],['孩子'],"['iPad速写图', '宠物情']"
+PBN,PUBLISHED,2024W050460-2024W080321,65d82687a64b6582fe05bd47,[],['野餐'],"['iPad速写图', '美好事物带来的愉悦']"
+PBN,PUBLISHED,2024W050447-2024W080318,65d82687a64b6582fe05bd44,[],['柯基'],"['色彩之美', 'iPad速写图']"
+PBN,PUBLISHED,2024W050452-2024W080319,65d82687a64b6582fe05bd45,[],['情侣'],"['爱情', 'iPad速写图']"
+PBN,PUBLISHED,2024W050438-2024W080317,65d82687a64b6582fe05bd43,[],['凤凰'],"['神话', 'iPad速写图']"
+PBN,PUBLISHED,2024W050428,65d82687a64b6582fe05bd42,"['方形', '彩绘', '困难']",['狐狸'],"['生机带来的希望', '彩绘作者包-徐同舟', 'iPad彩绘图']"
+PBN,PUBLISHED,2024W050310,65d82687a64b6582fe05bd3f,"['方形', '普通', '困难']",['洞穴'],"['自然环境的宁静', '神秘图']"
+VitaColor,PUBLISHED,2024W050453,65d81cb673358196a167c6d3,[],['孩子'],"['iPad速写图', '宠物情']"
+VitaColor,PUBLISHED,2024W050460,65d81cb673358196a167c6d4,[],['野餐'],"['iPad速写图', '美好事物带来的愉悦']"
+VitaColor,PUBLISHED,2024W050447,65d81cb673358196a167c6d1,[],['柯基'],"['色彩之美', 'iPad速写图']"
+VitaColor,PUBLISHED,2024W050452,65d81cb673358196a167c6d2,[],['情侣'],"['爱情', 'iPad速写图']"
+VitaColor,PUBLISHED,2024W050438,65d81cb673358196a167c6d0,[],['凤凰'],"['神话', 'iPad速写图']"
+PBN,PUBLISHED,2024W050282,65d8165a73358196a167c5a6,"['方形', '普通', '困难']",['字母文案'],"['收集活动', '生活与节日']"
+PBN,PUBLISHED,2024W050273,65d8174fa64b6582fe05bc2f,"['壁纸', '彩绘', '困难']",['灯饰'],"['PBN daily素材', '生活与节日']"
+PBN,PUBLISHED,2024W050481,65d8165a73358196a167c5ab,"['壁纸', '彩绘', '中等']",['美人鱼'],"['魔法', '彩绘作者包-Bessie_Raphson', 'PBN daily素材']"
+PBN,PUBLISHED,2024W050364,65d8165a73358196a167c5aa,"['方形', '普通', '困难']",['字母文案'],"['收集活动', '生活与节日']"
+PBN,PUBLISHED,2024W050360,65d8165a73358196a167c5a8,"['壁纸', '彩绘', '困难']",['高跟鞋'],"['PBN daily素材', '美好事物带来的愉悦']"
+PBN,PUBLISHED,2024W050355,65d8165a73358196a167c5a7,"['壁纸', '彩绘', '困难']",['其他花'],"['PBN daily素材', '自然与生态']"
+PBN,PUBLISHED,2024W050363,65d8165a73358196a167c5a9,"['方形', '普通', '困难']",['字母文案'],"['收集活动', '生活与节日']"
+PBN,PUBLISHED,2024W050279,65d8165a73358196a167c5a5,"['方形', '普通', '困难']",['其他物品'],"['收集活动', '生活与节日']"
+VitaColor,COLORING,2024W070057,,[],[],[]
+VitaColor,COLORING,2024W060234,,[],[],['VitaColor速写图']
+PBN,COLORING,2024W080255,,[],['书房'],"['ZenColor速写图', '生活环境的宁静']"
+VitaColor,COLORING,2023W470416-2024W080301,,[],['孩子'],"['VitaColor速写图', '兴趣']"
+PBN,COLORING,2024W080254,,[],['其他房屋内饰'],"['ZenColor速写图', '生活环境的宁静']"
+PBNPlus,LINGING,2023W120112-2024W080309,,"['ZenColor速写图', '方形', '普通', '困难']",['小径'],"['ZenColor速写图', '宁静', 'AI应用项目']"
+PBNPlus,LINGING,2023W110076-2024W080308,,[],[],[]
+PBNPlus,LINGING,2023W350295-2024W080307,,"['ZenColor速写图', '普通', '方形', '困难']",['孩子'],"['VitaColor速写图', '美好事物带来的愉悦']"
+PBNPlus,LINGING,2023W170096-2024W080306,,"['ZenColor速写图', '方形', '普通', '困难']",['复古老爷车'],"['ZenColor速写图', '美好事物带来的愉悦']"
+PBNPlus,LINGING,2023W250110-2024W080305,,[],[],[]
+PBNPlus,LINGING,2023W200092-2024W080304,,"['ZenColor速写图', '方形', '普通', '困难']",['多种动物'],"['ZenColor速写图', '生机带来的希望']"
+PBNPlus,LINGING,2023W180080-2024W080303,,"['ZenColor Daily', '高挑战图', '方形', '普通', '困难']",['多种动物'],"['ZenColor Daily', '生机带来的希望']"
+PBN,COLORING,2024W080247,,[],['家庭'],"['收集活动', '生活与节日']"
+VitaColor,LINGING,2023W460152-2024W080302,,[],['知更鸟'],"['VitaColor速写图', '2023节日-圣诞节', '生机带来的希望']"
+VitaColor,COLORING,2024W080249,,[],[],[]
+PBN,COLORING,2024W060225,,[],['湖泊'],"['ZenColor速写图', '自然环境的宁静']"
+ColorPad,LINGING,2024W080169,,[],['具体城市'],"['iPad付费包', '美学风格']"
+PBN,COLORING,2024W060235,,[],['其他客厅'],"['ZenColor速写图', '生活环境的宁静']"
+VitaColor,COLORING,2024W060231,,[],[],['VitaColor速写图']
+PBN,COLORING,2024W070049,,[],['果汁饮料'],"['PBN daily素材', '生活与节日']"
+PBN,COLORING,2024W070054,,[],['独角兽'],"['PBN速写图', '幻想主题创意']"
+PBN,COLORING,2024W080244,,[],['孩子'],"['收集活动', '生活与节日']"
+PBN,COLORING,2024W080246,,[],['其他奇幻场景'],"['收集活动', '生活与节日']"
+VitaColor,COLORING,2024W060228,,[],[],['美好生活的喜悦']
+VitaColor,COLORING,2024W060238,,[],[],['VitaColor速写图']
+PBN,COLORING,2024W060226,,[],['小镇'],"['ZenColor Daily', '生活环境的宁静']"
+VitaColor,COLORING,2024W080250,,[],[],[]
+VitaColor,COLORING,2024W080242,,[],[],['VitaColor速写图']
+VitaColor,COLORING,2024W070056,,[],[],[]
+VitaColor,COLORING,2024W070059,,[],[],"['VitaColor速写图', '美好生活的喜悦']"
+VitaColor,COLORING,2024W070055,,[],[],['美好生活的喜悦']
+PBN,COLORING,2024W070052,,[],['图腾纹样'],"['PBN速写图', '现实人文创意的记录']"
+PBN,COLORING,2024W070050,,[],['其他奇幻人物'],"['彩绘作者包', '魔法']"
+PBN,COLORING,2024W080281,,[],['其他花'],"['ZenColor普通图', '生机带来的希望']"
+ColorPad,COLORING,2024W080300,,[],['欧美时尚女性'],"['iPad付费包', '美学风格']"
+VitaColor,COLORING,2024W070058,,[],[],[]
+PBN,COLORING,2024W080245,,[],['面包'],"['收集活动', '生活与节日']"
+PBN,COLORING,2024W080279,,[],['其他花'],"['ZenColor普通图', '生机带来的希望']"
+ColorPad,COLORING,2024W050326,,[],[],['故事线']
+PBNPlus,FAILURE,2024W080295,,[],['其他物品'],"['ZenColor Daily', '美好事物带来的愉悦']"
+PBN,FAILURE,2024W080283,,[],['独栋房屋'],"['ZenColor速写图', '生活环境的宁静']"
+ColorPad,FAILURE,2024W080282,,[],['欧美时尚女性'],"['iPad付费包', '美学风格']"
+ColorPad,COLORING,2024W080173,,[],['悉尼歌剧院'],"['iPad付费包', '美学风格']"
+ColorPad,COLORING,2024W040144,,[],[],[]
+VitaColor,COLORING,2024W080251,,[],[],[]
+PBN,COLORING,2024W080179,,[],['蜀葵花'],"['ZenColor普通图', '生机带来的希望']"
+PBN,LINGING,2024W020038,,[],[],[]
+PBN,LINGING,2024W020036,,[],[],[]
+VitaColor,PUBLISHED,2024W030393-2024W080276,65d6e47173358196a167b2b6,"['复用至ZC', '复用至VC', '方形', '普通', '困难']",['立体图案'],"['秩序化图案', 'ZenColor速写图']"
+ColorPad,COLORING,2024W080175,,[],['美国国会大厦'],"['iPad付费包', '美学风格']"
+PBNPlus,PUBLISHED,2024W030393-2024W080275,65d6d978a64b6582fe05a943,"['复用至ZC', '复用至VC', '方形', '普通', '困难']",['立体图案'],"['秩序化图案', 'ZenColor速写图']"
+PBN,COLORING,2024W080166,,[],['溪流'],"['ZenColor Daily', '自然环境的宁静']"
+BPBN,PUBLISHED,2024W050427-2024W080270,65d6c9fc73358196a167b1aa,[],[],"['Non-religious', 'Animal']"
+BPBN,PUBLISHED,2024W050423-2024W080269,65d6c9fc73358196a167b1a9,[],[],"['Non-religious', 'Building']"
+BPBN,PUBLISHED,2024W050429-2024W080271,65d6c9fc73358196a167b1ab,[],[],"['Non-religious', 'Eagle']"
+BPBN,PUBLISHED,2024W050317-2024W080268,65d6c9fc73358196a167b1a8,[],[],"['Non-religious', 'Castle']"
+BPBN,PUBLISHED,2024W050446-2024W080274,65d6c9fc73358196a167b1ac,[],[],"['Religious', 'Angel']"
+BPBN,PUBLISHED,2024W050300-2024W080265,65d6c9fc73358196a167b1a5,[],[],"['Non-religious', 'Fruits']"
+BPBN,PUBLISHED,2024W050316-2024W080267,65d6c9fc73358196a167b1a7,[],[],"['Non-religious', 'Giraffe']"
+BPBN,PUBLISHED,2024W050312-2024W080266,65d6c9fc73358196a167b1a6,[],[],"['Non-religious', 'Nature']"
+BPBN,PUBLISHED,2024W030393-2024W040676,65b0abc973358196a1656356,[],[],"['Non-religious', 'Pattern']"
+PBN,PUBLISHED,2024W060080,65d6c84873358196a167b16c,"['方形', '普通', '困难']",['街景一角'],"['美好生活的喜悦', '神秘图']"
+PBN,PUBLISHED,2024W050446-2024W080273,65d6c84873358196a167b16d,[],['天使'],"['幻想主题创意', 'iPad速写图']"
+PBN,PUBLISHED,2024W050427,65d6c84873358196a167b16a,"['方形', '彩绘', '困难']",['多种动物'],"['生机带来的希望', '彩绘作者包-戴星宇']"
+PBN,PUBLISHED,2024W050423,65d6c84873358196a167b169,"['方形', '普通', '困难']",['独栋房屋'],"['ZenColor Daily', '生活环境的宁静', '高挑战图']"
+PBN,PUBLISHED,2024W050429,65d6c84873358196a167b16b,"['方形', '彩绘', '困难']",['多种动物'],"['经典童话再现', '彩绘作者包-Roisin_Sweeney']"
+PBN,PUBLISHED,2024W050317,65d6c84873358196a167b168,"['方形', '普通', '困难']",['中世纪城堡'],"['ZenColor Daily', '高挑战图', '生活环境的宁静']"
+PBN,PUBLISHED,2024W050316,65d6c84873358196a167b167,"['方形', '普通', '困难']",['长颈鹿'],"['ZenColor Daily', '生机带来的希望', '高挑战图']"
+PBN,PUBLISHED,2024W050312,65d6c84873358196a167b166,"['方形', '普通', '困难']",['溪流'],"['ZenColor Daily', '自然环境的宁静']"
+PBN,PUBLISHED,2024W050300,65d6c84873358196a167b165,"['方形', '普通', '中等']",['蓝莓'],"['ZenColor普通图', '生机带来的希望']"
+PBNPlus,PUBLISHED,2024W050423-2024W080261,65d6c7c073358196a167b156,"['方形', '普通', '困难']",['独栋房屋'],"['ZenColor Daily', '生活环境的宁静', '高挑战图']"
+PBNPlus,PUBLISHED,2024W060080-2024W080264,65d6c7c073358196a167b159,"['方形', '普通', '困难']",['街景一角'],"['美好生活的喜悦', '神秘图']"
+PBNPlus,PUBLISHED,2024W050427-2024W080262,65d6c7c073358196a167b157,"['方形', '彩绘', '困难']",['多种动物'],"['生机带来的希望', '彩绘作者包-戴星宇']"
+PBNPlus,PUBLISHED,2024W050317-2024W080260,65d6c7c073358196a167b155,"['方形', '普通', '困难']",['中世纪城堡'],"['ZenColor Daily', '高挑战图', '魔法']"
+PBNPlus,PUBLISHED,2024W050429-2024W080263,65d6c7c073358196a167b158,"['方形', '彩绘', '困难']",['多种动物'],"['经典童话再现', '彩绘作者包-Roisin_Sweeney']"
+PBNPlus,PUBLISHED,2024W050316-2024W080259,65d6c7c073358196a167b154,"['方形', '普通', '困难']",['长颈鹿'],"['ZenColor Daily', '生机带来的希望', '高挑战图']"
+PBNPlus,PUBLISHED,2024W050312-2024W080258,65d6c7c073358196a167b153,"['方形', '普通', '困难']",['溪流'],"['ZenColor Daily', '自然环境的宁静']"
+PBNPlus,PUBLISHED,2024W050300-2024W080257,65d6c7c073358196a167b152,"['方形', '普通', '中等']",['蓝莓'],"['ZenColor普通图', '生机带来的希望']"
+PBN,COLORING,2024W070019,,[],['金鲤鱼'],"['ZenColor速写图', '禅意物品']"
+VitaColor,PUBLISHED,2024W050446,65d6c6b8a64b6582fe05a7fa,[],['天使'],"['幻想主题创意', 'iPad速写图']"
+PBN,PUBLISHED,2024W030393-2024W040673,65b09be073358196a1656228,"['复用至ZC', '复用至VC', '方形', '普通', '困难']",['立体图案'],"['秩序化图案', 'ZenColor速写图']"
+PBN,PUBLISHED,2024W050283,65d6c19073358196a167b044,"['方形', '普通', '困难']",['字母文案'],"['收集活动', '生活与节日']"
+PBN,PUBLISHED,2024W050275,65d6c19073358196a167b040,"['壁纸', '彩绘', '中等']",['狐狸'],"['PBN daily素材', '色彩之美']"
+PBN,PUBLISHED,2024W050278,65d6c19073358196a167b043,"['壁纸', '彩绘', '中等']",['其他猫'],"['PBN daily素材', '美好生活的喜悦']"
+PBN,PUBLISHED,2024W050277,65d6c19073358196a167b042,"['壁纸', '彩绘', '困难']",['情侣'],"['PBN daily素材', '爱情']"
+PBN,PUBLISHED,2024W050274,65d6c19073358196a167b03f,"['壁纸', '彩绘', '中等']",['复古老爷车'],"['PBN daily素材', '现实想象创意']"
+PBN,PUBLISHED,2024W050276,65d6c19073358196a167b041,"['壁纸', '彩绘', '中等']",['沙发'],"['PBN daily素材', '生活环境的宁静']"
+PBN,PUBLISHED,2024W050272,65d6c19073358196a167b03e,"['壁纸', '彩绘', '困难']",['独栋房屋'],"['PBN daily素材', '生活与节日']"
+ColorPad,COLORING,2024W060084,,[],['牛'],"['iPad付费包', '自然与生态']"
+ColorPad,PUBLISHED,2024W050294,65d6bce2a64b6582fe05a5b5,[],['多种动物'],['经典童话再现']
+PBN,COLORING,2024W070005,,[],['西餐'],"['彩绘作者包', '美好事物带来的愉悦']"
+ColorPad,PUBLISHED,2024W040403,65d6bce2a64b6582fe05a5b4,"['复用至ZC', '复用至VC']",['抽象线条'],['秩序化图案']
+ColorPad,PUBLISHED,2024W040363,65d6bce2a64b6582fe05a5ae,[],['孩子'],['友情']
+ColorPad,PUBLISHED,2024W040362,65d6bce2a64b6582fe05a5ad,[],['情侣'],['爱情']
+ColorPad,PUBLISHED,2024W050337,65d6bce2a64b6582fe05a5b6,[],['天使'],['幻想主题创意']
+ColorPad,PUBLISHED,2024W040370,65d6bce2a64b6582fe05a5b1,['试新'],['欧美日常女性'],['兴趣活动的喜悦']
+ColorPad,PUBLISHED,2024W040361,65d6bce2a64b6582fe05a5ac,[],['多人'],['社会生活的喜悦']
+ColorPad,PUBLISHED,2024W040368,65d6bce2a64b6582fe05a5b0,['试新'],['多种动物'],['生机带来的希望']
+ColorPad,PUBLISHED,2024W040356,65d6bce2a64b6582fe05a5aa,[],['餐厅'],['生活环境的宁静']
+ColorPad,PUBLISHED,2024W040389,65d6bce2a64b6582fe05a5b2,[],['沙发'],['美好事物带来的愉悦']
+ColorPad,PUBLISHED,2024W040394,65d6bce2a64b6582fe05a5b3,[],['刺猬'],['生机带来的希望']
+ColorPad,PUBLISHED,2024W040354,65d6bce2a64b6582fe05a5a8,[],['其他客厅'],['生活环境的宁静']
+ColorPad,PUBLISHED,2024W040367,65d6bce2a64b6582fe05a5af,[],['池塘'],['生机带来的希望']
+ColorPad,PUBLISHED,2024W040358,65d6bce2a64b6582fe05a5ab,[],['山陵'],['自然环境的宁静']
+ColorPad,PUBLISHED,2024W040346,65d6bce2a64b6582fe05a5a2,[],['布偶猫'],['魔法']
+ColorPad,PUBLISHED,2024W040333,65d6bce2a64b6582fe05a5a0,[],['仙女精灵'],['魔法']
+ColorPad,PUBLISHED,2024W040352,65d6bce2a64b6582fe05a5a6,[],['街景一角'],['社会生活的喜悦']
+ColorPad,PUBLISHED,2024W040347,65d6bce2a64b6582fe05a5a3,[],['其他奇幻场景'],['魔法']
+ColorPad,PUBLISHED,2024W040336,65d6bce2a64b6582fe05a5a1,['试新'],['其他拟人化动物'],['拟人化']
+ColorPad,PUBLISHED,2024W040353,65d6bce2a64b6582fe05a5a7,[],['其他房屋内饰'],['生活环境的宁静']
+ColorPad,PUBLISHED,2024W040355,65d6bce2a64b6582fe05a5a9,[],['多人'],['社会生活的喜悦']
+ColorPad,PUBLISHED,2024W040351,65d6bce2a64b6582fe05a5a5,[],['现代建筑'],['生活环境的宁静']
+ColorPad,PUBLISHED,2024W040349,65d6bce2a64b6582fe05a5a4,['试新'],['孩子'],['经典童话再现']
+ColorPad,PUBLISHED,2024W040223,65d6bce2a64b6582fe05a59a,[],['其他鸟'],['生机带来的希望']
+ColorPad,PUBLISHED,2024W040330,65d6bce2a64b6582fe05a59f,[],['电车'],['生活环境的宁静']
+ColorPad,PUBLISHED,2024W040324,65d6bce2a64b6582fe05a59d,[],['情侣'],"['故事线-倒带人生', '爱情']"
+ColorPad,PUBLISHED,2024W040325,65d6bce2a64b6582fe05a59e,[],['欧美日常女性'],['兴趣活动的喜悦']
+ColorPad,PUBLISHED,2024W040206,65d6bce2a64b6582fe05a594,[],['独栋房屋'],['生活环境的宁静']
+ColorPad,PUBLISHED,2024W040197,65d6bce2a64b6582fe05a590,['试新'],['其他车'],['现实重构']
+ColorPad,PUBLISHED,2024W040248,65d6bce2a64b6582fe05a59b,[],['其他豹'],['生机带来的希望']
+ColorPad,PUBLISHED,2024W040210,65d6bce2a64b6582fe05a597,[],['现代建筑'],['生活环境的宁静']
+ColorPad,PUBLISHED,2024W040249,65d6bce2a64b6582fe05a59c,[],['熊'],['生机带来的希望']
+ColorPad,PUBLISHED,2024W040211,65d6bce2a64b6582fe05a598,[],['街景一角'],['生活环境的宁静']
+ColorPad,PUBLISHED,2024W040212,65d6bce2a64b6582fe05a599,[],['海洋岛屿'],['自然环境的宁静']
+ColorPad,PUBLISHED,2024W040208,65d6bce2a64b6582fe05a596,[],['现代简约卧室'],['生活环境的宁静']
+ColorPad,PUBLISHED,2024W040207,65d6bce2a64b6582fe05a595,[],['现代建筑'],['生活环境的宁静']
+ColorPad,PUBLISHED,2024W040199,65d6bce2a64b6582fe05a592,[],['现代建筑'],['创意建筑记录']
+ColorPad,PUBLISHED,2024W040205,65d6bce2a64b6582fe05a593,[],['现代简约式客厅'],['生活环境的宁静']
+ColorPad,PUBLISHED,2024W040198,65d6bce2a64b6582fe05a591,['试新'],['其他房屋内饰'],['秩序化建筑结构']
+ColorPad,PUBLISHED,2024W040122,65d6bce2a64b6582fe05a58c,[],['现代简约式客厅'],['生活环境的宁静']
+ColorPad,PUBLISHED,2024W040195,65d6bce2a64b6582fe05a58f,[],['仙女精灵'],['魔法']
+ColorPad,PUBLISHED,2024W040126,65d6bce2a64b6582fe05a58d,[],['风化岩石'],['自然环境的宁静']
+ColorPad,PUBLISHED,2024W040115,65d6bce2a64b6582fe05a58b,[],['盆栽绿植'],['生机带来的希望']
+ColorPad,PUBLISHED,2024W040135,65d6bce2a64b6582fe05a58e,[],['其他动物'],['生机带来的希望']
+ColorPad,PUBLISHED,2024W040112,65d6bce2a64b6582fe05a58a,['试新'],['其他奇幻场景'],['现实重构']
+PBN,COLORING,2024W080181,,[],['其他花'],"['ZenColor普通图', '生机带来的希望']"
+VitaColor,COLORING,2024W080177,,[],[],"['VitaColor速写图', '拟人化']"
+VitaColor,COLORING,2024W080178,,[],[],['VitaColor速写图']
+PBN,LINGING,2023W460088,,['困难'],['池塘'],[]
+VitaColor,COLORING,2024W080176,,[],[],[]
+PBN,COLORING,2024W080180,,[],['其他花'],"['ZenColor普通图', '生机带来的希望']"
+ColorPad,COLORING,2024W080170,,[],['美国自由女神像'],"['iPad付费包', '美学风格']"
+ColorPad,COLORING,2024W080172,,[],['日式风格建筑'],"['iPad付费包', '美学风格']"
+ColorPad,COLORING,2024W080167,,[],['圆顶教堂'],"['iPad付费包', '美学风格']"
+VitaColor,COLORING,2024W070098,,[],[],['现实想象创意']
+ColorPad,COLORING,2024W080174,,[],['罗马斗兽场'],"['iPad付费包', '美学风格']"
+PBN,LINGING,2024W050311,,[],['书房'],"['ZenColor Daily', '生活环境的宁静']"
+ColorPad,COLORING,2024W070038,,[],['留声机'],['现实想象创意']
+ColorPad,COLORING,2024W070048,,[],['欧美时尚女性'],"['iPad付费包', '美学风格']"
+PBN,COLORING,2024W070023,,[],['独栋房屋'],"['ZenColor速写图', '生活环境的宁静']"
+PBN,COLORING,2024W070016,,[],['蜥蜴'],"['ZenColor普通图', '生机带来的希望']"
+PBN,COLORING,2024W070021,,[],['其他物品'],"['ZenColor速写图', '禅意物品']"
+PBN,COLORING,2024W080256,,[],['书房'],['生活环境的宁静']
+ColorPad,COLORING,2024W070069,,[],['西方龙'],['神话']
+VitaColor,COLORING,2024W070112,,[],[],['神话']
+VitaColor,COLORING,2024W070105,,[],[],[]
+ColorPad,COLORING,2024W070045,,[],['家庭'],['亲情']
+ColorPad,COLORING,2024W080243,,[],['书房'],['生活环境的宁静']
+VitaColor,COLORING,2024W070102,,[],['寺庙'],['自然环境的宁静']
+ColorPad,COLORING,2024W070042,,[],['寺庙'],['自然环境的宁静']
+VitaColor,COLORING,2024W030393-2024W040678,65b09b5c73358196a1656212,"['复用至ZC', '复用至VC']",['立体图案'],['秩序化图案']
+PBNPlus,COLORING,2024W030393,65b0a7e373358196a16562be,"['复用至ZC', '复用至VC']",['立体图案'],['秩序化图案']
+ColorPad,COLORING,2024W080168,,[],['大本钟'],"['iPad付费包', '美学风格']"
+PBN,COLORING,2024W070086,,[],['鹦鹉'],['生机带来的希望']
+ColorPad,COLORING,2024W080171,,[],['里约热内卢基督像'],"['iPad付费包', '美学风格']"
+BPBN,PUBLISHED,2024W050297-2024W080240,65d5a35f73358196a1679d39,[],[],"['Religious', 'Egg']"
+BPBN,PUBLISHED,2024W050313-2024W080223,65d5a35f73358196a1679d34,[],[],"['Non-religious', 'Umbrella']"
+BPBN,PUBLISHED,2024W050298-2024W080241,65d5a35f73358196a1679d3a,[],[],"['Non-religious', 'Toy']"
+BPBN,PUBLISHED,2024W040450-2024W080238,65d5a35f73358196a1679d37,[],[],"['Non-religious', 'Pattern']"
+BPBN,PUBLISHED,2024W040528-2024W080239,65d5a35f73358196a1679d38,[],[],"['Non-religious', 'Love']"
+BPBN,PUBLISHED,2024W030061-2024W080237,65d5a35f73358196a1679d36,[],[],"['Non-religious', 'Leopard']"
+BPBN,PUBLISHED,2024W030059-2024W080236,65d5a35f73358196a1679d35,[],[],"['Non-religious', 'Animal']"
+BPBN,PUBLISHED,2024W050301-2024W080222,65d5a35f73358196a1679d33,[],[],"['Non-religious', 'Flower']"
+PBN,PUBLISHED,2024W050298-2024W080229,65d5a067a64b6582fe059363,[],['棋'],"['VitaColor速写图', '美好事物带来的愉悦']"
+PBN,PUBLISHED,2024W040528-2024W080227,65d5a067a64b6582fe059361,[],['情侣'],"['iPad速写图', '爱情']"
+PBN,PUBLISHED,2024W060081,65d5a067a64b6582fe05935e,"['方形', '普通', '困难']",['狸花猫'],"['神秘图', '美好生活的喜悦']"
+PBN,PUBLISHED,2024W050313,65d5a067a64b6582fe05935d,"['方形', '普通', '困难']",['伞'],"['ZenColor Daily', '美好事物带来的愉悦', '高挑战图']"
+PBN,PUBLISHED,2024W050297-2024W080228,65d5a067a64b6582fe059362,[],['蛋'],"['VitaColor速写图', '美好事物带来的愉悦']"
+PBN,PUBLISHED,2024W040450-2024W080226,65d5a067a64b6582fe059360,['试新'],['其他房屋内饰'],"['秩序化建筑结构', 'iPad速写图']"
+PBN,PUBLISHED,2024W050301,65d5a067a64b6582fe05935c,"['方形', '普通', '中等']",['其他花'],"['ZenColor普通图', '生机带来的希望']"
+PBN,PUBLISHED,2024W050288,65d5a067a64b6582fe05935a,"['方形', '普通', '困难']",['其他奇幻人物'],"['PBN速写图', '现实重构']"
+PBN,PUBLISHED,2024W030061-2024W080225,65d5a067a64b6582fe05935f,[],['猎豹'],"['VitaColor速写图', '生机带来的希望']"
+PBN,PUBLISHED,2024W050289,65d5a067a64b6582fe05935b,"['方形', '普通', '困难']",['其他奇幻人物'],"['PBN速写图', '现实重构']"
+PBN,PUBLISHED,2024W050287,65d5a067a64b6582fe059359,"['方形', '普通', '困难']",['其他奇幻人物'],"['PBN速写图', '现实重构']"
+PBN,PUBLISHED_FAIL,2024W030059-2024W080224,,[],"['兔子', '狸花猫']","['VitaColor速写图', '生机带来的希望']"
+PBNPlus,PUBLISHED,2024W030061-2024W080231,65d59f5ea64b6582fe05933e,[],['猎豹'],"['VitaColor速写图', '生机带来的希望']"
+PBNPlus,PUBLISHED,2024W040528-2024W080233,65d59f5ea64b6582fe059340,[],['情侣'],"['iPad速写图', '爱情']"
+PBNPlus,PUBLISHED,2024W040450-2024W080232,65d59f5ea64b6582fe05933f,['试新'],['其他房屋内饰'],"['秩序化建筑结构', 'iPad速写图']"
+PBNPlus,PUBLISHED,2024W030059-2024W080230,65d59f5ea64b6582fe05933d,[],"['兔子', '狸花猫']","['VitaColor速写图', '生机带来的希望']"
+PBNPlus,PUBLISHED,2024W050298-2024W080235,65d59f5ea64b6582fe059342,[],['棋'],"['VitaColor速写图', '美好事物带来的愉悦']"
+PBNPlus,PUBLISHED,2024W050297-2024W080234,65d59f5ea64b6582fe059341,[],['蛋'],"['VitaColor速写图', '美好事物带来的愉悦']"
+PBNPlus,PUBLISHED,2024W060081-2024W080220,65d59f5ea64b6582fe05933c,"['方形', '普通', '困难']",['狸花猫'],"['神秘图', '美好生活的喜悦']"
+PBNPlus,PUBLISHED,2024W050313-2024W080219,65d59f5ea64b6582fe05933b,"['方形', '普通', '困难']",['伞'],"['ZenColor Daily', '美好事物带来的愉悦', '高挑战图']"
+PBNPlus,PUBLISHED,2024W050301-2024W080218,65d59f5ea64b6582fe05933a,"['方形', '普通', '中等']",['其他花'],"['ZenColor普通图', '生机带来的希望']"
+VitaColor,PUBLISHED,2024W050297,65d59de573358196a1679c81,[],['蛋'],"['VitaColor速写图', '美好事物带来的愉悦']"
+VitaColor,PUBLISHED,2024W050298,65d59de573358196a1679c82,[],['棋'],"['VitaColor速写图', '美好事物带来的愉悦']"
+VitaColor,PUBLISHED,2024W040528,65d59de573358196a1679c80,[],['情侣'],"['iPad速写图', '爱情']"
+VitaColor,PUBLISHED,2024W040450,65d59de573358196a1679c7f,['试新'],['其他房屋内饰'],"['秩序化建筑结构', 'iPad速写图']"
+VitaColor,PUBLISHED,2024W030061,65d59de573358196a1679c7e,[],['猎豹'],"['VitaColor速写图', '生机带来的希望']"
+VitaColor,PUBLISHED,2024W030059,65d59de573358196a1679c7d,[],"['兔子', '狸花猫']","['VitaColor速写图', '生机带来的希望']"
+ColorPad,COLORING,2024W070013,,[],['鹦鹉'],['生机带来的希望']
+VitaColor,COLORING,2024W070127,,[],[],[]
+ColorPad,COLORING,2024W070084,,[],['钥匙锁'],['美好事物带来的愉悦']
+PBN,PUBLISHED,2024W050286,65d596aea64b6582fe0591e6,"['方形', '普通', '困难']",['字母文案'],"['收集活动', '生活与节日']"
+PBN,PUBLISHED,2024W050285,65d596aea64b6582fe0591e5,"['方形', '普通', '困难']",['字母文案'],"['收集活动', '生活与节日']"
+PBN,COLORING,2024W070003,,[],['其他亚洲女性'],"['彩绘作者包', '美好生活的喜悦']"
+VitaColor,PUBLISHED,2023W520632-2024W080216,65d5948ba64b6582fe0591ce,"['方形', '普通', '中等']",['桃子'],"['ZenColor普通图', '秩序化实体']"
+PBNPlus,PUBLISHED,2024W040452-2024W080201,65d5893a73358196a1679af6,[],['河流湖泊'],"['iPad速写图', '自然与生态']"
+PBNPlus,COLORING,2024W080162,,[],['曼陀罗'],"['ZenColor普通图', '曼陀罗']"
+ColorPad,COLORING,2024W080164,,[],['曼陀罗'],"['ZenColor普通图', '曼陀罗']"
+PBNPlus,COLORING,2024W080165,,[],['曼陀罗'],"['ZenColor普通图', '曼陀罗']"
+VitaColor,COLORING,2024W070125,,[],[],[]
+ColorPad,COLORING,2024W070082,,[],['香水'],['美好事物带来的愉悦']
+VitaColor,COLORING,2024W070119,,[],[],['美好生活的喜悦']
+ColorPad,COLORING,2024W070076,,[],['其他猫'],['美好生活的喜悦']
+PBNPlus,COLORING,2024W080163,,[],['曼陀罗'],"['ZenColor普通图', '曼陀罗']"
+PBN,COLORING,2024W070018,,[],['其他物品'],"['ZenColor速写图', '禅意物品']"
+ColorPad,LINGING,2024W040150,,[],[],[]
+VitaColor,COLORING,2024W070124,,[],[],[]
+ColorPad,COLORING,2024W070081,,[],['其他船'],['美好事物带来的愉悦']
+VitaColor,COLORING,2024W070128,,[],[],['神话']
+PBN,COLORING,2024W070090,,[],['仙女精灵'],['魔法']
+ColorPad,COLORING,2024W070030,,[],['仙女精灵'],['魔法']
+VitaColor,COLORING,2024W070113,,[],[],['原创幻想']
+ColorPad,COLORING,2024W070070,,[],['仙女精灵'],['原创幻想']
+ColorPad,LINGING,2024W040147,,[],[],[]
+ColorPad,LINGING,2024W040149,,[],[],[]
+ColorPad,LINGING,2024W040148,,[],[],[]
+ColorPad,COLORING,2024W070077,,[],['家庭'],['亲情']
+VitaColor,COLORING,2024W070120,,[],[],[]
+ColorPad,COLORING,2024W070035,,[],['美人鱼'],['魔法']
+VitaColor,COLORING,2024W070095,,[],[],['魔法']
+VitaColor,COLORING,2024W070121,,[],[],[]
+ColorPad,COLORING,2024W070078,,[],['孩子'],['友情']
+VitaColor,COLORING,2024W070126,,[],[],[]
+VitaColor,COLORING,2024W070122,,[],[],[]
+ColorPad,COLORING,2024W070083,,[],['高跟鞋'],['美好事物带来的愉悦']
+ColorPad,COLORING,2024W070085,,[],['其他奇幻动物'],['神话']
+ColorPad,COLORING,2024W070079,,[],['孩子'],['宠物情']
+VitaColor,COLORING,2024W080008,,[],[],"['VitaColor速写图', '生活环境的宁静']"
+ColorPad,COLORING,2024W070029,,[],['独栋房屋'],['生活环境的宁静']
+PBN,COLORING,2024W070089,,[],['独栋房屋'],['生活环境的宁静']
+VitaColor,COLORING,2024W070097,,[],[],['经典童话再现']
+ColorPad,COLORING,2024W070043,,[],['斗牛犬'],['美好生活的喜悦']
+VitaColor,COLORING,2024W070103,,[],[],['美好生活的喜悦']
+PBN,COLORING,2024W070091,,[],['独角兽'],['魔法']
+ColorPad,COLORING,2024W070031,,[],['独角兽'],['魔法']
+ColorPad,LINGING,2024W050295,,[],['拟人鼠'],['经典童话再现']
+PBN,LINGING,2024W050430,,[],['拟人鼠'],['经典童话再现']
+ColorPad,COLORING,2024W070037,,[],['小红帽'],['经典童话再现']
+VitaColor,COLORING,2024W070104,,[],[],['成就时刻的喜悦']
+ColorPad,COLORING,2024W070044,,[],['孩子'],['成就时刻的喜悦']
+VitaColor,COLORING,2024W070106,,[],[],[]
+PBN,COLORING,2024W070020,,[],['香炉'],"['ZenColor速写图', '禅意物品']"
+PBN,COLORING,2024W070088,,[],['小红帽'],['经典童话再现']
+ColorPad,COLORING,2024W070028,,[],['小红帽'],['经典童话再现']
+ColorPad,COLORING,2024W070046,,[],['杯碟水壶'],['美好事物带来的愉悦']
+PBN,COLORING,2024W070006,,[],['其他奇幻人物'],"['普通作者包', '幻想主题创意']"
+BPBN,PUBLISHED,2024W040170-2024W080197,65d44ae473358196a167879d,[],[],"['Non-religious', 'Building', '彩度']"
+PBNPlus,PUBLISHED,2024W020029-2024W080199,65d44b4173358196a16787af,"['方形', '普通', '困难']",['现代简约式客厅'],"['ZenColor速写图', '生活环境的宁静']"
+BPBN,PUBLISHED,2024W030552-2024W080190,65d44ae473358196a1678797,[],[],"['Non-religious', 'Wood']"
+BPBN,PUBLISHED,2024W030554-2024W080192,65d44ae473358196a1678799,[],[],"['Non-religious', 'Indoor']"
+BPBN,PUBLISHED,2024W040314-2024W080195,65d44ae473358196a167879c,[],[],"['Non-religious', 'Mountain']"
+BPBN,PUBLISHED,2024W020029-2024W080200,65d44ae473358196a167879e,[],[],"['Non-religious', 'Indoor']"
+BPBN,PUBLISHED,2024W030562-2024W080193,65d44ae473358196a167879a,[],[],"['Non-religious', 'Animal']"
+BPBN,PUBLISHED,2024W030564-2024W080194,65d44ae473358196a167879b,[],[],"['Non-religious', 'Building']"
+BPBN,PUBLISHED,2024W030551-2024W080189,65d44ae473358196a1678796,[],[],"['Non-religious', 'Building']"
+BPBN,PUBLISHED,2024W030553-2024W080191,65d44ae473358196a1678798,[],[],"['Non-religious', 'Building']"
+BPBN,PUBLISHED,2023W510521-2024W040014,65addd3d73358196a1650ca8,[],[],"['Non-religious', 'Place']"
+PBN,PUBLISHED,2024W020029,65d44a1073358196a167877d,"['方形', '普通', '困难']",['现代简约式客厅'],"['ZenColor速写图', '生活环境的宁静']"
+PBN,PUBLISHED,2024W040170-2024W080198,65d4491ba64b6582fe057dfc,[],['独栋房屋'],"['彩绘作者包-刘佳捷', '生活环境的宁静']"
+PBN,PUBLISHED,2024W030564-2024W080187,65d4491ba64b6582fe057dfa,[],['独栋房屋'],"['宁静', '生活环境的宁静', '高挑战图', 'ZenColor Daily']"
+PBN,PUBLISHED,2024W030562-2024W080186,65d4491ba64b6582fe057df9,[],['多种动物'],"['喜悦', '高挑战图', 'ZenColor Daily', '生机带来的希望']"
+PBN,PUBLISHED,2024W030552-2024W080183,65d4491ba64b6582fe057df6,[],['多种动物'],"['生机带来的希望', '高挑战图', 'ZenColor Daily']"
+PBNPlus,PUBLISHED,2024W040170-2024W080196,65d4497673358196a1678767,"['复用至PBN', '复用至ZC']",['树屋'],"['生活环境的宁静', '彩绘作者包-刘佳捷']"
+PBNPlus,PUBLISHED,2024W030554,65d4497673358196a1678763,[],['田园式卧室'],"['宁静', '高挑战图', '生活环境的宁静', 'ZenColor Daily']"
+PBNPlus,PUBLISHED,2024W030552,65d4497673358196a1678761,[],['多种动物'],"['生机带来的希望', '高挑战图', 'ZenColor Daily']"
+PBNPlus,PUBLISHED,2024W030564,65d4497673358196a1678765,[],['独栋房屋'],"['宁静', '生活环境的宁静', '高挑战图', 'ZenColor Daily']"
+PBN,PUBLISHED,2024W040314-2024W080188,65d4491ba64b6582fe057dfb,['复用至ZC'],['沟壑峡谷'],"['自然环境的宁静', 'ZenColor Daily']"
+PBNPlus,PUBLISHED,2024W040314,65d4497673358196a1678766,['复用至ZC'],['麻雀'],"['自然环境的宁静', 'ZenColor Daily']"
+PBNPlus,PUBLISHED,2023W510521-2024W040023,65addb2173358196a1650ba4,[],['钟表'],"['VitaColor速写图', '美好事物带来的愉悦']"
+PBN,PUBLISHED,2024W020107-2024W050499,65d4491ba64b6582fe057df3,"['复用至ZC', '方形', '普通', '困难']",['多家庭房屋'],"['ZenColor速写图', '生活环境的宁静', 'bonus']"
+PBNPlus,PUBLISHED,2024W030562,65d4497673358196a1678764,[],['多种动物'],"['喜悦', '高挑战图', 'ZenColor Daily', '生机带来的希望']"
+PBNPlus,PUBLISHED,2024W030553,65d4497673358196a1678762,[],['独栋房屋'],"['宁静', 'ZenColor速写图', '生活环境的宁静']"
+PBN,PUBLISHED,2023W510460-2024W050498,65d4491ba64b6582fe057df2,"['方形', '普通', '困难']",['竖琴'],"['VitaColor速写图', '美好事物带来的愉悦', 'bonus']"
+PBNPlus,PUBLISHED,2024W030551,65d4497673358196a1678760,[],['独栋房屋'],"['宁静', '高挑战图', '生活环境的宁静', 'ZenColor Daily']"
+PBN,PUBLISHED,2024W030551-2024W080182,65d4491ba64b6582fe057df5,[],['独栋房屋'],"['宁静', '高挑战图', '生活环境的宁静', 'ZenColor Daily']"
+PBN,PUBLISHED,2024W030554-2024W080185,65d4491ba64b6582fe057df8,[],['田园式卧室'],"['宁静', '高挑战图', '生活环境的宁静', 'ZenColor Daily']"
+PBN,PUBLISHED,2023W510181-2024W050497,65d4491ba64b6582fe057df1,"['方形', '普通', '困难']",['熊'],"['VitaColor速写图', '生机带来的希望', 'bonus']"
+PBN,PUBLISHED,2024W030553-2024W080184,65d4491ba64b6582fe057df7,[],['独栋房屋'],"['宁静', 'ZenColor速写图', '生活环境的宁静']"
+PBN,PUBLISHED,2023W510516-2024W050500,65d4491ba64b6582fe057df4,"['方形', '普通', '困难']",['其他花'],"['VitaColor速写图', '生机带来的希望', 'bonus']"
+PBN,PUBLISHED,2024W020457-2024W040563,65af571b73358196a1653a59,"['方形', '彩绘', '中等']",['其他猫'],"['彩绘作者包-Mira_Rast', '自然与生态']"
+PBN,PUBLISHED,2023W510521-2024W040005,65add900a64b6582fe02f57c,"['方形', '普通', '困难']",['钟表'],"['VitaColor速写图', '美好事物带来的愉悦']"
+VitaColor,PUBLISHED,2024W030362-2024W050496,65d446fa73358196a1678713,"['复用至ZC', '复用至VC']",['平铺图案'],"['秩序化图案', 'ZenColor普通图']"
+VitaColor,PUBLISHED,2024W030466-2024W050495,65d446fa73358196a1678712,[],['钟表'],"['iPad速写图', '美好事物带来的愉悦']"
+VitaColor,PUBLISHED,2024W020157-2024W050494,65d446fa73358196a1678711,[],['独栋房屋'],"['iPad速写图', '生活环境的宁静']"
+VitaColor,PUBLISHED,2024W040170,65d446fa73358196a167870f,"['复用至PBN', '复用至ZC']",['树屋'],"['生活环境的宁静', '彩绘作者包-刘佳捷']"
+VitaColor,PUBLISHED,2023W520195-2024W050493,65d446fa73358196a1678710,[],['其他奇幻场景'],"['VitaColor速写图', '生活与节日']"
+VitaColor,PUBLISHED,2023W510521,65add03073358196a16507a7,[],['钟表'],"['VitaColor速写图', '美好事物带来的愉悦']"
+PBN,PUBLISHED,2024W050284,65d443b0a64b6582fe057d5e,"['方形', '普通', '困难']",['字母文案'],"['收集活动', '生活与节日']"
+PBN,COLORING,2024W070064,,[],['日式客厅'],"['ZenColor速写图', '禅意场所']"
+PBNPlus,AUDITED,2024W010143-2024W030004,65a4b1e17bc0f70db05146b5,"['方形', '普通', '中等']",['平铺图案'],"['投放需求', '新沉浸感素材']"
+VitaColor,COLORING,2024W070096,,[],[],['架空世界']
+PBN,COLORING,2024W070022,,[],['街道'],"['ZenColor速写图', '生活环境的宁静']"
+PBN,COLORING,2024W070129,,[],['其他物品'],"['ZenColor普通图', '禅绕画']"
+ColorPad,PUBLISHED,2024W040387,65d40951a64b6582fe057a19,[],['水果店'],['ColorPad付费包-全景大发现']
+PBN,COLORING,2024W070061,,[],['花瓶'],"['ZenColor速写图', '禅意物品']"
+ColorPad,PUBLISHED,2024W040388,65d4086da64b6582fe0579e2,[],['街道'],['ColorPad付费包-全景大发现']
+ColorPad,PUBLISHED,2024W040381,65d4085973358196a16782dc,[],['街道'],['ColorPad付费包-全景大发现']
+ColorPad,PUBLISHED,2024W040382,65d4085aa64b6582fe0579db,[],['街道'],['ColorPad付费包-全景大发现']
+VitaColor,COLORING,2024W070100,,[],[],['生活环境的宁静']
+ColorPad,COLORING,2024W070040,,[],['田园式客厅'],['生活环境的宁静']
+VitaColor,COLORING,2024W070015,,[],[],['VitaColor速写图']
+PBN,COLORING,2024W070060,,[],['其他物品'],"['ZenColor速写图', '禅意物品']"
+PBN,COLORING,2024W070062,,[],['其他物品'],"['ZenColor速写图', '禅意物品']"
+PBN,COLORING,2024W070011,,[],['其他狗'],"['PBN速写图', '美好生活的喜悦']"
+PBN,COLORING,2024W070025,,[],['其他河谷'],"['ZenColor速写图', '自然环境的宁静']"
+VitaColor,COLORING,2024W070101,,[],[],['生活环境的宁静']
+ColorPad,COLORING,2024W070080,,[],['马'],['生机带来的希望']
+VitaColor,COLORING,2024W070123,,[],[],[]
+ColorPad,COLORING,2024W070041,,[],['桥梁'],['生活环境的宁静']
+PBN,COLORING,2024W070002,,[],['王子公主'],"['PBN速写图', '经典童话再现']"
+ColorPad,COLORING,2024W070039,,[],['车辆内景'],['生活环境的宁静']
+PBN,COLORING,2024W070024,,[],['小径'],"['ZenColor速写图', '自然环境的宁静']"
+VitaColor,COLORING,2024W070099,,[],[],['生活环境的宁静']
+VitaColor,COLORING,2024W070014,,[],[],[]
+PBN,COLORING,2024W070093,,[],['复古老爷车'],['美好事物带来的愉悦']
+ColorPad,COLORING,2024W070033,,[],['复古老爷车'],['美好事物带来的愉悦']
+ColorPad,COLORING,2024W080161,,[],['其他物品'],"['ZenColor普通图', '禅绕画']"
+VitaColor,COLORING,2024W070107,,[],[],['互帮互助的鼓舞']
+PBN,COLORING,2024W070094,,[],['餐厅'],['生活环境的宁静']
+ColorPad,COLORING,2024W070034,,[],['餐厅'],['生活环境的宁静']
+ColorPad,COLORING,2024W070027,,[],['欧美日常女性'],['美好生活的喜悦']
+PBN,COLORING,2024W070087,,[],['欧美日常女性'],['美好生活的喜悦']
+ColorPad,COLORING,2024W070047,,[],['朋友'],['互帮互助的鼓舞']
+PBN,COLORING,2024W070063,,[],['其他物品'],"['ZenColor速写图', '禅意物品']"
+PBN,COLORING,2024W070092,,[],['仙女精灵'],['魔法']
+ColorPad,COLORING,2024W070032,,[],['仙女精灵'],['魔法']
+BPBN,PUBLISHED,2024W040521-2024W080108,65d2f61ba64b6582fe056ae0,[],[],"['Non-religious', 'Indoor']"
+BPBN,PUBLISHED,2024W040503-2024W080103,65d2f61ba64b6582fe056adb,[],[],"['Non-religious', 'Eagle']"
+BPBN,PUBLISHED,2024W040517-2024W080065,65d2f646a64b6582fe056b01,[],[],"['Non-religious', 'Building']"
+BPBN,PUBLISHED,2024W040537-2024W080116,65d2f61ba64b6582fe056ae8,[],[],"['Non-religious', 'Sofa']"
+BPBN,PUBLISHED,2024W040534-2024W080114,65d2f61ba64b6582fe056ae6,[],[],"['Non-religious', 'Animal']"
+BPBN,PUBLISHED,2024W040536-2024W080115,65d2f61ba64b6582fe056ae7,[],[],"['Non-religious', 'Horse']"
+BPBN,PUBLISHED,2024W040533-2024W080113,65d2f61ba64b6582fe056ae5,[],[],"['Non-religious', 'Pond']"
+BPBN,PUBLISHED,2024W040499-2024W080101,65d2f61ba64b6582fe056ad9,[],[],"['Non-religious', 'Fairy Tale']"
+BPBN,PUBLISHED,2024W040527-2024W080110,65d2f61ba64b6582fe056ae2,[],[],"['Non-religious', 'Family']"
+BPBN,PUBLISHED,2024W040522-2024W080109,65d2f61ba64b6582fe056ae1,[],[],"['Non-religious', 'Building']"
+BPBN,PUBLISHED,2024W040464-2024W080096,65d2f61ba64b6582fe056ad4,[],[],"['Non-religious', 'Sea']"
+BPBN,PUBLISHED,2024W040532-2024W080112,65d2f61ba64b6582fe056ae4,[],[],"['Non-religious', 'Car']"
+BPBN,PUBLISHED,2024W040542-2024W080117,65d2f646a64b6582fe056b04,[],[],"['Non-religious', 'Animal']"
+BPBN,PUBLISHED,2024W040518-2024W080107,65d2f61ba64b6582fe056adf,[],[],"['Non-religious', 'Outdoor']"
+BPBN,PUBLISHED,2024W040554-2024W080007,65d2f646a64b6582fe056aff,[],[],"['Non-religious', 'Pattern']"
+BPBN,PUBLISHED,2024W040513-2024W080105,65d2f61ba64b6582fe056add,[],[],"['Non-religious', 'Fairy Tale']"
+BPBN,PUBLISHED,2024W040483-2024W080099,65d2f61ba64b6582fe056ad7,[],[],"['Non-religious', 'Bear']"
+BPBN,PUBLISHED,2024W030210-2024W080005,65d2f646a64b6582fe056afd,[],[],"['Non-religious', 'Car']"
+BPBN,PUBLISHED,2024W040482-2024W080098,65d2f61ba64b6582fe056ad6,[],[],"['Non-religious', 'Leopard']"
+BPBN,PUBLISHED,2024W040520-2024W080067,65d2f646a64b6582fe056b03,[],[],"['Non-religious', 'Indoor']"
+BPBN,PUBLISHED,2024W030155-2024W080004,65d2f646a64b6582fe056afc,[],[],"['Non-religious', 'Car']"
+BPBN,PUBLISHED,2024W040463-2024W080095,65d2f61ba64b6582fe056ad3,[],[],"['Non-religious', 'Outdoor']"
+BPBN,PUBLISHED,2024W040515-2024W080106,65d2f61ba64b6582fe056ade,[],[],"['Non-religious', 'Kids']"
+BPBN,PUBLISHED,2024W030211-2024W080006,65d2f646a64b6582fe056afe,[],[],"['Non-religious', 'Box']"
+BPBN,PUBLISHED,2024W030074-2024W080003,65d2f646a64b6582fe056afb,[],[],"['Non-religious', 'Indoor']"
+BPBN,PUBLISHED,2024W040460-2024W080093,65d2f61ba64b6582fe056ad1,[],[],"['Non-religious', 'Indoor']"
+BPBN,PUBLISHED,2024W040475-2024W080097,65d2f61ba64b6582fe056ad5,[],[],"['Non-religious', 'Bird']"
+BPBN,PUBLISHED,2024W040707-2024W060278,65d2f646a64b6582fe056af9,[],[],"['Non-religious', 'Building']"
+BPBN,PUBLISHED,2024W040512-2024W080104,65d2f61ba64b6582fe056adc,[],[],"['Non-religious', 'Cat']"
+BPBN,PUBLISHED,2024W040706-2024W060277,65d2f646a64b6582fe056af8,[],[],"['Non-religious', 'Sea turtle']"
+BPBN,PUBLISHED,2024W040519-2024W080066,65d2f646a64b6582fe056b02,[],[],"['Non-religious', 'Indoor']"
+BPBN,PUBLISHED,2024W040702-2024W060275,65d2f646a64b6582fe056af6,[],[],"['Non-religious', 'Building']"
+BPBN,PUBLISHED,2024W040502-2024W080102,65d2f61ba64b6582fe056ada,[],[],"['Non-religious', 'Fish']"
+BPBN,PUBLISHED,2024W040692-2024W060273,65d2f646a64b6582fe056af4,[],[],"['Non-religious', 'Family']"
+BPBN,PUBLISHED,2024W040529-2024W080111,65d2f61ba64b6582fe056ae3,[],[],"['Non-religious', 'Kids']"
+BPBN,PUBLISHED,2024W030143-2024W080064,65d2f646a64b6582fe056b00,[],[],"['Non-religious', 'Dog']"
+BPBN,PUBLISHED,2024W040457-2024W080091,65d2f61ba64b6582fe056acf,[],[],"['Non-religious', 'Indoor']"
+BPBN,PUBLISHED,2024W040462-2024W080094,65d2f61ba64b6582fe056ad2,[],[],"['Non-religious', 'Building']"
+BPBN,PUBLISHED,2024W040458-2024W080092,65d2f61ba64b6582fe056ad0,[],[],"['Non-religious', 'Building']"
+BPBN,PUBLISHED,2024W040704-2024W060276,65d2f646a64b6582fe056af7,[],[],"['Non-religious', 'Indoor']"
+BPBN,PUBLISHED,2024W040451-2024W080090,65d2f61ba64b6582fe056ace,[],[],"['Non-religious', 'Building']"
+BPBN,PUBLISHED,2024W040262-2024W060271,65d2f646a64b6582fe056af2,[],[],"['Non-religious', 'Night']"
+BPBN,PUBLISHED,2024W040434-2024W080087,65d2f61ba64b6582fe056acb,[],[],"['Non-religious', 'Animal']"
+BPBN,PUBLISHED,2024W040407-2024W080082,65d2f61ba64b6582fe056ac6,[],[],"['Non-religious', 'Outdoor']"
+BPBN,PUBLISHED,2024W020027-2024W080002,65d2f646a64b6582fe056afa,[],[],"['Non-religious', 'Grass']"
+BPBN,PUBLISHED,2024W040430-2024W080086,65d2f61ba64b6582fe056aca,[],[],"['Non-religious', 'Animal']"
+BPBN,PUBLISHED,2024W040698-2024W060274,65d2f646a64b6582fe056af5,[],[],"['Non-religious', 'Building']"
+BPBN,PUBLISHED,2024W040449-2024W080089,65d2f61ba64b6582fe056acd,[],[],"['Non-religious', 'Car']"
+BPBN,PUBLISHED,2024W040417-2024W080084,65d2f61ba64b6582fe056ac8,[],[],"['Non-religious', 'Indoor']"
+BPBN,PUBLISHED,2024W040447-2024W080088,65d2f61ba64b6582fe056acc,[],[],"['Non-religious', 'Fairy Tale']"
+BPBN,PUBLISHED,2024W040410-2024W080083,65d2f61ba64b6582fe056ac7,[],[],"['Non-religious', 'Flower']"
+BPBN,PUBLISHED,2024W040290-2024W080079,65d2f61ba64b6582fe056ac3,[],[],"['Non-religious', 'Penguin']"
+BPBN,PUBLISHED,2024W040689-2024W060272,65d2f646a64b6582fe056af3,[],[],"['Non-religious', 'Building']"
+BPBN,PUBLISHED,2024W040295-2024W080081,65d2f61ba64b6582fe056ac5,[],[],"['Non-religious', 'Bear']"
+BPBN,PUBLISHED,2024W040108-2024W060247,65d2f646a64b6582fe056aed,[],[],"['Non-religious', 'Pattern']"
+BPBN,PUBLISHED,2024W040285-2024W080075,65d2f61ba64b6582fe056abf,[],[],"['Non-religious', 'Deer']"
+BPBN,PUBLISHED,2024W040496-2024W080100,65d2f61ba64b6582fe056ad8,[],[],"['Non-religious', 'Outdoor']"
+BPBN,PUBLISHED,2024W040259-2024W060270,65d2f646a64b6582fe056af1,[],[],"['Non-religious', 'Outdoor']"
+BPBN,PUBLISHED,2024W040287-2024W080076,65d2f61ba64b6582fe056ac0,[],[],"['Religious', 'Angel']"
+BPBN,PUBLISHED,2024W040289-2024W080078,65d2f61ba64b6582fe056ac2,[],[],"['Non-religious', 'Leopard']"
+BPBN,PUBLISHED,2024W040421-2024W080085,65d2f61ba64b6582fe056ac9,[],[],"['Non-religious', 'Rocks']"
+BPBN,PUBLISHED,2024W040258-2024W060269,65d2f646a64b6582fe056af0,[],[],"['Non-religious', 'Women']"
+BPBN,PUBLISHED,2024W040310-2024W060249,65d2f646a64b6582fe056aef,[],[],"['Non-religious', 'Rocks']"
+BPBN,PUBLISHED,2024W030555-2024W060246,65d2f646a64b6582fe056aec,[],[],"['Non-religious', 'Building']"
+BPBN,PUBLISHED,2024W040294-2024W080080,65d2f61ba64b6582fe056ac4,[],[],"['Non-religious', 'Women']"
+BPBN,PUBLISHED,2024W030575-2024W080073,65d2f61ba64b6582fe056abd,[],[],"['Non-religious', 'Pig']"
+BPBN,PUBLISHED,2024W040171-2024W080074,65d2f61ba64b6582fe056abe,[],[],"['Non-religious', 'Elephant']"
+BPBN,PUBLISHED,2024W040288-2024W080077,65d2f61ba64b6582fe056ac1,[],[],"['Non-religious', 'Horse']"
+BPBN,PUBLISHED,2024W040176-2024W060248,65d2f646a64b6582fe056aee,[],[],"['Non-religious', 'Building']"
+BPBN,PUBLISHED,2024W030151-2024W080070,65d2f61ba64b6582fe056aba,[],[],"['Non-religious', 'Bag']"
+BPBN,PUBLISHED,2024W030149-2024W080069,65d2f61ba64b6582fe056ab9,[],[],"['Non-religious', 'Car']"
+BPBN,PUBLISHED,2024W030567-2024W080072,65d2f61ba64b6582fe056abc,[],[],"['Non-religious', 'Dog']"
+BPBN,PUBLISHED,2024W030566-2024W080071,65d2f61ba64b6582fe056abb,[],[],"['Non-religious', 'Cat']"
+BPBN,PUBLISHED,2024W040524-2024W080068,65d2f61ba64b6582fe056ab8,[],[],"['Non-religious', 'Wood']"
+BPBN,PUBLISHED,2024W040311-2024W060250,65d2f61ba64b6582fe056ab7,[],[],"['Non-religious', 'Sea']"
+PBNPlus,PUBLISHED,2024W040534-2024W080150,65d2e76673358196a167734f,['试新'],['多种动物'],"['iPad速写图', '生机带来的希望']"
+PBNPlus,PUBLISHED,2024W040521-2024W080144,65d2e76673358196a1677349,[],['多人'],"['iPad速写图', '社会生活的喜悦']"
+PBNPlus,PUBLISHED,2024W040460-2024W080136,65d2e76673358196a1677341,[],['现代简约卧室'],"['iPad速写图', '生活环境的宁静']"
+PBNPlus,PUBLISHED,2024W040459-2024W080135,65d2e76673358196a1677340,[],['现代建筑'],"['iPad速写图', '生活环境的宁静']"
+PBNPlus,PUBLISHED,2024W040451-2024W080132,65d2e76673358196a167733d,[],['现代建筑'],"['iPad速写图', '创意建筑记录']"
+PBNPlus,PUBLISHED,2024W040517-2024W080155,65d2e7f673358196a1677361,[],['现代建筑'],"['生活环境的宁静', 'iPad速写图']"
+PBNPlus,PUBLISHED,2024W040295-2024W080127,65d2e76673358196a1677338,"['复用至PBN', '复用至ZC', '试新']",['多种动物'],['生机带来的希望']
+PBNPlus,PUBLISHED,2024W040294-2024W080126,65d2e76673358196a1677337,"['复用至PBN', '复用至ZC', '试新']",['欧洲宫廷女性'],"['美好生活的喜悦', 'VitaColor速写图']"
+PBNPlus,PUBLISHED,2024W040290-2024W080125,65d2e76673358196a1677336,"['复用至PBN', '复用至ZC']",['企鹅'],"['生机带来的希望', '彩绘作者包-Ducky']"
+PBNPlus,PUBLISHED,2024W040176,65d2e7f673358196a167735a,"['复用至ZC', '试新']",['独栋房屋'],"['生活环境的宁静', 'ZenColor速写图']"
+PBNPlus,PUBLISHED,2024W040289-2024W080124,65d2e76673358196a1677335,"['复用至PBN', '复用至ZC']",['多种动物'],"['生机带来的希望', '彩绘作者包-艾星宇']"
+PBNPlus,PUBLISHED,2024W040285-2024W080123,65d2e76673358196a1677334,"['复用至PBN', '复用至ZC']",['多种动物'],"['生机带来的希望', '彩绘作者包-艾星宇']"
+PBNPlus,PUBLISHED,2024W040108,65d2e7f673358196a1677359,"['复用至ZC', '复用至VC']",['抽象线条'],"['秩序化图案', 'ZenColor普通图']"
+PBNPlus,PUBLISHED,2024W040524-2024W080158,65d2e7f673358196a1677364,[],['山陵'],"['自然环境的宁静', 'iPad速写图']"
+PBNPlus,PUBLISHED,2024W030143-2024W080154,65d2e7f673358196a1677360,"['复用至PBN', '复用至ZC']",['多种动物'],"['美好生活的喜悦', 'VitaColor速写图']"
+PBNPlus,PUBLISHED,2024W040310,65d2e7f673358196a167735b,"['复用至ZC', '试新']",['沙滩'],"['自然环境的宁静', 'ZenColor速写图']"
+PBNPlus,PUBLISHED,2024W040527-2024W080146,65d2e76673358196a167734b,[],['多人'],"['iPad速写图', '社会生活的喜悦']"
+PBNPlus,PUBLISHED,2024W040519-2024W080156,65d2e7f673358196a1677362,[],['其他房屋内饰'],"['生活环境的宁静', 'iPad速写图']"
+PBNPlus,PUBLISHED,2024W030555,65d2e7f673358196a1677358,[],['独栋房屋'],"['宁静', '高挑战图', '生活环境的宁静', 'ZenColor Daily']"
+PBNPlus,PUBLISHED,2024W040533-2024W080149,65d2e76673358196a167734e,[],['池塘'],"['生机带来的希望', 'iPad速写图']"
+PBNPlus,PUBLISHED,2024W040520-2024W080157,65d2e7f673358196a1677363,[],['其他房屋内饰'],"['生活环境的宁静', 'iPad速写图']"
+PBNPlus,PUBLISHED,2024W040475-2024W080140,65d2e76673358196a1677345,[],['其他鸟'],"['iPad速写图', '生机带来的希望']"
+PBNPlus,PUBLISHED,2024W040537-2024W080152,65d2e7f673358196a167735e,[],['沙发'],"['美好事物带来的愉悦', 'iPad速写图']"
+PBNPlus,PUBLISHED,2024W040536-2024W080151,65d2e7f673358196a167735d,['试新'],['欧美日常女性'],"['兴趣活动的喜悦', 'iPad速写图']"
+PBNPlus,PUBLISHED,2024W040496-2024W080142,65d2e76673358196a1677347,[],['电车'],"['彩绘作者包-徐同舟', '美好事物带来的愉悦']"
+PBNPlus,PUBLISHED,2024W040529-2024W080147,65d2e76673358196a167734c,[],['孩子'],"['友情', 'iPad速写图']"
+PBNPlus,PUBLISHED,2024W030149-2024W080118,65d2e76673358196a167732f,"['复用至PBN', '复用至ZC', '试新']",['赛车'],"['VitaColor速写图', '美好事物带来的愉悦']"
+PBNPlus,PUBLISHED,2024W040463-2024W080138,65d2e76673358196a1677343,[],['街景一角'],"['生活环境的宁静', 'iPad速写图']"
+PBNPlus,PUBLISHED,2024W040542-2024W080153,65d2e7f673358196a167735f,[],['刺猬'],"['生机带来的希望', 'iPad速写图']"
+PBNPlus,PUBLISHED,2024W040482-2024W080141,65d2e76673358196a1677346,[],['其他豹'],"['iPad速写图', '生机带来的希望']"
+PBNPlus,PUBLISHED,2024W040518-2024W080143,65d2e76673358196a1677348,[],['街景一角'],"['iPad速写图', '社会生活的喜悦']"
+PBNPlus,PUBLISHED,2024W040457-2024W080133,65d2e76673358196a167733e,[],['现代简约式客厅'],"['iPad速写图', '生活环境的宁静']"
+PBNPlus,PUBLISHED,2024W040421-2024W080129,65d2e76673358196a167733a,[],['风化岩石'],"['自然环境的宁静', 'iPad速写图']"
+PBNPlus,PUBLISHED,2024W040707-2024W060267,65d2e76673358196a167732e,"['方形', '彩绘', '困难']",['独栋房屋'],"['彩绘作者包-Haruka_Togai', '生活环境的宁静']"
+PBNPlus,PUBLISHED,2024W040434-2024W080131,65d2e76673358196a167733c,[],['虾'],"['iPad速写图', '生机带来的希望']"
+PBNPlus,PUBLISHED,2024W040430-2024W080130,65d2e76673358196a167733b,[],['其他动物'],"['生机带来的希望', 'iPad速写图']"
+PBNPlus,PUBLISHED,2024W040522-2024W080145,65d2e76673358196a167734a,[],['餐厅'],"['iPad速写图', '生活环境的宁静']"
+PBNPlus,PUBLISHED,2024W040311,65d2e7f673358196a167735c,"['复用至ZC', '试新']",['湖泊'],"['自然环境的宁静', 'ZenColor速写图']"
+PBNPlus,PUBLISHED,2024W030567-2024W080121,65d2e76673358196a1677332,"['复用至PBN', '复用至ZC', '试新']",['欧美日常女性'],"['宠物情', 'VitaColor速写图']"
+PBNPlus,PUBLISHED,2024W040417-2024W080128,65d2e76673358196a1677339,[],['现代简约式客厅'],"['iPad速写图', '生活环境的宁静']"
+PBNPlus,PUBLISHED,2024W040693-2024W060263,65d2e76673358196a167732a,"['方形', '彩绘', '困难']",['松鼠'],"['彩绘作者包-艾星宇', '拟人化']"
+PBNPlus,PUBLISHED,2024W040532-2024W080148,65d2e76673358196a167734d,[],['其他车'],"['iPad速写图', '美好事物带来的愉悦']"
+PBNPlus,PUBLISHED,2024W040692-2024W060262,65d2e76673358196a1677329,"['方形', '彩绘', '困难']",['多人'],"['彩绘作者包-John_Sloane', '社会生活的喜悦']"
+PBNPlus,PUBLISHED,2024W040689-2024W060261,65d2e76673358196a1677328,"['方形', '彩绘', '困难']",['独栋房屋'],"['彩绘作者包-Moana_Gippel', '生活环境的宁静']"
+PBNPlus,PUBLISHED,2024W040462-2024W080137,65d2e76673358196a1677342,[],['现代建筑'],"['生活环境的宁静', 'iPad速写图']"
+PBNPlus,PUBLISHED,2024W040458-2024W080134,65d2e76673358196a167733f,[],['现代建筑'],"['iPad速写图', '生活环境的宁静']"
+PBNPlus,PUBLISHED,2024W040464-2024W080139,65d2e76673358196a1677344,[],['海洋岛屿'],"['iPad速写图', '自然环境的宁静']"
+PBNPlus,PUBLISHED,2024W040554-2024W060260,65d2e76673358196a1677327,"['方形', '普通', '困难']",['抽象线条'],"['秩序化图案', 'ZenColor普通图']"
+PBNPlus,PUBLISHED,2024W030575-2024W080122,65d2e76673358196a1677333,[],['多种动物'],"['生机带来的希望', 'VitaColor速写图']"
+PBNPlus,PUBLISHED,2024W030211-2024W060255,65d2e76673358196a1677322,"['方形', '普通', '困难']",['信箱'],"['ZenColor速写图', '美好事物带来的愉悦']"
+PBNPlus,PUBLISHED,2024W040702-2024W060264,65d2e76673358196a167732b,"['方形', '彩绘', '困难']",['独栋房屋'],"['生活环境的宁静', '彩绘作者包-Dennis_Lewan', '成图采购']"
+PBNPlus,PUBLISHED,2024W040706-2024W060266,65d2e76673358196a167732d,"['方形', '彩绘', '困难']",['多种动物'],"['彩绘作者包-艾星宇', '生机带来的希望']"
+PBNPlus,PUBLISHED,2024W040260-2024W060258,65d2e76673358196a1677325,"['方形', '彩绘', '困难']",['童话城堡'],"['经典童话再现', '彩绘作者包-Griselda_Anna']"
+PBNPlus,PUBLISHED,2024W030566-2024W080120,65d2e76673358196a1677331,"['复用至PBN', '复用至ZC', '试新']",['狸花猫'],"['美好生活的喜悦', 'VitaColor速写图']"
+PBNPlus,PUBLISHED,2024W030151-2024W080119,65d2e76673358196a1677330,"['复用至PBN', '复用至ZC']",['女士包'],"['美好事物带来的愉悦', 'VitaColor速写图']"
+PBNPlus,PUBLISHED,2024W040704-2024W060265,65d2e76673358196a167732c,"['方形', '彩绘', '困难']",['书房'],"['生活环境的宁静', '彩绘作者包-Georgia Bennett']"
+PBNPlus,PUBLISHED,2024W040259-2024W060257,65d2e76673358196a1677324,"['方形', '彩绘', '困难']",['欧美日常女性'],"['美好生活的喜悦', '彩绘作者包-徐同舟']"
+PBNPlus,PUBLISHED,2024W030074-2024W060252,65d2e76673358196a167731f,"['复用至ZC', '方形', '普通', '困难']",['现代简约卧室'],"['VitaColor速写图', '生活环境的宁静']"
+PBNPlus,PUBLISHED,2024W030210-2024W060254,65d2e76673358196a1677321,"['方形', '普通', '困难']",['马车'],"['ZenColor速写图', '美好事物带来的愉悦']"
+PBNPlus,PUBLISHED,2024W040262-2024W060259,65d2e76673358196a1677326,"['方形', '彩绘', '困难']",['街景一角'],"['生活环境的宁静', '彩绘作者包-Georgia Bennett']"
+PBNPlus,PUBLISHED,2024W040258-2024W060256,65d2e76673358196a1677323,"['方形', '彩绘', '中等']",['欧美黑人时尚女性'],"['兴趣活动的喜悦', '彩绘作者包-Elisabeth_Alba']"
+PBNPlus,PUBLISHED,2024W030155-2024W060253,65d2e76673358196a1677320,"['复用至ZC', '方形', '普通', '困难']",['其他车'],"['美好事物带来的愉悦', 'ZenColor Daily', '高挑战图']"
+PBNPlus,PUBLISHED,2024W020027-2024W060251,65d2e76673358196a167731e,"['方形', '普通', '困难']",['其他草原'],"['ZenColor速写图', '自然风光的宁静']"
+PBN,PUBLISHED,2024W040519-2024W080061,65d2d41473358196a1677247,[],['其他房屋内饰'],"['生活环境的宁静', 'iPad速写图']"
+PBN,PUBLISHED,2024W040534-2024W080055,65d2d3e2a64b6582fe05694e,['试新'],['多种动物'],"['iPad速写图', '生机带来的希望']"
+PBN,PUBLISHED,2024W040527-2024W080051,65d2d3e2a64b6582fe05694a,[],['多人'],"['iPad速写图', '社会生活的喜悦']"
+PBN,PUBLISHED,2024W040521-2024W080049,65d2d3e2a64b6582fe056948,[],['多人'],"['iPad速写图', '社会生活的喜悦']"
+PBN,PUBLISHED,2024W040524-2024W080063,65d2d41473358196a1677249,[],['山陵'],"['自然环境的宁静', 'iPad速写图']"
+PBN,PUBLISHED,2024W040310-2024W060243,65d2d41473358196a1677242,"['复用至ZC', '试新']",['沙滩'],"['自然环境的宁静', 'ZenColor速写图']"
+PBN,PUBLISHED,2024W040529-2024W080052,65d2d3e2a64b6582fe05694b,[],['孩子'],"['友情', 'iPad速写图']"
+PBN,PUBLISHED,2024W040704,65d2d41473358196a167723c,"['方形', '彩绘', '困难']",['书房'],"['生活环境的宁静', '彩绘作者包-Georgia Bennett']"
+PBN,PUBLISHED,2024W040707,65d2d41473358196a167723e,"['方形', '彩绘', '困难']",['独栋房屋'],"['彩绘作者包-Haruka_Togai', '生活环境的宁静']"
+PBN,PUBLISHED,2024W040520-2024W080062,65d2d41473358196a1677248,[],['其他房屋内饰'],"['生活环境的宁静', 'iPad速写图']"
+PBN,PUBLISHED,2024W040311-2024W060244,65d2d41473358196a1677243,"['复用至ZC', '试新']",['湖泊'],"['自然环境的宁静', 'ZenColor速写图']"
+PBN,PUBLISHED,2024W040533-2024W080054,65d2d3e2a64b6582fe05694d,[],['池塘'],"['生机带来的希望', 'iPad速写图']"
+PBN,PUBLISHED,2024W040517-2024W080060,65d2d41473358196a1677246,[],['现代建筑'],"['生活环境的宁静', 'iPad速写图']"
+PBN,PUBLISHED,2024W040513-2024W080046,65d2d3e2a64b6582fe056945,[],['精灵'],"['iPad速写图', '其他幻想']"
+PBN,PUBLISHED,2024W040475-2024W080038,65d2d3e2a64b6582fe05693d,[],['其他鸟'],"['iPad速写图', '生机带来的希望']"
+PBN,PUBLISHED,2024W040515-2024W080047,65d2d3e2a64b6582fe056946,['试新'],['孩子'],"['经典童话再现', 'iPad速写图']"
+PBN,PUBLISHED,2024W040706,65d2d41473358196a167723d,"['方形', '彩绘', '困难']",['多种动物'],"['彩绘作者包-艾星宇', '生机带来的希望']"
+PBN,PUBLISHED,2024W040532-2024W080053,65d2d3e2a64b6582fe05694c,[],['其他车'],"['iPad速写图', '美好事物带来的愉悦']"
+PBN,PUBLISHED,2024W040264,65d2d41473358196a1677233,"['壁纸', '彩绘', '困难']",['情侣'],"['爱情', '彩绘作者包-Gabrielle_Monet']"
+PBN,PUBLISHED,2024W040462-2024W080035,65d2d3e2a64b6582fe05693a,[],['现代建筑'],['生活环境的宁静']
+PBN,PUBLISHED,2024W040537-2024W080057,65d2d3e2a64b6582fe056950,[],['沙发'],"['美好事物带来的愉悦', 'iPad速写图']"
+PBN,PUBLISHED,2024W040536-2024W080056,65d2d3e2a64b6582fe05694f,['试新'],['欧美日常女性'],"['兴趣活动的喜悦', 'iPad速写图']"
+PBN,PUBLISHED,2024W030555-2024W060240,65d2d41473358196a167723f,[],['独栋房屋'],"['宁静', '高挑战图', '生活环境的宁静', 'ZenColor Daily']"
+PBN,PUBLISHED,2024W040503-2024W080044,65d2d3e2a64b6582fe056943,[],['鹰'],"['色彩之美', 'iPad速写图']"
+PBN,PUBLISHED,2024W040483-2024W080040,65d2d3e2a64b6582fe05693f,[],['熊'],"['iPad速写图', '拟人化']"
+PBN,PUBLISHED,2024W040496-2024W080041,65d2d3e2a64b6582fe056940,[],['电车'],"['彩绘作者包-徐同舟', '生活环境的宁静']"
+PBN,PUBLISHED,2024W030143-2024W080059,65d2d41473358196a1677245,"['复用至PBN', '复用至ZC']",['多种动物'],"['美好生活的喜悦', 'VitaColor速写图']"
+PBN,PUBLISHED,2024W040108-2024W060241,65d2d41473358196a1677240,"['复用至ZC', '复用至VC']",['抽象线条'],"['秩序化图案', 'ZenColor普通图']"
+PBN,PUBLISHED,2024W040459-2024W080033,65d2d3e2a64b6582fe056938,[],['现代建筑'],"['iPad速写图', '生活环境的宁静']"
+PBN,PUBLISHED,2024W040693,65d2d41473358196a1677237,"['方形', '彩绘', '困难']",['松鼠'],"['彩绘作者包-艾星宇', '拟人化']"
+PBN,PUBLISHED,2024W040686,65d2d41473358196a1677235,"['壁纸', '彩绘', '困难']",['其他狗'],"['美好生活的喜悦', '彩绘作者包-Anne_Wertheim', '成图采购']"
+PBN,PUBLISHED,2024W040464-2024W080037,65d2d3e2a64b6582fe05693c,[],['海洋岛屿'],"['iPad速写图', '自然环境的宁静']"
+PBN,PUBLISHED,2024W040542-2024W080058,65d2d41473358196a1677244,[],['刺猬'],"['生机带来的希望', 'iPad速写图']"
+PBN,PUBLISHED,2024W040701,65d2d41473358196a167723a,"['壁纸', '彩绘', '中等']",['西方龙'],"['西方龙', '彩绘作者包-Anne_Stokes', '成图采购']"
+PBN,PUBLISHED,2024W040458-2024W080032,65d2d3e2a64b6582fe056937,[],['现代建筑'],"['iPad速写图', '生活环境的宁静']"
+PBN,PUBLISHED,2024W040522-2024W080050,65d2d3e2a64b6582fe056949,[],['餐厅'],"['iPad速写图', '生活环境的宁静']"
+PBN,PUBLISHED,2024W040499-2024W080042,65d2d3e2a64b6582fe056941,[],['仙子'],"['iPad速写图', '魔法', '彩绘作者包-Carmen_Ferreira']"
+PBN,PUBLISHED,2024W040698,65d2d41473358196a1677238,"['方形', '普通', '困难']",['独栋房屋'],"['PBN速写图', '生活环境的宁静']"
+PBN,PUBLISHED,2024W040512-2024W080045,65d2d3e2a64b6582fe056944,[],['布偶猫'],"['其他幻想', 'iPad速写图']"
+PBN,PUBLISHED,2024W040457-2024W080031,65d2d3e2a64b6582fe056936,[],['现代简约式客厅'],"['iPad速写图', '生活环境的宁静']"
+PBN,PUBLISHED,2024W040554,65d2d41473358196a1677234,"['方形', '普通', '困难']",['抽象线条'],"['秩序化图案', 'ZenColor普通图']"
+PBN,PUBLISHED,2024W040482-2024W080039,65d2d3e2a64b6582fe05693e,[],['其他豹'],"['iPad速写图', '生机带来的希望']"
+PBN,PUBLISHED,2024W040176-2024W060242,65d2d41473358196a1677241,"['复用至ZC', '试新']",['独栋房屋'],"['生活环境的宁静', 'ZenColor速写图']"
+PBN,PUBLISHED,2024W040518-2024W080048,65d2d3e2a64b6582fe056947,[],['街景一角'],"['iPad速写图', '社会生活的喜悦']"
+PBN,PUBLISHED,2024W040702,65d2d41473358196a167723b,"['方形', '彩绘', '困难']",['独栋房屋'],"['生活环境的宁静', '彩绘作者包-Dennis_Lewan', '成图采购']"
+PBN,PUBLISHED,2024W040502-2024W080043,65d2d3e2a64b6582fe056942,['试新'],['多种动物'],"['拟人化', 'iPad速写图']"
+PBN,PUBLISHED,2024W040689,65d2d41473358196a1677236,"['方形', '彩绘', '困难']",['独栋房屋'],"['彩绘作者包-Moana_Gippel', '生活环境的宁静']"
+PBN,PUBLISHED,2024W040451-2024W080030,65d2d3e2a64b6582fe056935,[],['现代建筑'],"['iPad速写图', '创意建筑记录']"
+PBN,PUBLISHED,2024W040290-2024W080019,65d2d3e2a64b6582fe05692a,"['复用至PBN', '复用至ZC']",['企鹅'],"['生机带来的希望', '彩绘作者包-Ducky']"
+PBN,PUBLISHED,2024W040259,65d2d41473358196a1677230,"['方形', '彩绘', '困难']",['欧美日常女性'],"['美好生活的喜悦', '彩绘作者包-徐同舟']"
+PBN,PUBLISHED,2024W040421-2024W080025,65d2d3e2a64b6582fe056930,[],['风化岩石'],"['自然环境的宁静', 'iPad速写图']"
+PBN,PUBLISHED,2024W040295-2024W080021,65d2d3e2a64b6582fe05692c,"['复用至PBN', '复用至ZC', '试新']",['多种动物'],['生机带来的希望']
+PBN,PUBLISHED,2024W040262,65d2d41473358196a1677232,"['方形', '彩绘', '困难']",['街景一角'],"['生活环境的宁静', '彩绘作者包-Georgia Bennett']"
+PBN,PUBLISHED,2024W040700,65d2d41473358196a1677239,"['壁纸', '彩绘', '中等']",['其他奇幻场景'],"['美人鱼', '彩绘作者包-Bessie_Raphson']"
+PBN,PUBLISHED,2024W040463-2024W080036,65d2d3e2a64b6582fe05693b,[],['街景一角'],"['生活环境的宁静', 'iPad速写图']"
+PBN,PUBLISHED,2024W040449-2024W080029,65d2d3e2a64b6582fe056934,['试新'],['其他奇幻物品'],"['iPad速写图', '生活与节日']"
+PBN,PUBLISHED,2024W030567-2024W080012,65d2d3e2a64b6582fe056923,"['复用至PBN', '复用至ZC', '试新']",['欧美日常女性'],"['宠物情', 'VitaColor速写图']"
+PBN,PUBLISHED,2024W040447-2024W080028,65d2d3e2a64b6582fe056933,[],['其他奇幻场景'],"['魔法', '彩绘作者包-Roisin_Sweeney']"
+PBN,PUBLISHED,2024W040260,65d2d41473358196a1677231,"['方形', '彩绘', '困难']",['童话城堡'],"['经典童话再现', '彩绘作者包-Griselda_Anna']"
+PBN,PUBLISHED,2024W040434-2024W080027,65d2d3e2a64b6582fe056932,[],['虾'],"['iPad速写图', '生机带来的希望']"
+PBN,PUBLISHED,2024W040430-2024W080026,65d2d3e2a64b6582fe056931,[],['其他动物'],"['生机带来的希望', 'iPad速写图']"
+PBN,PUBLISHED,2024W040258,65d2d41473358196a167722f,"['方形', '彩绘', '中等']",['欧美黑人时尚女性'],"['兴趣活动的喜悦', '彩绘作者包-Elisabeth_Alba']"
+PBN,PUBLISHED,2024W040460-2024W080034,65d2d3e2a64b6582fe056939,[],['现代简约卧室'],"['iPad速写图', '生活环境的宁静']"
+PBN,PUBLISHED,2024W030155,65d2d41473358196a167722c,"['复用至ZC', '方形', '普通', '困难']",['其他车'],"['美好事物带来的愉悦', 'ZenColor Daily', '高挑战图']"
+PBN,PUBLISHED,2024W040417-2024W080024,65d2d3e2a64b6582fe05692f,[],['现代简约式客厅'],"['iPad速写图', '生活环境的宁静']"
+PBN,PUBLISHED,2024W040285-2024W080015,65d2d3e2a64b6582fe056926,"['复用至PBN', '复用至ZC']",['多种动物'],"['生机带来的希望', '彩绘作者包-艾星宇']"
+PBN,PUBLISHED,2024W040294-2024W080020,65d2d3e2a64b6582fe05692b,"['复用至PBN', '复用至ZC', '试新']",['欧洲宫廷女性'],"['美好生活的喜悦', 'VitaColor速写图']"
+PBN,PUBLISHED,2024W030074,65d2d41473358196a167722b,"['复用至ZC', '方形', '普通', '困难']",['现代简约卧室'],"['VitaColor速写图', '生活环境的宁静']"
+PBN,PUBLISHED,2024W030211,65d2d41473358196a167722e,"['方形', '普通', '困难']",['信箱'],"['ZenColor速写图', '美好事物带来的愉悦']"
+PBN,PUBLISHED,2024W040288-2024W080017,65d2d3e2a64b6582fe056928,['复用至PBN'],['其他奇幻场景'],"['魔法', '彩绘作者包-Carmen_Ferreira']"
+PBN,PUBLISHED,2024W030210,65d2d41473358196a167722d,"['方形', '普通', '困难']",['马车'],"['ZenColor速写图', '美好事物带来的愉悦']"
+PBN,PUBLISHED,2024W040410-2024W080023,65d2d3e2a64b6582fe05692e,[],['盆栽绿植'],"['iPad速写图', '自然与生态']"
+PBN,PUBLISHED,2024W020027,65d2d41473358196a167722a,"['方形', '普通', '困难']",['其他狗'],"['ZenColor速写图', '自然风光的宁静']"
+PBN,PUBLISHED,2024W030149-2024W080009,65d2d3e2a64b6582fe056920,"['复用至PBN', '复用至ZC', '试新']",['赛车'],"['VitaColor速写图', '美好事物带来的愉悦']"
+PBN,PUBLISHED,2024W040407-2024W080022,65d2d3e2a64b6582fe05692d,['试新'],['其他奇幻场景'],"['iPad速写图', '生活与节日']"
+PBN,PUBLISHED,2024W040289-2024W080018,65d2d3e2a64b6582fe056929,"['复用至PBN', '复用至ZC']",['多种动物'],"['生机带来的希望', '彩绘作者包-艾星宇']"
+PBN,PUBLISHED,2024W040171-2024W080014,65d2d3e2a64b6582fe056925,['复用至PBN'],['大象'],"['色彩之美', '彩绘作者包-Griselda_Anna']"
+PBN,PUBLISHED,2024W040287-2024W080016,65d2d3e2a64b6582fe056927,['复用至PBN'],['天使'],"['魔法', '彩绘作者包-Carmen_Ferreira']"
+PBN,PUBLISHED,2024W030575-2024W080013,65d2d3e2a64b6582fe056924,[],['多种动物'],"['生机带来的希望', 'VitaColor速写图']"
+PBN,PUBLISHED,2024W030151-2024W080010,65d2d3e2a64b6582fe056921,"['复用至PBN', '复用至ZC']",['女士包'],"['美好事物带来的愉悦', 'VitaColor速写图']"
+PBN,PUBLISHED,2024W030566-2024W080011,65d2d3e2a64b6582fe056922,"['复用至PBN', '复用至ZC', '试新']",['狸花猫'],"['美好生活的喜悦', 'VitaColor速写图']"
+PBN,PUBLISHED,2024W040692,65d2d3e2a64b6582fe05691f,"['方形', '彩绘', '困难']",['多人'],"['彩绘作者包-John_Sloane', '社会生活的喜悦']"
+VitaColor,PUBLISHED,2024W040536,65d2ca8aa64b6582fe056843,['试新'],['欧美日常女性'],"['兴趣活动的喜悦', 'iPad速写图']"
+VitaColor,PUBLISHED,2024W040533,65d2ca8aa64b6582fe056841,[],['池塘'],"['生机带来的希望', 'iPad速写图']"
+VitaColor,PUBLISHED,2024W040503,65d2ca8aa64b6582fe056837,[],['鹰'],"['色彩之美', 'iPad速写图']"
+VitaColor,PUBLISHED,2024W040502,65d2ca8aa64b6582fe056836,['试新'],['多种动物'],"['拟人化', 'iPad速写图']"
+VitaColor,PUBLISHED,2024W040542,65d2ca8aa64b6582fe056845,[],['刺猬'],"['生机带来的希望', 'iPad速写图']"
+VitaColor,PUBLISHED,2024W040534,65d2ca8aa64b6582fe056842,['试新'],['多种动物'],"['iPad速写图', '生机带来的希望']"
+VitaColor,PUBLISHED,2024W040475,65d2ca8aa64b6582fe056831,[],['其他鸟'],"['iPad速写图', '生机带来的希望']"
+VitaColor,PUBLISHED,2024W040529,65d2ca8aa64b6582fe05683f,[],['孩子'],"['友情', 'iPad速写图']"
+VitaColor,PUBLISHED,2024W040522,65d2ca8aa64b6582fe05683d,[],['餐厅'],"['iPad速写图', '生活环境的宁静']"
+VitaColor,PUBLISHED,2024W040515,65d2ca8aa64b6582fe05683a,['试新'],['孩子'],"['经典童话再现', 'iPad速写图']"
+VitaColor,PUBLISHED,2024W040499,65d2ca8aa64b6582fe056835,[],['仙子'],"['魔法', '彩绘作者包-Carmen_Ferreira']"
+VitaColor,PUBLISHED,2024W040447,65d2ca8aa64b6582fe056827,[],['其他奇幻场景'],"['魔法', 'iPad速写图']"
+VitaColor,PUBLISHED,2024W040518,65d2ca8aa64b6582fe05683b,[],['街景一角'],"['iPad速写图', '社会生活的喜悦']"
+VitaColor,PUBLISHED,2024W040464,65d2ca8aa64b6582fe056830,[],['海洋岛屿'],"['iPad速写图', '自然环境的宁静']"
+VitaColor,PUBLISHED,2024W040527,65d2ca8aa64b6582fe05683e,[],['多人'],"['iPad速写图', '社会生活的喜悦']"
+VitaColor,PUBLISHED,2024W040460,65d2ca8aa64b6582fe05682d,[],['现代简约卧室'],"['iPad速写图', '生活环境的宁静']"
+VitaColor,PUBLISHED,2024W040496,65d2ca8aa64b6582fe056834,[],['电车'],"['彩绘作者包-徐同舟', '生活环境的宁静']"
+VitaColor,PUBLISHED,2024W040521,65d2ca8aa64b6582fe05683c,[],['多人'],"['iPad速写图', '社会生活的喜悦']"
+VitaColor,PUBLISHED,2024W040513,65d2ca8aa64b6582fe056839,[],['精灵'],"['iPad速写图', '其他幻想']"
+VitaColor,PUBLISHED,2024W040537,65d2ca8aa64b6582fe056844,[],['沙发'],"['美好事物带来的愉悦', 'iPad速写图']"
+VitaColor,PUBLISHED,2024W040459,65d2ca8aa64b6582fe05682c,[],['现代建筑'],"['iPad速写图', '生活环境的宁静']"
+VitaColor,PUBLISHED,2024W040532,65d2ca8aa64b6582fe056840,[],['其他车'],"['iPad速写图', '美好事物带来的愉悦']"
+VitaColor,PUBLISHED,2024W040482,65d2ca8aa64b6582fe056832,[],['其他豹'],"['iPad速写图', '生机带来的希望']"
+VitaColor,PUBLISHED,2024W040512,65d2ca8aa64b6582fe056838,[],['布偶猫'],"['其他幻想', 'iPad速写图']"
+VitaColor,PUBLISHED,2024W040434,65d2ca8aa64b6582fe056826,[],['虾'],"['iPad速写图', '生机带来的希望']"
+VitaColor,PUBLISHED,2024W040458,65d2ca8aa64b6582fe05682b,[],['现代建筑'],"['iPad速写图', '生活环境的宁静']"
+VitaColor,PUBLISHED,2024W040483,65d2ca8aa64b6582fe056833,[],['熊'],"['iPad速写图', '拟人化']"
+VitaColor,PUBLISHED,2024W040449,65d2ca8aa64b6582fe056828,['试新'],['其他奇幻物品'],"['iPad速写图', '生活与节日']"
+VitaColor,PUBLISHED,2024W040519,65d2cabd73358196a167714d,[],['其他房屋内饰'],"['生活环境的宁静', 'iPad速写图']"
+VitaColor,PUBLISHED,2024W040430,65d2ca8aa64b6582fe056825,[],['其他动物'],"['生机带来的希望', 'iPad速写图']"
+VitaColor,PUBLISHED,2024W040463,65d2ca8aa64b6582fe05682f,[],['街景一角'],"['生活环境的宁静', 'iPad速写图']"
+VitaColor,PUBLISHED,2024W040520,65d2cabd73358196a167714e,[],['其他房屋内饰'],"['生活环境的宁静', 'iPad速写图']"
+VitaColor,PUBLISHED,2024W040462,65d2ca8aa64b6582fe05682e,[],['现代建筑'],['生活环境的宁静']
+VitaColor,PUBLISHED,2024W040517,65d2cabd73358196a167714c,[],['现代建筑'],"['生活环境的宁静', 'iPad速写图']"
+VitaColor,PUBLISHED,2024W040421,65d2ca8aa64b6582fe056824,[],['风化岩石'],"['自然环境的宁静', 'iPad速写图']"
+VitaColor,PUBLISHED,2024W040451,65d2ca8aa64b6582fe056829,[],['现代建筑'],"['iPad速写图', '创意建筑记录']"
+VitaColor,PUBLISHED,2024W040407,65d2ca8aa64b6582fe056821,['试新'],['其他奇幻场景'],"['iPad速写图', '生活与节日']"
+VitaColor,PUBLISHED,2024W040410,65d2ca8aa64b6582fe056822,[],['盆栽绿植'],"['iPad速写图', '自然与生态']"
+VitaColor,PUBLISHED,2024W040417,65d2ca8aa64b6582fe056823,[],['现代简约式客厅'],"['iPad速写图', '生活环境的宁静']"
+VitaColor,PUBLISHED,2024W040457,65d2ca8aa64b6582fe05682a,[],['现代简约式客厅'],"['iPad速写图', '生活环境的宁静']"
+VitaColor,PUBLISHED,2024W030143,65d2cabd73358196a167714b,"['复用至PBN', '复用至ZC']",['多种动物'],"['美好生活的喜悦', 'VitaColor速写图']"
+VitaColor,PUBLISHED,2024W040289,65d2ca8aa64b6582fe05681d,"['复用至PBN', '复用至ZC']",['多种动物'],"['生机带来的希望', '彩绘作者包-艾星宇']"
+VitaColor,PUBLISHED,2024W040294,65d2ca8aa64b6582fe05681f,"['复用至PBN', '复用至ZC', '试新']",['欧洲宫廷女性'],"['美好生活的喜悦', 'VitaColor速写图']"
+VitaColor,PUBLISHED,2024W040524,65d2cabd73358196a167714f,[],['山陵'],"['自然环境的宁静', 'iPad速写图']"
+VitaColor,PUBLISHED,2024W040285,65d2ca8aa64b6582fe05681a,"['复用至PBN', '复用至ZC']",['多种动物'],"['生机带来的希望', '彩绘作者包-艾星宇']"
+VitaColor,PUBLISHED,2024W040295,65d2ca8aa64b6582fe056820,"['复用至PBN', '复用至ZC', '试新']",['多种动物'],['生机带来的希望']
+VitaColor,PUBLISHED,2024W030575,65d2ca8aa64b6582fe056818,[],['多种动物'],"['生机带来的希望', 'VitaColor速写图']"
+VitaColor,PUBLISHED,2024W040287,65d2ca8aa64b6582fe05681b,['复用至PBN'],['天使'],"['魔法', '彩绘作者包-Carmen_Ferreira']"
+VitaColor,PUBLISHED,2024W040290,65d2ca8aa64b6582fe05681e,"['复用至PBN', '复用至ZC']",['企鹅'],"['生机带来的希望', '彩绘作者包-Ducky']"
+VitaColor,PUBLISHED,2024W040288,65d2ca8aa64b6582fe05681c,['复用至PBN'],['其他奇幻场景'],"['魔法', '彩绘作者包-Carmen_Ferreira']"
+VitaColor,PUBLISHED,2024W040171,65d2ca8aa64b6582fe056819,['复用至PBN'],['大象'],"['色彩之美', '彩绘作者包-Griselda_Anna']"
+VitaColor,PUBLISHED,2024W030566,65d2ca8aa64b6582fe056816,"['复用至PBN', '复用至ZC', '试新']",['狸花猫'],"['美好生活的喜悦', 'VitaColor速写图']"
+VitaColor,PUBLISHED,2024W030567,65d2ca8aa64b6582fe056817,"['复用至PBN', '复用至ZC', '试新']",['欧美日常女性'],"['宠物情', 'VitaColor速写图']"
+VitaColor,PUBLISHED,2024W030151,65d2ca8aa64b6582fe056815,"['复用至PBN', '复用至ZC']",['女士包'],"['美好事物带来的愉悦', 'VitaColor速写图']"
+VitaColor,PUBLISHED,2024W030149,65d2ca8aa64b6582fe056814,"['复用至PBN', '复用至ZC', '试新']",['赛车'],"['VitaColor速写图', '美好事物带来的愉悦']"
+PBN,FAILURE,2024W070110,,[],['袋鼠'],['生机带来的希望']
+PBN,FAILURE,2024W070108,,[],['其他奇幻场景'],['现实重构']
+ColorPad,FAILURE,2024W070067,,[],['袋鼠'],['生机带来的希望']
+PBN,FAILURE,2024W070053,,[],['其他房屋内饰'],"['PBN速写图', '秩序化建筑结构']"
+PBN,FAILURE,2024W070051,,[],['其他奇幻人物'],"['彩绘作者包', '魔法']"
+PBN,FAILURE,2024W070010,,[],[],['普通作者包']
+PBN,FAILURE,2024W070009,,[],[],['普通作者包']
+PBN,FAILURE,2024W070008,,[],[],['普通作者包']
+PBN,FAILURE,2024W070007,,[],[],['普通作者包']
+VitaColor,COLORING,2023W510521-2024W070001,,[],['钟表'],"['VitaColor速写图', '美好事物带来的愉悦']"
+VitaColor,COLORING,2024W050384,,[],['大丽菊'],['VitaColor速写图']
+VitaColor,COLORING,2024W050382,,[],[],"['VitaColor速写图', '生活与节日']"
+PBN,COLORING,2024W050391,,[],['餐厅'],"['ZenColor Daily', '生活环境的宁静']"
+PBN,PUBLISHED,2024W040694,65c48bf3a64b6582fe055adb,"['壁纸', '彩绘', '困难']",['布偶猫'],"['daily素材', 'PBN daily素材', '美好生活的喜悦']"
+PBN,PUBLISHED,2024W040697,65c48bf3a64b6582fe055ade,"['壁纸', '彩绘', '中等']",['钢琴'],"['PBN daily素材', '现实重构']"
+PBN,PUBLISHED,2024W040683,65c48bf3a64b6582fe055ad9,"['壁纸', '彩绘', '困难']",['桥梁'],"['PBN daily素材', '生活环境的宁静']"
+PBN,PUBLISHED,2024W040696,65c48bf3a64b6582fe055add,"['壁纸', '彩绘', '困难']",['其他船'],"['PBN daily素材', '生活环境的宁静']"
+PBN,PUBLISHED,2024W040491,65c48bf3a64b6582fe055ad6,"['方形', '彩绘', '困难']",['欧美日常女性'],"['兴趣活动的喜悦', '故事线-倒带人生']"
+PBN,PUBLISHED,2024W040682,65c48bf3a64b6582fe055ad8,"['壁纸', '彩绘', '中等']",['沙滩'],"['PBN daily素材', '自然与生态']"
+PBN,PUBLISHED,2024W040684,65c48bf3a64b6582fe055ada,"['壁纸', '彩绘', '困难']",['菊花'],"['PBN daily素材', '自然与生态']"
+PBN,PUBLISHED,2024W040278,65c48bf3a64b6582fe055ad4,"['方形', '普通', '困难']",['王子公主'],"['宠物情', '普通作者包-Elli_Davis']"
+PBN,PUBLISHED,2024W040695,65c48bf3a64b6582fe055adc,"['壁纸', '彩绘', '中等']",['冰淇淋'],"['PBN daily素材', '生活与节日']"
+PBN,PUBLISHED,2024W040681,65c48bf3a64b6582fe055ad7,"['壁纸', '彩绘', '困难']",['其他船'],"['现实重构', 'PBN daily素材']"
+PBN,PUBLISHED,2024W040277,65c48bf3a64b6582fe055ad3,"['方形', '普通', '困难']",['王子公主'],"['普通作者包-Elli_Davis', '美好生活的喜悦']"
+PBN,PUBLISHED,2024W040490,65c48bf3a64b6582fe055ad5,"['方形', '彩绘', '困难']",['情侣'],"['故事线-倒带人生', '爱情']"
+PBN,PUBLISHED,2024W040263,65c48bf3a64b6582fe055ad2,"['壁纸', '彩绘', '困难']",['拟人猫'],"['拟人化', 'daily素材', 'PBN daily素材']"
+PBN,COLORING,2024W060224,,[],['中世纪城堡'],"['ZenColor速写图', '生活环境的宁静']"
+VitaColor,COLORING,2024W060232,,[],[],['VitaColor速写图']
+VitaColor,COLORING,2024W060223,,[],[],['VitaColor速写图']
+ColorPad,PUBLISHED,2024W040233,65c48225a64b6582fe055949,[],['其他幻想主体'],['ColorPad付费包-荒诞动物']
+VitaColor,COLORING,2024W060237,,[],[],[]
+VitaColor,COLORING,2024W060233,,[],[],['VitaColor速写图']
+VitaColor,COLORING,2024W060229,,[],[],['美好生活的喜悦']
+VitaColor,COLORING,2024W060230,,[],[],[]
+VitaColor,COLORING,2024W050375,,[],[],['VitaColor速写图']
+PBN,COLORING,2024W050465,,[],['乌龟'],"['神秘图', '生机带来的希望']"
+ColorPad,COLORING,2024W050394,,[],['乌龟'],"['神秘图', '生机带来的希望']"
+VitaColor,COLORING,2024W050377,,[],[],"['VitaColor速写图', '生活环境的宁静']"
+PBN,COLORING,2024W060236,,[],['厨房'],"['ZenColor速写图', '生活环境的宁静']"
+PBN,COLORING,2024W050393,,[],['多种动物'],"['ZenColor Daily', '生机带来的希望']"
+ColorPad,COLORING,2024W050334,,[],['海龟'],['现实想象创意']
+VitaColor,COLORING,2024W050443,,[],[],['现实想象创意']
+ColorPad,COLORING,2024W050396,,[],['外星人'],['探索外太空']
+VitaColor,COLORING,2024W050467,,[],[],['探索外太空']
+PBN,COLORING,2024W050305,,[],['立体图案'],"['ZenColor普通图', '秩序化图案']"
+ColorPad,COLORING,2024W050397,,[],['奇幻树'],['现实重构']
+VitaColor,COLORING,2024W050468,,[],[],['现实重构']
+ColorPad,COLORING,2024W060239,,[],['立体图案'],"['ZenColor普通图', '秩序化图案']"
+PBN,COLORING,2024W050318,,[],['其他鞋'],"['ZenColor Daily', '美好事物带来的愉悦']"
+VitaColor,COLORING,2024W050474,,[],[],['兴趣活动的喜悦']
+ColorPad,COLORING,2024W050403,,[],['其他狗'],['兴趣活动的喜悦']
+VitaColor,COLORING,2024W050372,,[],[],[]
+PBN,COLORING,2024W050420,,[],['曼陀罗'],"['ZenColor普通图', '曼陀罗']"
+PBN,COLORING,2024W050413,,[],['熊猫'],"['PBN daily素材', '生机带来的希望']"
+VitaColor,COLORING,2024W050472,,[],[],['生活环境的宁静']
+ColorPad,COLORING,2024W050401,,[],['餐厅'],['生活环境的宁静']
+ColorPad,COLORING,2024W050331,,[],['杯碟水壶'],['现实重构']
+VitaColor,COLORING,2024W050440,,[],[],['现实重构']
+VitaColor,COLORING,2024W050374,,[],[],['VitaColor速写图']
+VitaColor,COLORING,2024W050466,,[],[],['魔法']
+ColorPad,COLORING,2024W050395,,[],['狐狸'],['魔法']
+VitaColor,COLORING,2024W050373,,[],[],[]
+PBN,COLORING,2024W050315,,[],['鹦鹉'],"['ZenColor Daily', '生机带来的希望']"
+PBN,COLORING,2024W050411,,[],['家庭'],"['PBN daily素材', '亲情']"
+PBN,LINGING,2024W050390,,[],['相机'],"['ZenColor速写图', '美好事物带来的愉悦']"
+PBN,COLORING,2024W060227,,[],['溪流'],"['ZenColor Daily', '自然环境的宁静']"
+VitaColor,COLORING,2024W050473,,[],[],['美好生活的喜悦']
+ColorPad,COLORING,2024W050402,,[],['欧美时尚女性'],['美好生活的喜悦']
+ColorPad,COLORING,2024W050354,,[],['巴士'],['美好事物带来的愉悦']
+VitaColor,COLORING,2024W050463,,[],[],[]
+PBN,COLORING,2024W050433,,[],['平铺图案'],"['ZenColor普通图', '秩序化图案']"
+ColorPad,COLORING,2024W050406,,[],['水獭'],['生机带来的希望']
+VitaColor,COLORING,2024W050477,,[],[],[]
+ColorPad,COLORING,2024W050407,,[],['家庭'],"['iPad付费包', '美学风格']"
+VitaColor,PUBLISHED,2024W040472,65c34ec473358196a16744ec,[],['花盆'],"['iPad速写图', '美好事物带来的愉悦']"
+VitaColor,PUBLISHED,2024W040461,65c34ec473358196a16744ea,[],['其他客厅'],"['iPad速写图', '生活环境的宁静']"
+VitaColor,PUBLISHED,2024W040553-2024W060197,65c34ec473358196a16744ee,"['方形', '普通', '困难']",['向日葵'],"['ZenColor普通图', '生机带来的希望']"
+VitaColor,PUBLISHED,2024W040484,65c34ec473358196a16744ed,[],['梨'],"['iPad速写图', '生机带来的希望']"
+VitaColor,PUBLISHED,2024W040402,65c34ec473358196a16744e9,[],['孩子'],"['iPad速写图', '友情']"
+VitaColor,PUBLISHED,2024W040471,65c34ec473358196a16744eb,[],['玩偶'],"['iPad速写图', '美好事物带来的愉悦']"
+VitaColor,PUBLISHED,2024W040292,65c34ec473358196a16744e8,"['复用至PBN', '复用至ZC', '试新']",['孩子'],"['VitaColor速写图', '友情']"
+VitaColor,PUBLISHED,2024W030146,65c34ec473358196a16744e7,"['复用至PBN', '复用至ZC', '试新']",['棋'],"['VitaColor速写图', '美好事物带来的愉悦']"
+PBNPlus,PUBLISHED,2024W030146-2024W060209,65c34e36a64b6582fe053810,"['复用至PBN', '复用至ZC', '试新']",['棋'],"['VitaColor速写图', '美好事物带来的愉悦']"
+PBNPlus,PUBLISHED,2024W040471-2024W060213,65c34e36a64b6582fe053814,[],['玩偶'],"['iPad速写图', '美好事物带来的愉悦']"
+PBNPlus,PUBLISHED,2024W040484-2024W060215,65c34e36a64b6582fe053816,[],['梨'],"['iPad速写图', '生机带来的希望']"
+PBNPlus,PUBLISHED,2024W040553-2024W060196,65c34e36a64b6582fe05380f,"['方形', '普通', '困难']",['向日葵'],"['ZenColor普通图', '生机带来的希望']"
+PBNPlus,PUBLISHED,2024W040472-2024W060214,65c34e36a64b6582fe053815,[],['花盆'],"['iPad速写图', '美好事物带来的愉悦']"
+PBNPlus,PUBLISHED,2024W040461-2024W060212,65c34e36a64b6582fe053813,[],['其他客厅'],"['iPad速写图', '生活环境的宁静']"
+PBNPlus,PUBLISHED,2024W040292-2024W060210,65c34e36a64b6582fe053811,"['复用至PBN', '复用至ZC', '试新']",['孩子'],"['VitaColor速写图', '友情']"
+PBNPlus,PUBLISHED,2024W040402-2024W060211,65c34e36a64b6582fe053812,[],['孩子'],"['iPad速写图', '友情']"
+PBNPlus,PUBLISHED,2024W030147-2024W060195,65c34e36a64b6582fe05380e,"['复用至ZC', '方形', '普通', '困难']",['其他房屋内饰'],"['ZenColor速写图', '生活环境的宁静']"
+PBNPlus,PUBLISHED,2024W030070-2024W060194,65c34e36a64b6582fe05380d,"['复用至ZC', '方形', '普通', '困难']",['海狮'],"['生机带来的希望', '高挑战图', 'ZenColor Daily']"
+PBN,PUBLISHED,2024W040484-2024W060208,65c34ca4a64b6582fe053771,[],['梨'],"['iPad速写图', '生机带来的希望']"
+PBN,PUBLISHED,2024W040472-2024W060207,65c34ca4a64b6582fe053770,[],['花盆'],"['iPad速写图', '美好事物带来的愉悦']"
+PBN,PUBLISHED,2024W040461-2024W060205,65c34ca4a64b6582fe05376e,[],['其他客厅'],"['iPad速写图', '生活环境的宁静']"
+PBN,PUBLISHED,2024W040292-2024W060203,65c34ca4a64b6582fe05376c,"['复用至PBN', '复用至ZC', '试新']",['孩子'],"['VitaColor速写图', '友情']"
+PBN,PUBLISHED,2024W040553,65c34ca4a64b6582fe05376a,"['方形', '普通', '困难']",['向日葵'],"['ZenColor普通图', '生机带来的希望']"
+PBN,PUBLISHED,2024W040402-2024W060204,65c34ca4a64b6582fe05376d,[],['孩子'],"['iPad速写图', '友情']"
+PBN,PUBLISHED,2024W040471-2024W060206,65c34ca4a64b6582fe05376f,[],['玩偶'],"['iPad速写图', '美好事物带来的愉悦']"
+PBN,PUBLISHED,2024W030146-2024W060202,65c34ca4a64b6582fe05376b,"['复用至PBN', '复用至ZC', '试新']",['棋'],"['VitaColor速写图', '美好事物带来的愉悦']"
+PBN,PUBLISHED,2024W030147,65c34ca4a64b6582fe053769,"['复用至ZC', '方形', '普通', '困难']",['其他房屋内饰'],"['ZenColor速写图', '生活环境的宁静']"
+PBN,PUBLISHED,2024W030070,65c34ca4a64b6582fe053768,"['复用至ZC', '方形', '普通', '困难']",['海狮'],"['生机带来的希望', '高挑战图', 'ZenColor Daily']"
+BPBN,PUBLISHED,2024W040472-2024W060221,65c34aeea64b6582fe0536f6,[],[],"['Non-religious', 'Flower']"
+BPBN,PUBLISHED,2024W040471-2024W060220,65c34aeea64b6582fe0536f5,[],[],"['Non-religious', 'Toy bear']"
+BPBN,PUBLISHED,2024W040461-2024W060219,65c34aeea64b6582fe0536f4,[],[],"['Non-religious', 'Indoor']"
+BPBN,PUBLISHED,2024W040484-2024W060222,65c34aeea64b6582fe0536f7,[],[],"['Non-religious', 'Flower']"
+BPBN,PUBLISHED,2024W040553-2024W060200,65c34aeea64b6582fe0536f0,[],[],"['Non-religious', 'Flower']"
+BPBN,PUBLISHED,2024W040402-2024W060218,65c34aeea64b6582fe0536f3,[],[],"['Non-religious', 'Kids']"
+BPBN,PUBLISHED,2024W040292-2024W060217,65c34aeea64b6582fe0536f2,[],[],"['Non-religious', 'Kids']"
+BPBN,PUBLISHED,2024W030146-2024W060216,65c34aeea64b6582fe0536f1,[],[],"['Non-religious', 'Toy']"
+BPBN,PUBLISHED,2024W030147-2024W060199,65c34aeea64b6582fe0536ef,[],[],"['Non-religious', 'Indoor']"
+BPBN,PUBLISHED,2024W030070-2024W060198,65c34aeea64b6582fe0536ee,[],[],"['Non-religious', 'Animal']"
+ColorPad,COLORING,2024W040347-2024W060201,,[],[],[]
+ColorPad,PUBLISHED,2024W040209,65c324a673358196a1673c0b,[],['现代简约式客厅'],['生活环境的宁静']
+ColorPad,PUBLISHED,2024W050560,65c324a5a64b6582fe052f3b,[],['家庭'],['亲情']
+ColorPad,PUBLISHED,2024W040219,65c3247973358196a1673c04,[],['玩偶'],['美好事物带来的愉悦']
+ColorPad,PUBLISHED,2024W040385,65c3245aa64b6582fe052f34,[],['街道'],['ColorPad付费包-全景大发现']
+PBN,COLORING,2024W050307,,[],['其他动物'],"['ZenColor普通图', '禅绕画']"
+PBN,COLORING,2024W050385,,[],['其他花'],"['ZenColor普通图', '生机带来的希望']"
+VitaColor,COLORING,2024W050470,,[],[],['自然与生态']
+ColorPad,COLORING,2024W050399,,[],['树'],['自然与生态']
+VitaColor,COLORING,2024W050492,,[],[],['VitaColor速写图']
+VitaColor,COLORING,2024W050487,,[],[],[]
+PBN,COLORING,2024W050359,,[],['森林'],"['PBN daily素材', '自然环境的宁静']"
+PBN,COLORING,2024W050386,,[],['莲花'],"['ZenColor普通图', '生机带来的希望']"
+ColorPad,COLORING,2024W050342,,[],['孩子'],['兴趣活动的喜悦']
+VitaColor,COLORING,2024W050451,,[],[],['兴趣活动的喜悦']
+VitaColor,COLORING,2024W050469,,[],['金鱼'],['自然与生态']
+ColorPad,COLORING,2024W050398,,[],['金鱼'],['自然与生态']
+VitaColor,COLORING,2024W050475,,[],[],[]
+ColorPad,COLORING,2024W050404,,[],['面包树'],['生机带来的希望']
+ColorPad,COLORING,2024W050349,,[],['罂粟花'],['生机带来的希望']
+PBN,COLORING,2024W050387,,[],['其他花'],"['ZenColor普通图', '生机带来的希望']"
+VitaColor,COLORING,2024W050476,,[],[],[]
+ColorPad,COLORING,2024W050405,,[],[],['生机带来的希望']
+VitaColor,COLORING,2024W050458,,[],[],[]
+VitaColor,COLORING,2024W050471,,[],[],['现实想象创意']
+PBN,COLORING,2024W050299,,[],['其他花'],"['ZenColor普通图', '生机带来的希望']"
+ColorPad,COLORING,2024W050400,,[],['天鹅'],['现实想象创意']
+VitaColor,COLORING,2024W050490,,[],[],['VitaColor速写图']
+ColorPad,COLORING,2024W050421,,[],['平铺图案'],"['ZenColor普通图', '秩序化图案']"
+VitaColor,COLORING,2024W050486,,[],[],[]
+VitaColor,COLORING,2024W050488,,[],[],[]
+ColorPad,COLORING,2024W050306,,[],['抽象线条'],"['ZenColor普通图', '秩序化图案']"
+PBN,COLORING,2024W050357,,[],['独栋房屋'],"['PBN daily素材', '色彩之美']"
+PBN,COLORING,2024W050435,,[],['抽象线条'],"['ZenColor普通图', '秩序化图案']"
+PBN,COLORING,2024W050356,,[],['图腾纹样'],"['PBN daily素材', '文化与图腾']"
+ColorPad,PUBLISHED,2024W040390,65c1fddb73358196a1672426,[],['梳妆盒台'],['美好事物带来的愉悦']
+ColorPad,PUBLISHED,2024W040364,65c1fddc73358196a1672428,[],['留声机'],['美好事物带来的愉悦']
+ColorPad,PUBLISHED,2024W040366,65c1fddba64b6582fe05174c,[],['其他车'],['美好事物带来的愉悦']
+ColorPad,PUBLISHED,2024W040221,65c1fd9ea64b6582fe05172e,['试新'],['其他豹'],['生机带来的希望']
+ColorPad,PUBLISHED,2024W040246,65c1fd9c73358196a1672403,['试新'],['欧美时尚女性'],['美好生活的喜悦']
+ColorPad,PUBLISHED,2024W040213,65c1fd74a64b6582fe051720,[],['山陵'],['人工融入自然的宁静']
+ColorPad,PUBLISHED,2024W040214,65c1fd52a64b6582fe05171b,[],['极光'],['自然环境的宁静']
+ColorPad,PUBLISHED,2024W040134,65c1fd3b73358196a16723f2,[],['负鼠'],['生机带来的希望']
+ColorPad,PUBLISHED,2024W040105,65c1fcc773358196a16723d3,[],['孩子'],['友情']
+ColorPad,PUBLISHED,2024W040125,65c1fcc173358196a16723d0,[],['服装店'],['生活环境的宁静']
+ColorPad,PUBLISHED,2024W040120,65c1fcc2a64b6582fe0516f9,[],['浴室'],['生活环境的宁静']
+ColorPad,PUBLISHED,2024W040329,65c1fca0a64b6582fe0516ee,[],['多种动物'],['生机带来的希望']
+PBN,COLORING,2024W050483,,[],['孩子'],"['PBN速写图', '美好生活的喜悦']"
+ColorPad,PUBLISHED,2024W040216,65c1fbac73358196a167239d,[],['其他猫'],['美好生活的喜悦']
+ColorPad,PUBLISHED,2024W040220,65c1fb98a64b6582fe0516ba,[],['花盆'],['美好事物带来的愉悦']
+ColorPad,PUBLISHED,2024W040250,65c1fb7c73358196a167238a,[],['梨'],['生机带来的希望']
+PBN,COLORING,2024W050412,,[],['埃菲尔铁塔'],"['PBN daily素材', '生活环境的宁静']"
+PBN,COLORING,2024W050419,,[],['曼陀罗'],"['ZenColor普通图', '曼陀罗']"
+ColorPad,PUBLISHED,2024W040242,65c1fb6273358196a167237e,[],['家庭'],['ColorPad付费包-家庭时光']
+PBN,COLORING,2024W050408,,[],['蝴蝶'],"['PBN daily素材', '自然与生态']"
+ColorPad,PUBLISHED,2024W040328,65c1f790a64b6582fe0515df,[],['蘑菇屋'],['现实重构']
+PBN,COLORING,2024W050410,,[],['情侣'],"['PBN daily素材', '爱情']"
+PBN,PUBLISHED,2024W040182-2024W060193,65c1f5ec73358196a167224f,['复用至ZC'],['多种动物'],"['生机带来的希望', 'ZenColor Daily', '高挑战图']"
+BPBN,PUBLISHED,2024W030572-2024W060186,65c1f0cfa64b6582fe05142f,[],[],"['Non-religious', 'Building']"
+BPBN,PUBLISHED,2024W030559-2024W060181,65c1f0cfa64b6582fe05142a,[],[],"['Non-religious', 'Nature']"
+BPBN,PUBLISHED,2024W040530-2024W060166,65c1f0cfa64b6582fe051427,[],[],"['Non-religious', 'Music']"
+BPBN,PUBLISHED,2024W040429-2024W060157,65c1f0cfa64b6582fe05141e,[],[],"['Non-religious', 'Animal']"
+BPBN,PUBLISHED,2024W030570-2024W060150,65c1f0cfa64b6582fe051417,[],[],"['Non-religious', 'Table']"
+BPBN,PUBLISHED,2024W030568-2024W060148,65c1f0cfa64b6582fe051415,[],[],"['Non-religious', 'Animal']"
+BPBN,PUBLISHED,2024W040183-2024W060191,65c1f0cfa64b6582fe051434,[],[],"['Non-religious', 'Women', 'Dog']"
+BPBN,PUBLISHED,2024W040182-2024W060190,65c1f0cfa64b6582fe051433,[],[],"['Non-religious', 'Animal']"
+BPBN,PUBLISHED,2024W030571-2024W060185,65c1f0cfa64b6582fe05142e,[],[],"['Non-religious', 'Bed']"
+BPBN,PUBLISHED,2024W030561-2024W060182,65c1f0cfa64b6582fe05142b,[],[],"['Non-religious', 'Place']"
+BPBN,PUBLISHED,2024W040178-2024W060189,65c1f0cfa64b6582fe051432,[],[],"['Non-religious', 'Mandala']"
+BPBN,PUBLISHED,2024W040538-2024W060167,65c1f0cfa64b6582fe051428,[],[],"['Non-religious', 'Table']"
+BPBN,PUBLISHED,2024W030574-2024W060188,65c1f0cfa64b6582fe051431,[],[],"['Non-religious', 'Nature']"
+BPBN,PUBLISHED,2024W040494-2024W060164,65c1f0cfa64b6582fe051425,[],[],"['Non-religious', 'Mushroom']"
+BPBN,PUBLISHED,2024W030573-2024W060187,65c1f0cfa64b6582fe051430,[],[],"['Non-religious', 'Eagle']"
+BPBN,PUBLISHED,2024W040467-2024W060160,65c1f0cfa64b6582fe051421,[],[],"['Non-religious', 'Cat']"
+BPBN,PUBLISHED,2024W040302-2024W060192,65c1f0cfa64b6582fe051435,[],[],"['Non-religious', 'Building']"
+BPBN,PUBLISHED,2024W040495-2024W060165,65c1f0cfa64b6582fe051426,[],[],"['Non-religious', 'Animal']"
+BPBN,PUBLISHED,2024W030138-2024W060145,65c1f0cfa64b6582fe051412,[],[],"['Non-religious', 'Food']"
+BPBN,PUBLISHED,2024W040422-2024W060156,65c1f0cfa64b6582fe05141d,[],[],"['Non-religious', 'Dog', 'Cat']"
+BPBN,PUBLISHED,2024W030153-2024W060095,65c1f0cfa64b6582fe05140d,[],[],"['Non-religious', 'Place']"
+BPBN,PUBLISHED,2024W030565-2024W060184,65c1f0cfa64b6582fe05142d,[],[],"['Non-religious', 'Nature']"
+BPBN,PUBLISHED,2024W030563-2024W060183,65c1f0cfa64b6582fe05142c,[],[],"['Non-religious', 'Building']"
+BPBN,PUBLISHED,2024W040172-2024W060152,65c1f0cfa64b6582fe051419,[],[],"['Non-religious', 'Fairy Tale']"
+BPBN,PUBLISHED,2024W040480-2024W060163,65c1f0cfa64b6582fe051424,[],[],"['Non-religious', 'Women']"
+BPBN,PUBLISHED,2024W040468-2024W060161,65c1f0cfa64b6582fe051422,[],[],"['Non-religious', 'Cat']"
+BPBN,PUBLISHED,2024W040169-2024W060151,65c1f0cfa64b6582fe051418,[],[],"['Non-religious', 'Place']"
+BPBN,PUBLISHED,2024W040466-2024W060159,65c1f0cfa64b6582fe051420,[],[],"['Non-religious', 'Aurora']"
+BPBN,PUBLISHED,2024W030150-2024W060147,65c1f0cfa64b6582fe051414,[],[],"['Non-religious', 'Toy']"
+BPBN,PUBLISHED,2024W040546-2024W060168,65c1f0cfa64b6582fe051429,[],[],"['Non-religious', 'Women']"
+BPBN,PUBLISHED,2024W040465-2024W060158,65c1f0cfa64b6582fe05141f,[],[],"['Non-religious', 'Mountain']"
+BPBN,PUBLISHED,2024W040293-2024W060153,65c1f0cfa64b6582fe05141a,[],[],"['Non-religious', 'Women']"
+BPBN,PUBLISHED,2024W040690-2024W060098,65c1f0cfa64b6582fe051410,[],[],"['Non-religious', 'Bed']"
+BPBN,PUBLISHED,2024W030569-2024W060149,65c1f0cfa64b6582fe051416,[],[],"['Non-religious', 'Table']"
+BPBN,PUBLISHED,2024W040415-2024W060154,65c1f0cfa64b6582fe05141b,[],[],"['Non-religious', 'Indoor']"
+BPBN,PUBLISHED,2024W040473-2024W060162,65c1f0cfa64b6582fe051423,[],[],"['Non-religious', 'Leopard']"
+BPBN,PUBLISHED,2024W030152-2024W060094,65c1f0cfa64b6582fe05140c,[],[],"['Non-religious', 'Indoor']"
+BPBN,PUBLISHED,2024W040420-2024W060155,65c1f0cfa64b6582fe05141c,[],[],"['Non-religious', 'Indoor']"
+BPBN,PUBLISHED,2024W040687-2024W060097,65c1f0cfa64b6582fe05140f,[],[],"['Non-religious', 'Women']"
+BPBN,PUBLISHED,2024W030145-2024W060146,65c1f0cfa64b6582fe051413,[],[],"['Non-religious', 'Food']"
+BPBN,PUBLISHED,2024W040691-2024W060099,65c1f0cfa64b6582fe051411,[],[],"['Non-religious', 'Women']"
+BPBN,PUBLISHED,2024W030154-2024W060096,65c1f0cfa64b6582fe05140e,[],[],"['Non-religious', 'Building']"
+BPBN,PUBLISHED,2024W030148-2024W060093,65c1f0cfa64b6582fe05140b,[],[],"['Non-religious', 'Rocks']"
+PBN,PUBLISHED,2024W030559-2024W060169,65c1e98173358196a1671ed9,['复用至ZC'],['森林'],"['自然环境的宁静', 'ZenColor速写图']"
+PBN,PUBLISHED,2024W040302-2024W060179,65c1e98173358196a1671ee3,['复用至ZC'],['独栋房屋'],"['生活环境的宁静', 'ZenColor速写图', '极限挑战图']"
+PBN,PUBLISHED,2024W040178-2024W060177,65c1e98173358196a1671ee1,"['复用至ZC', '复用至VC']",['曼陀罗'],"['曼陀罗', 'ZenColor普通图']"
+PBN,PUBLISHED,2024W030565-2024W060172,65c1e98173358196a1671edc,[],['瀑布'],"['ZenColor速写图', '自然环境的宁静']"
+PBN,PUBLISHED,2024W030572-2024W060174,65c1e98173358196a1671ede,['复用至ZC'],['现代建筑'],"['生活环境的宁静', '高挑战图', 'ZenColor Daily']"
+PBN,PUBLISHED,2024W030561-2024W060170,65c1e98173358196a1671eda,[],['湖泊'],"['宁静', '高挑战图', 'ZenColor Daily']"
+PBN,PUBLISHED,2024W040530-2024W060121,65c1e98173358196a1671ed6,[],['留声机'],"['iPad速写图', '美好事物带来的愉悦']"
+PBN,PUBLISHED,2024W030573-2024W060175,65c1e98173358196a1671edf,['复用至ZC'],['鼓'],"['美好事物带来的愉悦', '高挑战图', 'ZenColor Daily']"
+PBN,PUBLISHED,2024W040495-2024W060120,65c1e98173358196a1671ed5,[],['多种动物'],"['彩绘作者包-Ducky', '生机带来的希望']"
+PBN,PUBLISHED,2024W030571-2024W060173,65c1e98173358196a1671edd,['复用至ZC'],['现代简约卧室'],"['生活环境的宁静', '高挑战图', 'ZenColor Daily']"
+PBN,PUBLISHED,2024W040546-2024W060123,65c1e98173358196a1671ed8,[],['欧美日常女性'],"['美好生活的喜悦', 'iPad速写图']"
+PBN,PUBLISHED,2024W030574-2024W060176,65c1e98173358196a1671ee0,['复用至ZC'],['河流湖泊'],"['自然环境的宁静', '高挑战图', 'ZenColor Daily']"
+PBN,PUBLISHED,2024W040480-2024W060118,65c1e98173358196a1671ed3,['试新'],['欧美日常女性'],"['美好生活的喜悦', 'iPad速写图']"
+PBN,PUBLISHED,2024W040468-2024W060116,65c1e98173358196a1671ed1,[],['其他猫'],"['iPad速写图', '美好生活的喜悦']"
+PBN,PUBLISHED,2024W040422-2024W060111,65c1e98173358196a1671ecc,['试新'],['多种宠物'],"['美好生活的喜悦', 'iPad速写图']"
+PBN,PUBLISHED,2024W040183-2024W060178,65c1e98173358196a1671ee2,['复用至ZC'],['欧美日常女性'],"['ZenColor速写图', '宠物情']"
+PBN,PUBLISHED,2024W040494-2024W060119,65c1e98173358196a1671ed4,[],['其他奇幻房屋'],"['彩绘作者包-刘佳捷', '现实重构']"
+PBN,PUBLISHED,2024W040466-2024W060114,65c1e98173358196a1671ecf,[],['极光'],"['自然环境的宁静', 'iPad速写图']"
+PBN,PUBLISHED,2024W040293-2024W060108,65c1e98173358196a1671ec9,"['复用至PBN', '复用至ZC', '试新']",['多人'],"['VitaColor速写图', '亲情']"
+PBN,PUBLISHED,2024W030569-2024W060104,65c1e98173358196a1671ec5,"['复用至PBN', '复用至ZC', '试新']",['棋'],"['VitaColor速写图', '美好事物带来的愉悦']"
+PBN,PUBLISHED,2024W030568-2024W060103,65c1e98173358196a1671ec4,"['复用至PBN', '复用至ZC']",['多种动物'],"['iPad速写图', '生机带来的希望']"
+PBN,PUBLISHED,2024W040538-2024W060122,65c1e98173358196a1671ed7,[],['梳妆盒台'],"['iPad速写图', '美好事物带来的愉悦']"
+PBN,PUBLISHED,2024W040420-2024W060110,65c1e98173358196a1671ecb,[],['服装店'],"['iPad速写图', '生活环境的宁静']"
+PBN,PUBLISHED,2024W040691,65c1e98173358196a1671ec0,"['方形', '彩绘', '困难']",['非洲裔日常女性'],"['彩绘作者包-Benedicta_Buatsie', '美好生活的喜悦']"
+PBN,PUBLISHED,2024W030563-2024W060171,65c1e98173358196a1671edb,[],['独栋房屋'],"['高挑战图', 'ZenColor Daily', '生活环境的宁静']"
+PBN,PUBLISHED,2024W030150-2024W060102,65c1e98173358196a1671ec3,"['复用至PBN', '复用至ZC', '试新']",['玩偶'],"['VitaColor速写图', '美好事物带来的愉悦']"
+PBN,PUBLISHED,2024W030570-2024W060105,65c1e98173358196a1671ec6,"['复用至PBN', '复用至ZC']",['台球'],"['VitaColor速写图', '美好事物带来的愉悦']"
+PBN,PUBLISHED,2024W040465-2024W060113,65c1e98173358196a1671ece,[],['山陵'],"['自然环境的宁静', 'iPad速写图']"
+PBN,PUBLISHED,2024W040473-2024W060117,65c1e98173358196a1671ed2,['试新'],['老虎'],"['iPad速写图', '生机带来的希望']"
+PBN,PUBLISHED,2024W040172-2024W060107,65c1e98173358196a1671ec8,['复用至PBN'],['其他奇幻场景'],"['经典童话再现', '彩绘作者包-Griselda_Anna']"
+PBN,PUBLISHED,2024W040169-2024W060106,65c1e98173358196a1671ec7,['复用至PBN'],['其他奇幻场景'],"['现实重构', '彩绘作者包-刘佳捷']"
+PBN,PUBLISHED,2024W040467-2024W060115,65c1e98173358196a1671ed0,[],['其他猫'],"['iPad速写图', '美好生活的喜悦']"
+PBN,PUBLISHED,2024W030145-2024W060101,65c1e98173358196a1671ec2,"['复用至PBN', '复用至ZC', '试新']",['披萨'],"['VitaColor速写图', '美好事物带来的愉悦']"
+PBN,PUBLISHED,2024W040429-2024W060112,65c1e98173358196a1671ecd,[],['其他动物'],"['iPad速写图', '生机带来的希望']"
+PBN,PUBLISHED,2024W040415-2024W060109,65c1e98173358196a1671eca,[],['浴室'],"['iPad速写图', '生活环境的宁静']"
+PBN,PUBLISHED,2024W040688,65c1e98173358196a1671ebe,"['方形', '彩绘', '困难']",['拟人猫'],"['彩绘作者包-Roisin_Sweeney', '幻想主题创意']"
+PBN,PUBLISHED,2024W030153,65c1e98173358196a1671ebb,"['复用至ZC', '试新', '方形', '普通', '困难']",['小镇'],"['ZenColor速写图', '人工融入自然的宁静']"
+PBN,PUBLISHED,2024W030138-2024W060100,65c1e98173358196a1671ec1,"['复用至PBN', '复用至ZC', '试新']",['西餐'],"['VitaColor速写图', '美好事物带来的愉悦']"
+PBN,PUBLISHED,2024W030148,65c1e98173358196a1671eb9,"['复用至ZC', '试新', '方形', '普通', '困难']",['风化岩石'],"['ZenColor速写图', '自然环境的宁静']"
+PBN,PUBLISHED,2024W040687,65c1e98173358196a1671ebd,"['方形', '彩绘', '困难']",['非洲裔日常女性'],"['彩绘作者包-Benedicta_Buatsie', '美好生活的喜悦']"
+PBN,PUBLISHED,2024W040690,65c1e98173358196a1671ebf,"['方形', '彩绘', '困难']",['其他房屋内饰'],"['彩绘作者包-徐同舟', '生活环境的宁静']"
+PBN,PUBLISHED,2024W030154,65c1e98173358196a1671ebc,"['复用至ZC', '试新', '方形', '普通', '困难']",['现代建筑'],"['ZenColor速写图', '人工融入自然的宁静']"
+PBN,PUBLISHED,2024W030152,65c1e98173358196a1671eba,"['复用至ZC', '方形', '普通', '困难']",['其他房屋内饰'],"['ZenColor速写图', '美好事物带来的愉悦']"
+PBN,PUBLISHED,2024W030063,65c1e98173358196a1671eb8,"['试新', '方形', '普通', '困难']",['拟人猫'],"['PBN速写图', '拟人化']"
+VitaColor,PUBLISHED,2024W040538,65c1e811a64b6582fe051196,[],['梳妆盒台'],"['iPad速写图', '美好事物带来的愉悦']"
