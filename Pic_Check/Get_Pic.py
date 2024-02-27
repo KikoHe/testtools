@@ -24,22 +24,22 @@ session = requests.Session()
 session.mount('https://', HTTPAdapter(max_retries=retries))
 
 # 获取素材列表的数据
-def Get_List(address, limit=10, timezone=timezone):
+def Get_List(address, limit=10, timezone=timezone, group="default"):
     url_prefixes = {
         "ZC_Lib": f"https://api.colorflow.app/colorflow/v1/paintcategory/all/paints?limit={limit}",
         "ZC_Daily": f"https://api.colorflow.app/colorflow/v1/daily?query_date={formatted_date1}",
         "VC_Lib": f"https://vitacolor-api.vitastudio.ai/vitacolor/v1/paintcategory/all/paints?limit={limit}",
         "VC_Daily": f"https://vitacolor-api.vitastudio.ai/vitacolor/v1/daily?query_date={formatted_date1}",
-        "PBN_Lib": f"https://paint-api.dailyinnovation.biz/paint/v1/paintCategory/5ba31d31fe401a000102966e/paints?day=100&limit={limit}",
+        "PBN_Lib": f"https://paint-api.dailyinnovation.biz/paint/v1/paintCategory/5ba31d31fe401a000102966e/paints?day=100&limit={limit}&groupNumber={group}",
         "PBN_Daily": f"https://paint-api.dailyinnovation.biz/paint/v1/daily?groupNumber=c&day=0&limit=400&offset=0",
-        "BP_Lib": f"https://bpbnapi.idailybread.com/paint/v1/paintCategory/trending/list?limit={limit}&offset=0&day=502&group_key=test_a&isAddDayMax=false&read_unactive=false&time_date=1703746118589&sort_plan=normal",
+        "BP_Lib": f"https://bpbnapi.idailybread.com/paint/v1/paintCategory/trending/list?limit={limit}&offset=0&day=503&group_key={group}&isAddDayMax=false&read_unactive=false&time_date=1709027222&sort_plan=normal",
         "BP_Daily": f"https://bpbnapi.idailybread.com/paint/v1/daily/{formatted_date3}",
         "Vista_Lib": f"https://colorpad-api.vitastudio.ai/colorpad/v1/paintcategory/all/paints?offset=0&limit={limit}",
         "Vista_Daily": f"https://colorpad-api.vitastudio.ai/colorpad/v1/daily?query_date={formatted_date1}"
     }
-
     headers = {
         "platform": "android",
+        "image_group": group,
         "install_day": "100",
         "timezone": timezone,
         "today": formatted_date2,
@@ -62,12 +62,12 @@ def Get_List(address, limit=10, timezone=timezone):
         print(f"An error occurred: {err}")
 
 # 获取Get_List列表数据中图片ID和zip包url
-def Get_id_Zipurl(address, limit):
+def Get_id_Zipurl(address, limit, group="c"):
     Pic_ids = []
     Zip_url = []
     attempt_count = 0
     while True:
-        data = Get_List(address, limit)
+        data = Get_List(address, limit, timezone, group)
         if address.startswith("PBN"):
             Pic_ids.clear()  # 清除之前的内容
             Zip_url.clear()
@@ -105,6 +105,35 @@ def Get_id_Zipurl(address, limit):
                         Pic_ids.append(detail_content["id"])
             break
     return Pic_ids, Zip_url
+
+# 获取不同的素材实验方案的素材数据，判断是否有方案的素材有缺失
+def Get_all_group_Lib_list_pic_ids(address,limit, group_list):
+    group_ids = []
+    for group in group_list:
+        ids, _ = Get_id_Zipurl(address, limit, group)
+        group_ids.append(len(ids))
+
+    # 寻找结果数量不是最大数量的所有group
+    max_count = max(group_ids)
+    inconsistent_groups = [group_list[i] for i in range(len(group_list)) if group_ids[i] != max_count]
+    if inconsistent_groups:
+        return inconsistent_groups
+    else:
+        return group_ids[0]
+
+# 检查BP和PBN项目的素有素材实验
+def Get_all_project_Lib_list_pic_ids(address,limit):
+    ids = []
+    group_list_bp = ["default", "default_ios", "test_a"]
+    group_list_pbn = ["c", "ios_c", "us-new", "vietnam-new", "brazil-new", "india-new", "mexico-new"]
+    if address == "BP_Lib":
+        ids = Get_all_group_Lib_list_pic_ids(address, limit, group_list_bp)
+    elif address == "PBN_Lib":
+        ids = Get_all_group_Lib_list_pic_ids(address, limit, group_list_pbn)
+    return ids
+
+print(Get_all_project_Lib_list_pic_ids("PBN_Lib",20))
+
 
 
 # 获取不同时区最新的故事线ID

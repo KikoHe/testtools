@@ -25,18 +25,21 @@ def test_number_error(address,limit=10):
                 failed_ids.append(ids_)
     return failed_ids
 
-# print(test_number_error("Vista_Lib",limit=30))
+print(test_number_error("PBN_Lib",limit=30))
 
 # 返回更新的素材张数
+
 def test_picupdate(address, limit=10):
     if address == "PBN_Story":
         updatepic = Get_stroyupdatepicid()
         ids = list(updatepic.keys())
+        ids_output = len(ids)
+    elif address in ["BP_Lib", "PBN_Lib"]:
+        ids_output = Get_all_project_Lib_list_pic_ids(address,limit)
     else:
         ids, _ = Get_id_Zipurl(address, limit)
-    print(len(ids))
-
-print(test_picupdate("Vista_Lib", limit=20))
+        ids_output = len(ids)
+    return ids_output
 
 # 检查PDF文件是否能正常打开
 def test_pdf(address, limit=10):

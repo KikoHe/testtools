@@ -7,8 +7,8 @@ import pandas as pd
 def get_url_headers(api_type, limit, offset):
     #枚举所有系统的数据接口url和headers
     if api_type == 'pbn':
-        # url = f'''https://pbn-cms-stage.learnings.ai/paint/v1/cms/paint?limit={limit}&offset={offset}&category_id=&authors=&color_type=&size_type=&tags=&with_preformance=false&status_list=&sort_by=c_time%5E-1&is_resource_update=IGNORE'''
-        url = f'''https://pbn-cms.learnings.ai/paint/v1/cms/paint?limit={limit}&offset={offset}&category_id=&authors=&color_type=&size_type=&tags=&with_preformance=false&status_list=&sort_by=c_time%5E-1&is_resource_update=IGNORE'''
+        url = f'''https://pbn-cms-stage.learnings.ai/paint/v1/cms/paint?limit={limit}&offset={offset}&category_id=&authors=&color_type=&size_type=&tags=&with_preformance=false&status_list=&sort_by=c_time%5E-1&is_resource_update=IGNORE'''
+        # url = f'''https://pbn-cms.learnings.ai/paint/v1/cms/paint?limit={limit}&offset={offset}&category_id=&authors=&color_type=&size_type=&tags=&with_preformance=false&status_list=&sort_by=c_time%5E-1&is_resource_update=IGNORE'''
         headers = {
             "Cookie": '''_ga=GA1.1.1929480831.1691656939; learnings-passport=EBH0lAfOxgQq90GrHPSdIFGaGgf_IGLhGWe1O53CoQOY8vKvW9nXHQZszwZauw20; learnings-user=lVeSR6Ly9Mm2BcY9X2kZPcdJG5oUkJx3OjFkNVJKB-cxD4xwsCdyWneh7Rhz0RZ29WkW1fX6vX3FsVtcTN2Nh34e9a2mde47LOtc6Wqdh1YhZW1ZLpD_BMYwsqRjN1FjUz-q0-fMDwPYpKEvE0h0I6O4d49Y81kvQtlO9lC-xGgk3n_bzXGeamh46nfCYIyfWvpuZtZbbnxQ8BmpTfSPFSCS1txNp7SC4pn_hfOC016BVwu4_s1IJ7_t5VXUnA05KVsoGt0AMH7NxPs_IJD6Sgt0rMA4ZH2R2T05D48RYNfztYsvYH14ut_LKxRsrK_PiT8KyJnOZVzhhKRi7JgZdrFO20qnOx0rakzG4pD1m7AKFYxkK6mufp-BPapGG_GG1fBO-lMFrZm9EuHCCPCTbPeB1x4Hxoob-uRybfpT-k23UlKotILiHKVR4fogWyejkmnP6Adw83W5Mip2_St3LyHTCVZvkPiJtmF-v2bHPclVk7k0U9o0CxOrkYUFsJ5TZWwPMC76zAMaMs79UZRE0JJl4KS5tNm65y1RyC62l5UXFvojbqPc1SbFLkzxQW1W3eAryvfkcfQA9atIbLggVP6TT9yjSRM7qE8rL8dqQZI; _ga_2Z4PFG28RG=GS1.1.1708481358.382.1.1708486541.60.0.0''',
             "Vincent_client_platform": "web"
@@ -21,22 +21,22 @@ def get_url_headers(api_type, limit, offset):
             "Vincent_client_platform": "web"
         }
     elif api_type == "zc":
-        # url = f'''https://zc-cms-stage.learnings.ai/colorflow/v1/cms/paint?offset={offset}&limit={limit}'''
-        url = f'''https://zc-cms.learnings.ai/colorflow/v1/cms/paint?offset={offset}&limit={limit}'''
+        url = f'''https://zc-cms-stage.learnings.ai/colorflow/v1/cms/paint?offset={offset}&limit={limit}'''
+        # url = f'''https://zc-cms.learnings.ai/colorflow/v1/cms/paint?offset={offset}&limit={limit}'''
         headers = {
             "Cookie": '''_ga=GA1.1.1929480831.1691656939; name=%E4%BD%95%E6%B6%9B; avatar=https://s1-imfile.feishucdn.com/static-resource/v1/v2_9adcf190-6b5f-4001-82ce-1278c1ab7e2g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp; id=5c85c2ed9def2c0001636c4b; learnings-passport=EBH0lAfOxgQq90GrHPSdIFGaGgf_IGLhGWe1O53CoQOY8vKvW9nXHQZszwZauw20; learnings-user=Z1-bVNSvI14NygsAWa_lRHgaeghMtZeezxxrou748bTSD_K9HFAvWIxZCutGOxDcSjF8TZHqlC0H0v1wL73guiD1PkxjYBDMQsfejUD-xcn8uiUmT1xW_JFbJVQKK4RqFg5tzCeqynz5hqA_U3lRJzX1TFgyCCjlzVzpKuYPJKcq7HKtkq5q4wE9IaUVN9A5XQ4sBjC1W52itnpoYlKxqDe2iHlIxptlekx2-mivj7i-lexgnkU1oJ5eJsjce2clMKGcYEfZUQmtvaja0rU0ypyXtbfdIu0wKujJm4xZo8wT5l2Vs1sAyYk7Igxqb5mRzyzkW-aBfvDHAxACDkM7XyjPvO9XRoQAR0a53kWCZUSc7TB3Zi24BChILnEtrPAXSfJwrEMsL83RQQdzFcKz_DwSO3Pmpvvmy2ZD3k0l95CoXgapQVhgrh8OupYveuAHgZYienI9a81mopuGbxpGinDuUSLG7ZM0GZoOasi2mjBVsNuZC6FMcz8314bYNdMmGmyiF4t3J2PQN7lWze1W_4dby0ddJr7r1GiZNlB9G3sg8T0cmSZVZotyk3I-TLyDnUPCS3F-0WjfMGybNgqZErO_Yw2jkuaqlnRCJlfE-Ok; _ga_2Z4PFG28RG=GS1.1.1708411797.379.1.1708419338.46.0.0''',
             "Vincent_client_platform": "web"
         }
     elif api_type == "vc":
-        # url = f'''https://vc-cms-stage.learnings.ai/vitacolor/v1/cms/paint?offset={offset}&limit={limit}'''
-        url = f'''https://vc-cms.learnings.ai/vitacolor/v1/cms/paint?offset={offset}&limit={limit}'''
+        url = f'''https://vc-cms-stage.learnings.ai/vitacolor/v1/cms/paint?offset={offset}&limit={limit}'''
+        # url = f'''https://vc-cms.learnings.ai/vitacolor/v1/cms/paint?offset={offset}&limit={limit}'''
         headers = {
             "Cookie": '''_ga=GA1.1.1929480831.1691656939; name=%E4%BD%95%E6%B6%9B; id=5c85c2ed9def2c0001636c4b; avatar=https://s1-imfile.feishucdn.com/static-resource/v1/v2_9adcf190-6b5f-4001-82ce-1278c1ab7e2g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp; learnings-passport=EBH0lAfOxgQq90GrHPSdIFGaGgf_IGLhGWe1O53CoQOY8vKvW9nXHQZszwZauw20; _ga_2Z4PFG28RG=GS1.1.1708411797.379.1.1708415957.60.0.0; learnings-user=bluifVYmgNIMsVszcHCd3A1maKLHIQnmUSU4MvWzxn9kkpnKskmX_0-zO5qMOpBfAsQ68O8HNWjh5ypfkYBh6MWDmD8tKiA39Gz_C-yluiRCKT2o_O7XFO2ZXRBPebv3yaDblxIJd4V5ldmbcg97koMY8OlZsyhDFAqxRGDBK9bfRWOjKKVmzEgrmWk2B_st4354XA9sKE-reRmOuVj7a0Ub7VYSrj0E2nh881jYZul1zSjarWGCOZCObD2lEhRNCH6piH-NwEuHEtkhmV7rmukIxkLOsBK5zIZj44ur6WZkA3m73oZG40D0dB2DMdf9ELeuAiob0pqLQi20NKKnTfMPG1CAxJhJSa84DxPkM_CM8y8X8-2wbkHc385TfTg389gEdHoatefaD3MaymYEaijZNB6oHzAqsUDiAyCV-tPUo55_tO_YWVhJX-IcoJgQ1wAwDP4RAf0JfYyaB3pGVUp5KFoNYwvp2tQE5NFf2iyZU42G9GdCLfCfqwkI9SNID8lp5z3XLAIqylmn9yU45LeEfhTzbcjg2vQV3US30ozGJS26Twi_W7Ywy12VQAS3A4LdQnHWpKfDB9cGyysSQlf5tnmCZ-2Q2Rq7-i0YZGk''',
             "Vincent_client_platform": "web"
         }
     elif api_type == "colorpad":
-        # url = f'''https://colorpad-cms-stage.learnings.ai/colorpad/v1/cms/paint?offset={offset}&limit={limit}'''
-        url = f'''https://colorpad-cms.learnings.ai/colorpad/v1/cms/paint?offset={offset}&limit={limit}'''
+        url = f'''https://colorpad-cms-stage.learnings.ai/colorpad/v1/cms/paint?offset={offset}&limit={limit}'''
+        # url = f'''https://colorpad-cms.learnings.ai/colorpad/v1/cms/paint?offset={offset}&limit={limit}'''
         headers = {
             "Cookie": '''_ga=GA1.1.1929480831.1691656939; learnings-passport=EBH0lAfOxgQq90GrHPSdIFGaGgf_IGLhGWe1O53CoQOY8vKvW9nXHQZszwZauw20; _ga_2Z4PFG28RG=GS1.1.1708506726.386.1.1708509274.9.0.0; learnings-user=Z1-bVNSvI14NygsAWa_lRHgaeghMtZeezxxrou748bTSD_K9HFAvWIxZCutGOxDcSjF8TZHqlC0H0v1wL73guiD1PkxjYBDMQsfejUD-xcn8uiUmT1xW_JFbJVQKK4RqFg5tzCeqynz5hqA_U3lRJzX1TFgyCCjlzVzpKuYPJKcq7HKtkq5q4wE9IaUVN9A5XQ4sBjC1W52itnpoYlKxqDe2iHlIxptlekx2-mivj7gpee_3Hc7EygiRn6OLMwo5YU1ng6cJSNKLifOCqDoT38_TTybLkBfntLJsyfLLxU9evH-1xcu6eEK7Nm2K-xJg5WMkISj6JWoMVmZ6aWAi8cZLTJJdKx690j-XXpVwDPBRnGdgplVgKWqryTDk_Hn3PRVWoKPnvOU_at0jmbtzHTyRI-qFcZ5mk7pRrAKLwOvHwMhs-cLaIzoKd4PqoqhzbsG_E-AlrIFoQntSahwgQcO1IKxtYOgMDgVPJ8rBhTHRln1lGrkSwJhDsIjyfse1l26wHsDwIqRMX5oidDTOjbckaid4F0r7HhJeXxSwox4tzfUNpoLa5VSQRsR7Jr1bw2dnDBXxA08Kg18gfrKNn1sHr-ut19DLdgT_1MSCEOo''',
             "Vincent_client_platform": "web"
@@ -131,30 +131,30 @@ def get_pic_info(project):
         # 使用 pandas 创建 DataFrame
         df = pd.DataFrame(results)
         if first_write:
-            df.to_csv(f'excel/{project}_before_refresh_data.csv', mode='w', index=False, header=True)
+            df.to_csv(f'excel/{project}_after_refresh_data.csv', mode='w', index=False, header=True)
             first_write = False
         else:
-            df.to_csv(f'excel/{project}_before_refresh_data.csv', mode='a', index=False, header=False)
+            df.to_csv(f'excel/{project}_after_refresh_data.csv', mode='a', index=False, header=False)
         offset += limit
     print(f"Data exported successfully to {project}_data.csv")
-get_pic_info("vincent")
+# get_pic_info("zc")
 
-def merge_table():
+def merge_table(project):
     # 基于ID合并两个表
     # 读取两个CSV文件
-    df1 = pd.read_csv('excel/colorpad_after_refresh_data.csv')
-    df2 = pd.read_csv('excel/colorpad_before_refresh_data.csv')
+    df1 = pd.read_csv(f'excel/{project}_after_refresh_data.csv')
+    df2 = pd.read_csv(f'excel/{project}_before_refresh_data.csv')
     # 基于ID合并两个DataFrame，这里以内连接为例
     merged_df = df1.merge(df2, on='cms_id', how='inner')  # 使用 'outer' 替换 'inner' 可进行外连接
     # 将合并后的DataFrame保存到新的CSV文件
-    merged_df.to_csv('excel/colorpad_merged_data.csv', index=False)
+    merged_df.to_csv(f'excel/{project}_merged_data.csv', index=False)
     print("The tables have been merged successfully and saved to merged_table.csv")
-# merge_table()
+# merge_table("vc")
 
-def compare_differences_tag():
+def compare_differences_tag(project):
     # 输出"两个列中内容不一样的素材"
     # 读取CSV文件到DataFrame
-    df = pd.read_csv('excel/colorpad_merged_data.csv')
+    df = pd.read_csv(f'excel/{project}_merged_data.csv')
 
     # 假设我们要比较的两个字段是'Column1'和'Column2'
     # 创建一个新的列'Difference'，这将是一个布尔列，显示两个字段是否不同
@@ -174,8 +174,9 @@ def compare_differences_tag():
     print(differences)
 
     # 如果需要，也可以将结果保存到新的 CSV 文件中
-    differences.to_csv('excel/colorpad_differences_data_clear.csv', index=False)
-# compare_differences_tag()
+    differences.to_csv(f'excel/{project}_differences_data_clear.csv', index=False)
+    # differences.to_csv(f'excel/{project}_differences_data_not_clear.csv', index=False)
+# compare_differences_tag("vc")
 
 def get_all_content_tag():
     # 设置重试次数以及回退策略
