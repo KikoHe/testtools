@@ -1,23 +1,13 @@
-from Get_Pic import *
-from Common_Fun import *
+from PIL import Image
+import cairosvg
 
-def test_number_error():
-    #Plan = Center
-    Project = "PBN"
-    limit = 1000
-    ids = Get_Picid(Project,limit)
-    failed_ids = []
-    for id_ in ids:
-            data = Get_Zip(id_, Project)
-            if sorted(Get_Number_From_Center(data)) != sorted(Get_Number_From_Plan(data)):
-                failed_ids.insert(-1, id_)
-            continue
+# 读取矢量资源文件（例如SVG）
+with open('/Users/ht/Desktop/PythonTools/Pic_Check/Pic/65e559a4a0a5acce482dae18/65e559a4a0a5acce482dae18_vector.svg', 'rb') as f:
+    svg_data = f.read()
 
+# 使用cairosvg将SVG转换为位图
+png_data = cairosvg.svg2png(bytestring=svg_data)
 
-def test_one_pic(address, PicID):
-    # 测试范围：PicID
-    # 测试内容：plan和center的元素是否一致
-    data = Get_detailjson(PicID, address)
-    difference = set(Get_Number_From_Plan(data)) - set(Get_Number_From_Center(data))
-    if difference:
-        raise ValueError(f"Plan中含有Center中没有的元素: {difference}")
+# 将位图数据保存为PNG文件
+with open('output_bitmap.png', 'wb') as f:
+    f.write(png_data)

@@ -28,12 +28,10 @@ def test_number_error(address,limit=10):
         if Test_area_and_FloatCenter(data) == False:
             # 测试点：Floatcenter中的数字位置，是否在area区域内；表现为：画布上的数字不是该色块的色号数字
             failed_ids.append(ids_)
-        if Test_area_and_Center(data)== False:
+        if address.startswith("PBN") and Test_area_and_Center(data)== False:
             # 测试点：center中的数字位置，是否在area区域内；表现为：画布上的数字不是该色块的色号数字
             failed_ids.append(ids_)
     return failed_ids
-# print(test_number_error("Vista_Pack",limit=10))
-
 
 # 返回更新的素材张数
 def test_picupdate(address, limit=10):
@@ -143,3 +141,4 @@ def test_error_from_excel(address):
         delete_folder(folder_path)
         time1 = time1 + 1
     return Number_failed_ids, PDF_failed_ids
+

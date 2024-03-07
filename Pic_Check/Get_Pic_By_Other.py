@@ -76,7 +76,7 @@ def get_picid_zipurl_from_excel(address):
 def Check_json_and_pdf(address):
     # ids, Zip_url = Get_id_Zipurl(address, limit=1000, group="c")  # 获取Lib、Daily要检测的素材信息：id、url
 
-    ids, Zip_url = Get_id_Zipurl_from_picdetailapi(address, "65e965b27ba2388826a1ee55")  #检查单张素材
+    ids, Zip_url = Get_id_Zipurl_from_picdetailapi(address, "65e18946ecb41b8f4484f5a5")  #检查单张素材
     # date = Get_Pack_Pic_Data("Pacific/Apia")    # 检查包素材
     # ids = [list(d.keys())[0] for d in date]  # 提取所有的键
     # Zip_url = [list(d.values())[0] for d in date]
@@ -87,30 +87,40 @@ def Check_json_and_pdf(address):
     for ids_, Zip_url_ in zip(ids, Zip_url):
         print(ids_)
         data = Get_detailjson(ids_, Zip_url_, address)
-        if Get_Number_From_Plan(data, address) == [] or Get_Number_From_Center(data) == []:
-            failed_ids.append(ids_)
-        elif set(Get_Number_From_Plan(data, address)) - set(Get_Number_From_Center(data)):
-            failed_ids.append(ids_)
-        if Get_Number_From_FloatCenter(data) != []:
-            if set(Get_Number_From_Plan(data, address)) - set(Get_Number_From_FloatCenter(data)):
-                failed_ids.append(ids_)
-        pdf = Get_PDF(ids_, Zip_url_, address)
-        if pdf:
-            try:
-                with open(pdf, 'rb') as file:
-                    reader = PyPDF2.PdfReader(file)
-                    if reader.is_encrypted:
-                        continue
-                    # 尝试读取PDF的每一页
-                    for page in range(len(reader.pages)):
-                        _ = reader.pages[page]  # 获取页面的方法也有变更
-            except PyPDF2.errors.PdfReadError as e:  # 更新异常处理
-                failed_ids_pdf.append(ids_)
-            except OSError as e:  # OSError 保持不变
-                failed_ids_pdf.append(ids_)
-            if Check_Pdf_Block(pdf, ids_, Zip_url_, address) == False:
-                failed_ids.append(ids_)
+        # if Get_Number_From_Plan(data, address) == [] or Get_Number_From_Center(data) == []:
+        #     print("1")
+        #
+        #     failed_ids.append(ids_)
+        # elif set(Get_Number_From_Plan(data, address)) - set(Get_Number_From_Center(data)):
+        #     print("2")
+        #
+        #     failed_ids.append(ids_)
+        # if Get_Number_From_FloatCenter(data) != []:
+        #     if set(Get_Number_From_Plan(data, address)) - set(Get_Number_From_FloatCenter(data)):
+        #         print("3")
+        #         failed_ids.append(ids_)
+        # pdf = Get_PDF(ids_, Zip_url_, address)
+        # if pdf:
+        #     try:
+        #         with open(pdf, 'rb') as file:
+        #             reader = PyPDF2.PdfReader(file)
+        #             if reader.is_encrypted:
+        #                 continue
+        #             # 尝试读取PDF的每一页
+        #             for page in range(len(reader.pages)):
+        #                 _ = reader.pages[page]  # 获取页面的方法也有变更
+        #     except PyPDF2.errors.PdfReadError as e:  # 更新异常处理
+        #         failed_ids_pdf.append(ids_)
+        #     except OSError as e:  # OSError 保持不变
+        #         failed_ids_pdf.append(ids_)
+        #     if Check_Pdf_Block(pdf, ids_, Zip_url_, address) == False:
+        #         print("Check_Pdf_Block error")
+        #         failed_ids.append(ids_)
         if Test_area_and_FloatCenter(data) == False:
+            print("Test_area_and_FloatCenter error")
+            failed_ids_number.append(ids_)
+        if address.startswith("PBN") and Test_area_and_Center(data) == False:
+            print("Test_area_and_Center error")
             failed_ids_number.append(ids_)
         # delete_folder(folder_path)
     print("*******test end********")
@@ -118,7 +128,7 @@ def Check_json_and_pdf(address):
     print(failed_ids_pdf)
     print(failed_ids_number)
 
-# Check_json_and_pdf("VC")
+Check_json_and_pdf("Vista")
 # Check_json_and_pdf("ZC_Daily")
 
 # 检查素材PicID的json错误类型

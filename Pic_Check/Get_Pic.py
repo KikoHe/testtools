@@ -453,8 +453,11 @@ def Test_area_and_Center(data):
                     if xmin < center_number_code_int_x < xmax and ymin < center_number_code_int_y < ymax:
                         pass
                     else:
+                        print("area_data:")
+                        print(xmin,xmax,ymin,ymax)
                         failed_numebr.append(int(center_number_code))
             if failed_numebr != []:
+                print("error id :")
                 print(sorted(failed_numebr))
                 return False
             else:
