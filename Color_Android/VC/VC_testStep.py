@@ -1,4 +1,4 @@
-from Action import *
+from Common_action import *
 
 def Open_Debug_Funtion(driver):
     click_by_id(driver, "tab_mywork")

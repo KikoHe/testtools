@@ -3,7 +3,7 @@
 # coding=utf-8
 __author__='kiko'
 
-'''description:非UI公共类'''
+'''测试前的准备相关工具'''
 
 import subprocess
 

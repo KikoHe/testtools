@@ -2,10 +2,9 @@
 
 import json
 import requests
-from src.common.Draw_unit import *
-from src.pages.drawing_pages import *
+from appium import webdriver
 desired_caps = {}
-desired_caps['platformName'] = 'iOS'  # 设备系统
+desired_caps['platformName'] = 'Andr'  # 设备系统
 desired_caps['platformVersion'] = '12.2'  # 设备系统版本
 desired_caps['deviceName'] = 'iPhone 6s'  # 设备名称
 desired_caps['app'] = '/Users/apple/Desktop/pbn_autotest_ios_pyton3/app/PaintByNumber.app'
@@ -13,8 +12,6 @@ desired_caps['automationName'] = 'XCUITest'
 desired_caps['noReset'] = True  #重置应用，清楚数据
 desired_caps['locale'] = 'fr_US'  #设置系统地区，区分国内国际版本
 driver = webdriver.Remote("http://localhost:4723/wd/hub", desired_caps)
-
-
 
 response = requests.get("http://paint-api.dailyinnovation.biz/paint/v1/paint/5d1567f3cd5f400001657d6d")
 js = json.loads(response.text)

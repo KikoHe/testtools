@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 import unittest
 from appium import webdriver
-from TestStep import *
+from VC_testStep import *
 
 class VC(unittest.TestCase):
     @classmethod
@@ -12,6 +12,7 @@ class VC(unittest.TestCase):
         desired_caps['deviceName'] = 'R5CNC09S18K'  # 设备名称
         desired_caps['appPackage'] = 'com.vitastudio.color.paint.free.coloring.number'
         desired_caps['appActivity'] = 'com.meevii.vitacolor.HomeActivity'
+
         cls.driver = webdriver.Remote("http://localhost:4723/wd/hub", desired_caps)
 
         click_by_id(cls.driver, "btn_text", "bottom_sheet")
@@ -19,7 +20,7 @@ class VC(unittest.TestCase):
             print("system >= 13")
             click_by_id(cls.driver, "com.android.permissioncontroller:id/permission_allow_button")
         Open_Debug_Funtion(cls.driver)
-        # remove_directory("/screenshots")
+        remove_directory("/screenshots")
 
     @classmethod
     def tearDownClass(cls):
@@ -32,6 +33,7 @@ class VC(unittest.TestCase):
         element_disappear_by_id(driver, "vc_logo")
 
     def tearDown(self):
+        ...
         self.driver.terminate_app('com.vitastudio.color.paint.free.coloring.number')
 
     def test_case_1(self):
@@ -81,9 +83,10 @@ class VC(unittest.TestCase):
             take_screenshot_and_save(driver, save_path="/screenshots", file_name="Finish_Library_Pic")
         print("Finish all new lib pic.")
 
+
 if __name__=='__main__':
     suite = unittest.TestSuite()
-    suite.addTest(VC("test_case_1"))
-    suite.addTest(VC("test_case_2"))
+    # suite.addTest(VC("test_case_1"))
+    # suite.addTest(VC("test_case_2"))
     runner = unittest.TextTestRunner()
     runner.run(suite)

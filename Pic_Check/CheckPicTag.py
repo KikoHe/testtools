@@ -4,39 +4,61 @@ from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 import pandas as pd
 
+
+# 枚举所有系统的数据接口url和headers
 def get_url_headers(api_type, limit, offset):
-    #枚举所有系统的数据接口url和headers
     if api_type == 'pbn':
-        url = f'''https://pbn-cms-stage.learnings.ai/paint/v1/cms/paint?limit={limit}&offset={offset}&category_id=&authors=&color_type=&size_type=&tags=&with_preformance=false&status_list=&sort_by=c_time%5E-1&is_resource_update=IGNORE'''
-        # url = f'''https://pbn-cms.learnings.ai/paint/v1/cms/paint?limit={limit}&offset={offset}&category_id=&authors=&color_type=&size_type=&tags=&with_preformance=false&status_list=&sort_by=c_time%5E-1&is_resource_update=IGNORE'''
+        url = f'''https://pbn-cms.learnings.ai/paint/v1/cms/paint?limit={limit}&offset={offset}&category_id=&authors=&color_type=&size_type=&tags=&with_preformance=false&status_list=&sort_by=c_time%5E-1&is_resource_update=IGNORE'''
+        # url = f'''https://pbn-cms-stage.learnings.ai/paint/v1/cms/paint?limit={limit}&offset={offset}&category_id=&authors=&color_type=&size_type=&tags=&with_preformance=false&status_list=&sort_by=c_time%5E-1&is_resource_update=IGNORE'''
         headers = {
             "Cookie": '''_ga=GA1.1.1929480831.1691656939; learnings-passport=EBH0lAfOxgQq90GrHPSdIFGaGgf_IGLhGWe1O53CoQOY8vKvW9nXHQZszwZauw20; learnings-user=lVeSR6Ly9Mm2BcY9X2kZPcdJG5oUkJx3OjFkNVJKB-cxD4xwsCdyWneh7Rhz0RZ29WkW1fX6vX3FsVtcTN2Nh34e9a2mde47LOtc6Wqdh1YhZW1ZLpD_BMYwsqRjN1FjUz-q0-fMDwPYpKEvE0h0I6O4d49Y81kvQtlO9lC-xGgk3n_bzXGeamh46nfCYIyfWvpuZtZbbnxQ8BmpTfSPFSCS1txNp7SC4pn_hfOC016BVwu4_s1IJ7_t5VXUnA05KVsoGt0AMH7NxPs_IJD6Sgt0rMA4ZH2R2T05D48RYNfztYsvYH14ut_LKxRsrK_PiT8KyJnOZVzhhKRi7JgZdrFO20qnOx0rakzG4pD1m7AKFYxkK6mufp-BPapGG_GG1fBO-lMFrZm9EuHCCPCTbPeB1x4Hxoob-uRybfpT-k23UlKotILiHKVR4fogWyejkmnP6Adw83W5Mip2_St3LyHTCVZvkPiJtmF-v2bHPclVk7k0U9o0CxOrkYUFsJ5TZWwPMC76zAMaMs79UZRE0JJl4KS5tNm65y1RyC62l5UXFvojbqPc1SbFLkzxQW1W3eAryvfkcfQA9atIbLggVP6TT9yjSRM7qE8rL8dqQZI; _ga_2Z4PFG28RG=GS1.1.1708481358.382.1.1708486541.60.0.0''',
             "Vincent_client_platform": "web"
         }
-    elif api_type == 'vincent':
-        # url = f'''https://vincent2.lexinshengwen.com/vincent/v1/material/global?limit={limit}&offset={offset}&image_paint_from=&image_outside_painter=&demand_intermediary=&demand_audit_painter=&demand_content_painter=&demand_color_painter=&demand_line_painter=&demand=&demand_creator=&material=&fuzzy_search_numbers=&image=&cms_id=&image_paint_type=&image_size_type=&image_production_type=&demand_status=&demand_deadline_for_lining_start=&demand_deadline_for_lining_end=&demand_complete_time_start=&demand_complete_time_end=&demand_platform=&demand_module=&demand_category=&demand_tag=&material_platform=ColorPad&material_module=&material_category=&material_tag=&demand_group=&demand_illustrator=&material_status='''
-        url = f'''https://vincent2.lexinshengwen.com/vincent/v1/material/global?limit={limit}&offset={offset}&image_paint_from=&image_outside_painter=&demand_intermediary=&demand_audit_painter=&demand_content_painter=&demand_color_painter=&demand_line_painter=&demand=&demand_creator=&material=&fuzzy_search_numbers=&image=&cms_id=&image_paint_type=&image_size_type=&image_production_type=&demand_status=&demand_deadline_for_lining_start=&demand_deadline_for_lining_end=&demand_complete_time_start=&demand_complete_time_end=&demand_platform=&demand_module=&demand_category=&demand_tag=&material_platform=&material_module=&material_category=&demand_group=&demand_illustrator=&material_status='''
+    elif api_type == 'vincent_vista':
+        # url = f'''https://vincent2-stage.lexinshengwen.com/vincent/v1/material/global?limit={limit}&offset={offset}&image_paint_from=&image_outside_painter=&demand_intermediary=&demand_audit_painter=&demand_content_painter=&demand_color_painter=&demand_line_painter=&demand=&demand_creator=&material=&fuzzy_search_numbers=&image=&cms_id=&image_paint_type=&image_size_type=&image_production_type=&demand_status=&demand_deadline_for_lining_start=&demand_deadline_for_lining_end=&demand_complete_time_start=&demand_complete_time_end=&demand_platform=&demand_module=&demand_category=&demand_tag=&material_platform=ColorPad&material_module=&material_category=&material_tag=&demand_group=&demand_illustrator=&material_status=PUBLISHED'''
+        url = f'''https://vincent2.lexinshengwen.com/vincent/v1/material/global?limit={limit}&offset={offset}&image_paint_from=&image_outside_painter=&demand_intermediary=&demand_audit_painter=&demand_content_painter=&demand_color_painter=&demand_line_painter=&demand=&demand_creator=&material=&fuzzy_search_numbers=&image=&cms_id=&image_paint_type=&image_size_type=&image_production_type=&demand_status=&demand_deadline_for_lining_start=&demand_deadline_for_lining_end=&demand_complete_time_start=&demand_complete_time_end=&demand_platform=&demand_module=&demand_category=&demand_tag=&material_platform=ColorPad&material_module=&material_category=&material_tag=&demand_group=&demand_illustrator=&material_status=PUBLISHED'''
         headers = {
-            "Cookie": '''_ga=GA1.1.1637196591.1691550110; sidebarStatus=0; uac_passport="2|1:0|10:1706665824|12:uac_passport|44:Yjg1N2QxNzZmNDk5NDdmZmIzMmI1YmYxNDUxZWE4YTk=|2f2fa92d8bdd58bb5597f615523e8ccf84f0a9f1de2f858ac18d62b911f04240"; user=2|1:0|10:1706665824|4:user|628:eyJpZCI6ICI1Yzg1YzJlZDlkZWYyYzAwMDE2MzZjNGIiLCAidXNlcmlkIjogIjE1NTIyNjk4Nzc3NDk2Mzg3IiwgIm5hbWUiOiAiXHU0ZjU1XHU2ZDliIiwgImF2YXRhciI6ICJodHRwczovL3MxLWltZmlsZS5mZWlzaHVjZG4uY29tL3N0YXRpYy1yZXNvdXJjZS92MS92Ml85YWRjZjE5MC02YjVmLTQwMDEtODJjZS0xMjc4YzFhYjdlMmd+P2ltYWdlX3NpemU9bm9vcCZjdXRfdHlwZT0mcXVhbGl0eT0mZm9ybWF0PXBuZyZzdGlja2VyX2Zvcm1hdD0ud2VicCIsICJlbWFpbCI6ICJoZXRhb0BkYWlseWlubm92YXRpb24uYml6IiwgImRlcGFydG1lbnQiOiBbIm9kLTJhZmVlZmIxMmIwMzcwYzJlYjhiMDE5NjY4OGY3YjA4Il0sICJhY3RpdmUiOiB0cnVlLCAiam9ibnVtYmVyIjogIiIsICJkaW5nZGluZ191c2VyaWQiOiAiMTU1MjI2OTg3Nzc0OTYzODciLCAiZmVpc2h1X3VzZXJpZCI6ICI4MzExNDJlNSIsICJoaXJlZCI6IDE3ODh9|ac0f531d5cd072adac68610f1187677cf0605bc52b2e1093bb80a96cc7fab5cb; _ga_2Z4PFG28RG=GS1.1.1706665816.89.1.1706668018.59.0.0''',
+            "Cookie": '''_ga=GA1.1.1637196591.1691550110; uac_passport="2|1:0|10:1709172725|12:uac_passport|44:ZDliZDA3NjVhMjM5NGRlMTk1NDVkZjNlZTRkMDdiMDI=|f0f5541c5b81e9f7a2436c868c5d9bfde21eb66aad02bde406e572ab63604de7"; user=2|1:0|10:1709172725|4:user|628:eyJpZCI6ICI1Yzg1YzJlZDlkZWYyYzAwMDE2MzZjNGIiLCAidXNlcmlkIjogIjE1NTIyNjk4Nzc3NDk2Mzg3IiwgIm5hbWUiOiAiXHU0ZjU1XHU2ZDliIiwgImF2YXRhciI6ICJodHRwczovL3MxLWltZmlsZS5mZWlzaHVjZG4uY29tL3N0YXRpYy1yZXNvdXJjZS92MS92Ml85YWRjZjE5MC02YjVmLTQwMDEtODJjZS0xMjc4YzFhYjdlMmd+P2ltYWdlX3NpemU9bm9vcCZjdXRfdHlwZT0mcXVhbGl0eT0mZm9ybWF0PXBuZyZzdGlja2VyX2Zvcm1hdD0ud2VicCIsICJlbWFpbCI6ICJoZXRhb0BkYWlseWlubm92YXRpb24uYml6IiwgImRlcGFydG1lbnQiOiBbIm9kLTJhZmVlZmIxMmIwMzcwYzJlYjhiMDE5NjY4OGY3YjA4Il0sICJhY3RpdmUiOiB0cnVlLCAiam9ibnVtYmVyIjogIiIsICJkaW5nZGluZ191c2VyaWQiOiAiMTU1MjI2OTg3Nzc0OTYzODciLCAiZmVpc2h1X3VzZXJpZCI6ICI4MzExNDJlNSIsICJoaXJlZCI6IDE4MTd9|a97f528ca901337aa64ed3d5787fb6032e343e650d9a4ed84244506018828df6; _ga_2Z4PFG28RG=GS1.1.1709172704.115.1.1709175893.60.0.0; sidebarStatus=0''',
+            "Vincent_client_platform": "web"
+        }
+    elif api_type == 'vincent_vc':
+        url = f'''https://vincent2.lexinshengwen.com/vincent/v1/material/global?limit={limit}&offset={offset}&image_paint_from=&image_outside_painter=&demand_intermediary=&demand_audit_painter=&demand_content_painter=&demand_color_painter=&demand_line_painter=&demand=&demand_creator=&material=&fuzzy_search_numbers=&image=&cms_id=&image_paint_type=&image_size_type=&image_production_type=&demand_status=&demand_deadline_for_lining_start=&demand_deadline_for_lining_end=&demand_complete_time_start=&demand_complete_time_end=&demand_platform=&demand_module=&demand_category=&demand_tag=&material_platform=VitaColor&material_module=&material_category=&material_tag=&demand_group=&demand_illustrator=&material_status=PUBLISHED'''
+        # url = f'''https://vincent2-stage.lexinshengwen.com/vincent/v1/material/global?limit={limit}&offset={offset}&image_paint_from=&image_outside_painter=&demand_intermediary=&demand_audit_painter=&demand_content_painter=&demand_color_painter=&demand_line_painter=&demand=&demand_creator=&material=&fuzzy_search_numbers=&image=&cms_id=&image_paint_type=&image_size_type=&image_production_type=&demand_status=&demand_deadline_for_lining_start=&demand_deadline_for_lining_end=&demand_complete_time_start=&demand_complete_time_end=&demand_platform=&demand_module=&demand_category=&demand_tag=&material_platform=VitaColor&material_module=&material_category=&material_tag=&demand_group=&demand_illustrator=&material_status=PUBLISHED'''
+        headers = {
+            "Cookie": '''_ga=GA1.1.1637196591.1691550110; uac_passport="2|1:0|10:1709172725|12:uac_passport|44:ZDliZDA3NjVhMjM5NGRlMTk1NDVkZjNlZTRkMDdiMDI=|f0f5541c5b81e9f7a2436c868c5d9bfde21eb66aad02bde406e572ab63604de7"; user=2|1:0|10:1709172725|4:user|628:eyJpZCI6ICI1Yzg1YzJlZDlkZWYyYzAwMDE2MzZjNGIiLCAidXNlcmlkIjogIjE1NTIyNjk4Nzc3NDk2Mzg3IiwgIm5hbWUiOiAiXHU0ZjU1XHU2ZDliIiwgImF2YXRhciI6ICJodHRwczovL3MxLWltZmlsZS5mZWlzaHVjZG4uY29tL3N0YXRpYy1yZXNvdXJjZS92MS92Ml85YWRjZjE5MC02YjVmLTQwMDEtODJjZS0xMjc4YzFhYjdlMmd+P2ltYWdlX3NpemU9bm9vcCZjdXRfdHlwZT0mcXVhbGl0eT0mZm9ybWF0PXBuZyZzdGlja2VyX2Zvcm1hdD0ud2VicCIsICJlbWFpbCI6ICJoZXRhb0BkYWlseWlubm92YXRpb24uYml6IiwgImRlcGFydG1lbnQiOiBbIm9kLTJhZmVlZmIxMmIwMzcwYzJlYjhiMDE5NjY4OGY3YjA4Il0sICJhY3RpdmUiOiB0cnVlLCAiam9ibnVtYmVyIjogIiIsICJkaW5nZGluZ191c2VyaWQiOiAiMTU1MjI2OTg3Nzc0OTYzODciLCAiZmVpc2h1X3VzZXJpZCI6ICI4MzExNDJlNSIsICJoaXJlZCI6IDE4MTd9|a97f528ca901337aa64ed3d5787fb6032e343e650d9a4ed84244506018828df6; _ga_2Z4PFG28RG=GS1.1.1709172704.115.1.1709175893.60.0.0; sidebarStatus=0''',
+            "Vincent_client_platform": "web"
+        }
+    elif api_type == 'vincent_zc':
+        url = f'''https://vincent2.lexinshengwen.com/vincent/v1/material/global?limit={limit}&offset={offset}&image_paint_from=&image_outside_painter=&demand_intermediary=&demand_audit_painter=&demand_content_painter=&demand_color_painter=&demand_line_painter=&demand=&demand_creator=&material=&fuzzy_search_numbers=&image=&cms_id=&image_paint_type=&image_size_type=&image_production_type=&demand_status=&demand_deadline_for_lining_start=&demand_deadline_for_lining_end=&demand_complete_time_start=&demand_complete_time_end=&demand_platform=&demand_module=&demand_category=&demand_tag=&material_platform=PBNPlus&material_module=&material_category=&material_tag=&demand_group=&demand_illustrator=&material_status=PUBLISHED'''
+        # url = f'''https://vincent2-stage.lexinshengwen.com/vincent/v1/material/global?limit={limit}&offset={offset}&image_paint_from=&image_outside_painter=&demand_intermediary=&demand_audit_painter=&demand_content_painter=&demand_color_painter=&demand_line_painter=&demand=&demand_creator=&material=&fuzzy_search_numbers=&image=&cms_id=&image_paint_type=&image_size_type=&image_production_type=&demand_status=&demand_deadline_for_lining_start=&demand_deadline_for_lining_end=&demand_complete_time_start=&demand_complete_time_end=&demand_platform=&demand_module=&demand_category=&demand_tag=&material_platform=PBNPlus&material_module=&material_category=&material_tag=&demand_group=&demand_illustrator=&material_status=PUBLISHED'''
+        headers = {
+            "Cookie": '''_ga=GA1.1.1637196591.1691550110; uac_passport="2|1:0|10:1709172725|12:uac_passport|44:ZDliZDA3NjVhMjM5NGRlMTk1NDVkZjNlZTRkMDdiMDI=|f0f5541c5b81e9f7a2436c868c5d9bfde21eb66aad02bde406e572ab63604de7"; user=2|1:0|10:1709172725|4:user|628:eyJpZCI6ICI1Yzg1YzJlZDlkZWYyYzAwMDE2MzZjNGIiLCAidXNlcmlkIjogIjE1NTIyNjk4Nzc3NDk2Mzg3IiwgIm5hbWUiOiAiXHU0ZjU1XHU2ZDliIiwgImF2YXRhciI6ICJodHRwczovL3MxLWltZmlsZS5mZWlzaHVjZG4uY29tL3N0YXRpYy1yZXNvdXJjZS92MS92Ml85YWRjZjE5MC02YjVmLTQwMDEtODJjZS0xMjc4YzFhYjdlMmd+P2ltYWdlX3NpemU9bm9vcCZjdXRfdHlwZT0mcXVhbGl0eT0mZm9ybWF0PXBuZyZzdGlja2VyX2Zvcm1hdD0ud2VicCIsICJlbWFpbCI6ICJoZXRhb0BkYWlseWlubm92YXRpb24uYml6IiwgImRlcGFydG1lbnQiOiBbIm9kLTJhZmVlZmIxMmIwMzcwYzJlYjhiMDE5NjY4OGY3YjA4Il0sICJhY3RpdmUiOiB0cnVlLCAiam9ibnVtYmVyIjogIiIsICJkaW5nZGluZ191c2VyaWQiOiAiMTU1MjI2OTg3Nzc0OTYzODciLCAiZmVpc2h1X3VzZXJpZCI6ICI4MzExNDJlNSIsICJoaXJlZCI6IDE4MTd9|a97f528ca901337aa64ed3d5787fb6032e343e650d9a4ed84244506018828df6; _ga_2Z4PFG28RG=GS1.1.1709172704.115.1.1709175893.60.0.0; sidebarStatus=0''',
+            "Vincent_client_platform": "web"
+        }
+    elif api_type == 'vincent_pbn':
+        # url = f'''https://vincent2-stage.lexinshengwen.com/vincent/v1/material/global?limit={limit}&offset={offset}&image_paint_from=&image_outside_painter=&demand_intermediary=&demand_audit_painter=&demand_content_painter=&demand_color_painter=&demand_line_painter=&demand=&demand_creator=&material=&fuzzy_search_numbers=&image=&cms_id=&image_paint_type=&image_size_type=&image_production_type=&demand_status=&demand_deadline_for_lining_start=&demand_deadline_for_lining_end=&demand_complete_time_start=&demand_complete_time_end=&demand_platform=&demand_module=&demand_category=&demand_tag=&material_platform=PBN&material_module=&material_category=&material_tag=&demand_group=&demand_illustrator=&material_status=PUBLISHED'''
+        url = f'''https://vincent2.lexinshengwen.com/vincent/v1/material/global?limit={limit}&offset={offset}&image_paint_from=&image_outside_painter=&demand_intermediary=&demand_audit_painter=&demand_content_painter=&demand_color_painter=&demand_line_painter=&demand=&demand_creator=&material=&fuzzy_search_numbers=&image=&cms_id=&image_paint_type=&image_size_type=&image_production_type=&demand_status=&demand_deadline_for_lining_start=&demand_deadline_for_lining_end=&demand_complete_time_start=&demand_complete_time_end=&demand_platform=&demand_module=&demand_category=&demand_tag=&material_platform=PBN&material_module=&material_category=&material_tag=&demand_group=&demand_illustrator=&material_status=PUBLISHED'''
+        headers = {
+            "Cookie": '''_ga=GA1.1.1637196591.1691550110; uac_passport="2|1:0|10:1709172725|12:uac_passport|44:ZDliZDA3NjVhMjM5NGRlMTk1NDVkZjNlZTRkMDdiMDI=|f0f5541c5b81e9f7a2436c868c5d9bfde21eb66aad02bde406e572ab63604de7"; user=2|1:0|10:1709172725|4:user|628:eyJpZCI6ICI1Yzg1YzJlZDlkZWYyYzAwMDE2MzZjNGIiLCAidXNlcmlkIjogIjE1NTIyNjk4Nzc3NDk2Mzg3IiwgIm5hbWUiOiAiXHU0ZjU1XHU2ZDliIiwgImF2YXRhciI6ICJodHRwczovL3MxLWltZmlsZS5mZWlzaHVjZG4uY29tL3N0YXRpYy1yZXNvdXJjZS92MS92Ml85YWRjZjE5MC02YjVmLTQwMDEtODJjZS0xMjc4YzFhYjdlMmd+P2ltYWdlX3NpemU9bm9vcCZjdXRfdHlwZT0mcXVhbGl0eT0mZm9ybWF0PXBuZyZzdGlja2VyX2Zvcm1hdD0ud2VicCIsICJlbWFpbCI6ICJoZXRhb0BkYWlseWlubm92YXRpb24uYml6IiwgImRlcGFydG1lbnQiOiBbIm9kLTJhZmVlZmIxMmIwMzcwYzJlYjhiMDE5NjY4OGY3YjA4Il0sICJhY3RpdmUiOiB0cnVlLCAiam9ibnVtYmVyIjogIiIsICJkaW5nZGluZ191c2VyaWQiOiAiMTU1MjI2OTg3Nzc0OTYzODciLCAiZmVpc2h1X3VzZXJpZCI6ICI4MzExNDJlNSIsICJoaXJlZCI6IDE4MTd9|a97f528ca901337aa64ed3d5787fb6032e343e650d9a4ed84244506018828df6; _ga_2Z4PFG28RG=GS1.1.1709172704.115.1.1709175893.60.0.0; sidebarStatus=0''',
             "Vincent_client_platform": "web"
         }
     elif api_type == "zc":
-        url = f'''https://zc-cms-stage.learnings.ai/colorflow/v1/cms/paint?offset={offset}&limit={limit}'''
-        # url = f'''https://zc-cms.learnings.ai/colorflow/v1/cms/paint?offset={offset}&limit={limit}'''
+        # url = f'''https://zc-cms-stage.learnings.ai/colorflow/v1/cms/paint?offset={offset}&limit={limit}'''
+        url = f'''https://zc-cms.learnings.ai/colorflow/v1/cms/paint?offset={offset}&limit={limit}'''
         headers = {
             "Cookie": '''_ga=GA1.1.1929480831.1691656939; name=%E4%BD%95%E6%B6%9B; avatar=https://s1-imfile.feishucdn.com/static-resource/v1/v2_9adcf190-6b5f-4001-82ce-1278c1ab7e2g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp; id=5c85c2ed9def2c0001636c4b; learnings-passport=EBH0lAfOxgQq90GrHPSdIFGaGgf_IGLhGWe1O53CoQOY8vKvW9nXHQZszwZauw20; learnings-user=Z1-bVNSvI14NygsAWa_lRHgaeghMtZeezxxrou748bTSD_K9HFAvWIxZCutGOxDcSjF8TZHqlC0H0v1wL73guiD1PkxjYBDMQsfejUD-xcn8uiUmT1xW_JFbJVQKK4RqFg5tzCeqynz5hqA_U3lRJzX1TFgyCCjlzVzpKuYPJKcq7HKtkq5q4wE9IaUVN9A5XQ4sBjC1W52itnpoYlKxqDe2iHlIxptlekx2-mivj7i-lexgnkU1oJ5eJsjce2clMKGcYEfZUQmtvaja0rU0ypyXtbfdIu0wKujJm4xZo8wT5l2Vs1sAyYk7Igxqb5mRzyzkW-aBfvDHAxACDkM7XyjPvO9XRoQAR0a53kWCZUSc7TB3Zi24BChILnEtrPAXSfJwrEMsL83RQQdzFcKz_DwSO3Pmpvvmy2ZD3k0l95CoXgapQVhgrh8OupYveuAHgZYienI9a81mopuGbxpGinDuUSLG7ZM0GZoOasi2mjBVsNuZC6FMcz8314bYNdMmGmyiF4t3J2PQN7lWze1W_4dby0ddJr7r1GiZNlB9G3sg8T0cmSZVZotyk3I-TLyDnUPCS3F-0WjfMGybNgqZErO_Yw2jkuaqlnRCJlfE-Ok; _ga_2Z4PFG28RG=GS1.1.1708411797.379.1.1708419338.46.0.0''',
             "Vincent_client_platform": "web"
         }
     elif api_type == "vc":
-        url = f'''https://vc-cms-stage.learnings.ai/vitacolor/v1/cms/paint?offset={offset}&limit={limit}'''
-        # url = f'''https://vc-cms.learnings.ai/vitacolor/v1/cms/paint?offset={offset}&limit={limit}'''
+        # url = f'''https://vc-cms-stage.learnings.ai/vitacolor/v1/cms/paint?offset={offset}&limit={limit}'''
+        url = f'''https://vc-cms.learnings.ai/vitacolor/v1/cms/paint?offset={offset}&limit={limit}'''
         headers = {
             "Cookie": '''_ga=GA1.1.1929480831.1691656939; name=%E4%BD%95%E6%B6%9B; id=5c85c2ed9def2c0001636c4b; avatar=https://s1-imfile.feishucdn.com/static-resource/v1/v2_9adcf190-6b5f-4001-82ce-1278c1ab7e2g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp; learnings-passport=EBH0lAfOxgQq90GrHPSdIFGaGgf_IGLhGWe1O53CoQOY8vKvW9nXHQZszwZauw20; _ga_2Z4PFG28RG=GS1.1.1708411797.379.1.1708415957.60.0.0; learnings-user=bluifVYmgNIMsVszcHCd3A1maKLHIQnmUSU4MvWzxn9kkpnKskmX_0-zO5qMOpBfAsQ68O8HNWjh5ypfkYBh6MWDmD8tKiA39Gz_C-yluiRCKT2o_O7XFO2ZXRBPebv3yaDblxIJd4V5ldmbcg97koMY8OlZsyhDFAqxRGDBK9bfRWOjKKVmzEgrmWk2B_st4354XA9sKE-reRmOuVj7a0Ub7VYSrj0E2nh881jYZul1zSjarWGCOZCObD2lEhRNCH6piH-NwEuHEtkhmV7rmukIxkLOsBK5zIZj44ur6WZkA3m73oZG40D0dB2DMdf9ELeuAiob0pqLQi20NKKnTfMPG1CAxJhJSa84DxPkM_CM8y8X8-2wbkHc385TfTg389gEdHoatefaD3MaymYEaijZNB6oHzAqsUDiAyCV-tPUo55_tO_YWVhJX-IcoJgQ1wAwDP4RAf0JfYyaB3pGVUp5KFoNYwvp2tQE5NFf2iyZU42G9GdCLfCfqwkI9SNID8lp5z3XLAIqylmn9yU45LeEfhTzbcjg2vQV3US30ozGJS26Twi_W7Ywy12VQAS3A4LdQnHWpKfDB9cGyysSQlf5tnmCZ-2Q2Rq7-i0YZGk''',
             "Vincent_client_platform": "web"
         }
-    elif api_type == "colorpad":
-        url = f'''https://colorpad-cms-stage.learnings.ai/colorpad/v1/cms/paint?offset={offset}&limit={limit}'''
-        # url = f'''https://colorpad-cms.learnings.ai/colorpad/v1/cms/paint?offset={offset}&limit={limit}'''
+    elif api_type == "vista":
+        # url = f'''https://colorpad-cms-stage.learnings.ai/colorpad/v1/cms/paint?offset={offset}&limit={limit}'''
+        url = f'''https://colorpad-cms.learnings.ai/colorpad/v1/cms/paint?offset={offset}&limit={limit}'''
         headers = {
             "Cookie": '''_ga=GA1.1.1929480831.1691656939; learnings-passport=EBH0lAfOxgQq90GrHPSdIFGaGgf_IGLhGWe1O53CoQOY8vKvW9nXHQZszwZauw20; _ga_2Z4PFG28RG=GS1.1.1708506726.386.1.1708509274.9.0.0; learnings-user=Z1-bVNSvI14NygsAWa_lRHgaeghMtZeezxxrou748bTSD_K9HFAvWIxZCutGOxDcSjF8TZHqlC0H0v1wL73guiD1PkxjYBDMQsfejUD-xcn8uiUmT1xW_JFbJVQKK4RqFg5tzCeqynz5hqA_U3lRJzX1TFgyCCjlzVzpKuYPJKcq7HKtkq5q4wE9IaUVN9A5XQ4sBjC1W52itnpoYlKxqDe2iHlIxptlekx2-mivj7gpee_3Hc7EygiRn6OLMwo5YU1ng6cJSNKLifOCqDoT38_TTybLkBfntLJsyfLLxU9evH-1xcu6eEK7Nm2K-xJg5WMkISj6JWoMVmZ6aWAi8cZLTJJdKx690j-XXpVwDPBRnGdgplVgKWqryTDk_Hn3PRVWoKPnvOU_at0jmbtzHTyRI-qFcZ5mk7pRrAKLwOvHwMhs-cLaIzoKd4PqoqhzbsG_E-AlrIFoQntSahwgQcO1IKxtYOgMDgVPJ8rBhTHRln1lGrkSwJhDsIjyfse1l26wHsDwIqRMX5oidDTOjbckaid4F0r7HhJeXxSwox4tzfUNpoLa5VSQRsR7Jr1bw2dnDBXxA08Kg18gfrKNn1sHr-ut19DLdgT_1MSCEOo''',
             "Vincent_client_platform": "web"
@@ -63,7 +85,7 @@ def get_pic_info(project):
         session.mount('https://', HTTPAdapter(max_retries=retries))
         response = session.get(pic_list, headers=headers)
         results = []
-        if project == "vincent":
+        if project.startswith("vincent"):
             response_data = response.json()["data"]["demand_list"]
             if response_data == []:
                 break
@@ -87,9 +109,9 @@ def get_pic_info(project):
                     print(number)
 
                 result_dict = {
-                    "platform": platform,
-                    "status": status,
-                    "number": number,
+                    # "platform": platform,
+                    # "status": status,
+                    # "number": number,
                     "cms_id": cms_id,
                     "supplement_tag_list": supplement_tag_list,
                     "content_tag_list": content_tag_list,
@@ -112,18 +134,18 @@ def get_pic_info(project):
                     "operations_tag_list": operations_Tag_list
                 }
                 results.append(result_dict)
-        elif project == "zc"or project == "vc" or project == "colorpad":
+        elif project == "zc"or project == "vc" or project == "vista":
             response_data = response.json()["data"]["paint_list"]
             if response_data == []:
                 break
             for pic in response_data:
                 operations_Tag_list = pic["detail"][0]["releation"]["operation_tag"]
                 content_tag_list = pic["detail"][0]["releation"]["content_tag"]
-                # supplement_tag_list = pic["detail"][0]["releation"]["supplement_tag"]
+                supplement_tag_list = pic["detail"][0]["releation"]["specified_tag"]
                 cms_id = pic["detail"][0]["id"]
                 result_dict = {
                     "cms_id": cms_id,
-                    # "supplement_tag_list": supplement_tag_list,
+                    "supplement_tag_list": supplement_tag_list,
                     "content_tag_list": content_tag_list,
                     "operations_tag_list": operations_Tag_list
                 }
@@ -137,27 +159,33 @@ def get_pic_info(project):
             df.to_csv(f'excel/{project}_after_refresh_data.csv', mode='a', index=False, header=False)
         offset += limit
     print(f"Data exported successfully to {project}_data.csv")
+# get_pic_info("vista")
+# get_pic_info("vc")
 # get_pic_info("zc")
+# get_pic_info("vincent_vista")
+# get_pic_info("vincent_vc")
+# get_pic_info("vincent_zc")
+# get_pic_info("pbn")
+# get_pic_info("vincent_pbn")
 
 def merge_table(project):
     # 基于ID合并两个表
     # 读取两个CSV文件
     df1 = pd.read_csv(f'excel/{project}_after_refresh_data.csv')
+    # df2 = pd.read_csv(f'excel/vincent_vc_after_refresh_data.csv')
     df2 = pd.read_csv(f'excel/{project}_before_refresh_data.csv')
     # 基于ID合并两个DataFrame，这里以内连接为例
     merged_df = df1.merge(df2, on='cms_id', how='inner')  # 使用 'outer' 替换 'inner' 可进行外连接
     # 将合并后的DataFrame保存到新的CSV文件
     merged_df.to_csv(f'excel/{project}_merged_data.csv', index=False)
     print("The tables have been merged successfully and saved to merged_table.csv")
+# merge_table("vista")
 # merge_table("vc")
+# merge_table("zc")
+# merge_table("pbn")
 
 def compare_differences_tag(project):
-    # 输出"两个列中内容不一样的素材"
-    # 读取CSV文件到DataFrame
     df = pd.read_csv(f'excel/{project}_merged_data.csv')
-
-    # 假设我们要比较的两个字段是'Column1'和'Column2'
-    # 创建一个新的列'Difference'，这将是一个布尔列，显示两个字段是否不同
     df['Difference'] = df['operations_tag_list_x'] != df['operations_tag_list_y']
 
     # 添加额外的条件过滤，排除特定的差异组合
@@ -165,18 +193,69 @@ def compare_differences_tag(project):
     filter_condition = ~df.apply(lambda row: any(
         [(exclusion[0] in row['operations_tag_list_x'] and exclusion[1] in row['operations_tag_list_y']) for exclusion
          in excluded_combinations]), axis=1)
+
+    # 新增额外的条件过滤，排除应该被删除的数据
+    # filter_tags = ['中式建筑', '日式建筑', '手机电话', '沙漏钟表', '指纹', '绘画工具', '楼梯', '火', '长笛', '陶瓷', '军人伴侣节']
+
+    fixed_elements = ['PBN普通图', '彩绘作者包-Aidana_Ryskulova', '彩绘作者包-Kenny_Hawk', '曼陀罗+', '心理疗愈-曼陀罗', '作者专题-ac', '普通', '一般彩绘', '每周收集-奇迹古国', '作者专题-gurjigur', 'Zen调性', '狭义Zen']  # 固定元素
+    additional_filter_condition = df['operations_tag_list_y'].apply(lambda x: any(tag in x for tag in fixed_elements)) & \
+                                  ~df['operations_tag_list_x'].apply(lambda x: any(tag in x for tag in fixed_elements))
+
+    filter_condition = filter_condition & ~additional_filter_condition
+
+    # 排除 B列中内容为 `['[]']` 的行
+    filter_condition = filter_condition & ~(df['operations_tag_list_y'] == "['[]']")
+
     df = df[filter_condition]
 
     # 筛选出有差异的数据行
     differences = df[df['Difference']]
-
     # 显示有差异的数据
     print(differences)
 
     # 如果需要，也可以将结果保存到新的 CSV 文件中
     differences.to_csv(f'excel/{project}_differences_data_clear.csv', index=False)
-    # differences.to_csv(f'excel/{project}_differences_data_not_clear.csv', index=False)
+
+# compare_differences_tag("vista")
 # compare_differences_tag("vc")
+compare_differences_tag("zc")
+# compare_differences_tag("pbn")
+
+def compare_differences_content_tag(project):
+    df = pd.read_csv(f'excel/{project}_merged_data.csv')
+    df['Difference'] = df['content_tag_list_x'] != df['content_tag_list_y']
+
+    # 新增额外的条件过滤，排除应该被删除的数据
+    # fixed_elements = ['中式建筑', '日式建筑', '手机电话', '沙漏钟表', '指纹', '绘画工具', '楼梯', '火', '长笛', '陶瓷', '军人伴侣节']
+    #
+    # filter_condition = df['operations_tag_list_y'].apply(lambda x: any(tag in x for tag in fixed_elements)) & \
+    #                               ~df['operations_tag_list_x'].apply(lambda x: any(tag in x for tag in fixed_elements))
+    # df = df[filter_condition]
+
+    # 筛选出有差异的数据行
+    differences = df[df['Difference']]
+    # 显示有差异的数据
+    print(differences)
+
+    # 如果需要，也可以将结果保存到新的 CSV 文件中
+    differences.to_csv(f'excel/{project}_differences_content_data_clear.csv', index=False)
+
+# compare_differences_content_tag("vista")
+# compare_differences_content_tag("vc")
+# compare_differences_content_tag("zc")
+# compare_differences_content_tag("pbn")
+
+def compare_differences_tag_from_vincent(project):
+    df = pd.read_csv(f'excel/{project}_merged_vincent_data.csv')
+    df['Difference'] = df['operations_tag_list_x'] != df['operations_tag_list_y']
+    # 筛选出有差异的数据行
+    differences = df[df['Difference']]
+    # 显示有差异的数据
+    print(differences)
+    # 如果需要，也可以将结果保存到新的 CSV 文件中
+    differences.to_csv(f'excel/{project}_differences_data_clear_vincent.csv', index=False)
+
+# compare_differences_tag_from_vincent("vc")
 
 def get_all_content_tag():
     # 设置重试次数以及回退策略
@@ -245,3 +324,12 @@ def test_pic_tag_refresh():
     }
     # 获取到满足运营tag和内容tag的所有素材后，查看这些刷新后的素材的运营tag是否满足预期映射关系
     vincent_debug_picinfo_url = f''''''
+
+
+def compare_differences_tag_from_vincent(project):
+    df = pd.read_csv(f'excel/{project}_differences_data_clear.csv')
+    df = df[df['operations_tag_list_y'].str.contains('宁静')]
+    print(df)
+    df.to_csv('excel/modified_file.csv', index=False)
+# compare_differences_tag_from_vincent("zc")
+

@@ -1,8 +1,8 @@
 import glob
 import os,shutil
 
+# 删除当前目录及子目录下所有包含PicID的.zip文件
 def remove_zip_files_and_directories(PicID):
-    # 删除当前目录及子目录下所有包含PicID的.zip文件
     zip_files = glob.glob(f'**/*{PicID}*.zip', recursive=True)
     for zip_file in zip_files:
         try:
@@ -21,11 +21,8 @@ def remove_zip_files_and_directories(PicID):
             except OSError as e:
                 print(f"无法删除目录 {directory}。原因：{e.strerror}")
 
-
-def delete_folder():
-    folder_path = '/Users/ht/Desktop/PythonTools/Pic_Check/Pic/'  # 替换为您的文件夹路径
-
-    # 遍历文件夹中的所有文件和子文件夹
+# 遍历文件夹中的所有文件和子文件夹，并删除
+def delete_folder(folder_path):
     for filename in os.listdir(folder_path):
         file_path = os.path.join(folder_path, filename)
         if os.path.isfile(file_path):
@@ -34,7 +31,7 @@ def delete_folder():
         elif os.path.isdir(file_path):
             # 如果是子文件夹，则递归删除
             shutil.rmtree(file_path)
-    # print("文件夹已清空。")
-delete_folder()
-# 调用函数
-# remove_zip_files_in_current_directory()
+
+# folder_path = '/Users/ht/Desktop/PythonTools/Pic_Check/Pic/'  # 替换为您的文件夹路径
+# delete_folder(folder_path)
+

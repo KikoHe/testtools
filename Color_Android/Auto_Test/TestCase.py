@@ -1,12 +1,8 @@
 # -*- coding:utf-8 -*-
 import time
-import unittest
 from appium import webdriver
 from selenium.common import TimeoutException
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from Common_action import *
+from Test_unit import *
 
 desired_caps = {}
 desired_caps['platformName'] = 'Android'  # 设备系统

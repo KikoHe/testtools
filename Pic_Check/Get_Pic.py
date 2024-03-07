@@ -1,9 +1,10 @@
-import json,pytz,hashlib, zipfile,os,requests
+import json, pytz, hashlib, zipfile, os, requests, fitz
 from datetime import datetime
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
-import pandas as pd
-from collections import Counter
+
+# from Get_Pic_By_Other import *
+
 
 timezone = "Pacific/Apia"
 timezone_cn = "Asia/Shanghai"
@@ -92,7 +93,7 @@ def Get_id_Zipurl(address, limit, group="c"):
                         Zip_url.append(detail_content["detail"][0]["resource"]["zip"])
                         Pic_ids.append(detail_content["detail"][0]["id"])
                 elif address in ["VC_Lib", "ZC_Lib", "Vista_Lib"]:
-                    if detail_content["logic"]["release_date"] == formatted_date2:
+                    # if detail_content["logic"]["release_date"] == formatted_date2:
                         Zip_url.append(detail_content["detail"][0]["resource"]["zip"])
                         Pic_ids.append(detail_content["detail"][0]["id"])
                 elif address in ["BP_Lib"]:
@@ -104,6 +105,7 @@ def Get_id_Zipurl(address, limit, group="c"):
                         Zip_url.append(detail_content["zip_2048_pdf"])
                         Pic_ids.append(detail_content["id"])
             break
+    # print(len(Pic_ids))
     return Pic_ids, Zip_url
 
 # 获取不同的素材实验方案的素材数据，判断是否有方案的素材有缺失
@@ -132,11 +134,8 @@ def Get_all_project_Lib_list_pic_ids(address,limit):
         ids = Get_all_group_Lib_list_pic_ids(address, limit, group_list_pbn)
     return ids
 
-print(Get_all_project_Lib_list_pic_ids("PBN_Lib",20))
 
-
-
-# 获取不同时区最新的故事线ID
+# 获取最新的故事线ID
 def Get_storyid(timezone_country):
     PBN_Today_url = f"https://paint-api.dailyinnovation.biz/paint/v1/today?install_day=1681&explore_simplified=0&day=1681&groupNumber=c"
     headers = {
@@ -161,7 +160,7 @@ def Get_storyid(timezone_country):
     except Exception as err:
         print(f"An error occurredGet_storyid: {err}")
 
-# 获取不同时区最新故事线的素材ID
+# 获取PBN最新故事线的素材ID
 def Get_story_pic(timezone_country):
     stroyid = Get_storyid(timezone_country)
     PBN_story_url = f"https://paint-api.dailyinnovation.biz/paint/v1/story/{stroyid}"
@@ -190,23 +189,62 @@ def Get_story_pic(timezone_country):
         print(f"An error occurred: {err}")
     return pic_id_zipurl
 
-# 获取更新的故事素材ID和url
+# 获取PBN更新的故事素材数据（通过不同时区返回不同数据来获取）
 def Get_stroyupdatepicid():
     stroyid = Get_storyid(timezone)
     stroyid_cn = Get_storyid(timezone_cn)
     stroypic = Get_story_pic(timezone)
     stroypic_cn = Get_story_pic(timezone_cn)
     if stroyid != stroyid_cn:
-        # print("上了新的故事线，故事线ID：" + stroyid)
         stroyupdatepic = stroypic
     else:
         stroyupdatepic = {key: stroypic[key] for key in stroypic if key not in stroypic_cn}
-        # if stroyupdatepicid:
-        #     print("未上新故事线，仅更新素材，故事线ID：" + stroyid + "更新素材ID：" + stroyupdatepicid)
-        # else:
-        #     print("未更新素材")
-    return stroyupdatepic
+    ids = list(stroyupdatepic.keys())
+    Zip_url = list(stroyupdatepic.values())
+    return ids,Zip_url
 
+# 获取Vista所有内购包的素材数据
+def Get_Pack_Pic_Data(timezone_country):
+    Vista_Pack_url = "https://colorpad-api.vitastudio.ai/colorpad/v1/paint/pack"
+    # Vista_Pack_url = "https://colorpad-api-stage.vitastudio.ai/colorpad/v1/paint/pack?limit=50" #测试数据
+    headers = {
+        "platform": "ios",
+        "install_day": "100",
+        "timezone": timezone_country,
+        "today": formatted_date2,
+        "country": "US",
+        "version": "4.4.10",
+        "language": "zh-Hans",
+        "apiversion": "2",
+        "versionnum": "10899",
+    }
+    pic_data = []
+    try:
+        response = session.get(Vista_Pack_url, headers=headers)
+        response.raise_for_status()  # 如果请求返回的状态码不是200，则抛出异常
+        response_data = response.json()["data"]
+        for data in response_data["content"]:
+            paints = data["paints"]
+            for paints_data in paints:
+                paint_dict = {
+                   paints_data["detail"][0]["id"]: paints_data["detail"][0]["resource"]["zip"]
+                }
+                pic_data.append(paint_dict)
+        return pic_data
+    except requests.exceptions.HTTPError as http_err:
+        print(f"HTTP error occurred: {http_err}")
+    except Exception as err:
+        print(f"An error occurred: {err}")
+
+# 获取Vista内购包模块更新的素材数据
+def Get_Pack_Pic_Update_Data():
+    pic_data = Get_Pack_Pic_Data(timezone)
+    pic_data_cn = Get_Pack_Pic_Data(timezone_cn)
+    # pic_data_cn = Get_Pack_Pic_Data("America/Los_Angeles") #测试数据
+    update_data = [element for element in pic_data if element not in pic_data_cn]
+    ids = [list(d.keys())[0] for d in update_data]  # 提取所有的键
+    url = [list(d.values())[0] for d in update_data]
+    return ids, url
 
 # 根据图片url下载素材zip包内容
 def Get_Zip(PicID, Zip_url, address):
@@ -219,7 +257,6 @@ def Get_Zip(PicID, Zip_url, address):
     #创建下载目录
     if os.path.exists(home) == False:
         os.mkdir(home)
-
     # 下载zip包
     try:
         with session.get(Zip_url, stream=True, timeout=(10, 30)) as zip_r:
@@ -238,7 +275,6 @@ def Get_Zip(PicID, Zip_url, address):
     except requests.exceptions.RequestException as e:
         print(f"请求ZIP包时发生错误: {e}")
         return
-
     try:
         # 确保文件已经完整下载再进行解压
         zf = zipfile.ZipFile(filename)
@@ -273,6 +309,33 @@ def Get_PDF(PicID, Zip_url, address):
             os.rename(pic_region_path, pic_pdf_path)
             return pic_pdf_path
 
+# 检查PDF是否遮挡了色号显示的位置
+def Check_Pdf_Block(pdf_file, ids_, Zip_url_, address):
+    doc = fitz.open(pdf_file)
+    page = doc[0]
+
+    data = Get_detailjson(ids_, Zip_url_, address)
+    Axis_list = Get_Axis_From_Center(data)
+
+    Failed_Axis = []
+    for Axis in Axis_list:
+        x, y, radius = Axis[0], Axis[1], Axis[2]
+        x1, y1 = float(x) - float(radius), float(y) - float(radius)
+        x2, y2 = float(x) + float(radius), float(y) + float(radius)
+        bbox = fitz.Rect(x1, y1, x2, y2)
+        if int(radius) < 5:
+            # print(x, y, radius)
+            pix = page.get_pixmap(matrix=fitz.Matrix(1, 1), clip=bbox)
+            pixel_value = int.from_bytes(pix.samples, byteorder='big')
+            if pixel_value < 255:
+                Failed_Axis.append(Axis)
+    if Failed_Axis == []:
+        return True
+    else:
+        print(Failed_Axis)
+        return False
+
+# print(Check_Pdf_Block("/Users/ht/Desktop/PythonTools/Pic_Check/Pic/654da6d861b9c94253eba131/1141b9babfd990c283132c7cb5620283.pdf",917,3,2))
 
 # 根据detailjson数据，获取其中的center数据中的色块编号
 def Get_Number_From_Center(data):
@@ -286,6 +349,24 @@ def Get_Number_From_Center(data):
             center_number_code_list.insert(-1, center_number_code_int)
     return sorted(center_number_code_list)
 
+def Get_Axis_From_Center(data):
+    center_number_Axis_list = []
+    if "center" in data:
+        center = data["center"]
+        if center != None:
+            center_number = center.split('|')  # 色块数
+            for i in range(len(center_number)):
+                center_number_code_x = center_number[i - 1].split(',')[1]
+                center_number_code_y = center_number[i - 1].split(',')[2]
+                center_number_code_radius = center_number[i - 1].split(',')[3]
+                center_number_Axis = [center_number_code_x,
+                    center_number_code_y,
+                    center_number_code_radius]
+                center_number_Axis_list.append(center_number_Axis)
+        else:
+            print("No center")
+    return center_number_Axis_list
+
 # 根据detailjson数据，获取其中的float center数据中的色块编号
 def Get_Number_From_FloatCenter(data):
     center_number_code_list = []
@@ -298,8 +379,28 @@ def Get_Number_From_FloatCenter(data):
                 center_number_code_int = int(center_number_code)
                 center_number_code_list.insert(-1, center_number_code_int)
         else:
-            print("No center_float" )
+            print("No center_float")
     return sorted(center_number_code_list)
+
+def Get_Axis_From_FloatCenter(data):
+    center_number_Axis_list = []
+    if "center_float" in data:
+        center = data["center_float"]
+        if center != None:
+            center_number = center.split('|')  # 色块数
+            for i in range(len(center_number)):
+                center_number_code_x = center_number[i - 1].split(',')[1]
+                center_number_code_y = center_number[i - 1].split(',')[2]
+                center_number_code_radius = center_number[i - 1].split(',')[3]
+                center_number_Axis = {
+                    center_number_code_x,
+                    center_number_code_y,
+                    center_number_code_radius
+                }
+                center_number_Axis_list.append(center_number_Axis)
+        else:
+            print("No center_float")
+    return center_number_Axis_list
 
 # 根据detailjson数据，获取其中的plan数据中的色块编号
 def Get_Number_From_Plan(data, address):
@@ -312,111 +413,90 @@ def Get_Number_From_Plan(data, address):
         if "plans" in data:
             plan = data["plans"]
     if plan != []:
-        plan_number = plan[0].split('|')  # 色号数
-        # sehaobianhao  = 1
+        # print("start")
+        plan_number = plan[0].split('|')   # 色块信息
+        Number = 1
         for i in range(len(plan_number)):
             plan_number_code = plan_number[i].split('#')[0].split(',')
             for num in range(len(plan_number_code)):
                 plan_number_code_single = plan_number_code[num - 1]
                 plan_number_code_int = int(plan_number_code_single)
-                # if plan_number_code_int == 1039:
-                #     print(sehaobianhao)
+                # if plan_number_code_int == "1185":   ###返回色块编号为plan_number_code_int的色号编号
+                #     print(Number) # 色号数
                 plan_number_code_list.insert(-1, plan_number_code_int)
-            # sehaobianhao = sehaobianhao +1
+            Number = Number + 1
     return sorted(plan_number_code_list)
 
-# 通过单素材详情接口获取zip url
-def Get_id_Zipurl_from_picdetailapi(PicID,address):
-    url_prefixes = {
-        "PBN": f"https://paint-api.dailyinnovation.biz/paint/v1/paint/{PicID}",
-        "ZC":f"https://api.colorflow.app/colorflow/v1/paint/{PicID}",
-        "VC":f"https://vitacolor-api.vitastudio.ai/vitacolor/v1/paint/{PicID}",
-        "BP":f"https://bpbnapi.idailybread.com/paint/v1/paint/{PicID}"
-    }
-    headers = {
-        "platform": "android",
-        "install_day": "100",
-        "timezone": timezone,
-        "today": formatted_date2,
-        "country": "US",
-        "version": "4.4.10",
-        "language": "zh-Hans",
-        "apiversion": "2",
-        "versionnum": "10899",
-        "user-agent": "android/31 paint.by.number.pixel.art.coloring.drawing.puzzle/4.4.10"
-    }
-    url = url_prefixes.get(address)
-    try:
-        response = session.get(url, headers=headers)
-        response.raise_for_status()  # 如果请求返回的状态码不是200，则抛出异常
-        response_data = response.json()["data"]
-        if address == "PBN":
-            if response_data["vector_zip_file"]:
-                return(PicID,response_data["vector_zip_file"])
+# 根据detailjson数据，获取其中的数据中的area数据：色块外切矩形的坐标,然后对比center中的数字位置，是否在area区域内
+def Test_area_and_Center(data):
+    if "area" in data and "center" in data:
+        area_data = data["area"]
+        center = data["center"]
+
+        if area_data != None and center != None:
+            center_number = center.split('|')  # 色块数
+            failed_numebr = []
+            for i in range(len(center_number)):
+                center_number_code = center_number[i - 1].split(',')[0]
+                center_number_code_x = center_number[i - 1].split(',')[1]
+                center_number_code_y = center_number[i - 1].split(',')[2]
+                center_number_code_int_x = float(center_number_code_x)
+                center_number_code_int_y = float(center_number_code_y)
+
+                if center_number_code in area_data:
+                    area_data_number = area_data[center_number_code]
+
+                    xmin = area_data_number["minX"]
+                    xmax = area_data_number["maxX"]
+                    ymin = area_data_number["minY"]
+                    ymax = area_data_number["maxY"]
+                    if xmin < center_number_code_int_x < xmax and ymin < center_number_code_int_y < ymax:
+                        pass
+                    else:
+                        failed_numebr.append(int(center_number_code))
+            if failed_numebr != []:
+                print(sorted(failed_numebr))
+                return False
             else:
-                return(PicID,response_data["zip_file"])
-        elif address.startswith(("VC", "ZC")):
-            return (PicID,response_data["resource"]["zip"])
-        elif address == "BP":
-            return(PicID, response_data["zip_2048_pdf"])
+                return True
+        else:
+            print("No center_float")
+            return True
+    else:
+        return True
+# 对比centerfloat
+def Test_area_and_FloatCenter(data):
+    if "center_float" in data:
+        area_data = data["area"]
+        center = data["center_float"]
+        if area_data != None and center != None:
+            center_number = center.split('|')  # 色块数
+            failed_numebr = []
+            for i in range(len(center_number)):
+                center_number_code = center_number[i - 1].split(',')[0]
+                center_number_code_x = center_number[i - 1].split(',')[1]
+                center_number_code_y = center_number[i - 1].split(',')[2]
+                center_number_code_int_x = float(center_number_code_x)
+                center_number_code_int_y = float(center_number_code_y)
 
-    except requests.exceptions.HTTPError as http_err:
-        print(f"HTTP error occurred: {http_err}")
-    except Exception as err:
-        print(f"An error occurred: {err}")
+                if center_number_code in area_data:
+                    area_data_number = area_data[center_number_code]
 
-# 获取excel表中素材ID的zip url
-def get_picid_zipurl_from_excel(address):
-    df = pd.read_excel('excel/12121test.xlsx', usecols=[0])
-    data = df.to_dict(orient='split')
-    json_data = {
-        'columns': data['columns'],
-        'data': data['data']
-    }
-    with open('excel/output.json', 'w') as f:
-        json.dump(json_data, f)
-    Pic_ids = []
-    Zip_url = []
-    for data in json_data["data"]:
-        pic_id = data[0]
-        picid, zipurl = Get_id_Zipurl_from_picdetailapi(pic_id, address)
-        Pic_ids.append(picid)
-        Zip_url.append(zipurl)
-    return Pic_ids, Zip_url
-
-# 检查素材在CMS上的配置
-def pic_config(address):
-    url_prefixes = {
-        "PBN": f"https://pbn-cms.learnings.ai/paint/v1/cms/paint?abtest_key=c&limit=500&offset=0&status_list=ONLINE_LIBRARY&paint_id=&abtest_show=true&u_time_range=20240205_20240229&category_id=&with_userscore=true&sort_by=release_date%5E-1",
-        # "ZC": f"https://zc-cms.learnings.ai/colorflow/v1/cms/daily?limit=200&offset=0&release_date=2024-02-05~2024-03-01",
-        "ZC": f"https://zc-cms.learnings.ai/colorflow/v1/cms/abtest/default/detail?limit=500&offset=0&release_date=2024-02-05%5E2024-02-29",
-        "VC": f"https://vc-cms.learnings.ai/vitacolor/v1/cms/abtest/default/detail?limit=500&offset=0&release_date=2024-02-05%5E2024-02-29",
-        "BP": f"https://bpbncms.idailybread.com/bpbn/v1/cms/daily?date_start=20240205&date_end=20240229&limit=200&offset=0"
-    }
-    headers = {
-        # "cookie":"_ga=GA1.1.1929480831.1691656939; isArtist=false; learnings-passport=EBH0lAfOxgQq90GrHPSdIFGaGgf_IGLhGWe1O53CoQOY8vKvW9nXHQZszwZauw20; learnings-user=jOtSLUDcxz0Rqm5CFl0wv3vUKHxw4hfPXySdC0tteGjdSuzc2S9dWSscm6EpMnrgmvlxo3MtKJDSL2QRR2lDHoWoQanLZojxDmybNMWODWJKrELGFwmAbGG_08mYaJ9ytZyQWz2zuVDa6n6KhihlNLbbZ-w4c6Q9Ao7JR7dEV9C6mwrpeJO-vVinPyD_YBL0AO_0f7sYs_XMbX7_qBCTAbwSOPA50gDjk9MeThQLcVheB4qjwFbHkflc-nkzofL38Q8lw2vEE4uFRkCViCL6GfVuLLO6vrTfAbpPP4_5p5cBtiAvTJVMtPae-A7hT73fE-lvx-TG6uGBTyC2KJ3RpZg3jhEkZStqRD2WQMRfRhzousFONxgPK0Tk04InttOXUobw926QK5PIpUoFOlFNu0SdXHsCz-aIIcgWG39MmXCmIA4ZdsgoFbk7Z071lYzbMnXrbeYlFo_LfDzAtJnSH7B7jeJW-a2ZmTzsCjeLMBMAS1uM31gnRP1hKTT9OWZTlEVM6GdjGbgfvs6mYb_evgDofEiF0p1Q-Lga6W20RTNkFLij_vDvcDRfzmzXMOMozMYa680odUYfKjWL_v4kT_ATCTTYJE4zSyHBPzT3ThQ; _ga_2Z4PFG28RG=GS1.1.1707124810.358.1.1707124832.38.0.0"
-        "cookie":"_ga=GA1.1.1929480831.1691656939; name=%E4%BD%95%E6%B6%9B; avatar=https://s1-imfile.feishucdn.com/static-resource/v1/v2_9adcf190-6b5f-4001-82ce-1278c1ab7e2g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp; id=5c85c2ed9def2c0001636c4b; learnings-passport=EBH0lAfOxgQq90GrHPSdIFGaGgf_IGLhGWe1O53CoQOY8vKvW9nXHQZszwZauw20; learnings-user=Z1-bVNSvI14NygsAWa_lRHgaeghMtZeezxxrou748bTSD_K9HFAvWIxZCutGOxDcSjF8TZHqlC0H0v1wL73guiD1PkxjYBDMQsfejUD-xcn8uiUmT1xW_JFbJVQKK4RqFg5tzCeqynz5hqA_U3lRJzX1TFgyCCjlzVzpKuYPJKcq7HKtkq5q4wE9IaUVN9A5XQ4sBjC1W52itnpoYlKxqDe2iHlIxptlekx2-mivj7ghoD5b0RMFEeiguN-S80pLsBFfYmZ9O91PSbo-e9Ufr2hO140KoB1SP0btGCLz_NsFUEuI7kmsKjCqWhYJxHqqe2KUhVTPU0pQKYEQkD_TmHb-ty0u9AkIU561k2QL40SAlhLiSK9b0piZ7Ce-gP_HukkXLXYQrPLiMI5PZ2-vJYBphsctwCgm0wdR3qPTFmmhyB2x8ZiyfL4pYq_Vt0sgyMvYnzgo4d_b7hRs_DAndgrur2zi9gbsrsHpfrwrqGu2Uc0wgwJuzcB0iynkNUXngsI5US1IHw5oqOCi6OlRbFoDdkLiG1D9jKXHJgS6wV5T9Jid45FZrBi06hXuVGaFihrfJmP4zMDvBZhA89fNeirkatm25J6qXvCE4BRwQeo; _ga_2Z4PFG28RG=GS1.1.1707186605.362.1.1707186606.59.0.0"
-        # "cookie":"_ga=GA1.1.1929480831.1691656939; name=%E4%BD%95%E6%B6%9B; id=5c85c2ed9def2c0001636c4b; avatar=https://s1-imfile.feishucdn.com/static-resource/v1/v2_9adcf190-6b5f-4001-82ce-1278c1ab7e2g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp; learnings-passport=EBH0lAfOxgQq90GrHPSdIFGaGgf_IGLhGWe1O53CoQOY8vKvW9nXHQZszwZauw20; learnings-user=Ou7DP0e3gj7hKCv6Vp_u07qL8XuAbzmZtA2imbFJ69_G7PgF_8m1kJVQE_vZ6FDplIzaRJ86YeTM3L8mpmqQZlpXsUIaSAZVxTbJ09gtiHYbqC-A21l788of_99X8TRKoNAA8t3DDFCBkkqP6dNclMWBbIioTCuA3M9YZrUePWSPE9s0z4xJgExt6svjIcYX89Pp_uu2khmZbK2d-3poNEx7FtclZR2HrNILYeUWfUBRoOANdbbTYCfBsiodp2zJ338mH55PVqs9bdPZQZvzvb-To-wAPKgpMnXfun4FVr7uOfgpgh6gwsDWrmMBJEIpWQqKRBW075C-15NQckngxZIlliffaaBuFILF5sPOOwlLRnNgFxKztY0KXvpJlVVQALkifC7bnmi7v3H6V76-kgxRHaeBVREvU0Nl1VyKNdrmdXndZgp3jAWFr8HkQLQoqV2uP06U9LhGEDAgLiV0Y4DG5Jw2pIdgWdmJBKNR6KTIQJUY2GZA_aFpGRP1oaYTNrxGrZQ48yBhVoja7OffcrTzSRBKjfCe7Sm10hdaL0aVF5OAUnvMZEA2AT7W0g9fJv2LcVDU0QeycrvPEyy8x02SYNIcYGlOPmhgREDUzu8; _ga_2Z4PFG28RG=GS1.1.1707124810.358.1.1707126342.42.0.0"
-        # "cookie": '''_ga=GA1.1.1084550949.1697188455; uac_passport="2|1:0|10:1707126693|12:uac_passport|44:YmM4MTA5N2UzMjI4NDIzYzkwZmExYjc3ODFlYjUwMzE=|a25a884a0f84140b1310aed889f795ee65373c6e29c5a8b0b4178139492fe9af"; user="2|1:0|10:1707126693|4:user|608:eyJpZCI6IjVjODVjMmVkOWRlZjJjMDAwMTYzNmM0YiIsInVzZXJpZCI6IjE1NTIyNjk4Nzc3NDk2Mzg3IiwibmFtZSI6Ilx1NGY1NVx1NmQ5YiIsImF2YXRhciI6Imh0dHBzOlwvXC9zMS1pbWZpbGUuZmVpc2h1Y2RuLmNvbVwvc3RhdGljLXJlc291cmNlXC92MVwvdjJfOWFkY2YxOTAtNmI1Zi00MDAxLTgyY2UtMTI3OGMxYWI3ZTJnfj9pbWFnZV9zaXplPW5vb3AmY3V0X3R5cGU9JnF1YWxpdHk9JmZvcm1hdD1wbmcmc3RpY2tlcl9mb3JtYXQ9LndlYnAiLCJlbWFpbCI6ImhldGFvQGRhaWx5aW5ub3ZhdGlvbi5iaXoiLCJkZXBhcnRtZW50IjpbIm9kLTJhZmVlZmIxMmIwMzcwYzJlYjhiMDE5NjY4OGY3YjA4Il0sImFjdGl2ZSI6dHJ1ZSwiam9ibnVtYmVyIjoiIiwiZGluZ2RpbmdfdXNlcmlkIjoiMTU1MjI2OTg3Nzc0OTYzODciLCJmZWlzaHVfdXNlcmlkIjoiODMxMTQyZTUiLCJoaXJlZCI6MTc5M30=|e051a7b239d5f9e9cda34ad4da2c84b52cf69b0ac14deb3ab5073b1b7aae24ab"; _ga_2Z4PFG28RG=GS1.1.1707126686.13.1.1707126725.21.0.0'''
-    }
-    url = url_prefixes.get(address)
-    try:
-        response = session.get(url, headers=headers)
-        response.raise_for_status()  # 如果请求返回的状态码不是200，则抛出异常
-        # response_data = response.json()["data"]["list"]
-        response_data = response.json()["data"]["content"]
-        id_list = []
-        for list in response_data:
-            # id = list["id"]
-            # release_data = list["logic"]["ab_test_set"]["release_date"]
-            # release_data = list["logic"]["daily_set"]["daily"]
-            release_data = list["release_date"]
-            # release_data = list["daily"]
-            id_list.append(release_data)
-        counter = Counter(id_list)
-        for element, count in counter.items():
-            print(f"{element}: {count}")
-    except requests.exceptions.HTTPError as http_err:
-        print(f"HTTP error occurred: {http_err}")
-    except Exception as err:
-        print(f"An error occurred: {err}")
+                    xmin = area_data_number["minX"]
+                    xmax = area_data_number["maxX"]
+                    ymin = area_data_number["minY"]
+                    ymax = area_data_number["maxY"]
+                    if xmin < center_number_code_int_x < xmax and ymin < center_number_code_int_y < ymax:
+                        pass
+                    else:
+                        failed_numebr.append(int(center_number_code))
+            if failed_numebr != []:
+                print(sorted(failed_numebr))
+                return False
+            else:
+                return True
+        else:
+            print("No center_float")
+            return True
+    else:
+        return True

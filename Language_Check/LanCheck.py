@@ -1,7 +1,10 @@
 import os, openpyxl,argparse
 from openpyxl.styles import NamedStyle, Font, Border, Side, PatternFill, colors
 from openpyxl.comments import Comment
-# from langid.langid import LanguageIdentifier, model
+from langdetect import detect
+from langdetect import detect_langs
+from langdetect import DetectorFactory
+
 
 # 从xlutils模块中导入copy这个函数
 
@@ -182,7 +185,7 @@ def CompairText(file_path,x,y):
             b18 = sheet.cell(row=10, column=c)
 
             b18.fill = None  # 清空Excel背景色
-            b.comment = None  # 清空Excel备注
+            b18.comment = None  # 清空Excel备注
 
             if b17.value not in b16.value:
                 commentexcel(b17, 9, c, '内容不匹配')
@@ -192,16 +195,39 @@ def CompairText(file_path,x,y):
                 continue
         book.save(file_path)
 
-
-
 def commentexcel(b, r, c, string):
-    fill_3 = PatternFill("solid", fgColor="ffc7ce")  # 红色
+    # fill_3 = PatternFill("solid", fgColor="ffc7ce")  # 红色
+    # b.fill = fill_3
+    #
     comment = Comment(string, "tester")
-
-    b.fill = fill_3
     b.comment = comment
     print(str(r) + '行' + str(c) + '列' + string)
     return
+
+def CompairLan(file_path,x,y):
+    try:
+        book = openpyxl.load_workbook(file_path)
+    except Exception as e:
+        # 如果路径不在或者excel不正确，返回报错信息
+        print('路径不在或者excel不正确', e)
+        return e
+    else:
+        sheet = book.active  # 取第一个sheet页
+        rows_num = sheet.max_row + 1  # 取这个sheet页的所有行数
+        clos_num = sheet.max_column + 1
+        for r in list(range(rows_num))[x:]:  # 取第4行到最后一行
+            for c in list(range(clos_num))[y:]:  # 取第9列到最后一行
+                b = sheet.cell(row=r, column=c)
+                a = b.value
+                key = sheet.cell(row=2,column=c)
+                b.fill = None #清空Excel背景色
+                b.comment = None #清空Excel备注
+                DetectorFactory.seed = 0
+                if detect(a) not in key.value:
+                    print(key.value)
+                    print(detect(a))
+                    commentexcel(b, r, c, "不是这个国家的语言")
+        book.save(file_path)
 
 ###直接在代码中修改执行文件路径
 # # 获取项目路径
@@ -225,4 +251,5 @@ y = args.clos
 
 # 检查文件格式
 # updateExcel(file_path,x,y)
-CompairText(file_path,x,y)
+# CompairText(file_path,x,y)
+CompairLan(file_path, x, y)
