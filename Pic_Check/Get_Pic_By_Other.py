@@ -28,6 +28,7 @@ def Get_id_Zipurl_from_picdetailapi(address,PicID):
         "user-agent": "android/31 paint.by.number.pixel.art.coloring.drawing.puzzle/4.4.10"
     }
     url = url_prefixes.get(address)
+    print("url: "+str(url))
     ids = []
     zip_url = []
     try:
@@ -76,7 +77,7 @@ def get_picid_zipurl_from_excel(address):
 def Check_json_and_pdf(address):
     # ids, Zip_url = Get_id_Zipurl(address, limit=1000, group="c")  # 获取Lib、Daily要检测的素材信息：id、url
 
-    ids, Zip_url = Get_id_Zipurl_from_picdetailapi(address, "65e18946ecb41b8f4484f5a5")  #检查单张素材
+    ids, Zip_url = Get_id_Zipurl_from_picdetailapi(address, "65e0077773358196a16839c1")  #检查单张素材
     # date = Get_Pack_Pic_Data("Pacific/Apia")    # 检查包素材
     # ids = [list(d.keys())[0] for d in date]  # 提取所有的键
     # Zip_url = [list(d.values())[0] for d in date]
@@ -87,18 +88,16 @@ def Check_json_and_pdf(address):
     for ids_, Zip_url_ in zip(ids, Zip_url):
         print(ids_)
         data = Get_detailjson(ids_, Zip_url_, address)
-        # if Get_Number_From_Plan(data, address) == [] or Get_Number_From_Center(data) == []:
-        #     print("1")
-        #
-        #     failed_ids.append(ids_)
-        # elif set(Get_Number_From_Plan(data, address)) - set(Get_Number_From_Center(data)):
-        #     print("2")
-        #
-        #     failed_ids.append(ids_)
-        # if Get_Number_From_FloatCenter(data) != []:
-        #     if set(Get_Number_From_Plan(data, address)) - set(Get_Number_From_FloatCenter(data)):
-        #         print("3")
-        #         failed_ids.append(ids_)
+        if Get_Number_From_Plan(data, address) == [] or Get_Number_From_Center(data) == []:
+            print("1")
+            failed_ids.append(ids_)
+        elif set(Get_Number_From_Plan(data, address)) - set(Get_Number_From_Center(data)):
+            print("2")
+            failed_ids.append(ids_)
+        if Get_Number_From_FloatCenter(data) != []:
+            if set(Get_Number_From_Plan(data, address)) - set(Get_Number_From_FloatCenter(data)):
+                print("3")
+                failed_ids.append(ids_)
         # pdf = Get_PDF(ids_, Zip_url_, address)
         # if pdf:
         #     try:

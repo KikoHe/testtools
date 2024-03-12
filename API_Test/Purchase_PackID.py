@@ -25,7 +25,7 @@ def Get_All_PackID():
         "apiversion": "2",
         "versionnum": "10899",
     }
-    url = "https://colorpad-api.vitastudio.ai/colorpad/v1/paint/pack?limit=60&offset=0"
+    url = "https://colorpad-api-stage.vitastudio.ai/colorpad/v1/paint/pack?limit=60&offset=0"
     Pack_data_list = []
     try:
         response = session.get(url, headers=headers)
@@ -57,11 +57,11 @@ def Get_All_Pack_Level(level):
         selected_keys = [list(d.keys())[0] for d in All if 300 >= list(d.values())[0] > 150]
     elif level == 1:
         selected_keys = [list(d.keys())[0] for d in All if 150 >= list(d.values())[0]]
-    print("Level"+str(level)+"的所有包ID： "+ str(selected_keys))
+    print("Level"+str(level)+"的所有包ID： " + str(selected_keys))
     return selected_keys
 # Get_All_Pack_Level(3)
 
-def Get_Bonus_PackID(Purchased_PackID,count,Weight):
+def Get_Bonus_PackID(Purchased_PackID,count,high_pack_count):
     headers = {
         "platform": "android",
         "install_day": "100",
@@ -72,18 +72,19 @@ def Get_Bonus_PackID(Purchased_PackID,count,Weight):
         "versionnum": "10899",
         "user-agent": "android/31 paint.by.number.pixel.art.coloring.drawing.puzzle/4.4.10"
     }
-    url = "https://colorpad-api.vitastudio.ai/colorpad/v1/paint/pack/luckydraw"
+    url = "https://colorpad-api-stage.vitastudio.ai/colorpad/v1/paint/pack/luckydraw"
     body = {
         "purchased_pack_ids": Purchased_PackID,
         "count": count,
-        "SSR": Weight
+        "bonus_pack_count": high_pack_count
     }
+    # print(body)
     Pack_data_list = []
+    response_data = {}
     try:
-        response = session.PUT(url, headers=headers, body=body)
+        response = session.put(url, headers=headers, json=body)
         response.raise_for_status()  # 如果请求返回的状态码不是200，则抛出异常
         response_data = response.json()["data"]["content"]
-        return response_data
     except requests.exceptions.HTTPError as http_err:
         print(f"HTTP error occurred: {http_err}")
     except Exception as err:
@@ -91,14 +92,16 @@ def Get_Bonus_PackID(Purchased_PackID,count,Weight):
     for data in response_data:
         Packid = data["id"]
         Price = data["price"]
-        Pack_data = {Packid:Price}
+        Pack_data = {Packid: Price}
         Pack_data_list.append(Pack_data)
     return Pack_data_list
 
+# print(Get_Bonus_PackID([],"2","false"))
+# Get_Bonus_PackID([],"2","false")
 
 # 测试:权重
 # 测试:奖励包ID 不能是 已购买包ID
-def Test_1(input, times):
+def Test_1(input, times, count, high_pack_count=0):
     if input == 1 or input == 2 or input == 3:
         Purchased_PackID = Get_All_Pack_Level(input) #1、2、3代表各自等级的全部包
         if input == 1:
@@ -110,19 +113,24 @@ def Test_1(input, times):
     else:
         Purchased_PackID = input #具体ID
     print("已购素材包ID： " + str(Purchased_PackID))
-    Weights = 1 # 需要获取/手动修改
-    if Weights == 0:
+    if high_pack_count == 0:
         print("固定权重")
-    elif Weights == 1:
+    else:
         print("特殊权重")
     Level_list = [] #奖励包的等级
+    PackID_total_list = []
     i = 0
     while True:
         if i >= times:
             print("重复购买了："+str(times)+"次")
             break
-        # Bonus_Pack = Get_Bonus_PackID(Purchased_PackID) # 获取奖励包数据
-        Bonus_Pack = Get_All_PackID() # 获取奖励包数据
+        Bonus_Pack = Get_Bonus_PackID(Purchased_PackID, count, high_pack_count) # 获取奖励包数据
+
+        Bonus_Pack_ID_list = [list(d.keys())[0] for d in Bonus_Pack]
+        Return_PackID = list(Bonus_Pack_ID_list)
+        print("Return_PackID: " + str(Return_PackID))
+
+        PackID_total_list.append(Return_PackID) #收集所有购买的包ID
         Bonus_Pack_price_list = [list(d.values())[0] for d in Bonus_Pack] # 获取奖励包价格
         for price in Bonus_Pack_price_list:  # 将包的等级存入Level_list
             if price > 300:
@@ -131,11 +139,20 @@ def Test_1(input, times):
                 Level_list.append(2)
             else:
                 Level_list.append(1)
-        if input != 3 and 3 in Level_list and Weights == 1:
-            Level_list.remove(3)
+        if input != 3 and high_pack_count != 0:
+            # print("单次购买的奖励包ID："+str(PackID_total_list))
+            # print("单次购买的奖励包等级："+str(Level_list))
+            if 3 not in Level_list:
+                print("特殊权重，没有奖励level3的素材")
+            else:
+                print("特殊权重，奖励了level3的素材")
+                number = 0
+                while True:
+                    Level_list.remove(3)
+                    number = number + 1
+                    if number >= high_pack_count:
+                        break
 
-        keys = [list(d.keys())[0] for d in Bonus_Pack]
-        Return_PackID = list(keys)
         # 将两个列表转换为集合
         Purchased_PackID_set = set(Purchased_PackID)
         Return_PackID_set = set(Return_PackID)
@@ -146,7 +163,8 @@ def Test_1(input, times):
         else:
             print("正常：没有返回已购买的包")
         i = i+1
-    print("多次购买后的奖励素材包的总level list： " + str(Level_list))
+    print("多次购买后的奖励素材包ID： " + str(PackID_total_list))
+    print("多次购买后的奖励素材包等级： " + str(Level_list))
 
     level_counts = Counter(Level_list)# 计算总的元素个数
     total_count = len(Level_list)# 计算每个元素的比例
@@ -154,4 +172,5 @@ def Test_1(input, times):
     for level, weight in level_weights.items():  # 打印每个元素的比例
         print(f"等级 {level} 的比例为: {weight:.2f}")
 
-Test_1("111",3)
+# 已购包ID、购买次数、单次购买个数、高价值包个数
+Test_1("", 1, 4, 3)

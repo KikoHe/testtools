@@ -134,7 +134,6 @@ def Get_all_project_Lib_list_pic_ids(address,limit):
         ids = Get_all_group_Lib_list_pic_ids(address, limit, group_list_pbn)
     return ids
 
-
 # 获取最新的故事线ID
 def Get_storyid(timezone_country):
     PBN_Today_url = f"https://paint-api.dailyinnovation.biz/paint/v1/today?install_day=1681&explore_simplified=0&day=1681&groupNumber=c"
@@ -413,7 +412,7 @@ def Get_Number_From_Plan(data, address):
         if "plans" in data:
             plan = data["plans"]
     if plan != []:
-        # print("start")
+        print("start")
         plan_number = plan[0].split('|')   # 色块信息
         Number = 1
         for i in range(len(plan_number)):
@@ -421,8 +420,9 @@ def Get_Number_From_Plan(data, address):
             for num in range(len(plan_number_code)):
                 plan_number_code_single = plan_number_code[num - 1]
                 plan_number_code_int = int(plan_number_code_single)
-                # if plan_number_code_int == "1185":   ###返回色块编号为plan_number_code_int的色号编号
-                #     print(Number) # 色号数
+                # print(plan_number_code_int)
+                if plan_number_code_int == 724:   ###返回色块编号为plan_number_code_int的色号编号
+                    print("色号： "+str(Number)) # 色号数
                 plan_number_code_list.insert(-1, plan_number_code_int)
             Number = Number + 1
     return sorted(plan_number_code_list)
@@ -440,8 +440,10 @@ def Test_area_and_Center(data):
                 center_number_code = center_number[i - 1].split(',')[0]
                 center_number_code_x = center_number[i - 1].split(',')[1]
                 center_number_code_y = center_number[i - 1].split(',')[2]
+                center_number_code_R = center_number[i - 1].split(',')[3]
                 center_number_code_int_x = float(center_number_code_x)
                 center_number_code_int_y = float(center_number_code_y)
+                center_number_code_int_R = float(center_number_code_R)
 
                 if center_number_code in area_data:
                     area_data_number = area_data[center_number_code]
@@ -450,11 +452,11 @@ def Test_area_and_Center(data):
                     xmax = area_data_number["maxX"]
                     ymin = area_data_number["minY"]
                     ymax = area_data_number["maxY"]
-                    if xmin < center_number_code_int_x < xmax and ymin < center_number_code_int_y < ymax:
+                    if xmin-center_number_code_int_R < center_number_code_int_x < xmax+center_number_code_int_R and ymin-center_number_code_int_R < center_number_code_int_y < ymax+center_number_code_int_R:
                         pass
                     else:
                         print("area_data:")
-                        print(xmin,xmax,ymin,ymax)
+                        print(xmin, xmax, ymin, ymax)
                         failed_numebr.append(int(center_number_code))
             if failed_numebr != []:
                 print("error id :")
@@ -467,6 +469,7 @@ def Test_area_and_Center(data):
             return True
     else:
         return True
+
 # 对比centerfloat
 def Test_area_and_FloatCenter(data):
     if "center_float" in data:
@@ -479,8 +482,10 @@ def Test_area_and_FloatCenter(data):
                 center_number_code = center_number[i - 1].split(',')[0]
                 center_number_code_x = center_number[i - 1].split(',')[1]
                 center_number_code_y = center_number[i - 1].split(',')[2]
+                center_number_code_R = center_number[i - 1].split(',')[3]
                 center_number_code_int_x = float(center_number_code_x)
                 center_number_code_int_y = float(center_number_code_y)
+                center_number_code_int_R = float(center_number_code_R)
 
                 if center_number_code in area_data:
                     area_data_number = area_data[center_number_code]
@@ -489,7 +494,7 @@ def Test_area_and_FloatCenter(data):
                     xmax = area_data_number["maxX"]
                     ymin = area_data_number["minY"]
                     ymax = area_data_number["maxY"]
-                    if xmin < center_number_code_int_x < xmax and ymin < center_number_code_int_y < ymax:
+                    if xmin-center_number_code_int_R < center_number_code_int_x < xmax+center_number_code_int_R and ymin-center_number_code_int_R < center_number_code_int_y < ymax+center_number_code_int_R:
                         pass
                     else:
                         failed_numebr.append(int(center_number_code))
