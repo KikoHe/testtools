@@ -44,7 +44,7 @@ def Get_id_Zipurl_from_picdetailapi(PicID,address):
                 svg_zip_url = response_data["region_json_zip"]
         elif address.startswith(("VC", "ZC", "Vista")):
             not_svg_zip_url = response_data["resource"]["zip"]
-        elif address == "BP":
+        elif address.startswith("BP"):
             not_svg_zip_url = response_data["zip_2048_pdf"]
         return not_svg_zip_url, svg_zip_url
     except requests.exceptions.HTTPError as http_err:
