@@ -1,4 +1,4 @@
-import pytz, hashlib, zipfile, os, requests
+import pytz, hashlib, zipfile, os, requests,pyzipper,subprocess
 from datetime import datetime
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
@@ -67,6 +67,7 @@ def get_today_update_lib_or_daily_pic_data(address, limit=30, timezone=timezone,
         for item in paintList:
             if item["releaseDate"] == formatted_date2:
                 pic_id = item["id"]
+
                 if "vector_zip_file" in item and item["vector_zip_file"] != None:
                     zip_url = item["vector_zip_file"]
                 else:
@@ -88,16 +89,95 @@ def get_today_update_lib_or_daily_pic_data(address, limit=30, timezone=timezone,
                     pic_data[pic_id] = zip_url
     return pic_data
 
+### 获取CMS上所有进行中的的素材实验方案
+def get_imagegroup_from_CMS(address):
+    url_prefixes = {
+        "PBN": f"https://pbn-cms.learnings.ai/paint/v1/cms/abtest?limit=100&offset=0&country=",
+        "ZC": f"https://zc-cms.learnings.ai/colorflow/v1/cms/abtest?offset=0&limit=50",
+        "VC": f"https://vc-cms.learnings.ai/vitacolor/v1/cms/abtest?offset=0&limit=50",
+        "BP": f"https://bpbncms.idailybread.com/bpbn/v1/cms/abtest?limit=50&offset=0&status=0",
+        "Vista": f"https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest?offset=0&limit=50",
+    }
+    headers = {
+        "cookie":'''_ga=GA1.1.1929480831.1691656939; learnings-passport=_sLoatJ7zrLmUuJjAyErLhekSW3RsYzZ2lr6_ZzTsiHgDHFKnnZS0taYmRszx8Wp; isArtist=false; projectIds=[%225b84f58e689998000116d3fd%22%2C%225b892d3a9f9b4e00011d1cf3%22%2C%225e43d79dbfe4170001141436%22]; products=[%225bfb5a2b6ff9950001e9a969%22%2C%225c00dc5713ab060001c19ea0%22%2C%225b18ef419c560300013ddf28%22%2C%225b18f0079c560300013ddf29%22%2C%225e43d79dbfe4170001141436%22%2C%225b84f58e689998000116d3fd%22%2C%225b892d3a9f9b4e00011d1cf3%22%2C%22657953298aa0c540cc3fd85d%22%2C%22655d7180648210324dccb499%22%2C%2264b4c17796b49d036a8d6bb9%22%2C%2264b4c18196b49d036a8d6bba%22%2C%22645b2f85cd911b5ea8511fd6%22%2C%2260385d6148b726000118051b%22%2C%2260385d8448b726000118051c%22]; ajs_anonymous_id=42cd20ca-c89e-49ac-ad60-eb63ead5252c; uac_passport="2|1:0|10:1719804699|12:uac_passport|44:ZjhjY2Y1Y2ZhYmVlNDA4ZjgyN2I0NzdhYzQwNDYyOWY=|07278d3a26be700c22ec6c25569b9c2fcea8b391ea5e95806372d99497d945d3"; _ga_2Z4PFG28RG=GS1.1.1719818527.767.1.1719818529.58.0.0; learnings-user=Y9TMYRYvMgjahTWxYd_XFBI0KYZJaHUk1l1MhwgegnVgqXUGbYb7DNmGxEsuwcEcKbKBz9e5MNQayINWig9hTAD5eHvFRuEC7knIaO169ZErprdOkdMvq1R3gLWpyaLV-dUnBVgGFjIbeYsmdFSvoTOdMvSq9p5Gvr4myfyULiuUpZ5EAoD3kKYrdKfbt_-a588mMst8FAJJWkOi-4cJ7Pa52OtqzsQs31lDCAZmvdpzGYSG2w3AldQVQK1UpZm51dy3CFOAYsdi2BOJzrJgsUr6KLquPfSdQsaoZVmqYivEfdpxXHdKq2iNG8z4NoTUlZC89Ac7OHGsOnO6As258zSos0gonyTKoL123EUxmzDgItL285urGsoNe_0SFmM08bsfQvXAgpOBLONzNKIqZ90ofhOaFOu75cT1jy_WTPXpwcVfSmhJ3UWY0W9Qpn-k0q44183PEm5umFgVDLS516TaDVGTGeNHQG2gRbR6F6C7pe1C4psz8E4I8ira6aF4vCzFnbSEDbRehhIGs2zio_tPClr5GfRFN5LwZFYawLo-nXuf2tCD_uYe71Bg0zc-ez73BO56fFg4idxP2v99L3VEeYeugm7kDTxOof1-GhA'''
+    }
+    address = address.split('_')[0]
+    url = url_prefixes.get(address)
+    try:
+        response = session.get(url, headers=headers)
+        response.raise_for_status()  # 如果请求返回的状态码不是200，则抛出异常
+        if address.startswith("BP"):
+            response_data = response.json()["data"]["content"]
+        else:
+            response_data = response.json()["data"]["list"]
+        image_group = []
+        for list in response_data:
+            if address.startswith("BP") and list["status"] == 1:
+                image_group.append(list["group_key"])
+            elif not address.startswith("BP") and list["status"] == "ACTIVE":
+                image_group.append(list["code"])
+
+    except requests.exceptions.HTTPError as http_err:
+        print(f"HTTP error occurred: {http_err}")
+    except Exception as err:
+        print(f"An error occurred: {err}")
+    return set(image_group)
+
+### 获取ABtest上所有进行中的的素材实验方案
+def get_imagegroup_from_ABTest(address):
+    APP_ID_iOS = {
+        "PBN": "5b892d3a9f9b4e00011d1cf3",
+        "ZC": "60385d8448b726000118051c",
+        "VC": "64b4c18196b49d036a8d6bba",
+        "BP": "5c00dc5713ab060001c19ea0",
+        "Vista": "657953298aa0c540cc3fd85d"
+    }
+    APP_ID_Android = {
+        "PBN": "5b84f58e689998000116d3fd",
+        "ZC": "60385d6148b726000118051b",
+        "VC": "64b4c17796b49d036a8d6bb9",
+        "BP": "5bfb5a2b6ff9950001e9a969",
+        "Vista": "657953298aa0c540cc3fd85d"  # 暂时使用iOS的补充一下
+    }
+    address = address.split('_')[0]
+    url_iOS = f"https://api.learnings.ai/pm/abtest/v4.15/production/{APP_ID_iOS.get(address)}/params?version_code=0"
+    url_Android = f"https://api.learnings.ai/pm/abtest/v4.15/production/{APP_ID_Android.get(address)}/params?version_code=0"
+    url_list = [url_iOS, url_Android]
+    image_group = []
+    for url in url_list:
+        try:
+            response = session.get(url)
+            response.raise_for_status()  # 如果请求返回的状态码不是200，则抛出异常
+            response_data = response.json()["data"]["params"]
+            # print(response_data)
+            for list in response_data:
+                if list["key"] == "imageGroupNum" or list["key"] == "image_test_v2" or list["key"] == "image_test_v3":
+                    for value_list in list["value"]:
+                        image_group.append(value_list["value"])
+        except requests.exceptions.HTTPError as http_err:
+            print(f"HTTP error occurred: {http_err}")
+        except Exception as err:
+            print(f"An error occurred: {err}")
+    if image_group == []:
+        image_group.append("default")
+    # print(set(image_group))
+    return set(image_group)
+
+### 对比CMS和ABtest的素材方案，获取最终需要测试的素材方案
+def get_imagegroup(address):
+    CMS_imagegroup = get_imagegroup_from_CMS(address)
+    ABtest_imagegroup = get_imagegroup_from_ABTest(address)
+    diff = ABtest_imagegroup.difference(set(CMS_imagegroup))
+    if diff:
+        raise Exception(f"List B contains data that is not in List A: {list(diff)}")
+    else:
+        return ABtest_imagegroup
+
 ### 获取PBN、BP所有方案今天更新的素材是否一致，如果一致，则返回当天更新的素材数据
 def get_all_imagegroup_pic_update(address):
     update_pic_data = {}
     update_pic_number = []
-    if address.startswith("BP"):
-        group_list = ["default", "default_ios", "test_a"]
-    elif address.startswith("PBN"):
-        group_list = ["c", "ios_c", "us-new", "vietnam-new", "brazil-new", "india-new", "mexico-new"]
-    else:
-        group_list = ["default"]
+    group_list = list(get_imagegroup(address))
     for group in group_list:
         update_pic_data = get_today_update_lib_or_daily_pic_data(address, limit=50, timezone=timezone, group=group)
         update_pic_number.append(len(update_pic_data))
@@ -111,7 +191,6 @@ def get_all_imagegroup_pic_update(address):
             fail_group_list.append(fail_group)
             print("以下素材方案更新的素材数量有问题: ", str(fail_group_list))
         return False
-
 ### 获取PBN某个时区最新的故事线ID和里面的素材信息
 def get_lastest_story_pic_data(time_zone):
     story_list_url = f"https://paint-api.dailyinnovation.biz/paint/v1/today?install_day=1681&explore_simplified=0&day=1681&groupNumber=c"
@@ -137,9 +216,7 @@ def get_lastest_story_pic_data(time_zone):
         print(f"HTTP error occurred: {http_err}")
     except Exception as err:
         print(f"An error occurred: {err}")
-
     story_detail_url = f"https://paint-api.dailyinnovation.biz/paint/v1/story/{lastest_story_id}"
-
     try:
         response = session.get(story_detail_url, headers=headers_timezone)
         response.raise_for_status()  # 如果请求返回的状态码不是200，则抛出异常
@@ -154,6 +231,7 @@ def get_lastest_story_pic_data(time_zone):
     except Exception as err:
         print(f"An error occurred: {err}")
     return lastest_story_id, lastest_story_pic_data
+
 ### 获取更新的故事线素材（通过对比0、8两个时区）
 def get_today_uptate_story_pic_data():
     story_id_0, story_pic_data_0 = get_lastest_story_pic_data(timezone)
@@ -210,6 +288,7 @@ def get_zip_detail(address, pic_id, zip_url):
     if address.startswith("BP"):
         pwd = "UHVnW2k9QWY3Smp2cGZIYldOdGt2eXZOcUt1dFQpOEY="
     else:
+        # print(pic_id)
         passwordid = pic_id + "VMyv=vJ?9ioBBxCu-naAlfyHXlW28F8#"
         pwd = hashlib.md5(passwordid.encode()).hexdigest()
     # 创建下载目录
@@ -220,11 +299,9 @@ def get_zip_detail(address, pic_id, zip_url):
         with session.get(zip_url, stream=True, timeout=(10, 30)) as zip_r:
             zip_r.raise_for_status()
             filename = os.path.join(home, f"{pic_id}.zip")
-
             # 安全地删除已存在的文件
             if os.path.exists(filename):
                 os.remove(filename)
-
             # 流式写入文件
             with open(filename, "wb") as code:
                 for chunk in zip_r.iter_content(chunk_size=1024 * 1024):
@@ -235,10 +312,23 @@ def get_zip_detail(address, pic_id, zip_url):
         return
     try:
         # 确保文件已经完整下载再进行解压
-        zf = zipfile.ZipFile(filename)
+        # zf = zipfile.ZipFile(filename)
+        zf = pyzipper.AESZipFile(filename, encryption=pyzipper.WZ_AES) ##加压zip更换了库，导致zipfile方法不可用
         zf.setpassword(pwd.encode())
         for name in zf.namelist():
             zf.extract(name, './%s/%s' % ("Pic", pic_id))
         zf.close()
     except zipfile.BadZipFile as e:
         print(f"文件损坏，无法解压: {e}")
+
+# 通过工具检查SVG资源是否正常
+def check_svg_by_cmd(picid):
+    filename = os.getcwd()+f"/Pic/{picid}"
+    try:
+        command = ['/Users/ht/Desktop/PythonTools/Pic_Test/LXSVGValidate_number', filename]
+        result = subprocess.run(command, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        # print(result.stdout)
+        return picid
+    except subprocess.CalledProcessError as e:
+        print(e.stderr)
+        # return picid

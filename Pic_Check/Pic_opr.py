@@ -89,12 +89,11 @@ def Get_pic_id_from_syncall():
     except Exception as err:
         print(f"An error occurred: {err}")
 
-# 获取all分类的素材ID
+# 获取XXX分类的素材ID
 def get_pic_id_more():
-    url = "https://paint-api.dailyinnovation.biz/paint/v1/paintCategory/5ba31d31fe401a000102966e/paints?limit=30000&offset=0&day=0&contain_colored=yes&show_d0_release=true&test_paint=false&groupNumber=c&pic_sort_new=a"
+    url = "https://paint-api.dailyinnovation.biz/paint/v1/paintCategory/5c90960434d5a60001f6f7d1/paints?limit=30000&offset=0&day=0&contain_colored=yes&show_d0_release=true&test_paint=false&groupNumber=c&pic_sort_new=a"
     old_ids = Get_pic_id_from_url(url)
-    print("所有图片数")
-    print(len(old_ids))
+    print("所有图片数:" + str(len(old_ids)))
     # 检查文件是否存在，如果不存在则创建新文件并写入默认内容
     if not os.path.exists('sync_all.txt'):
         with open('sync_all.txt', 'w') as file:
@@ -104,19 +103,11 @@ def get_pic_id_more():
     with open('sync_all.txt', 'r') as file:
         content = file.read()
         json_data = json.loads(content)
-
-    # file = open('sync_all.txt', 'r')
-    # content = file.read()
-    # json_data = json.loads(content)
-    # file.close()
-
     synv_id_list = []
     for data in json_data["data"]["work_list"]:
         id = data["paint"]["id"]
         synv_id_list.append(id)
-    print(len(synv_id_list))
     result = [x for x in old_ids if x not in synv_id_list]
-    print(len(result))
     return result
 
 # 推送单个数据到账户中
@@ -141,7 +132,7 @@ def post_data():
         "Content-Type": "application/json",
         "content-length":"74",
         "accept-encoding":"gzip",
-        "cookie": '''user="2|1:0|10:1706853627|4:user|116:eyJ1c2VySWQiOiI2NWJjNTdmOTI2N2U1ZjYyYmMzNDQwNWYiLCJkZXZpY2VUb2tlbiI6IjliOTdjMjA4OTI2NzQ3NTNiMWM4YmI2NThhMmQxZmU0In0=|905b4219c9ae8ec7cf1892ffda549423eedd9bd605dc660d13ec15b09f91bdaf"'''
+        "cookie": '''user="2|1:0|10:1718271442|4:user|116:eyJ1c2VySWQiOiI2NjZhYmRkMjZjOTVhMmQ1MzA0NzFkYmUiLCJkZXZpY2VUb2tlbiI6IjgyYzNjMzIxMTlkZTQwODhiZmMzNjE2ZGMzNGY4NDI1In0=|f0272423786eb8d0642ca2d300a833e1b6fccaa0df217f49d180dbf072f278fd"'''
     }
     data_pic = {"lastModified": 1706842086027, "paintId": "5d289a8ba5b37f00014592e8", "state": 2}
     try:
@@ -175,13 +166,13 @@ def post_work_list():
         "Content-Type": "application/json",
         "content-length": "74",
         "accept-encoding": "gzip",
-        "cookie": '''user="2|1:0|10:1708661059|4:user|116:eyJ1c2VySWQiOiI2NWQ4MTZkNTk0NWJkMWJlNjFlYTEyZmMiLCJkZXZpY2VUb2tlbiI6IjU4OTdlYzMzYTAwNTQ0Nzk5OGE1OGJjMWE4Y2ZmNmM4In0=|6fff7d6a1d54b6eaae1a126af5d21a1fba644cd2b30acee05426b243f5ca31ec"'''
+        "cookie": '''user="2|1:0|10:1718280719|4:user|116:eyJ1c2VySWQiOiI2NjYyZGE4NTIwNmNjOGVjM2ZjYWJhMmIiLCJkZXZpY2VUb2tlbiI6ImQzMzAzMDdmM2Y0NzQ5MWM5MmM1OGVhYTIwYTIzYTNiIn0=|c327b7208f856389b423fc99b6cb0581dfdaad7518961134eec8bdee232e0cb9"'''
     }
     key = 1
     paint_ids = get_pic_id_more()
     for paint_id in paint_ids:
         work_item = {
-            "lastModified": 1706842086027,
+            "lastModified": 1718280587,
             "paintId": paint_id,
             "state": 2
         }

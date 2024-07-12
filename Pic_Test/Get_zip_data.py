@@ -1,8 +1,7 @@
 import PyPDF2, fitz, json
 from PyPDF2 import errors
-from Get_Pic_Data import *
-
-
+from Get_pic_data import *
+from Get_pic_data_from_api import *
 
 # 然后获取素材detailjson内的数据
 def get_data_from_zip(address,pic_id):
@@ -16,7 +15,8 @@ def get_data_from_zip(address,pic_id):
         if os.path.exists(pic_region_path) and os.path.isfile(pic_region_path):
             os.rename(pic_region_path, pdf)
         else:
-            print("不存在pdf资源： "+str(pic_region_path))
+            pass
+            # print("不存在pdf资源： "+str(pic_region_path))
 
     with open(datajson, "r") as file:
         detail_json_data = json.load(file)
@@ -28,11 +28,14 @@ def get_single_data_from_detail_json(address, detail_json_data, data_type):
 
     if data_type in detail_json_data:
         data = detail_json_data[data_type]
-        # print(datatype + str(data))
+        if data is not None:
+            return data
+        else:
+            # print("这个key的value为空： " + str(data_type))
+            return False
     else:
-        print("没有这个数据： "+str(data_type))
+        # print("没有这个key： "+str(data_type))
         return False
-    return data
 
 def get_all_data_and_pdf(address,pic_id):
     detail_json_data, pdf = get_data_from_zip(address,pic_id)
@@ -68,13 +71,13 @@ def get_all_data_and_pdf(address,pic_id):
     else:
         plans_data_block_group_list = plans_data[0].split('|')
         plans_data_block_list = []
-        block_group_number = 0
+        block_group_number = 1
         for block_group_data in plans_data_block_group_list:
             block_group = block_group_data.split('#')[0].split(',')
             for block in block_group:
                 plans_data_block_list.append(block)
-                # if block == "1":
-                #     print("你要找的色块对应的色号是： "+str(block_group_number))
+                # if block == "816":
+                    # print("你要找的色块对应的色号是： "+str(block_group_number))
             block_group_number = block_group_number + 1
     # print("plans_data_block_list_lens: "+str(len(plans_data_block_list)))
     # print("plans_data_block_list: "+str(plans_data_block_list))
@@ -96,6 +99,7 @@ def get_all_data_and_pdf(address,pic_id):
 def test_zip_data(address, pic_id):
     center_number, center_data, centerfloat_number, centerfloat_data,\
     plans_number, area_number, area_data, pdf = get_all_data_and_pdf(address, pic_id)
+
     # 检查资源是否为空
     if plans_number == []:
         print("plans_number 为空")
@@ -107,18 +111,20 @@ def test_zip_data(address, pic_id):
         print("center_number 为空")
         return False
     if area_number == []:
-        print("area_number 为空，但不会报错")  # area资源完全为空的时候，客户端会重新计算，所以不返回flase
+        print("【警告】area_number 为空，但不会报错")  # area资源完全为空的时候，客户端会重新计算，所以不返回flase
+        area_number, area_data = get_area_from_vincent(pic_id)
         pass
 
     ### 检查floatcenter的色块是否比plan少，如果floatcenter缺少了，则不能定位，且没有色号显示在色块上，除了PBN，都用的floatcenter资源
-    if address.startswith(("VC", "ZC", "Vista")):
+    if address.startswith(("VC", "ZC", "Vista", "PBN")):
         set_plans_number = set(plans_number)
         set_centerfloat_number = set(centerfloat_number)
         centerfloat_number_more = set_centerfloat_number.difference(set_plans_number)
-        if centerfloat_number_more:
-            print("centerfloat比plan多的色块： "+str(centerfloat_number_more))
+        if centerfloat_number_more and centerfloat_number != []:
+            pass
+            print("【警告】centerfloat比plan多的色块： "+str(centerfloat_number_more))
         plans_number_more = set_plans_number.difference(set_centerfloat_number)
-        if plans_number_more:
+        if plans_number_more and centerfloat_number != []:
             print("centerfloat比plan少的色块： " + str(plans_number_more))
             return False
 
@@ -128,7 +134,8 @@ def test_zip_data(address, pic_id):
         set_center_number = set(center_number)
         center_number_more = set_center_number.difference(set_plans_number)
         if center_number_more:
-            print("center比plan多的色块： "+str(center_number_more))    # centerfloat多了色块，不会对着色流程造成影响，就不返回Flase了
+            pass
+            print("【警告】center比plan多的色块： "+str(center_number_more))    # centerfloat多了色块，不会对着色流程造成影响，就不返回Flase了
         plans_number_more = set_plans_number.difference(set_center_number)
         if plans_number_more:
             print("center比plan少的色块： "+str(plans_number_more))
@@ -144,10 +151,11 @@ def test_zip_data(address, pic_id):
             return False
         area_numberr_more = set_area_number.difference(set_plans_number)
         if area_numberr_more:
-            print("area中多的色块： " + str(area_numberr_more))   # area的色块比plan多的情况，客户端不会报错，就不返回False了
+            pass
+            print("【警告】area中多的色块： " + str(area_numberr_more))   # area的色块比plan多的情况，客户端不会报错，就不返回False了
 
     ### 检查floatcenter中的x,y坐标一定是落在area的色块矩形区域内，通过这个方法能检查出色号显示错乱的问题，比如色号1的色块显示的色号是5,PBN用的是center，而不是floatcenter
-    if address.startswith(("VC", "ZC", "Vista")):
+    if address.startswith(("PBN", "VC", "ZC", "Vista")):
         for center_data_block in centerfloat_data:
             center_data_block_detail = center_data_block.split(',')
             center_data_block_detail_number = center_data_block_detail[0]
@@ -161,11 +169,17 @@ def test_zip_data(address, pic_id):
                 x_max = area_data_block_detail["maxX"]
                 y_min = area_data_block_detail["minY"]
                 y_max = area_data_block_detail["maxY"]
+                # if center_data_block_detail_number == "1163":
+                #     print(x_min)
+                #     print(x_max)
+                #     print(center_data_block_detail_x)
+                #     print(center_data_block_detail_r)
                 if x_min-center_data_block_detail_r < center_data_block_detail_x < x_max+center_data_block_detail_r\
                         and y_min-center_data_block_detail_r < center_data_block_detail_y < y_max+center_data_block_detail_r:
                     pass
                 else:
-                    print("色号上的数据显示的位置是错误的/偏移的："+str(center_data_block_detail_number))
+                    print("【警告】色号上的数据显示的位置是错误的/偏移的："+str(center_data_block_detail_number))
+                    pass
 
     ### 检查center中的x,y坐标一定是落在area的色块矩形区域内，通过这个方法能检查出色号显示错乱的问题，比如色号1的色块显示的色号是5,PBN 用的是center，而是floatcenter
     if address.startswith(("PBN", "BP")):
@@ -186,7 +200,8 @@ def test_zip_data(address, pic_id):
                         and y_min-center_data_block_detail_r < center_data_block_detail_y < y_max+center_data_block_detail_r:
                     pass
                 else:
-                    print("色号上的数据显示的位置是错误的/偏移的："+str(center_data_block_detail_number))
+                    pass
+                    print("【警告】色号上的数据显示的位置是错误的/偏移的："+str(center_data_block_detail_number))
 
     if os.path.isfile(pdf):
         ### 检查pdf资源是否被破坏，是否能正常打开
