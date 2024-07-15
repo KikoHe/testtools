@@ -1,7 +1,7 @@
-import PyPDF2, fitz, json
 from PyPDF2 import errors
 from Get_pic_data import *
 from Get_pic_data_from_api import *
+import PyPDF2, fitz, json
 
 # 然后获取素材detailjson内的数据
 def get_data_from_zip(address,pic_id):
@@ -96,6 +96,9 @@ def get_all_data_and_pdf(address,pic_id):
            center_float_data_block_number_list, center_float_data_block_list,\
            plans_data_block_list, area_data_block_number_list, area_data, pdf
 
+
+
+# 检测非SVG资源
 def test_zip_data(address, pic_id):
     center_number, center_data, centerfloat_number, centerfloat_data,\
     plans_number, area_number, area_data, pdf = get_all_data_and_pdf(address, pic_id)
@@ -235,3 +238,15 @@ def test_zip_data(address, pic_id):
                     return False
 
     return True
+
+# 通过工具检查SVG资源
+def check_svg_by_cmd(picid):
+    filename = os.getcwd()+f"/Pic/{picid}"
+    try:
+        command = ['/Users/ht/Desktop/PythonTools/Pic_Test/LXSVGValidate_number', filename]
+        result = subprocess.run(command, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        # print(result.stdout)
+        return picid
+    except subprocess.CalledProcessError as e:
+        print(e.stderr)
+        # return picid
