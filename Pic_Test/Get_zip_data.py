@@ -2,7 +2,7 @@ from PyPDF2 import errors
 from Get_pic_data import *
 from Get_pic_data_from_api import *
 from Common_Fun import *
-import PyPDF2, fitz, json
+import PyPDF2, fitz, json,inspect
 
 # 然后获取素材detailjson内的数据
 def get_data_from_zip(address,pic_id):
@@ -242,10 +242,12 @@ def test_zip_data(address, pic_id):
 
 # 通过工具检查SVG资源
 def check_svg_by_cmd(picid):
-    filename = current_directory+f"/Pic/{picid}"
+    current_directory = os.getcwd()
+    tool_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+    filename = tool_dir+f"/Pic/{picid}"
     try:
 
-        command = [f'{current_directory}/LXSVGValidate_number', filename]
+        command = [f'{tool_dir}/LXSVGValidate_number', filename]
         result = subprocess.run(command, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         # print(result.stdout)
         return picid
