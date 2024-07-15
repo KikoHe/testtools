@@ -1,6 +1,8 @@
 import glob
 import os,shutil
 
+current_directory = os.getcwd()
+
 # 删除当前目录及子目录下所有包含PicID的.zip文件
 def remove_zip_files_and_directories(PicID):
     zip_files = glob.glob(f'**/*{PicID}*.zip', recursive=True)
