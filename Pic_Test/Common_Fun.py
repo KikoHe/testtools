@@ -1,8 +1,5 @@
-import glob
-import os,shutil
-
-current_directory = os.getcwd()
-
+from Public_env import *
+import os
 # 删除当前目录及子目录下所有包含PicID的.zip文件
 def remove_zip_files_and_directories(PicID):
     zip_files = glob.glob(f'**/*{PicID}*.zip', recursive=True)
@@ -34,6 +31,4 @@ def delete_folder(folder_path):
             # 如果是子文件夹，则递归删除
             shutil.rmtree(file_path)
 
-# folder_path = '/Users/ht/Desktop/PythonTools/Pic_Check/Pic/'  # 替换为您的文件夹路径
-# delete_folder(folder_path)
 

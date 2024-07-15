@@ -3,11 +3,6 @@ from Get_pic_data_from_api import *
 import multiprocessing
 from Common_Fun import *
 
-
-folder_path = '/Users/ht/Desktop/PythonTools/Pic_Test/Pic/'
-if os.path.exists(folder_path):
-    delete_folder(folder_path)
-
 # 测试单张素材（SVG + PDF）
 def test_single_pic(PicID, address):
     not_svg_zip_url, svg_zip_url = Get_id_Zipurl_from_picdetailapi(PicID, address)
@@ -63,8 +58,8 @@ def test_update_pic_single_by_single(address_input=''):
 
         test_result_single_project = {address: [update_pic_number, fail_ids, fail_groups]}
         test_result.append(test_result_single_project)
-        test_result = ("[项目_页面：[当天更新素材数，异常素材ID，异常素材方案]" + str(test_result))
-    return test_result
+    test_result_log = ("[项目_页面：[当天更新素材数，异常素材ID，异常素材方案]" + str(test_result))
+    return test_result_log
 
 # 通过CMS接口拉取测试素材，通过单素材接口获取测试资源（SVG+PDF）
 # 要调整拉取范围，需要修改pic_config中的url即可
@@ -110,3 +105,12 @@ def dist_error_id(filename):
                 number_fail_ids.append(test_zip_data_result)
         not_number_fail_ids = [x for x in content if x not in number_fail_ids]
     return number_fail_ids, not_number_fail_ids
+
+# ids = ["65d2d3e2a64b6582fe056923"]
+# error_ids = []
+# for id in ids:
+#     print(id)
+#     test_result = test_single_pic(id, "PBN")
+#     if test_result == False:
+#         error_ids.append(id)
+#         print("error!!!!!!!!!!"+str(error_ids))

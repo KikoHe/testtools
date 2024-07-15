@@ -1,8 +1,8 @@
+from Public_env import *
 from PyPDF2 import errors
 from Get_pic_data import *
 from Get_pic_data_from_api import *
 from Common_Fun import *
-import PyPDF2, fitz, json,inspect
 
 # 然后获取素材detailjson内的数据
 def get_data_from_zip(address,pic_id):
@@ -77,12 +77,9 @@ def get_all_data_and_pdf(address,pic_id):
             block_group = block_group_data.split('#')[0].split(',')
             for block in block_group:
                 plans_data_block_list.append(block)
-                # if block == "816":
-                    # print("你要找的色块对应的色号是： "+str(block_group_number))
+                # if block == "578":
+                #     print("你要找的色块对应的色号是： "+str(block_group_number))
             block_group_number = block_group_number + 1
-    # print("plans_data_block_list_lens: "+str(len(plans_data_block_list)))
-    # print("plans_data_block_list: "+str(plans_data_block_list))
-    # print("plans_data_block_group_list_lens: "+str(len(plans_data_block_group_list)))
 
     area_data = get_single_data_from_detail_json(address, detail_json_data, "area")
     if area_data == False:
@@ -96,8 +93,6 @@ def get_all_data_and_pdf(address,pic_id):
     return center_data_block_number_list, center_data_block_list,\
            center_float_data_block_number_list, center_float_data_block_list,\
            plans_data_block_list, area_data_block_number_list, area_data, pdf
-
-
 
 # 检测非SVG资源
 def test_zip_data(address, pic_id):
@@ -114,10 +109,10 @@ def test_zip_data(address, pic_id):
     if address.startswith(("PBN", "BP")) and center_number == []:
         print("center_number 为空")
         return False
-    if area_number == []:
-        print("【警告】area_number 为空，但不会报错")  # area资源完全为空的时候，客户端会重新计算，所以不返回flase
-        area_number, area_data = get_area_from_vincent(pic_id)
-        pass
+    # if area_number == []:
+    #     print("【警告】area_number 为空，但不会报错")  # area资源完全为空的时候，客户端会重新计算，所以不返回flase
+    #     area_number, area_data = get_area_from_vincent(pic_id)
+    #     pass
 
     ### 检查floatcenter的色块是否比plan少，如果floatcenter缺少了，则不能定位，且没有色号显示在色块上，除了PBN，都用的floatcenter资源
     if address.startswith(("VC", "ZC", "Vista", "PBN")):
@@ -173,11 +168,6 @@ def test_zip_data(address, pic_id):
                 x_max = area_data_block_detail["maxX"]
                 y_min = area_data_block_detail["minY"]
                 y_max = area_data_block_detail["maxY"]
-                # if center_data_block_detail_number == "1163":
-                #     print(x_min)
-                #     print(x_max)
-                #     print(center_data_block_detail_x)
-                #     print(center_data_block_detail_r)
                 if x_min-center_data_block_detail_r < center_data_block_detail_x < x_max+center_data_block_detail_r\
                         and y_min-center_data_block_detail_r < center_data_block_detail_y < y_max+center_data_block_detail_r:
                     pass
@@ -228,16 +218,16 @@ def test_zip_data(address, pic_id):
         for axis in centerfloat_data:
             axis_detail = axis.split(',')
             number, x, y, r = axis_detail[0], axis_detail[1], axis_detail[2], axis_detail[3]
-            x1, y1 = float(x) - float(r), float(y) - float(r)
-            x2, y2 = float(x) + float(r), float(y) + float(r)
-            bbox = fitz.Rect(x1, y1, x2, y2)
-            if float(r) < 5:   # 仅测试小色块，阈值为5
-                pix = page.get_pixmap(matrix=fitz.Matrix(1, 1), clip=bbox)
-                pixel_value = int.from_bytes(pix.samples, byteorder='big')
-                if pixel_value < 255:    # 小于255，则不透明，有重叠
-                    print("这个色块和pdf资源有重叠风险： "+str(number))
-                    return False
-
+            if number in plans_number:
+                x1, y1 = float(x) - float(r), float(y) - float(r)
+                x2, y2 = float(x) + float(r), float(y) + float(r)
+                bbox = fitz.Rect(x1, y1, x2, y2)
+                if float(r) < 5:   # 仅测试小色块，阈值为5
+                    pix = page.get_pixmap(matrix=fitz.Matrix(1, 1), clip=bbox)
+                    pixel_value = int.from_bytes(pix.samples, byteorder='big')
+                    if pixel_value < 255:    # 小于255，则不透明，有重叠
+                        print("【警告】这个色块和pdf资源有重叠风险： "+str(number))
+                        pass
     return True
 
 # 通过工具检查SVG资源

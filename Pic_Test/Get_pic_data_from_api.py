@@ -1,6 +1,6 @@
 from Get_zip_data import *
 import pandas as pd
-import json
+from Public_env import *
 
 # 通过单素材详情接口获取Zip_url
 def Get_id_Zipurl_from_picdetailapi(PicID,address):
@@ -11,26 +11,10 @@ def Get_id_Zipurl_from_picdetailapi(PicID,address):
         "BP": f"https://bpbnapi.idailybread.com/paint/v1/paint/{PicID}",
         "Vista": f"https://colorpad-api.vitastudio.ai/colorpad/v1/paint/{PicID}"
     }
-    headers = {
-        "platform": "ios",
-        "install_day": "100",
-        "timezone": timezone,
-        "today": formatted_date2,
-        "country": "US",
-        "version": "4.9.0",
-        "language": "zh-Hans",
-        "apiversion": "2",
-        "versionnum": "3488",
-        # "user-agent": "android/31 paint.by.number.pixel.art.coloring.drawing.puzzle/4.4.10"
-        "user-agent": "ios/17.5.1 com.paint.bynumber/4.12.0",
-        "product-info": "ios/17.5.1 PBN/4.12.0 US",
-        "support-blend": "true",
-        "device-type": "phone"
-    }
     url = url_prefixes.get(address.split('_')[0])
     svg_zip_url, not_svg_zip_url = '', ''
     try:
-        response = session.get(url, headers=headers)
+        response = session.get(url, headers=phone_headers)
         response.raise_for_status()  # 如果请求返回的状态码不是200，则抛出异常
         response_data = response.json()["data"]
         if address.startswith("PBN"):
@@ -59,13 +43,10 @@ def pic_config(address,offset=0,limit=100):
         "BP": f"https://bpbncms.idailybread.com/bpbn/v1/cms/abtest/logic_item/test_a/list/trending?limit={limit}&offset={offset}&category_key=trending&size=&is_colored=false&is_gif=false&status=0&show_type=0&release_date_start=20240501&release_date_end=20240505&id_or_filename=&with_scores=true",
         "Vista": f"https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/default/detail?limit={limit}&offset={offset}&release_date=2024-05-01%5E2024-05-05"
     }
-    headers = {
-        "cookie":'''_ga=GA1.1.1929480831.1691656939; learnings-passport=_sLoatJ7zrLmUuJjAyErLhekSW3RsYzZ2lr6_ZzTsiHgDHFKnnZS0taYmRszx8Wp; isArtist=false; projectIds=[%225b84f58e689998000116d3fd%22%2C%225b892d3a9f9b4e00011d1cf3%22%2C%225e43d79dbfe4170001141436%22]; products=[%225bfb5a2b6ff9950001e9a969%22%2C%225c00dc5713ab060001c19ea0%22%2C%225b18ef419c560300013ddf28%22%2C%225b18f0079c560300013ddf29%22%2C%225e43d79dbfe4170001141436%22%2C%225b84f58e689998000116d3fd%22%2C%225b892d3a9f9b4e00011d1cf3%22%2C%22657953298aa0c540cc3fd85d%22%2C%22655d7180648210324dccb499%22%2C%2264b4c17796b49d036a8d6bb9%22%2C%2264b4c18196b49d036a8d6bba%22%2C%22645b2f85cd911b5ea8511fd6%22%2C%2260385d6148b726000118051b%22%2C%2260385d8448b726000118051c%22]; ajs_anonymous_id=42cd20ca-c89e-49ac-ad60-eb63ead5252c; uac_passport="2|1:0|10:1719804699|12:uac_passport|44:ZjhjY2Y1Y2ZhYmVlNDA4ZjgyN2I0NzdhYzQwNDYyOWY=|07278d3a26be700c22ec6c25569b9c2fcea8b391ea5e95806372d99497d945d3"; _ga_2Z4PFG28RG=GS1.1.1719818527.767.1.1719818529.58.0.0; learnings-user=Y9TMYRYvMgjahTWxYd_XFBI0KYZJaHUk1l1MhwgegnVgqXUGbYb7DNmGxEsuwcEcKbKBz9e5MNQayINWig9hTAD5eHvFRuEC7knIaO169ZErprdOkdMvq1R3gLWpyaLV-dUnBVgGFjIbeYsmdFSvoTOdMvSq9p5Gvr4myfyULiuUpZ5EAoD3kKYrdKfbt_-a588mMst8FAJJWkOi-4cJ7Pa52OtqzsQs31lDCAZmvdpzGYSG2w3AldQVQK1UpZm51dy3CFOAYsdi2BOJzrJgsUr6KLquPfSdQsaoZVmqYivEfdpxXHdKq2iNG8z4NoTUlZC89Ac7OHGsOnO6As258zSos0gonyTKoL123EUxmzDgItL285urGsoNe_0SFmM08bsfQvXAgpOBLONzNKIqZ90ofhOaFOu75cT1jy_WTPXpwcVfSmhJ3UWY0W9Qpn-k0q44183PEm5umFgVDLS516TaDVGTGeNHQG2gRbR6F6C7pe1C4psz8E4I8ira6aF4vCzFnbSEDbRehhIGs2zio_tPClr5GfRFN5LwZFYawLo-nXuf2tCD_uYe71Bg0zc-ez73BO56fFg4idxP2v99L3VEeYeugm7kDTxOof1-GhA'''
-    }
     url = url_prefixes.get(address)
     print(url)
     try:
-        response = session.get(url, headers=headers)
+        response = session.get(url, headers=CMS_headers)
         response.raise_for_status()  # 如果请求返回的状态码不是200，则抛出异常
         if address == "PBN":
             response_data = response.json()["data"]["list"]
@@ -153,5 +134,24 @@ def get_area_from_vincent(pic_cms_id):
     except Exception as err:
         print(f"An error occurred: {err}")
     return area_number, area_data
-# print(get_area_from_vincent("65fd1c6a48defc641251e6f4"))
 
+# 检查CMS素材配置方案的内容
+def check_CMS_pic_config():
+    group_list = get_imagegroup_from_CMS("PBN")
+    print(group_list)
+    test_result = {}
+    for group in group_list:
+        print(group)
+        url = f"https://pbn-cms.learnings.ai/paint/v1/cms/paint?abtest_key={group}&limit=50&offset=0&status_list=ONLINE_LIBRARY&paint_id=&abtest_show=true&category_id=5ba31d31fe401a000102966e&with_userscore=true&sort_by=release_date%5E-1"
+        try:
+            response = session.get(url, headers=CMS_headers)
+            response.raise_for_status()  # 如果请求返回的状态码不是200，则抛出异常
+            total = response.json()["data"]["total"]
+            test_result[group] = total
+            print(test_result)
+        except requests.exceptions.HTTPError as http_err:
+            print(f"HTTP error occurred: {http_err}")
+        except Exception as err:
+            print(f"An error occurred: {err}")
+
+# check_CMS_pic_config()
