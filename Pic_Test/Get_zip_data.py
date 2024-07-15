@@ -242,7 +242,6 @@ def test_zip_data(address, pic_id):
 
 # 通过工具检查SVG资源
 def check_svg_by_cmd(picid):
-    current_directory = os.getcwd()
     tool_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
     filename = tool_dir+f"/Pic/{picid}"
     try:

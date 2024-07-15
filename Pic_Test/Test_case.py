@@ -63,6 +63,7 @@ def test_update_pic_single_by_single(address_input=''):
 
         test_result_single_project = {address: [update_pic_number, fail_ids, fail_groups]}
         test_result.append(test_result_single_project)
+        test_result = ("[项目_页面：[当天更新素材数，异常素材ID，异常素材方案]" + str(test_result))
     return test_result
 
 # 通过CMS接口拉取测试素材，通过单素材接口获取测试资源（SVG+PDF）
