@@ -3,9 +3,9 @@ from Get_pic_data_from_api import *
 import multiprocessing
 from Common_Fun import *
 
-folder_path = '/Users/ht/Desktop/PythonTools/Pic_Test/Pic/'
-if os.path.exists(folder_path):
-    delete_folder(folder_path)
+# folder_path = '/Users/ht/Desktop/PythonTools/Pic_Test/Pic/'
+# if os.path.exists(folder_path):
+#     delete_folder(folder_path)
 
 # 测试单张素材（SVG + PDF）
 def test_single_pic(PicID, address):

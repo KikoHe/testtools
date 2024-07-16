@@ -85,6 +85,7 @@ def get_all_data_and_pdf(address,pic_id):
     if area_data == False:
         area_data_block_number_list = []
     else:
+        area_data = ast.literal_eval(area_data)
         area_data_block_number_list = list(area_data.keys())
 
     # print("area_data_block_number_list_lens: "+str(len(area_data_block_number_list)))
@@ -237,7 +238,6 @@ def check_svg_by_cmd(picid):
         command = [f'{tool_dir}/LXSVGValidate', filename]
         process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         stdout, stderr = process.communicate()
-
         if process.returncode == 0:
             return True
         else:

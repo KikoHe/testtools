@@ -6,6 +6,7 @@ from Public_env import *
 def Get_id_Zipurl_from_picdetailapi(PicID,address):
     url_prefixes = {
         "PBN": f"https://paint-api.dailyinnovation.biz/paint/v1/paint/{PicID}",
+        # "PBN": f"https://paint-api-stage.dailyinnovation.biz/paint/v1/paint/{PicID}",
         "ZC": f"https://api.colorflow.app/colorflow/v1/paint/{PicID}",
         "VC": f"https://vitacolor-api.vitastudio.ai/vitacolor/v1/paint/{PicID}",
         "BP": f"https://bpbnapi.idailybread.com/paint/v1/paint/{PicID}",

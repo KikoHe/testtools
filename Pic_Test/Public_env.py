@@ -1,4 +1,4 @@
-import os, glob, PyPDF2, fitz, json, inspect, shutil, pytz, hashlib, zipfile, requests, pyzipper, subprocess
+import ast, os, glob, PyPDF2, fitz, json, inspect, shutil, pytz, hashlib, zipfile, requests, pyzipper, subprocess
 from Common_Fun import *
 from datetime import datetime
 from requests.adapters import HTTPAdapter
