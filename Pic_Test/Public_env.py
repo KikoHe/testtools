@@ -7,10 +7,6 @@ from urllib3.util.retry import Retry
 current_directory = os.getcwd() #当前路路径
 home = os.path.join(os.getcwd(), "Pic")  ##下载的zip文件存放路径
 
-folder_path = '/Users/ht/Desktop/PythonTools/Pic_Test/Pic/'
-if os.path.exists(folder_path):
-    delete_folder(folder_path)
-
 timezone = "Pacific/Apia"
 timezone_cn = "Asia/Shanghai"
 today = datetime.now(pytz.timezone(timezone))

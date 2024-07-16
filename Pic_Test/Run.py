@@ -15,6 +15,11 @@ function_mappings = {
 }
 
 def main():
+    # 检查目录是否存在
+    if os.path.exists(home):
+        # 删除目录及其所有内容
+        shutil.rmtree(home)
+
     # 获取要运行的函数名称
     function_to_run = sys.argv[1]
     # 根据函数名称获取对应的函数和用法信息
@@ -31,11 +36,6 @@ def main():
     else:
         print("无效的函数。")
         sys.exit(1)
-
-    # 检查目录是否存在
-    if os.path.exists(home):
-        # 删除目录及其所有内容
-        shutil.rmtree(home)
 
 if __name__ == "__main__":
     main()

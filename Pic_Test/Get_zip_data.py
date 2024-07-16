@@ -154,7 +154,7 @@ def test_zip_data(address, pic_id):
             print("【警告】area中多的色块： " + str(area_numberr_more))   # area的色块比plan多的情况，客户端不会报错，就不返回False了
 
     ### 检查floatcenter中的x,y坐标一定是落在area的色块矩形区域内，通过这个方法能检查出色号显示错乱的问题，比如色号1的色块显示的色号是5,PBN用的是center，而不是floatcenter
-    if address.startswith(("PBN", "VC", "ZC", "Vista")):
+    if address.startswith(("PBN", "VC", "ZC")):
         for center_data_block in centerfloat_data:
             center_data_block_detail = center_data_block.split(',')
             center_data_block_detail_number = center_data_block_detail[0]
@@ -229,23 +229,10 @@ def test_zip_data(address, pic_id):
                         print("【警告】这个色块和pdf资源有重叠风险： "+str(number))
                         pass
     return True
-
-# 通过工具检查SVG资源
-def check_svg_by_cmd_1(picid):
-    tool_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-    filename = tool_dir+f"/Pic/{picid}"
-    try:
-        command = [f'{tool_dir}/LXSVGValidate', filename]
-        subprocess.run(command, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-        return True
-    except subprocess.CalledProcessError as e:
-        print("SVG fail", e)
-        return False
-
 # 通过工具检查SVG资源
 def check_svg_by_cmd(picid):
     tool_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-    filename = tool_dir + f"/Pic/{picid}"
+    filename = home + f"/{picid}"
     try:
         command = [f'{tool_dir}/LXSVGValidate', filename]
         process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
