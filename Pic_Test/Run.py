@@ -7,6 +7,7 @@ def parse_args():
 # 函数映射字典
 function_mappings = {
     'test_single_pic': (test_single_pic, "用法: python Run.py test_single_pic <PicID> <address>"),
+    'test_single_pic_svg': (test_single_pic_svg, "用法: python Run.py test_single_pic_svg <PicID> <address>"),
     'test_picupdate': (test_single_pic_svg, "用法: python Run.py test_single_pic_svg <PicID> <address>"),
     'test_update_pic_single_by_single': (test_update_pic_single_by_single, "用法: python Run.py test_update_pic_single_by_single <address_list>"),
     'test_pic_from_cms': (test_pic_from_cms, "用法: python Run.py test_pic_from_cms <address> <offset> <limit>"),

@@ -235,11 +235,9 @@ def check_svg_by_cmd(picid):
     tool_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
     filename = tool_dir+f"/Pic/{picid}"
     try:
-
-        command = [f'{tool_dir}/LXSVGValidate_number', filename]
-        result = subprocess.run(command, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-        # print(result.stdout)
-        return picid
+        command = [f'{tool_dir}/LXSVGValidate', filename]
+        subprocess.run(command, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        return True
     except subprocess.CalledProcessError as e:
-        print(e.stderr)
-        # return picid
+        print("SVG fail", e)
+        return False
