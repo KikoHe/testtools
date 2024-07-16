@@ -231,7 +231,7 @@ def test_zip_data(address, pic_id):
     return True
 
 # 通过工具检查SVG资源
-def check_svg_by_cmd(picid):
+def check_svg_by_cmd_1(picid):
     tool_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
     filename = tool_dir+f"/Pic/{picid}"
     try:
@@ -240,4 +240,23 @@ def check_svg_by_cmd(picid):
         return True
     except subprocess.CalledProcessError as e:
         print("SVG fail", e)
+        return False
+
+# 通过工具检查SVG资源
+def check_svg_by_cmd(picid):
+    tool_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+    filename = tool_dir + f"/Pic/{picid}"
+    try:
+        command = [f'{tool_dir}/LXSVGValidate', filename]
+        process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        stdout, stderr = process.communicate()
+
+        if process.returncode == 0:
+            return True
+        else:
+            # 打印标准输出和标准错误
+            print(stdout)
+            return False
+    except subprocess.CalledProcessError as e:
+        print("Test Fail", e)
         return False
