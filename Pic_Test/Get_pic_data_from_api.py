@@ -21,10 +21,10 @@ def Get_id_Zipurl_from_picdetailapi(PicID,address):
         response.raise_for_status()  # 如果请求返回的状态码不是200，则抛出异常
         response_data = response.json()["data"]
         if address.startswith("PBN"):
-            if response_data["vector_zip_file"]:
-                not_svg_zip_url = response_data["vector_zip_file"]
-            elif response_data["zip_file"]:
+            if response_data["zip_file"]:
                 not_svg_zip_url = response_data["zip_file"]
+            elif response_data["vector_zip_file"]:
+                not_svg_zip_url = response_data["vector_zip_file"]
             if response_data["region_json_zip"]:
                 svg_zip_url = response_data["region_json_zip"]
         elif address.startswith(("VC", "ZC", "Vista")):

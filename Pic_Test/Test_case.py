@@ -40,6 +40,7 @@ def test_update_pic_single_by_single(address_input=''):
     if address_input == '':
         address_list = ["PBN_Lib", "PBN_Daily", "PBN_Story", "ZC_Lib", "ZC_Daily", "VC_Lib", "VC_Daily",\
                         "Vista_Lib", "Vista_Daily", "Vista_Pack", "BP_Lib", "BP_Daily"]
+        # address_list = ["PBN_Lib", "PBN_Daily"]
     else:
         address_list = [address_input]
     for address in address_list:

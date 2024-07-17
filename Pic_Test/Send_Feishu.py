@@ -23,7 +23,7 @@ def report_test_update_pic_single_by_single():
             error_groups_output = "所有方案更新素材数量一致"
         else:
             error_groups_output = f"此方案更新素材数量和其他方案不一致：{error_groups}"
-        summary = f"{project} - {update_ids_output}； {error_ids_output}； {error_groups_output}\n\n" + summary
+        summary = summary + f"\n\n{project[0]} - {update_ids_output}； {error_ids_output}； {error_groups_output}"
     logging.info(f"SUMMARY: {summary}")
     return summary
 
@@ -43,9 +43,9 @@ def report_check_CMS_pic_config():
         else:
             close_group_output = "最近没有关闭素材方案"
         if update_group != {}:
-            update_group_output = f"最近素材方案的素材变化：{update_group}，请确认是否正确"
+            update_group_output = f"所有素材方案最近的素材变化数量，参考：{update_group}，请确认是否正确"
 
-        summary = f"{address} - {new_group_output}； {close_group_output}； {update_group_output}\n\n" + summary
+        summary = summary + f"\n\n{address} - {new_group_output}； {close_group_output}； {update_group_output}"
     return summary
 
 # 飞书消息发送函数
@@ -96,10 +96,15 @@ if __name__ == "__main__":
     # webhook_url = "https://open.feishu.cn/open-apis/bot/v2/hook/c7dbaf7d-3c94-46a4-872d-d819a650b1dc"
     webhook_url = "https://open.feishu.cn/open-apis/bot/v2/hook/2ba28d6d-6765-4e54-85ac-bbfef081bc83"
 
-    # title_1 = "素材方案检测"
-    # summary_1 = report_test_update_pic_single_by_single()
-    # send_feishu_summary_message(summary_1, formatted_date1, webhook_url, title_1)
+    title_1 = "当日更新素材资源检测"
+    summary_1 = report_test_update_pic_single_by_single()
+    send_feishu_summary_message(summary_1, formatted_date1, webhook_url, title_1)
 
-    title_2 = "当日更新素材资源检测"
+    title_2 = "素材方案检测"
     summary_2 = report_check_CMS_pic_config()
     send_feishu_summary_message(summary_2, formatted_date1, webhook_url, title_2)
+
+    # title_3 = "素材方案检测详细"
+    # with open(f"{test_result_path}/test.log", 'r') as log:
+    #     summary_3 = log.read()
+    # send_feishu_summary_message(summary_3, formatted_date1, webhook_url, title_3)

@@ -18,7 +18,7 @@ def get_data_from_zip(address,pic_id):
         if os.path.exists(pic_region_path) and os.path.isfile(pic_region_path):
             os.rename(pic_region_path, pdf)
         else:
-            logging.warning("不存在pdf资源： "+str(pic_region_path))
+            logging.warning(f"{address}的{pic_id}不存在pdf资源")
             pass
 
     with open(datajson, "r") as file:
@@ -34,10 +34,10 @@ def get_single_data_from_detail_json(address, detail_json_data, data_type):
         if data is not None:
             return data
         else:
-            logging.warning("这个key的value为空： " + str(data_type))
+            logging.error(f"{address}中某个素材的key：{data_type}value为空")
             return False
     else:
-        logging.warning("没有这个key： "+str(data_type))
+        logging.error(f"{address}中某个素材没有这个key：{data_type}")
         return False
 
 def get_all_data_and_pdf(address,pic_id):
@@ -75,8 +75,8 @@ def get_all_data_and_pdf(address,pic_id):
             block_group = block_group_data.split('#')[0].split(',')
             for block in block_group:
                 plans_data_block_list.append(block)
-                if block == "96":
-                    logging.info("你要找的色块对应的色号是： "+str(block_group_number))
+                # if block in ["137","547","717"]:
+                #     logging.info("你要找的色块对应的色号是： "+str(block_group_number))
             block_group_number = block_group_number + 1
 
     area_data = get_single_data_from_detail_json(address, detail_json_data, "area")
@@ -96,19 +96,19 @@ def test_zip_data(address, pic_id):
 
     # 检查资源是否为空
     if plans_number == []:
-        logging.error("plans_number 为空")
+        logging.error(f"{address}的 {pic_id}: plans_number为空")
         return False
     if address.startswith(("VC", "ZC", "Vista")) and centerfloat_number == []:
-        logging.error("centerfloat_number 为空")
+        logging.error(f"{address}的 {pic_id}:centerfloat_number为空")
         return False
     if address.startswith(("PBN")) and centerfloat_number == []:
-        logging.warning("PBN centerfloat_number 为空")
+        logging.warning(f"{address}的 {pic_id}: centerfloat_number为空,但不会报错")
         pass
     if address.startswith(("PBN", "BP")) and center_number == []:
-        logging.error("center_number 为空")
+        logging.error(f"{address}的 {pic_id}: center_number为空")
         return False
     if area_number == []:
-        logging.warning("area_number 为空，但不会报错")  # area资源完全为空的时候，Android客户端会重新计算，iOS客户端完全没用这个数据
+        logging.warning(f"{address}的 {pic_id}: area_number为空,但不会报错")  # area资源完全为空的时候，Android客户端会重新计算，iOS客户端完全没用这个数据
         pass
     ### 检查floatcenter的色块是否比plan少，如果floatcenter缺少了，则不能定位，且没有色号显示在色块上，除了PBN，都用的floatcenter资源
     if address.startswith(("VC", "ZC", "Vista", "PBN")):
@@ -116,11 +116,11 @@ def test_zip_data(address, pic_id):
         set_centerfloat_number = set(centerfloat_number)
         centerfloat_number_more = set_centerfloat_number.difference(set_plans_number)
         if centerfloat_number_more and centerfloat_number != []:
-            logging.warning("【警告】centerfloat比plan多的色块： "+str(centerfloat_number_more))
+            logging.warning(f"{address}的 {pic_id}: centerfloat比plan多，但是不会报错。具体的色块： "+str(centerfloat_number_more),)
             pass
         plans_number_more = set_plans_number.difference(set_centerfloat_number)
         if plans_number_more and centerfloat_number != []:
-            logging.error("centerfloat比plan少的色块： " + str(plans_number_more))
+            logging.error(f"{address}的 {pic_id}: centerfloat比plan少，会报错，具体的色块： " + str(plans_number_more))
             return False
 
     ### 检查center的色块是否比plan少，如果center缺少了，则不能定位，且没有色号显示在色块上，只检查PBN，是因为暂时只有PBN用center资源
@@ -129,11 +129,11 @@ def test_zip_data(address, pic_id):
         set_center_number = set(center_number)
         center_number_more = set_center_number.difference(set_plans_number)
         if center_number_more:
-            logging.warning("【警告】center比plan多的色块： "+str(center_number_more))    # centerfloat多了色块，不会对着色流程造成影响，就不返回Flase了
+            logging.warning(f"{address}的 {pic_id}: center比plan多，不会报错。具体的色块： "+str(center_number_more))    # centerfloat多了色块，不会对着色流程造成影响，就不返回Flase了
             pass
         plans_number_more = set_plans_number.difference(set_center_number)
         if plans_number_more:
-            logging.error("center比plan少的色块： "+str(plans_number_more))
+            logging.error(f"{address}的{pic_id}: center比plan少,的色块： "+str(plans_number_more))
             return False
 
     ### 检查area的色块是否比plan中的少，如果少了，Android客户端这个色块就不能填色，不检查vista是因为iOS会自己生成这个资源
@@ -146,7 +146,7 @@ def test_zip_data(address, pic_id):
             return False
         area_numberr_more = set_area_number.difference(set_plans_number)
         if area_numberr_more:
-            logging.warning("【警告】area中多的色块： " + str(area_numberr_more))   # area的色块比plan多的情况，客户端不会报错，就不返回False了
+            logging.warning(f"{address}的 {pic_id}: area比plan色块多，不会报错，具体多的色块： " + str(area_numberr_more))   # area的色块比plan多的情况，客户端不会报错，就不返回False了
             pass
 
     ### 检查floatcenter中的x,y坐标一定是落在area的色块矩形区域内，通过这个方法能检查出色号显示错乱的问题，比如色号1的色块显示的色号是5,PBN用的是center，而不是floatcenter
@@ -168,7 +168,7 @@ def test_zip_data(address, pic_id):
                         and y_min-center_data_block_detail_r < center_data_block_detail_y < y_max+center_data_block_detail_r:
                     pass
                 else:
-                    logging.warning("【警告】色号上的数据显示的位置是错误的/偏移的："+str(center_data_block_detail_number))
+                    logging.warning(f"{address}的 {pic_id}: 色号上的数据显示的位置是错误的/偏移的，不会报错，具体的色块编号："+str(center_data_block_detail_number))
                     pass
 
     ### 检查center中的x,y坐标一定是落在area的色块矩形区域内，通过这个方法能检查出色号显示错乱的问题，比如色号1的色块显示的色号是5,PBN 用的是center，而是floatcenter
@@ -190,7 +190,7 @@ def test_zip_data(address, pic_id):
                         and y_min-center_data_block_detail_r < center_data_block_detail_y < y_max+center_data_block_detail_r:
                     pass
                 else:
-                    logging.warning("【警告】色号上的数据显示的位置是错误的/偏移的："+str(center_data_block_detail_number))
+                    logging.warning(f"{address}的 {pic_id}: 色号上的数据显示的位置是错误的/偏移的，不会报错，具体的色块："+str(center_data_block_detail_number))
                     pass
 
     if os.path.isfile(pdf):
@@ -222,7 +222,7 @@ def test_zip_data(address, pic_id):
                     pix = page.get_pixmap(matrix=fitz.Matrix(1, 1), clip=bbox)
                     pixel_value = int.from_bytes(pix.samples, byteorder='big')
                     if pixel_value < 255:    # 小于255，则不透明，有重叠
-                        logging.warning("【警告】这个色块和pdf资源有重叠风险： "+str(number))
+                        logging.warning(f"{address}的 {pic_id}: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： "+str(number))
                         pass
     return True
 

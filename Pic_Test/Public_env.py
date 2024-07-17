@@ -5,17 +5,9 @@ from datetime import datetime
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
-logging.basicConfig(filename='', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-# logging.basicConfig(filename='example.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-def example_function():
-    logging.info('这是一个信息级别的日志消息')
-    logging.warning('这是一个警告级别的日志消息')
-    logging.error('这是一个错误级别的日志消息')
-
 current_directory = os.getcwd() #当前路路径
-basic_path = os.getcwd() ##下载的zip文件存放路径
-home = os.path.join(basic_path, "Pic")  ##下载的zip文件存放路径
-test_result_path = os.path.join(basic_path, "Test_Result")  ##下载的zip文件存放路径
+home = os.path.join(current_directory, "Pic")  ##下载的zip文件存放路径
+test_result_path = os.path.join(current_directory, "Test_Result")  ##下载的zip文件存放路径
 
 timezone = "Pacific/Apia"
 timezone_cn = "Asia/Shanghai"
@@ -52,3 +44,29 @@ retries = Retry(total=5,  # 总尝试次数
 # 创建一个带有重试的会话对象
 session = requests.Session()
 session.mount('https://', HTTPAdapter(max_retries=retries))
+
+
+
+# 设置日志格式
+formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+
+# 创建一个日志记录器
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
+
+# 创建一个处理器将日志消息打印到控制台
+console_handler = logging.StreamHandler()
+console_handler.setLevel(logging.INFO)
+console_handler.setFormatter(formatter)
+logger.addHandler(console_handler)
+
+# 创建一个处理器将warning和error级别的日志保存到文件
+file_handler = logging.FileHandler(test_result_path+'/test.log')
+file_handler.setLevel(logging.WARNING)  # 只保存warning和error级别的日志
+file_handler.setFormatter(formatter)
+logger.addHandler(file_handler)
+
+def example_function():
+    logging.info('这是一个信息级别的日志消息')
+    logging.warning('这是一个警告级别的日志消息')
+    logging.error('这是一个错误级别的日志消息')
