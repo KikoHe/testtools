@@ -106,6 +106,8 @@ def get_picid_from_excel(address, filename):
 # 通过vincent获取素材area[未调通]
 def get_area_from_vincent(pic_cms_id):
     area_data = {}
+    close_group = {}
+
     area_number = []
     url_get_ma_id = f"https://vincent2.lexinshengwen.com/vincent/v1/material/manage?limit=50&offset=0&image_paint_from=&image_outside_painter=&demand_intermediary=&demand_audit_painter=&demand_content_painter=&demand_color_painter=&demand_line_painter=&demand=&demand_creator=&material=&fuzzy_search_numbers=&image=&cms_id={pic_cms_id}&image_paint_type=&image_size_type=&image_production_type=&demand_status=&demand_deadline_for_lining_start=&demand_deadline_for_lining_end=&demand_complete_time_start=&demand_complete_time_end=&demand_platform=&demand_module=&demand_category=&demand_tag=&material_platform=&material_module=&material_category=&demand_group=&demand_illustrator=&material_status="
     headers = {
@@ -139,9 +141,14 @@ def get_area_from_vincent(pic_cms_id):
 
 # 对比上一次的测试数据，输出：
 # 1、新增的素材方案及对应的素材数量
-# 2、"历史素材方案变更的数量 不等于 每日更新素材" 的素材方案
-# 3、关掉的素材方案
-def check_CMS_pic_config(group_id='',address='PBN'):
+# 2、历史方案的更新数量
+# 3、关掉的素材方案及对应数量
+# 4、暂时支持各个lib
+def check_CMS_pic_config(group_id='',address='PBN_Lib'):
+    new_group = {}
+    close_group = {}
+    update_pic_data = {}
+
     if group_id == '':
         group_list = get_imagegroup_from_CMS(address)
     else:
@@ -149,10 +156,23 @@ def check_CMS_pic_config(group_id='',address='PBN'):
     today_test_result = {}
     for group in group_list:
         logging.info(group)
-        url_release_data = f"https://pbn-cms.learnings.ai/paint/v1/cms/paint?abtest_key={group}&limit=50&offset=0&status_list=ONLINE_LIBRARY&abtest_release_date_range=2015-08-01T00:00:00_{formatted_date1}T00:00:00&paint_id=&abtest_show=true&category_id=&with_userscore=true&sort_by=release_date%5E-1"
-        url_day = f"https://pbn-cms.learnings.ai/paint/v1/cms/paint?abtest_key={group}&limit=50&offset=0&status_list=ONLINE_LIBRARY&paint_id=&abtest_show=true&abtest_day_range=-100_100&category_id=&with_userscore=true&sort_by=release_date%5E-1"
+        url_release_data_prefixes = {
+            "PBN_Lib": f"https://pbn-cms.learnings.ai/paint/v1/cms/paint?abtest_key={group}&limit=1&offset=0&status_list=ONLINE_LIBRARY&abtest_release_date_range=2015-08-01T00:00:00_{formatted_date1}T00:00:00&paint_id=&abtest_show=true&category_id=&with_userscore=true&sort_by=release_date%5E-1",
+            "ZC_Lib": f"https://zc-cms.learnings.ai/colorflow/v1/cms/abtest/{group}/detail?limit=1&offset=0&release_date=2018-07-10%5E{formatted_date1}",
+            "VC_Lib": f"https://vc-cms.learnings.ai/vitacolor/v1/cms/abtest/{group}/detail?limit=1&offset=0&release_date=2018-07-10%5E{formatted_date1}",
+            "Vista_Lib": f"https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/{group}/detail?limit=1&offset=0&release_date=2018-07-10%5E{formatted_date1}"
+        }
+        url_day_prefixes = {
+            "PBN_Lib": f"https://pbn-cms.learnings.ai/paint/v1/cms/paint?abtest_key={group}&limit=1&offset=0&status_list=ONLINE_LIBRARY&paint_id=&abtest_show=true&abtest_day_range=-100_100&category_id=&with_userscore=true&sort_by=release_date%5E-1",
+            "ZC_Lib": f"https://zc-cms.learnings.ai/colorflow/v1/cms/abtest/{group}/detail?limit=1&offset=0&day=-100%5E100",
+            "VC_Lib": f"https://vc-cms.learnings.ai/vitacolor/v1/cms/abtest/{group}/detail?limit=1&offset=0&day=-100%5E100",
+            "Vista_Lib": f"https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/{group}/detail?limit=1&offset=0&day=-100%5E100"
+        }
+        url_release_data = url_release_data_prefixes.get(address)
+        url_day = url_day_prefixes.get(address)
         total = 0
         for url in [url_release_data, url_day]:
+            logging.info("url: %s", url)
             response = []
             try:
                 response = session.get(url, headers=CMS_headers)
@@ -161,19 +181,24 @@ def check_CMS_pic_config(group_id='',address='PBN'):
                 logging.error(f"HTTP error occurred: {http_err}")
             except Exception as err:
                 logging.error(f"An error occurred: {err}")
+            logging.info(response.json()["data"]["total"])
             total = response.json()["data"]["total"]+total
+            logging.info("total: %s", total)
         today_test_result[group] = total
-    logging.info(today_test_result)
+    logging.info("today_test_result: %s", today_test_result)
 
-    test_result_filename = test_result_path + "/test_result.json"
+    test_result_filename = test_result_path + f"/{address}_test_result.json"
     if os.path.exists(test_result_filename):
         with open(test_result_filename, "r") as file:
             last_test_result = json.load(file)
             logging.info("last_test_result: %s", last_test_result)
             new_group = {key: today_test_result[key] for key in set(today_test_result.keys()) - set(last_test_result.keys())}
             close_group = {key: last_test_result[key] for key in set(last_test_result.keys()) - set(today_test_result.keys())}
+
             common_keys = set(today_test_result.keys()) & set(last_test_result.keys())
             update_pic_data = {key: today_test_result[key] - last_test_result[key] for key in common_keys}
+            update_pic_data = {key: value for key, value in update_pic_data.items() if value != 0}
+
             logging.info("new_group: %s", new_group)
             logging.info("close_group: %s", close_group)
             logging.info("update_pic_data: %s", update_pic_data)
@@ -183,4 +208,4 @@ def check_CMS_pic_config(group_id='',address='PBN'):
     with open(test_result_filename, "w") as file:
         json.dump(today_test_result, file, indent=4)
 
-# check_CMS_pic_config()
+    return new_group, close_group, update_pic_data

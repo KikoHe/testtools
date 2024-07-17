@@ -1,44 +1,55 @@
-import logging
-
 from Test_case import *
 
-output = test_update_pic_single_by_single()
-# output = [{'PBN_Lib': [15, ['6690e0754a98b8c414e02db5'], []]}, {'PBN_Daily': [1, ['6690e0754a98b8c414e02db5'], []]}, {'PBN_Story': [0, ['6690e0754a98b8c414e02db5'], []]}, {'ZC_Lib': [8, ['6690e0754a98b8c414e02db5'], []]}, {'ZC_Daily': [1, ['6690e0754a98b8c414e02db5'], []]}, {'VC_Lib': [8, ['6690e0754a98b8c414e02db5'], []]}, {'VC_Daily': [1, ['6690e0754a98b8c414e02db5'], []]}, {'Vista_Lib': [6, ['6690e0754a98b8c414e02db5'], []]}, {'Vista_Daily': [1, ['6690e0754a98b8c414e02db5'], []]}, {'Vista_Pack': [0, ['6690e0754a98b8c414e02db5'], []]}, {'BP_Lib': [6, ['6690e0754a98b8c414e02db5'], []]}, {'BP_Daily': [1, ['6690e0754a98b8c414e02db5'], []]}]
-logging.info("output: %s", output)
+# 发送每日更新素材的测试报告
+def report_test_update_pic_single_by_single():
+    output = test_update_pic_single_by_single()
+    logging.info("output: %s", output)
+    summary = ""
+    for data in output:
+        project = list(data.keys())
+        value = data[project[0]]
 
-update_ids_output = ""
-error_ids_output = ""
-error_groups_output = ""
-summary = ""
+        update_pics = value[0]
+        update_ids_output = f" 更新素材：{update_pics}张"
 
-for data in output:
-    print("data", data)
-    project = list(data.keys())
-    print("project:", project)
-    value = data[project[0]]
-    print("value", value)
+        error_ids = value[1]
+        if error_ids == []:
+            error_ids_output = "没有发现异常素材"
+        else:
+            error_ids_output = f"发现异常素材ID：{error_ids}"
 
-    update_pics = value[0]
-    update_ids_output = f" 更新素材：{update_pics}张"
+        error_groups = value[2]
+        if error_groups == []:
+            error_groups_output = "所有方案更新素材数量一致"
+        else:
+            error_groups_output = f"此方案更新素材数量和其他方案不一致：{error_groups}"
+        summary = f"{project} - {update_ids_output}； {error_ids_output}； {error_groups_output}\n\n" + summary
+    logging.info(f"SUMMARY: {summary}")
+    return summary
 
-    error_ids = value[1]
-    if error_ids == []:
-        error_ids_output = "没有发现异常素材"
-    else:
-        error_ids_output = f"发现异常素材ID：{error_ids}"
+# 发送素材方案内容检测报告
+def report_check_CMS_pic_config():
+    new_group_output,close_group_output,update_group_output,summary = '', '', '', ''
+    address_list = ["PBN_Lib", "ZC_Lib", "VC_Lib", "Vista_Lib"]
+    # address_list = ["ZC_Lib"]
+    for address in address_list:
+        new_group, close_group, update_group = check_CMS_pic_config("", address)
+        if new_group != {}:
+            new_group_output = f"最近上新素材方案及素材数量：{new_group}，请确认是否正确"
+        else:
+            new_group_output = "最近没有上新素材方案"
+        if close_group != {}:
+            close_group_output = f"最近关闭素材方案及素材数量：{close_group}，请确认是否正确"
+        else:
+            close_group_output = "最近没有关闭素材方案"
+        if update_group != {}:
+            update_group_output = f"最近素材方案的素材变化：{update_group}，请确认是否正确"
 
-    error_groups = value[2]
-    if error_groups == []:
-        error_groups_output = "所有方案更新素材数量一致"
-    else:
-        error_groups_output = f"此方案更新素材数量和其他方案不一致：{error_groups}"
-    summary = f"{project} - {update_ids_output}； {error_ids_output}； {error_groups_output}\n\n" + summary
-
-logging.info(f"SUMMARY: {summary}")
+        summary = f"{address} - {new_group_output}； {close_group_output}； {update_group_output}\n\n" + summary
+    return summary
 
 # 飞书消息发送函数
-def send_feishu_summary_message(summary, date):
-    webhook_url = "https://open.feishu.cn/open-apis/bot/v2/hook/2ba28d6d-6765-4e54-85ac-bbfef081bc83"
+def send_feishu_summary_message(summary, date, webhook_url, title):
     # 构建JSON格式的消息体
     json_payload = {
         "msg_type": "interactive",
@@ -49,7 +60,7 @@ def send_feishu_summary_message(summary, date):
             "header": {
                 "title": {
                     "tag": "plain_text",
-                    "content": f"{date}素材检测报告总结"
+                    "content": f"{date}{title}报告总结"
                 },
                 "template": "blue"
             },
@@ -81,5 +92,14 @@ def send_feishu_summary_message(summary, date):
     response = requests.post(webhook_url, json=json_payload)
     print(response.text)
 
-# 发送汇总消息
-send_feishu_summary_message(summary, formatted_date1)
+if __name__ == "__main__":
+    # webhook_url = "https://open.feishu.cn/open-apis/bot/v2/hook/c7dbaf7d-3c94-46a4-872d-d819a650b1dc"
+    webhook_url = "https://open.feishu.cn/open-apis/bot/v2/hook/2ba28d6d-6765-4e54-85ac-bbfef081bc83"
+
+    # title_1 = "素材方案检测"
+    # summary_1 = report_test_update_pic_single_by_single()
+    # send_feishu_summary_message(summary_1, formatted_date1, webhook_url, title_1)
+
+    title_2 = "当日更新素材资源检测"
+    summary_2 = report_check_CMS_pic_config()
+    send_feishu_summary_message(summary_2, formatted_date1, webhook_url, title_2)

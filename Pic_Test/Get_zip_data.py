@@ -101,14 +101,15 @@ def test_zip_data(address, pic_id):
     if address.startswith(("VC", "ZC", "Vista")) and centerfloat_number == []:
         logging.error("centerfloat_number 为空")
         return False
+    if address.startswith(("PBN")) and centerfloat_number == []:
+        logging.warning("PBN centerfloat_number 为空")
+        pass
     if address.startswith(("PBN", "BP")) and center_number == []:
         logging.error("center_number 为空")
         return False
     if area_number == []:
-        logging.warning("【警告】area_number 为空，但不会报错")  # area资源完全为空的时候，客户端会重新计算，所以不返回flase
-        # area_number, area_data = get_area_from_vincent(pic_id)
+        logging.warning("area_number 为空，但不会报错")  # area资源完全为空的时候，Android客户端会重新计算，iOS客户端完全没用这个数据
         pass
-
     ### 检查floatcenter的色块是否比plan少，如果floatcenter缺少了，则不能定位，且没有色号显示在色块上，除了PBN，都用的floatcenter资源
     if address.startswith(("VC", "ZC", "Vista", "PBN")):
         set_plans_number = set(plans_number)
@@ -224,6 +225,7 @@ def test_zip_data(address, pic_id):
                         logging.warning("【警告】这个色块和pdf资源有重叠风险： "+str(number))
                         pass
     return True
+
 # 通过工具检查SVG资源
 def check_svg_by_cmd(picid):
     tool_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
