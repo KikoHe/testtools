@@ -1,3 +1,5 @@
+import logging
+
 from Public_env import *
 
 ### 获取CMS上所有进行中的的素材实验方案
@@ -26,9 +28,9 @@ def get_imagegroup_from_CMS(address):
                 image_group.append(list["code"])
 
     except requests.exceptions.HTTPError as http_err:
-        print(f"HTTP error occurred: {http_err}")
+        logging.error(f"HTTP error occurred: {http_err}")
     except Exception as err:
-        print(f"An error occurred: {err}")
+        logging.error(f"An error occurred: {err}")
     return set(image_group)
 
 ### 获取CMS上实验组中For you 未开启的方案：
@@ -36,7 +38,7 @@ def get_For_you_from_CMS():
     result_group = []
     grouplist = get_imagegroup_from_CMS("PBN")
     for group in grouplist:
-        print(group)
+        logging.info("group: %s", group)
         url = f"https://pbn-cms.learnings.ai/paint/v1/cms/abtest/{group}/category"
         try:
             response = session.get(url, headers=CMS_headers)
@@ -46,9 +48,9 @@ def get_For_you_from_CMS():
                 if item["id"] == "5fdb3cbf97428126950e5def" and item["show"] != False:
                     result_group.append(group)
         except requests.exceptions.HTTPError as http_err:
-            print(f"HTTP error occurred: {http_err}")
+            logging.error(f"HTTP error occurred: {http_err}")
         except Exception as err:
-            print(f"An error occurred: {err}")
+            logging.error(f"An error occurred: {err}")
     return result_group
 
 ### 获取ABtest上所有进行中的的素材实验方案
@@ -77,18 +79,16 @@ def get_imagegroup_from_ABTest(address):
             response = session.get(url)
             response.raise_for_status()  # 如果请求返回的状态码不是200，则抛出异常
             response_data = response.json()["data"]["params"]
-            # print(response_data)
             for list in response_data:
                 if list["key"] == "imageGroupNum" or list["key"] == "image_test_v2" or list["key"] == "image_test_v3":
                     for value_list in list["value"]:
                         image_group.append(value_list["value"])
         except requests.exceptions.HTTPError as http_err:
-            print(f"HTTP error occurred: {http_err}")
+            logging.error(f"HTTP error occurred: {http_err}")
         except Exception as err:
-            print(f"An error occurred: {err}")
+            logging.error(f"An error occurred: {err}")
     if image_group == []:
         image_group.append("default")
-    # print(set(image_group))
     return set(image_group)
 
 ### 对比CMS和ABtest的素材方案，获取最终需要测试的素材方案
@@ -136,12 +136,12 @@ def get_today_update_lib_or_daily_pic_data(address, limit=30, timezone=timezone,
         response.raise_for_status()  # 如果请求返回的状态码不是200，则抛出异常
         response_data = response.json()["data"]
     except requests.exceptions.HTTPError as http_err:
-        print(f"HTTP error occurred: {http_err}")
+        logging.error(f"HTTP error occurred: {http_err}")
     except Exception as err:
-        print(f"An error occurred: {err}")
+        logging.error(f"An error occurred: {err}")
 
     if response_data == {}:
-        print("列表数据请求失败： "+str(url)+str(headers))
+        logging.info("列表数据请求失败： "+str(url)+str(headers))
         return pic_id
     elif address.startswith("PBN"):
         paintList = response_data["paintList"]
@@ -178,7 +178,7 @@ def get_all_imagegroup_pic_update(address):
         for number in different_update_group:
             fail_group = group_list[number]
             fail_group_list.append(fail_group)
-            print("以下素材方案更新的素材数量有问题: ", str(fail_group_list))
+            logging.error("以下素材方案更新的素材数量有问题: ", str(fail_group_list))
         return update_pic_id, fail_group_list
 
 ### 获取PBN某个时区最新的故事线ID和里面的素材信息
@@ -202,9 +202,9 @@ def get_lastest_story_pic_id(time_zone):
         response.raise_for_status()  # 如果请求返回的状态码不是200，则抛出异常
         lastest_story_id = response.json()["data"][1]["newChallengeList"][0]["id"]
     except requests.exceptions.HTTPError as http_err:
-        print(f"HTTP error occurred: {http_err}")
+        logging.error(f"HTTP error occurred: {http_err}")
     except Exception as err:
-        print(f"An error occurred: {err}")
+        logging.error(f"An error occurred: {err}")
     return lastest_story_id
 
 ### 获取更新的故事线素材（通过对比0、8两个时区）
@@ -212,10 +212,10 @@ def get_today_uptate_story_pic_id():
     story_id_0 = get_lastest_story_pic_id(timezone)
     story_id_8 = get_lastest_story_pic_id(timezone_cn)
     if story_id_0 != story_id_8:
-        print("今天上了新的故事线！")
+        logging.info("今天上了新的故事线！")
         update_pid_id = story_id_0
     else:
-        print("今天仅上了新的素材！")
+        logging.info("今天仅上了新的素材！")
         update_pid_id = [element for element in story_id_0 if element not in story_id_8]
     return update_pid_id
 
@@ -244,9 +244,9 @@ def get_lastest_pack_pic_id(time_zone):
                 lastest_pack_pic_id.append([paints_data["detail"][0]["id"]])
         return lastest_pack_pic_id
     except requests.exceptions.HTTPError as http_err:
-        print(f"HTTP error occurred: {http_err}")
+        logging.error(f"HTTP error occurred: {http_err}")
     except Exception as err:
-        print(f"An error occurred: {err}")
+        logging.error(f"An error occurred: {err}")
 
 # 获取更新的内购包里面的素材id
 def get_today_update_pack_pic_id():
@@ -261,7 +261,6 @@ def get_zip_detail(address, pic_id, zip_url):
     if address.startswith("BP"):
         pwd = "UHVnW2k9QWY3Smp2cGZIYldOdGt2eXZOcUt1dFQpOEY="
     else:
-        # print(pic_id)
         passwordid = pic_id + "VMyv=vJ?9ioBBxCu-naAlfyHXlW28F8#"
         pwd = hashlib.md5(passwordid.encode()).hexdigest()
     # 创建下载目录
@@ -281,7 +280,7 @@ def get_zip_detail(address, pic_id, zip_url):
                     if chunk:
                         code.write(chunk)
     except requests.exceptions.RequestException as e:
-        print(f"请求ZIP包时发生错误: {e}")
+        logging.error(f"请求ZIP包时发生错误: {e}")
         return
     try:
         # 确保文件已经完整下载再进行解压
@@ -292,4 +291,4 @@ def get_zip_detail(address, pic_id, zip_url):
             zf.extract(name, './%s/%s' % ("Pic", pic_id))
         zf.close()
     except zipfile.BadZipFile as e:
-        print(f"文件损坏，无法解压: {e}")
+        logging.error(f"文件损坏，无法解压: {e}")

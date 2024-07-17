@@ -1,3 +1,5 @@
+import logging
+
 from Get_zip_data import *
 import pandas as pd
 from Public_env import *
@@ -31,9 +33,9 @@ def Get_id_Zipurl_from_picdetailapi(PicID,address):
             not_svg_zip_url = response_data["zip_2048_pdf"]
         return not_svg_zip_url, svg_zip_url
     except requests.exceptions.HTTPError as http_err:
-        print(f"HTTP error occurred: {http_err}")
+        logging.error(f"HTTP error occurred: {http_err}")
     except Exception as err:
-        print(f"An error occurred: {err}")
+        logging.error(f"An error occurred: {err}")
 
 # 获取CMS上素材方案配置内容：ID+data
 def pic_config(address,offset=0,limit=100):
@@ -45,7 +47,7 @@ def pic_config(address,offset=0,limit=100):
         "Vista": f"https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/default/detail?limit={limit}&offset={offset}&release_date=2024-05-01%5E2024-05-05"
     }
     url = url_prefixes.get(address)
-    print(url)
+    logging.info("CMS_url: %s", url)
     try:
         response = session.get(url, headers=CMS_headers)
         response.raise_for_status()  # 如果请求返回的状态码不是200，则抛出异常
@@ -53,7 +55,6 @@ def pic_config(address,offset=0,limit=100):
             response_data = response.json()["data"]["list"]
         else:
             response_data = response.json()["data"]["content"]
-        # print(response_data)
         id_list = {}
         for list in response_data:
             if address == "PBN":
@@ -69,9 +70,9 @@ def pic_config(address,offset=0,limit=100):
             id_list[id] = release_data
         return id_list
     except requests.exceptions.HTTPError as http_err:
-        print(f"HTTP error occurred: {http_err}")
+        logging.error(f"HTTP error occurred: {http_err}")
     except Exception as err:
-        print(f"An error occurred: {err}")
+        logging.error(f"An error occurred: {err}")
 
 # 获取CMS上素材方案配置内容，并按照data返回素材张数
 def Get_update_id_data(address):
@@ -85,7 +86,7 @@ def Get_update_id_data(address):
             value_counts[value] = 1
     # 打印每个 value 出现的次数
     for value, count in value_counts.items():
-        print(f"{address} '{value}' 的素材张数: {count}")
+        logging.info(f"{address} '{value}' 的素材张数: {count}")
 
 def get_picid_from_excel(address, filename):
     df = pd.read_excel(filename, usecols=[0])
@@ -131,28 +132,55 @@ def get_area_from_vincent(pic_cms_id):
         area_data = json.loads(area_data)
         area_number = list(area_data.keys())
     except requests.exceptions.HTTPError as http_err:
-        print(f"HTTP error occurred: {http_err}")
+        logging.error(f"HTTP error occurred: {http_err}")
     except Exception as err:
-        print(f"An error occurred: {err}")
+        logging.error(f"An error occurred: {err}")
     return area_number, area_data
 
-# 检查CMS素材配置方案的内容
-def check_CMS_pic_config():
-    group_list = get_imagegroup_from_CMS("PBN")
-    print(group_list)
-    test_result = {}
+# 对比上一次的测试数据，输出：
+# 1、新增的素材方案及对应的素材数量
+# 2、"历史素材方案变更的数量 不等于 每日更新素材" 的素材方案
+# 3、关掉的素材方案
+def check_CMS_pic_config(group_id='',address='PBN'):
+    if group_id == '':
+        group_list = get_imagegroup_from_CMS(address)
+    else:
+        group_list = [group_id]
+    today_test_result = {}
     for group in group_list:
-        print(group)
-        url = f"https://pbn-cms.learnings.ai/paint/v1/cms/paint?abtest_key={group}&limit=50&offset=0&status_list=ONLINE_LIBRARY&paint_id=&abtest_show=true&category_id=5ba31d31fe401a000102966e&with_userscore=true&sort_by=release_date%5E-1"
-        try:
-            response = session.get(url, headers=CMS_headers)
-            response.raise_for_status()  # 如果请求返回的状态码不是200，则抛出异常
-            total = response.json()["data"]["total"]
-            test_result[group] = total
-            print(test_result)
-        except requests.exceptions.HTTPError as http_err:
-            print(f"HTTP error occurred: {http_err}")
-        except Exception as err:
-            print(f"An error occurred: {err}")
+        logging.info(group)
+        url_release_data = f"https://pbn-cms.learnings.ai/paint/v1/cms/paint?abtest_key={group}&limit=50&offset=0&status_list=ONLINE_LIBRARY&abtest_release_date_range=2015-08-01T00:00:00_{formatted_date1}T00:00:00&paint_id=&abtest_show=true&category_id=&with_userscore=true&sort_by=release_date%5E-1"
+        url_day = f"https://pbn-cms.learnings.ai/paint/v1/cms/paint?abtest_key={group}&limit=50&offset=0&status_list=ONLINE_LIBRARY&paint_id=&abtest_show=true&abtest_day_range=-100_100&category_id=&with_userscore=true&sort_by=release_date%5E-1"
+        total = 0
+        for url in [url_release_data, url_day]:
+            response = []
+            try:
+                response = session.get(url, headers=CMS_headers)
+                response.raise_for_status()  # 如果请求返回的状态码不是200，则抛出异常
+            except requests.exceptions.HTTPError as http_err:
+                logging.error(f"HTTP error occurred: {http_err}")
+            except Exception as err:
+                logging.error(f"An error occurred: {err}")
+            total = response.json()["data"]["total"]+total
+        today_test_result[group] = total
+    logging.info(today_test_result)
+
+    test_result_filename = test_result_path + "/test_result.json"
+    if os.path.exists(test_result_filename):
+        with open(test_result_filename, "r") as file:
+            last_test_result = json.load(file)
+            logging.info("last_test_result: %s", last_test_result)
+            new_group = {key: today_test_result[key] for key in set(today_test_result.keys()) - set(last_test_result.keys())}
+            close_group = {key: last_test_result[key] for key in set(last_test_result.keys()) - set(today_test_result.keys())}
+            common_keys = set(today_test_result.keys()) & set(last_test_result.keys())
+            update_pic_data = {key: today_test_result[key] - last_test_result[key] for key in common_keys}
+            logging.info("new_group: %s", new_group)
+            logging.info("close_group: %s", close_group)
+            logging.info("update_pic_data: %s", update_pic_data)
+    else:
+        os.makedirs(os.path.dirname(test_result_filename), exist_ok=True)
+
+    with open(test_result_filename, "w") as file:
+        json.dump(today_test_result, file, indent=4)
 
 # check_CMS_pic_config()

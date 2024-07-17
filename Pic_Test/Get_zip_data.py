@@ -1,3 +1,5 @@
+import logging
+
 from Public_env import *
 from PyPDF2 import errors
 from Get_pic_data import *
@@ -16,8 +18,8 @@ def get_data_from_zip(address,pic_id):
         if os.path.exists(pic_region_path) and os.path.isfile(pic_region_path):
             os.rename(pic_region_path, pdf)
         else:
+            logging.warning("不存在pdf资源： "+str(pic_region_path))
             pass
-            # print("不存在pdf资源： "+str(pic_region_path))
 
     with open(datajson, "r") as file:
         detail_json_data = json.load(file)
@@ -32,10 +34,10 @@ def get_single_data_from_detail_json(address, detail_json_data, data_type):
         if data is not None:
             return data
         else:
-            # print("这个key的value为空： " + str(data_type))
+            logging.warning("这个key的value为空： " + str(data_type))
             return False
     else:
-        # print("没有这个key： "+str(data_type))
+        logging.warning("没有这个key： "+str(data_type))
         return False
 
 def get_all_data_and_pdf(address,pic_id):
@@ -50,8 +52,6 @@ def get_all_data_and_pdf(address,pic_id):
         center_data_block_number_list = []
         for center_data_block_number in center_data_block_list:
             center_data_block_number_list.append(center_data_block_number.split(',')[0])
-    # print("center_data_block_number_list_lens: "+str(len(center_data_block_number_list)))
-    # print("center_data_block_number_list: "+str(center_data_block_number_list))
 
     center_float_data = get_single_data_from_detail_json(address, detail_json_data, "center_float")
     if center_float_data == False:
@@ -62,8 +62,6 @@ def get_all_data_and_pdf(address,pic_id):
         center_float_data_block_number_list = []
         for center_float_data_block_number in center_float_data_block_list:
             center_float_data_block_number_list.append(center_float_data_block_number.split(',')[0])
-    # print("center_float_data_block_number_list_lens: "+str(len(center_float_data_block_number_list)))
-    # print("center_float_data_block_number_list: "+str(center_float_data_block_number_list))
 
     plans_data = get_single_data_from_detail_json(address, detail_json_data, "plans")
     if plans_data == False:
@@ -77,19 +75,15 @@ def get_all_data_and_pdf(address,pic_id):
             block_group = block_group_data.split('#')[0].split(',')
             for block in block_group:
                 plans_data_block_list.append(block)
-                # if block == "578":
-                #     print("你要找的色块对应的色号是： "+str(block_group_number))
+                if block == "96":
+                    logging.info("你要找的色块对应的色号是： "+str(block_group_number))
             block_group_number = block_group_number + 1
 
     area_data = get_single_data_from_detail_json(address, detail_json_data, "area")
     if area_data == False:
         area_data_block_number_list = []
     else:
-        area_data = ast.literal_eval(area_data)
         area_data_block_number_list = list(area_data.keys())
-
-    # print("area_data_block_number_list_lens: "+str(len(area_data_block_number_list)))
-    # print("area_data_block_number_list: "+str(area_data_block_number_list))
 
     return center_data_block_number_list, center_data_block_list,\
            center_float_data_block_number_list, center_float_data_block_list,\
@@ -102,18 +96,18 @@ def test_zip_data(address, pic_id):
 
     # 检查资源是否为空
     if plans_number == []:
-        print("plans_number 为空")
+        logging.error("plans_number 为空")
         return False
     if address.startswith(("VC", "ZC", "Vista")) and centerfloat_number == []:
-        print("centerfloat_number 为空")
+        logging.error("centerfloat_number 为空")
         return False
     if address.startswith(("PBN", "BP")) and center_number == []:
-        print("center_number 为空")
+        logging.error("center_number 为空")
         return False
-    # if area_number == []:
-    #     print("【警告】area_number 为空，但不会报错")  # area资源完全为空的时候，客户端会重新计算，所以不返回flase
-    #     area_number, area_data = get_area_from_vincent(pic_id)
-    #     pass
+    if area_number == []:
+        logging.warning("【警告】area_number 为空，但不会报错")  # area资源完全为空的时候，客户端会重新计算，所以不返回flase
+        # area_number, area_data = get_area_from_vincent(pic_id)
+        pass
 
     ### 检查floatcenter的色块是否比plan少，如果floatcenter缺少了，则不能定位，且没有色号显示在色块上，除了PBN，都用的floatcenter资源
     if address.startswith(("VC", "ZC", "Vista", "PBN")):
@@ -121,11 +115,11 @@ def test_zip_data(address, pic_id):
         set_centerfloat_number = set(centerfloat_number)
         centerfloat_number_more = set_centerfloat_number.difference(set_plans_number)
         if centerfloat_number_more and centerfloat_number != []:
+            logging.warning("【警告】centerfloat比plan多的色块： "+str(centerfloat_number_more))
             pass
-            print("【警告】centerfloat比plan多的色块： "+str(centerfloat_number_more))
         plans_number_more = set_plans_number.difference(set_centerfloat_number)
         if plans_number_more and centerfloat_number != []:
-            print("centerfloat比plan少的色块： " + str(plans_number_more))
+            logging.error("centerfloat比plan少的色块： " + str(plans_number_more))
             return False
 
     ### 检查center的色块是否比plan少，如果center缺少了，则不能定位，且没有色号显示在色块上，只检查PBN，是因为暂时只有PBN用center资源
@@ -134,11 +128,11 @@ def test_zip_data(address, pic_id):
         set_center_number = set(center_number)
         center_number_more = set_center_number.difference(set_plans_number)
         if center_number_more:
+            logging.warning("【警告】center比plan多的色块： "+str(center_number_more))    # centerfloat多了色块，不会对着色流程造成影响，就不返回Flase了
             pass
-            print("【警告】center比plan多的色块： "+str(center_number_more))    # centerfloat多了色块，不会对着色流程造成影响，就不返回Flase了
         plans_number_more = set_plans_number.difference(set_center_number)
         if plans_number_more:
-            print("center比plan少的色块： "+str(plans_number_more))
+            logging.error("center比plan少的色块： "+str(plans_number_more))
             return False
 
     ### 检查area的色块是否比plan中的少，如果少了，Android客户端这个色块就不能填色，不检查vista是因为iOS会自己生成这个资源
@@ -147,12 +141,12 @@ def test_zip_data(address, pic_id):
         set_area_number = set(area_number)
         plans_number_more = set_plans_number.difference(set_area_number)
         if plans_number_more:
-            print("area中缺少的色块： " + str(plans_number_more))
+            logging.error("area中缺少的色块： " + str(plans_number_more))
             return False
         area_numberr_more = set_area_number.difference(set_plans_number)
         if area_numberr_more:
+            logging.warning("【警告】area中多的色块： " + str(area_numberr_more))   # area的色块比plan多的情况，客户端不会报错，就不返回False了
             pass
-            print("【警告】area中多的色块： " + str(area_numberr_more))   # area的色块比plan多的情况，客户端不会报错，就不返回False了
 
     ### 检查floatcenter中的x,y坐标一定是落在area的色块矩形区域内，通过这个方法能检查出色号显示错乱的问题，比如色号1的色块显示的色号是5,PBN用的是center，而不是floatcenter
     if address.startswith(("PBN", "VC", "ZC")):
@@ -173,7 +167,7 @@ def test_zip_data(address, pic_id):
                         and y_min-center_data_block_detail_r < center_data_block_detail_y < y_max+center_data_block_detail_r:
                     pass
                 else:
-                    print("【警告】色号上的数据显示的位置是错误的/偏移的："+str(center_data_block_detail_number))
+                    logging.warning("【警告】色号上的数据显示的位置是错误的/偏移的："+str(center_data_block_detail_number))
                     pass
 
     ### 检查center中的x,y坐标一定是落在area的色块矩形区域内，通过这个方法能检查出色号显示错乱的问题，比如色号1的色块显示的色号是5,PBN 用的是center，而是floatcenter
@@ -195,8 +189,8 @@ def test_zip_data(address, pic_id):
                         and y_min-center_data_block_detail_r < center_data_block_detail_y < y_max+center_data_block_detail_r:
                     pass
                 else:
+                    logging.warning("【警告】色号上的数据显示的位置是错误的/偏移的："+str(center_data_block_detail_number))
                     pass
-                    print("【警告】色号上的数据显示的位置是错误的/偏移的："+str(center_data_block_detail_number))
 
     if os.path.isfile(pdf):
         ### 检查pdf资源是否被破坏，是否能正常打开
@@ -207,10 +201,10 @@ def test_zip_data(address, pic_id):
                     for page in range(len(reader.pages)):
                         _ = reader.pages[page]
         except PyPDF2.errors.PdfReadError as e:  # 更新异常处理
-            print("不能打开这个PDF资源，具体原因： "+str(e))
+            logging.error("不能打开这个PDF资源，具体原因： "+str(e))
             return False
         except OSError as e:  # OSError 保持不变
-            print("不能打开这个PDF资源，具体原因： "+str(e))
+            logging.error("不能打开这个PDF资源，具体原因： "+str(e))
             return False
 
         ### 检查色块上的数字是否和PDF线稿有重叠，同时能判断色块不可见的问题
@@ -227,7 +221,7 @@ def test_zip_data(address, pic_id):
                     pix = page.get_pixmap(matrix=fitz.Matrix(1, 1), clip=bbox)
                     pixel_value = int.from_bytes(pix.samples, byteorder='big')
                     if pixel_value < 255:    # 小于255，则不透明，有重叠
-                        print("【警告】这个色块和pdf资源有重叠风险： "+str(number))
+                        logging.warning("【警告】这个色块和pdf资源有重叠风险： "+str(number))
                         pass
     return True
 # 通过工具检查SVG资源
@@ -242,8 +236,8 @@ def check_svg_by_cmd(picid):
             return True
         else:
             # 打印标准输出和标准错误
-            print(stdout)
+            logging.error(stdout)
             return False
     except subprocess.CalledProcessError as e:
-        print("Test Fail", e)
+        logging.error("Test Fail: %s", e)
         return False

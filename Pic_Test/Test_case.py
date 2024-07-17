@@ -1,3 +1,5 @@
+import logging
+
 from Get_zip_data import *
 from Get_pic_data_from_api import *
 import multiprocessing
@@ -35,14 +37,13 @@ def test_single_pic_svg(PicID, address):
 def test_update_pic_single_by_single(address_input=''):
     test_result = []
     fail_groups = []
-    fail_ids = []
     if address_input == '':
         address_list = ["PBN_Lib", "PBN_Daily", "PBN_Story", "ZC_Lib", "ZC_Daily", "VC_Lib", "VC_Daily",\
                         "Vista_Lib", "Vista_Daily", "Vista_Pack", "BP_Lib", "BP_Daily"]
     else:
         address_list = [address_input]
     for address in address_list:
-        print("开始测试项目模块:"+str(address))
+        logging.info("开始测试项目模块:"+str(address))
         if address == "PBN_Story":
             pid_ids = get_today_uptate_story_pic_id()
         elif address == "Vista_Pack":
@@ -50,15 +51,14 @@ def test_update_pic_single_by_single(address_input=''):
         else:
             pid_ids, fail_groups = get_all_imagegroup_pic_update(address)
 
+        fail_ids = []
         for pic_id in pid_ids:
-            print("开始测试素材:" + str(pic_id))
+            logging.info("开始测试素材:" + str(pic_id))
             test_zip_data_result_pdf = test_single_pic(pic_id, address)
             if test_zip_data_result_pdf == False:
-                print("资源测试异常的素材ID： " + str(pic_id))
+                logging.error("资源测试异常的素材ID： " + str(pic_id))
                 fail_ids.append(pic_id)
-
         update_pic_number = len(pid_ids)
-
         test_result_single_project = {address: [update_pic_number, fail_ids, fail_groups]}
         test_result.append(test_result_single_project)
     return test_result
@@ -68,21 +68,22 @@ def test_update_pic_single_by_single(address_input=''):
 def test_pic_from_cms(address="PBN",offset=0,limit=100):
     id_list = pic_config(address, offset, limit)
     ids = list(id_list.keys())
-    print("总测试素材数" + str(len(ids)))
+    logging.info("总测试素材数" + str(len(ids)))
     fail_ids = []
     i = 1
     for PicID in ids:
-        print(f"第{i}个测试素材，ID： {PicID}")
+        logging.info(f"第{i}个测试素材，ID： {PicID}")
         test_zip_data_result = test_single_pic(PicID, address)
         # test_zip_data_result = test_single_pic_svg(PicID, address)
         if test_zip_data_result == False:
             fail_ids.append(PicID)
-            print("截止目前所有异常的素材ID： " + str(fail_ids))
+            logging.error("截止目前所有异常的素材ID： " + str(fail_ids))
             output = "测试结果：" + str(PicID) + "\n"
             with open(f'output_{offset}.txt', 'a') as file:
                 file.write(output)  # 写入输出结果到文件中
         i = i + 1
     return fail_ids
+
 # 多任务同时执行
 def multi_action_test():
     address = "PBN"

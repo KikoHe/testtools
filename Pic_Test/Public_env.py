@@ -1,11 +1,20 @@
-import ast, os, glob, PyPDF2, fitz, json, inspect, shutil, pytz, hashlib, zipfile, requests, pyzipper, subprocess
+import ast, os, glob, PyPDF2, fitz, json, inspect, shutil, pytz, hashlib, zipfile, requests, pyzipper, subprocess,logging
 from Common_Fun import *
 from datetime import datetime
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
+logging.basicConfig(filename='', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+# logging.basicConfig(filename='example.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+def example_function():
+    logging.info('这是一个信息级别的日志消息')
+    logging.warning('这是一个警告级别的日志消息')
+    logging.error('这是一个错误级别的日志消息')
+
 current_directory = os.getcwd() #当前路路径
-home = os.path.join(os.getcwd(), "Pic")  ##下载的zip文件存放路径
+basic_path = os.getcwd() ##下载的zip文件存放路径
+home = os.path.join(basic_path, "Pic")  ##下载的zip文件存放路径
+test_result_path = os.path.join(basic_path, "Test_Result")  ##下载的zip文件存放路径
 
 timezone = "Pacific/Apia"
 timezone_cn = "Asia/Shanghai"
