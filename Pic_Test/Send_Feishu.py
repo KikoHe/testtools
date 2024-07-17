@@ -23,7 +23,7 @@ def report_test_update_pic_single_by_single():
             error_groups_output = "所有方案更新素材数量一致"
         else:
             error_groups_output = f"此方案更新素材数量和其他方案不一致：{error_groups}"
-        summary = summary + f"\n\n{project[0]} - {update_ids_output}； {error_ids_output}； {error_groups_output}"
+        summary = summary + f"{project[0]} - {update_ids_output}； {error_ids_output}； {error_groups_output}\n\n"
     logging.info(f"SUMMARY: {summary}")
     return summary
 
@@ -45,7 +45,7 @@ def report_check_CMS_pic_config():
         if update_group != {}:
             update_group_output = f"所有素材方案最近的素材变化数量，参考：{update_group}，请确认是否正确"
 
-        summary = summary + f"\n\n{address} - {new_group_output}； {close_group_output}； {update_group_output}"
+        summary = summary + f"{address} - {new_group_output}； {close_group_output}； {update_group_output}\n\n"
     return summary
 
 # 飞书消息发送函数
