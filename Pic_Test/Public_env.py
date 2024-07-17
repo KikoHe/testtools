@@ -7,7 +7,13 @@ from urllib3.util.retry import Retry
 
 current_directory = os.getcwd() #当前路路径
 home = os.path.join(current_directory, "Pic")  ##下载的zip文件存放路径
+if not os.path.exists(home):
+    os.makedirs(home)
+    print(f"文件夹 '{home}' 不存在，已创建")
 test_result_path = os.path.join(current_directory, "Test_Result")  ##下载的zip文件存放路径
+if not os.path.exists(test_result_path):
+    os.makedirs(test_result_path)
+    print(f"文件夹 '{test_result_path}' 不存在，已创建")
 
 timezone = "Pacific/Apia"
 timezone_cn = "Asia/Shanghai"
