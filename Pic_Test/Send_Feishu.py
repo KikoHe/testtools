@@ -23,7 +23,8 @@ def report_test_update_pic_single_by_single():
             error_groups_output = "所有方案更新素材数量一致"
         else:
             error_groups_output = f"此方案更新素材数量和其他方案不一致：{error_groups}"
-        summary = summary + f"{project[0]} - {update_ids_output}； {error_ids_output}； {error_groups_output}\n\n"
+
+        summary = summary + f"{project[0]} - 1、{update_ids_output}；\n 2、{error_ids_output}；\n 3、{error_groups_output}\n\n"
     logging.info(f"SUMMARY: {summary}")
     return summary
 
@@ -35,15 +36,15 @@ def report_check_CMS_pic_config():
     for address in address_list:
         new_group, close_group, update_group = check_CMS_pic_config("", address)
         if new_group != {}:
-            new_group_output = f"最近上新素材方案及素材数量：{new_group}，请确认是否正确"
+            new_group_output = f"1、最近上新素材方案及素材数量：{new_group}，请确认是否正确"
         else:
-            new_group_output = "最近没有上新素材方案"
+            new_group_output = "1、最近没有上新素材方案"
         if close_group != {}:
-            close_group_output = f"最近关闭素材方案及素材数量：{close_group}，请确认是否正确"
+            close_group_output = f"2、最近关闭素材方案及素材数量：{close_group}，请确认是否正确"
         else:
-            close_group_output = "最近没有关闭素材方案"
+            close_group_output = "2、最近没有关闭素材方案"
         if update_group != {}:
-            update_group_output = f"所有素材方案最近的素材变化数量，参考：{update_group}，请确认是否正确"
+            update_group_output = f"3、现有素材方案明天的素材变化数量，参考：{update_group}，请确认是否正确"
 
         summary = summary + f"{address} - {new_group_output}； {close_group_output}； {update_group_output}\n\n"
     return summary
