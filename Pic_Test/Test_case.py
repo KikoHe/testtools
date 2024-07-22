@@ -53,6 +53,7 @@ def test_update_pic_single_by_single(address_input=''):
             pid_ids, update_fail_groups = get_all_imagegroup_pic_update(address)
 
         fail_ids = []
+        print(pid_ids)
         for pic_id in pid_ids:
             logging.info("开始测试素材:" + str(pic_id))
             test_zip_data_result_pdf = test_single_pic(pic_id, address)

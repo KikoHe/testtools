@@ -1083,3 +1083,346 @@ Validate Error: Parse SVG Json Error: No Path Data Of p
 2024-07-18 17:21:33,323 - ERROR - Validate Error: Start Validate SVG
 Validate Error: SVG Color Plan Empty: 112|134|135|136|137|138|139|140|141|142|143|144|145|146|147|148|149|150|151|152
 
+2024-07-20 22:37:49,175 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-20 22:37:49,176 - WARNING - PBN_Lib的 66601a7cb8b6c415e708db1c: area_number为空,但不会报错
+2024-07-20 22:38:06,628 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-20 22:38:06,628 - WARNING - PBN_Lib的 666bf0bd1e0212901fcc5472: area_number为空,但不会报错
+2024-07-20 22:38:11,988 - WARNING - PBN_Lib的 666bf0bd1e0212901fcc5472: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 76
+2024-07-20 22:39:17,697 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-20 22:39:17,697 - WARNING - PBN_Lib的 66727ddf33abc7bfe729d15f: area_number为空,但不会报错
+2024-07-20 22:40:19,172 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-20 22:40:19,172 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: area_number为空,但不会报错
+2024-07-20 22:40:19,495 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1804
+2024-07-20 22:40:20,567 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1119
+2024-07-20 22:40:23,560 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 789
+2024-07-20 22:40:25,848 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 936
+2024-07-20 22:40:29,155 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 201
+2024-07-20 22:40:29,921 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1399
+2024-07-20 22:40:30,131 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 2424
+2024-07-20 22:40:30,548 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1005
+2024-07-20 22:40:30,710 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 2159
+2024-07-20 22:40:30,757 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1669
+2024-07-20 22:40:34,184 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1504
+2024-07-20 22:40:35,846 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1258
+2024-07-20 22:40:35,893 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1365
+2024-07-20 22:40:36,055 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 197
+2024-07-20 22:40:36,078 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1533
+2024-07-20 22:40:36,124 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 285
+2024-07-20 22:40:36,170 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1136
+2024-07-20 22:40:36,668 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1877
+2024-07-20 22:40:37,202 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1984
+2024-07-20 22:40:37,248 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 906
+2024-07-20 22:40:37,341 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1475
+2024-07-20 22:40:37,432 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 2738
+2024-07-20 22:40:37,479 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1070
+2024-07-20 22:40:37,733 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 799
+2024-07-20 22:40:37,779 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 385
+2024-07-20 22:40:37,918 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 221
+2024-07-20 22:40:37,964 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 194
+2024-07-20 22:40:38,333 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 276
+2024-07-20 22:40:39,676 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 2257
+2024-07-20 22:40:39,862 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1415
+2024-07-20 22:40:41,858 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1559
+2024-07-20 22:40:45,319 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1223
+2024-07-20 22:40:45,504 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1263
+2024-07-20 22:40:46,938 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1551
+2024-07-20 22:40:51,209 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1701
+2024-07-20 22:40:51,739 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 520
+2024-07-20 22:40:52,665 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1138
+2024-07-20 22:40:52,734 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1170
+2024-07-20 22:40:54,110 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 673
+2024-07-20 22:40:54,342 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1585
+2024-07-20 22:40:54,550 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1560
+2024-07-20 22:40:55,060 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1169
+2024-07-20 22:40:55,084 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1513
+2024-07-20 22:40:55,130 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 904
+2024-07-20 22:40:55,594 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1882
+2024-07-20 22:40:55,710 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 981
+2024-07-20 22:40:55,779 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1198
+2024-07-20 22:40:55,803 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1622
+2024-07-20 22:40:55,826 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1789
+2024-07-20 22:40:55,872 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 198
+2024-07-20 22:40:55,941 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 230
+2024-07-20 22:40:55,965 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 894
+2024-07-20 22:40:57,237 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 2677
+2024-07-20 22:40:58,141 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1481
+2024-07-20 22:40:58,280 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1692
+2024-07-20 22:40:58,326 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1369
+2024-07-20 22:40:58,534 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 925
+2024-07-20 22:40:58,766 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 969
+2024-07-20 22:40:59,578 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 2156
+2024-07-20 22:40:59,601 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1702
+2024-07-20 22:40:59,624 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1458
+2024-07-20 22:41:01,803 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1915
+2024-07-20 22:41:02,357 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1832
+2024-07-20 22:41:02,404 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1537
+2024-07-20 22:41:02,427 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1173
+2024-07-20 22:41:05,592 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 571
+2024-07-20 22:41:06,334 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1590
+2024-07-20 22:41:10,760 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1447
+2024-07-20 22:41:11,223 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1482
+2024-07-20 22:41:11,525 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 2334
+2024-07-20 22:41:11,641 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1516
+2024-07-20 22:41:14,864 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1618
+2024-07-20 22:41:14,888 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1734
+2024-07-20 22:41:14,911 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1986
+2024-07-20 22:41:14,934 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1558
+2024-07-20 22:41:15,028 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1987
+2024-07-20 22:41:16,467 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 2344
+2024-07-20 22:41:16,607 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 2246
+2024-07-20 22:41:16,700 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1716
+2024-07-20 22:41:27,081 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-20 22:41:27,081 - WARNING - PBN_Lib的 66837aa2ddd966a95e661fa9: area_number为空,但不会报错
+2024-07-20 22:41:29,548 - WARNING - PBN_Lib的 66837aa2ddd966a95e661fa9: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 224
+2024-07-20 22:41:29,978 - WARNING - PBN_Lib的 66837aa2ddd966a95e661fa9: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 206
+2024-07-20 22:41:34,638 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-20 22:41:34,638 - WARNING - PBN_Lib的 667d14c8ddd966a95e65891b: area_number为空,但不会报错
+2024-07-20 22:41:34,733 - WARNING - PBN_Lib的 667d14c8ddd966a95e65891b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 112
+2024-07-20 22:41:36,493 - WARNING - PBN_Lib的 667d14c8ddd966a95e65891b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 541
+2024-07-20 22:41:37,100 - WARNING - PBN_Lib的 667d14c8ddd966a95e65891b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 501
+2024-07-20 22:41:37,111 - WARNING - PBN_Lib的 667d14c8ddd966a95e65891b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 706
+2024-07-20 22:41:37,776 - WARNING - PBN_Lib的 667d14c8ddd966a95e65891b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 956
+2024-07-20 22:41:37,833 - WARNING - PBN_Lib的 667d14c8ddd966a95e65891b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 668
+2024-07-20 22:41:38,729 - WARNING - PBN_Lib的 667d14c8ddd966a95e65891b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 380
+2024-07-20 22:41:40,174 - WARNING - PBN_Lib的 667d14c8ddd966a95e65891b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 61
+2024-07-20 22:41:40,207 - WARNING - PBN_Lib的 667d14c8ddd966a95e65891b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 114
+2024-07-20 22:41:41,815 - WARNING - PBN_Lib的 667d14c8ddd966a95e65891b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 5
+2024-07-20 22:41:42,678 - WARNING - PBN_Lib的 667d14c8ddd966a95e65891b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 761
+2024-07-20 22:42:01,664 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-20 22:42:01,665 - WARNING - PBN_Lib的 6661523c0e482305e3747683: area_number为空,但不会报错
+2024-07-20 22:42:25,112 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-20 22:42:25,112 - WARNING - PBN_Lib的 66753ef3c6c0db33eba30b1d: area_number为空,但不会报错
+2024-07-20 22:42:31,675 - WARNING - PBN_Lib的 66753ef3c6c0db33eba30b1d: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 536
+2024-07-20 22:42:32,162 - WARNING - PBN_Lib的 66753ef3c6c0db33eba30b1d: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 163
+2024-07-20 22:42:38,027 - WARNING - PBN_Lib的 66753ef3c6c0db33eba30b1d: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1078
+2024-07-20 22:42:39,890 - WARNING - PBN_Lib的 66753ef3c6c0db33eba30b1d: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 470
+2024-07-20 22:42:41,500 - WARNING - PBN_Lib的 66753ef3c6c0db33eba30b1d: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 28
+2024-07-20 22:43:05,358 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-20 22:43:05,359 - WARNING - PBN_Lib的 6662aca84ab3c188139321a8: area_number为空,但不会报错
+2024-07-20 22:43:32,593 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-20 22:43:32,594 - WARNING - PBN_Lib的 666bf0bd1e0212901fcc5466: area_number为空,但不会报错
+2024-07-20 22:44:28,546 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-20 22:44:28,547 - WARNING - PBN_Lib的 6687730947888354fffd0f7b: area_number为空,但不会报错
+2024-07-20 22:44:28,607 - WARNING - PBN_Lib的 6687730947888354fffd0f7b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1285
+2024-07-20 22:44:28,843 - WARNING - PBN_Lib的 6687730947888354fffd0f7b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 557
+2024-07-20 22:44:29,078 - WARNING - PBN_Lib的 6687730947888354fffd0f7b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 85
+2024-07-20 22:44:30,626 - WARNING - PBN_Lib的 6687730947888354fffd0f7b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 255
+2024-07-20 22:44:34,143 - WARNING - PBN_Lib的 6687730947888354fffd0f7b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 158
+2024-07-20 22:44:36,779 - WARNING - PBN_Lib的 6687730947888354fffd0f7b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 246
+2024-07-20 22:44:38,751 - WARNING - PBN_Lib的 6687730947888354fffd0f7b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 863
+2024-07-20 22:44:42,749 - WARNING - PBN_Lib的 6687730947888354fffd0f7b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1527
+2024-07-20 22:44:45,697 - WARNING - PBN_Lib的 6687730947888354fffd0f7b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 109
+2024-07-20 22:44:48,972 - WARNING - PBN_Lib的 6687730947888354fffd0f7b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 938
+2024-07-20 22:45:07,117 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-20 22:45:07,118 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: area_number为空,但不会报错
+2024-07-20 22:45:07,355 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 642
+2024-07-20 22:45:07,614 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 951
+2024-07-20 22:45:07,692 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 151
+2024-07-20 22:45:07,722 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 880
+2024-07-20 22:45:08,001 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 550
+2024-07-20 22:45:08,812 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 377
+2024-07-20 22:45:09,258 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 889
+2024-07-20 22:45:09,320 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 839
+2024-07-20 22:45:10,087 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 3
+2024-07-20 22:45:10,118 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 211
+2024-07-20 22:45:10,216 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 997
+2024-07-20 22:45:10,241 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 163
+2024-07-20 22:45:10,334 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 166
+2024-07-20 22:45:10,395 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 741
+2024-07-20 22:45:10,499 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 162
+2024-07-20 22:45:10,763 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 586
+2024-07-20 22:45:10,988 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 863
+2024-07-20 22:45:11,016 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 161
+2024-07-20 22:45:11,022 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 165
+2024-07-20 22:45:11,028 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 170
+2024-07-20 22:45:15,985 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-20 22:45:15,985 - WARNING - PBN_Lib的 66851286c6c0db33eba4a5f3: area_number为空,但不会报错
+2024-07-20 22:45:19,623 - WARNING - PBN_Lib的 66851286c6c0db33eba4a5f3: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 467
+2024-07-20 22:45:19,883 - WARNING - PBN_Lib的 66851286c6c0db33eba4a5f3: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1
+2024-07-20 22:45:24,618 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-20 22:45:24,619 - WARNING - PBN_Lib的 66793379c6c0db33eba34453: area_number为空,但不会报错
+2024-07-20 22:46:00,167 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-20 22:46:00,168 - WARNING - PBN_Lib的 66694937b1573455506ef46b: area_number为空,但不会报错
+2024-07-20 22:47:07,352 - ERROR - PBN_Daily中某个素材没有这个key：area
+2024-07-20 22:47:07,353 - WARNING - PBN_Daily的 66712da72e27fa5d40ddfb27: area_number为空,但不会报错
+2024-07-20 22:58:45,264 - ERROR - HTTP error occurred: 404 Client Error: Not Found for url: https://colorpad-api.vitastudio.ai/colorpad/v1/paint/%5B'66602502b8b6c415e708dfd4'%5D
+2024-07-20 23:41:01,400 - ERROR - HTTP error occurred: 404 Client Error: Not Found for url: https://colorpad-api.vitastudio.ai/colorpad/v1/paint/%5B'66602502b8b6c415e708dfd4'%5D
+2024-07-21 00:20:23,539 - ERROR - An error occurred: 'list' object has no attribute 'isdigit'
+2024-07-21 00:20:23,887 - ERROR - An error occurred: 'list' object has no attribute 'isdigit'
+2024-07-21 00:46:12,761 - ERROR - HTTP error occurred: 404 Client Error: Not Found for url: https://paint-api.dailyinnovation.biz/paint/v1/paint/6
+2024-07-21 00:55:27,908 - ERROR - PBN_Story中某个素材没有这个key：area
+2024-07-21 00:55:27,909 - WARNING - PBN_Story的 666bf0bd1e0212901fcc545f: area_number为空,但不会报错
+2024-07-21 01:01:23,922 - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='pbn-cdn.dailyinnovation.biz', port=443): Read timed out. (read timeout=10)")': /paintByNumber/online/66601a7cb8b6c415e708db1c_91a99819c291c455109638a3b30eb98d.zip
+2024-07-21 01:01:25,729 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-21 01:01:25,729 - WARNING - PBN_Lib的 66601a7cb8b6c415e708db1c: area_number为空,但不会报错
+2024-07-21 01:01:27,464 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-21 01:01:27,464 - WARNING - PBN_Lib的 666bf0bd1e0212901fcc5472: area_number为空,但不会报错
+2024-07-21 01:01:32,271 - WARNING - PBN_Lib的 666bf0bd1e0212901fcc5472: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 76
+2024-07-21 01:01:39,544 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-21 01:01:39,545 - WARNING - PBN_Lib的 66727ddf33abc7bfe729d15f: area_number为空,但不会报错
+2024-07-21 01:01:47,107 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-21 01:01:47,108 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: area_number为空,但不会报错
+2024-07-21 01:01:47,444 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1804
+2024-07-21 01:01:48,563 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1119
+2024-07-21 01:01:51,771 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 789
+2024-07-21 01:01:54,171 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 936
+2024-07-21 01:01:57,635 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 201
+2024-07-21 01:01:58,440 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1399
+2024-07-21 01:01:58,660 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 2424
+2024-07-21 01:01:59,098 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1005
+2024-07-21 01:01:59,270 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 2159
+2024-07-21 01:01:59,319 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1669
+2024-07-21 01:02:02,987 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1504
+2024-07-21 01:02:04,734 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1258
+2024-07-21 01:02:04,784 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1365
+2024-07-21 01:02:04,955 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 197
+2024-07-21 01:02:04,980 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1533
+2024-07-21 01:02:05,030 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 285
+2024-07-21 01:02:05,080 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1136
+2024-07-21 01:02:05,589 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1877
+2024-07-21 01:02:06,149 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1984
+2024-07-21 01:02:06,199 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 906
+2024-07-21 01:02:06,298 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1475
+2024-07-21 01:02:06,396 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 2738
+2024-07-21 01:02:06,446 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1070
+2024-07-21 01:02:06,713 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 799
+2024-07-21 01:02:06,763 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 385
+2024-07-21 01:02:06,911 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 221
+2024-07-21 01:02:06,960 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 194
+2024-07-21 01:02:07,347 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 276
+2024-07-21 01:02:08,762 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 2257
+2024-07-21 01:02:08,958 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1415
+2024-07-21 01:02:11,065 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1559
+2024-07-21 01:02:14,718 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1223
+2024-07-21 01:02:14,916 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1263
+2024-07-21 01:02:16,473 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1551
+2024-07-21 01:02:20,974 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1701
+2024-07-21 01:02:21,533 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 520
+2024-07-21 01:02:22,501 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1138
+2024-07-21 01:02:22,575 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1170
+2024-07-21 01:02:24,026 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 673
+2024-07-21 01:02:24,270 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1585
+2024-07-21 01:02:24,492 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1560
+2024-07-21 01:02:25,028 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1169
+2024-07-21 01:02:25,053 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1513
+2024-07-21 01:02:25,104 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 904
+2024-07-21 01:02:25,592 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1882
+2024-07-21 01:02:25,715 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 981
+2024-07-21 01:02:25,789 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1198
+2024-07-21 01:02:25,815 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1622
+2024-07-21 01:02:25,840 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1789
+2024-07-21 01:02:25,891 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 198
+2024-07-21 01:02:25,965 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 230
+2024-07-21 01:02:25,991 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 894
+2024-07-21 01:02:27,354 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 2677
+2024-07-21 01:02:28,311 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1481
+2024-07-21 01:02:28,458 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1692
+2024-07-21 01:02:28,508 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1369
+2024-07-21 01:02:28,734 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 925
+2024-07-21 01:02:28,983 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 969
+2024-07-21 01:02:29,846 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 2156
+2024-07-21 01:02:29,872 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1702
+2024-07-21 01:02:29,897 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1458
+2024-07-21 01:02:32,186 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1915
+2024-07-21 01:02:32,768 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1832
+2024-07-21 01:02:32,818 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1537
+2024-07-21 01:02:32,843 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1173
+2024-07-21 01:02:36,171 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 571
+2024-07-21 01:02:36,949 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1590
+2024-07-21 01:02:41,663 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1447
+2024-07-21 01:02:42,156 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1482
+2024-07-21 01:02:42,472 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 2334
+2024-07-21 01:02:42,596 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1516
+2024-07-21 01:02:45,998 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1618
+2024-07-21 01:02:46,024 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1734
+2024-07-21 01:02:46,050 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1986
+2024-07-21 01:02:46,075 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1558
+2024-07-21 01:02:46,174 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1987
+2024-07-21 01:02:47,691 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 2344
+2024-07-21 01:02:47,838 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 2246
+2024-07-21 01:02:47,937 - WARNING - PBN_Lib的 668227d8c6c0db33eba422ad: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1716
+2024-07-21 01:02:52,545 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-21 01:02:52,545 - WARNING - PBN_Lib的 66837aa2ddd966a95e661fa9: area_number为空,但不会报错
+2024-07-21 01:02:55,160 - WARNING - PBN_Lib的 66837aa2ddd966a95e661fa9: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 224
+2024-07-21 01:02:55,620 - WARNING - PBN_Lib的 66837aa2ddd966a95e661fa9: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 206
+2024-07-21 01:02:58,635 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-21 01:02:58,635 - WARNING - PBN_Lib的 667d14c8ddd966a95e65891b: area_number为空,但不会报错
+2024-07-21 01:02:58,730 - WARNING - PBN_Lib的 667d14c8ddd966a95e65891b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 112
+2024-07-21 01:03:00,673 - WARNING - PBN_Lib的 667d14c8ddd966a95e65891b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 541
+2024-07-21 01:03:01,336 - WARNING - PBN_Lib的 667d14c8ddd966a95e65891b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 501
+2024-07-21 01:03:01,348 - WARNING - PBN_Lib的 667d14c8ddd966a95e65891b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 706
+2024-07-21 01:03:02,062 - WARNING - PBN_Lib的 667d14c8ddd966a95e65891b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 956
+2024-07-21 01:03:02,125 - WARNING - PBN_Lib的 667d14c8ddd966a95e65891b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 668
+2024-07-21 01:03:03,091 - WARNING - PBN_Lib的 667d14c8ddd966a95e65891b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 380
+2024-07-21 01:03:04,647 - WARNING - PBN_Lib的 667d14c8ddd966a95e65891b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 61
+2024-07-21 01:03:04,684 - WARNING - PBN_Lib的 667d14c8ddd966a95e65891b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 114
+2024-07-21 01:03:06,406 - WARNING - PBN_Lib的 667d14c8ddd966a95e65891b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 5
+2024-07-21 01:03:07,330 - WARNING - PBN_Lib的 667d14c8ddd966a95e65891b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 761
+2024-07-21 01:03:09,900 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-21 01:03:09,900 - WARNING - PBN_Lib的 6661523c0e482305e3747683: area_number为空,但不会报错
+2024-07-21 01:03:12,784 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-21 01:03:12,784 - WARNING - PBN_Lib的 66753ef3c6c0db33eba30b1d: area_number为空,但不会报错
+2024-07-21 01:03:19,373 - WARNING - PBN_Lib的 66753ef3c6c0db33eba30b1d: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 536
+2024-07-21 01:03:19,861 - WARNING - PBN_Lib的 66753ef3c6c0db33eba30b1d: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 163
+2024-07-21 01:03:25,692 - WARNING - PBN_Lib的 66753ef3c6c0db33eba30b1d: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1078
+2024-07-21 01:03:27,558 - WARNING - PBN_Lib的 66753ef3c6c0db33eba30b1d: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 470
+2024-07-21 01:03:29,165 - WARNING - PBN_Lib的 66753ef3c6c0db33eba30b1d: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 28
+2024-07-21 01:03:31,495 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-21 01:03:31,495 - WARNING - PBN_Lib的 6662aca84ab3c188139321a8: area_number为空,但不会报错
+2024-07-21 01:03:39,526 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-21 01:03:39,526 - WARNING - PBN_Lib的 666bf0bd1e0212901fcc5466: area_number为空,但不会报错
+2024-07-21 01:04:11,842 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-21 01:04:11,843 - WARNING - PBN_Lib的 6687730947888354fffd0f7b: area_number为空,但不会报错
+2024-07-21 01:04:11,895 - WARNING - PBN_Lib的 6687730947888354fffd0f7b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1285
+2024-07-21 01:04:12,139 - WARNING - PBN_Lib的 6687730947888354fffd0f7b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 557
+2024-07-21 01:04:12,382 - WARNING - PBN_Lib的 6687730947888354fffd0f7b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 85
+2024-07-21 01:04:13,983 - WARNING - PBN_Lib的 6687730947888354fffd0f7b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 255
+2024-07-21 01:04:17,586 - WARNING - PBN_Lib的 6687730947888354fffd0f7b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 158
+2024-07-21 01:04:20,311 - WARNING - PBN_Lib的 6687730947888354fffd0f7b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 246
+2024-07-21 01:04:22,330 - WARNING - PBN_Lib的 6687730947888354fffd0f7b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 863
+2024-07-21 01:04:26,440 - WARNING - PBN_Lib的 6687730947888354fffd0f7b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1527
+2024-07-21 01:04:29,496 - WARNING - PBN_Lib的 6687730947888354fffd0f7b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 109
+2024-07-21 01:04:32,910 - WARNING - PBN_Lib的 6687730947888354fffd0f7b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 938
+2024-07-21 01:04:35,569 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-21 01:04:35,569 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: area_number为空,但不会报错
+2024-07-21 01:04:35,804 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 642
+2024-07-21 01:04:36,064 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 951
+2024-07-21 01:04:36,144 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 151
+2024-07-21 01:04:36,176 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 880
+2024-07-21 01:04:36,457 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 550
+2024-07-21 01:04:37,274 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 377
+2024-07-21 01:04:37,722 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 889
+2024-07-21 01:04:37,785 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 839
+2024-07-21 01:04:38,557 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 3
+2024-07-21 01:04:38,589 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 211
+2024-07-21 01:04:38,690 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 997
+2024-07-21 01:04:38,715 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 163
+2024-07-21 01:04:38,810 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 166
+2024-07-21 01:04:38,874 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 741
+2024-07-21 01:04:38,979 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 162
+2024-07-21 01:04:39,254 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 586
+2024-07-21 01:04:39,485 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 863
+2024-07-21 01:04:39,514 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 161
+2024-07-21 01:04:39,521 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 165
+2024-07-21 01:04:39,527 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5f: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 170
+2024-07-21 01:04:41,463 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-21 01:04:41,463 - WARNING - PBN_Lib的 66851286c6c0db33eba4a5f3: area_number为空,但不会报错
+2024-07-21 01:04:45,386 - WARNING - PBN_Lib的 66851286c6c0db33eba4a5f3: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 467
+2024-07-21 01:04:45,664 - WARNING - PBN_Lib的 66851286c6c0db33eba4a5f3: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1
+2024-07-21 01:04:49,037 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-21 01:04:49,037 - WARNING - PBN_Lib的 66793379c6c0db33eba34453: area_number为空,但不会报错
+2024-07-21 01:05:09,957 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-21 01:05:09,958 - WARNING - PBN_Lib的 66694937b1573455506ef46b: area_number为空,但不会报错
+2024-07-21 01:05:35,426 - ERROR - PBN_Daily中某个素材没有这个key：area
+2024-07-21 01:05:35,426 - WARNING - PBN_Daily的 66712da72e27fa5d40ddfb27: area_number为空,但不会报错
+2024-07-21 01:06:15,493 - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='cdn-v2.colorflow.app', port=443): Read timed out. (read timeout=10)")': /zip/667a84caddd966a95e6537f6_649ba23227f4d981573db17eff171a29.zip
+2024-07-21 01:06:27,518 - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='cdn-v2.colorflow.app', port=443): Read timed out. (read timeout=10)")': /zip/667a84caddd966a95e6537f6_649ba23227f4d981573db17eff171a29.zip
+2024-07-21 01:06:41,546 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='cdn-v2.colorflow.app', port=443): Read timed out. (read timeout=10)")': /zip/667a84caddd966a95e6537f6_649ba23227f4d981573db17eff171a29.zip
+2024-07-21 01:08:30,563 - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /zip/657fc64bf8792f7ffe818de6_59423c07c8af17c042873fa603754881.zip
+2024-07-21 01:14:46,270 - ERROR - BP_Lib中某个素材没有这个key：center_float
+2024-07-21 01:14:48,800 - ERROR - BP_Lib中某个素材没有这个key：center_float
+2024-07-21 01:14:51,675 - ERROR - BP_Lib中某个素材没有这个key：center_float
+2024-07-21 01:14:54,015 - ERROR - BP_Lib中某个素材没有这个key：center_float
+2024-07-21 01:14:57,881 - ERROR - BP_Lib中某个素材没有这个key：center_float
+2024-07-21 01:15:00,383 - ERROR - BP_Lib中某个素材没有这个key：center_float
+2024-07-21 01:15:06,537 - ERROR - BP_Daily中某个素材没有这个key：center_float

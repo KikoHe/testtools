@@ -196,27 +196,27 @@ def get_lastest_story_pic_id(time_zone):
         "versionnum": "10899",
         "user-agent": "android/31 paint.by.number.pixel.art.coloring.drawing.puzzle/4.4.10"
     }
-    lastest_story_id = []
+    lastest_story_id, lastest_story_id_pic_id = [], []
     try:
         response = session.get(story_list_url, headers=headers_timezone)
         response.raise_for_status()  # 如果请求返回的状态码不是200，则抛出异常
         lastest_story_id = response.json()["data"][1]["newChallengeList"][0]["id"]
+        lastest_story_id_pic_id = response.json()["data"][1]["newChallengeList"][0]["paintIdList"]
     except requests.exceptions.HTTPError as http_err:
         logging.error(f"HTTP error occurred: {http_err}")
     except Exception as err:
         logging.error(f"An error occurred: {err}")
-    return lastest_story_id
+    return lastest_story_id, lastest_story_id_pic_id
 
 ### 获取更新的故事线素材（通过对比0、8两个时区）
 def get_today_uptate_story_pic_id():
-    story_id_0 = get_lastest_story_pic_id(timezone)
-    story_id_8 = get_lastest_story_pic_id(timezone_cn)
+    story_id_0, pic_id_0 = get_lastest_story_pic_id(timezone)
+    story_id_8, pic_id_8 = get_lastest_story_pic_id(timezone_cn)
     if story_id_0 != story_id_8:
         logging.info("今天上了新的故事线！")
-        update_pid_id = story_id_0
+        update_pid_id = pic_id_0
     else:
-        logging.info("今天仅上了新的素材！")
-        update_pid_id = [element for element in story_id_0 if element not in story_id_8]
+        update_pid_id = [element for element in pic_id_0 if element not in pic_id_8]
     return update_pid_id
 
 # 获取Vista某个时区最新3个的内购包里面的素材信息
@@ -241,7 +241,7 @@ def get_lastest_pack_pic_id(time_zone):
         for data in response_data["content"]:
             paints = data["paints"]
             for paints_data in paints:
-                lastest_pack_pic_id.append([paints_data["detail"][0]["id"]])
+                lastest_pack_pic_id.append(paints_data["detail"][0]["id"])
         return lastest_pack_pic_id
     except requests.exceptions.HTTPError as http_err:
         logging.error(f"HTTP error occurred: {http_err}")
