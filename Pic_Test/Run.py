@@ -9,7 +9,8 @@ function_mappings = {
     'test_single_pic': (test_single_pic, "用法: python Run.py test_single_pic <PicID> <address>"),
     'test_single_pic_svg': (test_single_pic_svg, "用法: python Run.py test_single_pic_svg <PicID> <address>"),
     'test_picupdate': (test_single_pic_svg, "用法: python Run.py test_single_pic_svg <PicID> <address>"),
-    'test_update_pic_single_by_single': (test_update_pic_single_by_single, "用法: python Run.py test_update_pic_single_by_single <address_list>"),
+    'test_update_pic_from_api': (test_update_pic_from_api, "用法: python Run.py test_update_pic_from_api <address_list>"),
+    'test_releaseday_pic_from_cms': (test_releaseday_pic_from_cms, "用法: python Run.py test_releaseday_pic_from_cms <address_list> <test_day>"),
     'test_pic_from_cms': (test_pic_from_cms, "用法: python Run.py test_pic_from_cms <address> <offset> <limit>"),
     'Dist_error_id': (dist_error_id, "用法: python Run.py Dist_error_id <filename>")
 }

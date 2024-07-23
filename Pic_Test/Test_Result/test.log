@@ -1426,3 +1426,148 @@ Validate Error: SVG Color Plan Empty: 112|134|135|136|137|138|139|140|141|142|14
 2024-07-21 01:14:57,881 - ERROR - BP_Lib中某个素材没有这个key：center_float
 2024-07-21 01:15:00,383 - ERROR - BP_Lib中某个素材没有这个key：center_float
 2024-07-21 01:15:06,537 - ERROR - BP_Daily中某个素材没有这个key：center_float
+2024-07-22 19:59:54,280 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-22 19:59:54,281 - WARNING - PBN_Lib的 665832d8b8b6c415e707f6e2: area_number为空,但不会报错
+2024-07-22 20:00:01,269 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-22 20:00:01,269 - WARNING - PBN_Lib的 66727ddf33abc7bfe729d166: area_number为空,但不会报错
+2024-07-22 20:00:03,724 - WARNING - PBN_Lib的 66727ddf33abc7bfe729d166: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 275
+2024-07-22 20:00:07,685 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-22 20:00:07,686 - WARNING - PBN_Lib的 667a8400c6c0db33eba37298: area_number为空,但不会报错
+2024-07-22 20:00:15,316 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-22 20:00:15,316 - WARNING - PBN_Lib的 668cab30cd6bcc4ded4f87d4: area_number为空,但不会报错
+2024-07-22 20:00:18,352 - WARNING - PBN_Lib的 668cab30cd6bcc4ded4f87d4: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1927
+2024-07-22 20:00:20,555 - WARNING - PBN_Lib的 668cab30cd6bcc4ded4f87d4: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 871
+2024-07-22 20:00:20,622 - WARNING - PBN_Lib的 668cab30cd6bcc4ded4f87d4: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1943
+2024-07-22 20:00:22,339 - WARNING - PBN_Lib的 668cab30cd6bcc4ded4f87d4: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 588
+2024-07-22 20:00:23,701 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-22 20:00:23,701 - WARNING - PBN_Lib的 66727ddf33abc7bfe729d15d: area_number为空,但不会报错
+2024-07-22 20:00:26,083 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-22 20:00:26,083 - WARNING - PBN_Lib的 66694937b1573455506ef46e: area_number为空,但不会报错
+2024-07-22 20:00:30,158 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-22 20:00:30,158 - WARNING - PBN_Lib的 66875c6acd6bcc4ded4f17b3: area_number为空,但不会报错
+2024-07-22 20:27:51,052 - ERROR - An error occurred: string indices must be integers
+2024-07-22 20:27:51,469 - ERROR - An error occurred: string indices must be integers
+2024-07-22 20:29:56,736 - ERROR - An error occurred: string indices must be integers
+2024-07-22 20:29:57,186 - ERROR - An error occurred: string indices must be integers
+2024-07-22 20:45:24,106 - ERROR - HTTP error occurred: 400 Client Error: Bad Request for url: https://pbn-cms.learnings.ai/paint/v1/cms/paint?abtest_key=in-test3&limit=1000&offset=0&status_list=ONLINE_LIBRARY&abtest_release_date_range=2024-07-23T00:00:00_T00:00:00&paint_id=&abtest_show=true&category_id=&with_userscore=true&sort_by=release_date%5E-1
+2024-07-23 09:44:47,221 - ERROR - HTTP error occurred: 400 Client Error: Bad Request for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 09:49:48,484 - ERROR - An error occurred: 'NoneType' object is not subscriptable
+2024-07-23 09:50:32,376 - ERROR - HTTP error occurred: 400 Client Error: Bad Request for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 09:54:08,541 - ERROR - HTTP error occurred: 400 Client Error: Bad Request for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 09:58:43,688 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 09:58:59,660 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 09:59:13,312 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:00:01,102 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:02:17,911 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:04:15,950 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:04:47,663 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:04:47,972 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:06:15,573 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:06:15,887 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:06:29,968 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:06:30,276 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:08:18,004 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:08:18,336 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:10:06,968 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:10:07,281 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:11:04,730 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:11:05,038 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:15:33,644 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:15:33,949 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:16:45,706 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:16:46,068 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:17:23,059 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:17:23,383 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:18:37,116 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:18:37,422 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:19:10,215 - ERROR - An error occurred: 'Session' object has no attribute 'POST'
+2024-07-23 10:19:10,215 - ERROR - An error occurred: 'Session' object has no attribute 'POST'
+2024-07-23 10:19:16,434 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:19:16,752 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:19:22,538 - ERROR - HTTP error occurred: 405 Client Error: Method Not Allowed for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:19:23,779 - ERROR - HTTP error occurred: 405 Client Error: Method Not Allowed for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:20:13,995 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:20:14,324 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:21:48,714 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:21:49,037 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:30:05,208 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:30:05,509 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:30:35,662 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:30:35,983 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:31:59,214 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:31:59,532 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:32:37,711 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:32:38,060 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:34:40,374 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:34:40,696 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:35:48,384 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:35:48,710 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/test1/details
+2024-07-23 10:45:19,690 - ERROR - HTTP error occurred: 404 Client Error: Not Found for url: https://zc-cms.learnings.ai/colorflow/v1/cms/abtest/eu-test1/details
+2024-07-23 10:51:15,718 - ERROR - HTTP error occurred: 405 Client Error: Method Not Allowed for url: https://bpbncms.idailybread.com/bpbn/v1/cms/abtest/logic_item/default/list/trending?limit=20&offset=0&category_key=trending&size=&is_colored=false&is_gif=false&status=0&show_type=0&release_date_start=20240723&release_date_end=20240723&id_or_filename=&with_scores=true
+2024-07-23 10:52:53,185 - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /bpbn/v1/cms/abtest/logic_item/default/list/trending?limit=20&offset=0&category_key=trending&size=&is_colored=false&is_gif=false&status=0&show_type=0&release_date_start=20240723&release_date_end=20240723&id_or_filename=&with_scores=true
+2024-07-23 10:53:57,603 - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /bpbn/v1/cms/abtest/logic_item/default/list/trending?limit=20&offset=0&category_key=trending&size=&is_colored=false&is_gif=false&status=0&show_type=0&release_date_start=20240723&release_date_end=20240723&id_or_filename=&with_scores=true
+2024-07-23 11:25:19,025 - ERROR - HTTP error occurred: 405 Client Error: Method Not Allowed for url: https://pbn-cms.learnings.ai/paint/v1/cms/paint?abtest_key=in-test3&limit=1000&offset=0&status_list=ONLINE_LIBRARY&abtest_release_date_range=20240723T00:00:00_20240723T00:00:00&paint_id=&abtest_show=true&category_id=&with_userscore=true&sort_by=release_date%5E-1
+2024-07-23 11:25:37,300 - ERROR - HTTP error occurred: 405 Client Error: Method Not Allowed for url: https://pbn-cms.learnings.ai/paint/v1/cms/paint?abtest_key=in-test3&limit=1000&offset=0&status_list=ONLINE_LIBRARY&abtest_release_date_range=2024-07-23T00:00:00_2024-07-23T00:00:00&paint_id=&abtest_show=true&category_id=&with_userscore=true&sort_by=release_date%5E-1
+2024-07-23 11:28:22,034 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-23 11:28:22,035 - WARNING - PBN_Lib的 665832d8b8b6c415e707f6e2: area_number为空,但不会报错
+2024-07-23 11:28:29,129 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-23 11:28:29,129 - WARNING - PBN_Lib的 66727ddf33abc7bfe729d166: area_number为空,但不会报错
+2024-07-23 11:28:31,509 - WARNING - PBN_Lib的 66727ddf33abc7bfe729d166: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 275
+2024-07-23 11:28:35,279 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-23 11:28:35,280 - WARNING - PBN_Lib的 667a8400c6c0db33eba37298: area_number为空,但不会报错
+2024-07-23 11:28:42,865 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-23 11:28:42,865 - WARNING - PBN_Lib的 668cab30cd6bcc4ded4f87d4: area_number为空,但不会报错
+2024-07-23 11:28:45,782 - WARNING - PBN_Lib的 668cab30cd6bcc4ded4f87d4: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1927
+2024-07-23 11:28:47,711 - WARNING - PBN_Lib的 668cab30cd6bcc4ded4f87d4: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 871
+2024-07-23 11:28:47,772 - WARNING - PBN_Lib的 668cab30cd6bcc4ded4f87d4: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1943
+2024-07-23 11:28:49,434 - WARNING - PBN_Lib的 668cab30cd6bcc4ded4f87d4: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 588
+2024-07-23 11:28:50,897 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-23 11:28:50,897 - WARNING - PBN_Lib的 66727ddf33abc7bfe729d15d: area_number为空,但不会报错
+2024-07-23 11:28:53,354 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-23 11:28:53,354 - WARNING - PBN_Lib的 66694937b1573455506ef46e: area_number为空,但不会报错
+2024-07-23 11:28:58,188 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-23 11:28:58,188 - WARNING - PBN_Lib的 66875c6acd6bcc4ded4f17b3: area_number为空,但不会报错
+2024-07-23 11:29:09,898 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-23 11:29:09,898 - WARNING - PBN_Lib的 667e3a4ac6c0db33eba3ef0c: area_number为空,但不会报错
+2024-07-23 11:29:22,719 - WARNING - PBN_Lib的 667e3a4ac6c0db33eba3ef0c: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 385
+2024-07-23 11:29:23,350 - WARNING - PBN_Lib的 667e3a4ac6c0db33eba3ef0c: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 531
+2024-07-23 11:29:25,551 - WARNING - PBN_Lib的 667e3a4ac6c0db33eba3ef0c: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 700
+2024-07-23 11:29:27,451 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-23 11:29:27,451 - WARNING - PBN_Lib的 66727ddf33abc7bfe729d14b: area_number为空,但不会报错
+2024-07-23 11:29:30,158 - WARNING - PBN_Lib的 66727ddf33abc7bfe729d14b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1018
+2024-07-23 11:29:32,892 - WARNING - PBN_Lib的 66727ddf33abc7bfe729d14b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 42
+2024-07-23 11:29:33,193 - WARNING - PBN_Lib的 66727ddf33abc7bfe729d14b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 770
+2024-07-23 11:29:35,549 - WARNING - PBN_Lib的 66727ddf33abc7bfe729d14b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 785
+2024-07-23 11:29:35,954 - WARNING - PBN_Lib的 66727ddf33abc7bfe729d14b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 82
+2024-07-23 11:29:36,503 - WARNING - PBN_Lib的 66727ddf33abc7bfe729d14b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 496
+2024-07-23 11:29:36,611 - WARNING - PBN_Lib的 66727ddf33abc7bfe729d14b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 961
+2024-07-23 11:29:36,677 - WARNING - PBN_Lib的 66727ddf33abc7bfe729d14b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 864
+2024-07-23 11:29:40,887 - WARNING - PBN_Lib的 66727ddf33abc7bfe729d14b: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 982
+2024-07-23 11:29:44,703 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-23 11:29:44,703 - WARNING - PBN_Lib的 664da088471231ae29f0a104: area_number为空,但不会报错
+2024-07-23 11:30:05,357 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-23 11:30:05,357 - WARNING - PBN_Lib的 6644550c8a97705c86b9ea64: area_number为空,但不会报错
+2024-07-23 11:30:45,694 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-23 11:30:45,695 - WARNING - PBN_Lib的 66875c6acd6bcc4ded4f17a5: area_number为空,但不会报错
+2024-07-23 11:30:59,539 - WARNING - PBN_Lib的 66875c6acd6bcc4ded4f17a5: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1325
+2024-07-23 11:31:27,006 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-23 11:31:27,007 - WARNING - PBN_Lib的 66793379c6c0db33eba3447c: area_number为空,但不会报错
+2024-07-23 11:31:27,560 - WARNING - PBN_Lib的 66793379c6c0db33eba3447c: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 231
+2024-07-23 11:31:30,162 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-23 11:31:30,162 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5e: area_number为空,但不会报错
+2024-07-23 11:31:45,348 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5e: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 750
+2024-07-23 11:31:48,971 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5e: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 816
+2024-07-23 11:31:49,537 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5e: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 340
+2024-07-23 11:31:53,198 - WARNING - PBN_Lib的 667d1ba3ddd966a95e658c5e: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： 1038
+2024-07-23 11:31:58,873 - ERROR - PBN_Lib中某个素材没有这个key：area
+2024-07-23 11:31:58,874 - WARNING - PBN_Lib的 66694937b1573455506ef45c: area_number为空,但不会报错
+2024-07-23 11:38:55,716 - ERROR - An error occurred: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2024-07-23 11:39:34,509 - ERROR - HTTP error occurred: 404 Client Error: Not Found for url: https://zc-cms.learnings.ai/colorflow/v1/cms/default/eu-test1/details
+2024-07-23 11:41:03,022 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://zc-cms.learnings.ai/colorflow/v1/cms/dailys
+2024-07-23 11:58:08,384 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://zc-cms.learnings.ai/colorflow/v1/cms/dailys
+2024-07-23 11:58:43,394 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://zc-cms.learnings.ai/colorflow/v1/cms/dailys
+2024-07-23 12:03:45,945 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://vc-cms.learnings.ai/vitacolor/v1/cms/dailys
+2024-07-23 12:03:57,647 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/dailys
+2024-07-23 12:37:09,092 - ERROR - HTTP error occurred: 500 Server Error: Internal Server Error for url: https://colorpad-cms.learnings.ai/colorpad/v1/cms/dailys
+2024-07-23 14:02:40,877 - ERROR - An error occurred: HTTPSConnectionPool(host='bpbncms.idailybread.com', port=443): Max retries exceeded with url: /bpbn/v1/cms/abtest/logic_item/default/list/trending?limit=20&offset=0&category_key=trending&size=&is_colored=false&is_gif=false&status=0&show_type=0&release_date_start=2024-07-23&release_date_end=2024-07-23&id_or_filename=&with_scores=true (Caused by ResponseError('too many 500 error responses'))
+2024-07-23 16:11:54,154 - ERROR - An error occurred: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?

@@ -1,57 +1,39 @@
 import logging
-
 from Public_env import *
+from Get_pic_data_from_api import *
 
-### 获取CMS上所有进行中的的素材实验方案
-def get_imagegroup_from_CMS(address):
+# 通过单素材详情接口获取Zip_url
+def Get_id_Zipurl_from_picdetailapi(PicID,address):
     url_prefixes = {
-        "PBN": f"https://pbn-cms.learnings.ai/paint/v1/cms/abtest?limit=100&offset=0&country=",
-        "ZC": f"https://zc-cms.learnings.ai/colorflow/v1/cms/abtest?offset=0&limit=50",
-        "VC": f"https://vc-cms.learnings.ai/vitacolor/v1/cms/abtest?offset=0&limit=50",
-        "BP": f"https://bpbncms.idailybread.com/bpbn/v1/cms/abtest?limit=50&offset=0&status=0",
-        "Vista": f"https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest?offset=0&limit=50",
+        "PBN": f"https://paint-api.dailyinnovation.biz/paint/v1/paint/{PicID}",
+        # "PBN": f"https://paint-api-stage.dailyinnovation.biz/paint/v1/paint/{PicID}",
+        "ZC": f"https://api.colorflow.app/colorflow/v1/paint/{PicID}",
+        "VC": f"https://vitacolor-api.vitastudio.ai/vitacolor/v1/paint/{PicID}",
+        "BP": f"https://bpbnapi.idailybread.com/paint/v1/paint/{PicID}",
+        "Vista": f"https://colorpad-api.vitastudio.ai/colorpad/v1/paint/{PicID}"
     }
-    address = address.split('_')[0]
-    url = url_prefixes.get(address)
-    image_group = []
+    url = url_prefixes.get(address.split('_')[0])
+    svg_zip_url, not_svg_zip_url = '', ''
     try:
-        response = session.get(url, headers=CMS_headers)
+        response = session.get(url, headers=phone_headers)
         response.raise_for_status()  # 如果请求返回的状态码不是200，则抛出异常
-        if address.startswith("BP"):
-            response_data = response.json()["data"]["content"]
-        else:
-            response_data = response.json()["data"]["list"]
-        for list in response_data:
-            if address.startswith("BP") and list["status"] == 1:
-                image_group.append(list["group_key"])
-            elif not address.startswith("BP") and list["status"] == "ACTIVE":
-                image_group.append(list["code"])
-
+        response_data = response.json()["data"]
+        if address.startswith("PBN"):
+            if response_data["zip_file"]:
+                not_svg_zip_url = response_data["zip_file"]
+            elif response_data["vector_zip_file"]:
+                not_svg_zip_url = response_data["vector_zip_file"]
+            if response_data["region_json_zip"]:
+                svg_zip_url = response_data["region_json_zip"]
+        elif address.startswith(("VC", "ZC", "Vista")):
+            not_svg_zip_url = response_data["resource"]["zip"]
+        elif address.startswith("BP"):
+            not_svg_zip_url = response_data["zip_2048_pdf"]
+        return not_svg_zip_url, svg_zip_url
     except requests.exceptions.HTTPError as http_err:
         logging.error(f"HTTP error occurred: {http_err}")
     except Exception as err:
         logging.error(f"An error occurred: {err}")
-    return set(image_group)
-
-### 获取CMS上实验组中For you 未开启的方案：
-def get_For_you_from_CMS():
-    result_group = []
-    grouplist = get_imagegroup_from_CMS("PBN")
-    for group in grouplist:
-        logging.info("group: %s", group)
-        url = f"https://pbn-cms.learnings.ai/paint/v1/cms/abtest/{group}/category"
-        try:
-            response = session.get(url, headers=CMS_headers)
-            response.raise_for_status()  # 如果请求返回的状态码不是200，则抛出异常
-            response_data = response.json()["data"]["list"]
-            for item in response_data:
-                if item["id"] == "5fdb3cbf97428126950e5def" and item["show"] != False:
-                    result_group.append(group)
-        except requests.exceptions.HTTPError as http_err:
-            logging.error(f"HTTP error occurred: {http_err}")
-        except Exception as err:
-            logging.error(f"An error occurred: {err}")
-    return result_group
 
 ### 获取ABtest上所有进行中的的素材实验方案
 def get_imagegroup_from_ABTest(address):

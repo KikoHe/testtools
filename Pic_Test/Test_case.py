@@ -34,13 +34,14 @@ def test_single_pic_svg(PicID, address):
     return svg_test_result
 
 # 测试明天更新的素材（通过一张一张的请求素材详情的数据,包括SVG+PDF）
-def test_update_pic_single_by_single(address_input=''):
+def test_update_pic_from_api(address_input=''):
     test_result = []
     update_fail_groups = []
     if address_input == '':
         address_list = ["PBN_Lib", "PBN_Daily", "PBN_Story", "ZC_Lib", "ZC_Daily", "VC_Lib", "VC_Daily",\
                         "Vista_Lib", "Vista_Daily", "Vista_Pack", "BP_Lib", "BP_Daily"]
-        # address_list = ["PBN_Lib", "PBN_Daily"]
+    elif isinstance(address_input, list):
+        address_list = address_input
     else:
         address_list = [address_input]
     for address in address_list:
@@ -51,9 +52,7 @@ def test_update_pic_single_by_single(address_input=''):
             pid_ids = get_today_update_pack_pic_id()
         else:
             pid_ids, update_fail_groups = get_all_imagegroup_pic_update(address)
-
         fail_ids = []
-        print(pid_ids)
         for pic_id in pid_ids:
             logging.info("开始测试素材:" + str(pic_id))
             test_zip_data_result_pdf = test_single_pic(pic_id, address)
@@ -61,21 +60,41 @@ def test_update_pic_single_by_single(address_input=''):
                 logging.error("资源测试异常的素材ID： " + str(pic_id))
                 fail_ids.append(pic_id)
         update_pic_number = len(pid_ids)
-
         test_result_single_project = {address: [update_pic_number, fail_ids, update_fail_groups]}
         test_result.append(test_result_single_project)
     return test_result
 
+# 测试某天的更新的素材
+def test_releaseday_pic_from_cms(address_input='',test_day=None):
+    test_result = []
+    if address_input == '':
+        address_list = ["PBN_Lib", "PBN_Daily", "ZC_Lib", "ZC_Daily", "VC_Lib", "VC_Daily",\
+                        "Vista_Lib", "Vista_Daily", "BP_Lib", "BP_Daily"]
+    else:
+        address_list = [address_input]
+    for address in address_list:
+        logging.info("开始测试项目模块:"+str(address))
+        pid_ids = get_release_day_picid_from_cms(address, test_day)
+        fail_ids = []
+        # for pic_id in pid_ids:
+        #     logging.info("开始测试素材:" + str(pic_id))
+        #     test_zip_data_result_pdf = test_single_pic(pic_id, address)
+        #     if test_zip_data_result_pdf == False:
+        #         logging.error("资源测试异常的素材ID： " + str(pic_id))
+        #         fail_ids.append(pic_id)
+        update_pic_number = len(pid_ids)
+        test_result_single_project = {address: [update_pic_number, fail_ids]}
+        test_result.append(test_result_single_project)
+    return test_result
 
 # 通过CMS接口拉取测试素材，通过单素材接口获取测试资源（SVG+PDF）
 # 要调整拉取范围，需要修改pic_config中的url即可
-def test_pic_from_cms(address="PBN",offset=0,limit=100):
-    id_list = pic_config(address, offset, limit)
-    ids = list(id_list.keys())
-    logging.info("总测试素材数" + str(len(ids)))
+def test_pic_from_cms(address="PBN", offset=0, limit=100):
+    id_list = get_all_picid_from_cms(address, offset, limit)
+    logging.info("总测试素材数" + str(len(id_list)))
     fail_ids = []
     i = 1
-    for PicID in ids:
+    for PicID in id_list:
         logging.info(f"第{i}个测试素材，ID： {PicID}")
         test_zip_data_result = test_single_pic(PicID, address)
         # test_zip_data_result = test_single_pic_svg(PicID, address)
