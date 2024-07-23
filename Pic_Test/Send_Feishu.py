@@ -19,13 +19,7 @@ def report_test_update_pic_from_api():
         else:
             error_ids_output = f"发现异常素材ID：{error_ids}"
 
-        error_groups = value[2]
-        if error_groups == []:
-            error_groups_output = "所有方案更新素材数量一致"
-        else:
-            error_groups_output = f"此方案更新素材数量和其他方案不一致：{error_groups}"
-
-        summary = summary + f"{project[0]}： \n1、{update_ids_output}；\n2、{error_ids_output}；\n3、{error_groups_output}\n\n"
+        summary = summary + f"{project[0]}： \n1、{update_ids_output}；\n2、{error_ids_output}；\n\n"
     logging.info(f"SUMMARY: {summary}")
     return summary
 
