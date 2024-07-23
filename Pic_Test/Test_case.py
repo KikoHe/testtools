@@ -76,12 +76,12 @@ def test_releaseday_pic_from_cms(address_input='',test_day=None):
         logging.info("开始测试项目模块:"+str(address))
         pid_ids = get_release_day_picid_from_cms(address, test_day)
         fail_ids = []
-        # for pic_id in pid_ids:
-        #     logging.info("开始测试素材:" + str(pic_id))
-        #     test_zip_data_result_pdf = test_single_pic(pic_id, address)
-        #     if test_zip_data_result_pdf == False:
-        #         logging.error("资源测试异常的素材ID： " + str(pic_id))
-        #         fail_ids.append(pic_id)
+        for pic_id in pid_ids:
+            logging.info("开始测试素材:" + str(pic_id))
+            test_zip_data_result_pdf = test_single_pic(pic_id, address)
+            if test_zip_data_result_pdf == False:
+                logging.error("资源测试异常的素材ID： " + str(pic_id))
+                fail_ids.append(pic_id)
         update_pic_number = len(pid_ids)
         test_result_single_project = {address: [update_pic_number, fail_ids]}
         test_result.append(test_result_single_project)

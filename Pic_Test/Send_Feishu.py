@@ -47,7 +47,7 @@ def report_test_releaseday_pic_from_cms(release_day):
         else:
             error_ids_output = f"发现异常素材ID：{error_ids}"
 
-        summary = summary + f"{project[0]}： \n1、{update_ids_output}；2、{error_ids_output}\n"
+        summary = summary + f"{project[0]}： \n{update_ids_output}；{error_ids_output}\n"
     logging.info(f"SUMMARY: {summary}")
     return summary
 
@@ -55,7 +55,6 @@ def report_test_releaseday_pic_from_cms(release_day):
 def report_check_CMS_pic_config(release_day):
     new_group_output, close_group_output, update_group_output, summary = '', '', '', ''
     address_list = ["PBN_Lib", "PBN_Daily", "ZC_Lib", "VC_Lib", "Vista_Lib"]
-    address_list = ["PBN_Daily"]
     for address in address_list:
         today_update_number = len(get_release_day_picid_from_cms(address, release_day))
         new_group, close_group, update_group = check_CMS_pic_config("", address, release_day)
