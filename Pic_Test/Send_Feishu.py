@@ -39,7 +39,7 @@ def report_test_releaseday_pic_from_cms(release_day):
         if error_ids == []:
             error_ids_output = "没有发现异常素材"
         else:
-            error_ids_output = f"发现异常素材ID：{error_ids}"
+            error_ids_output = f"发现异常素材ID：{error_ids}，@何涛"
 
         summary = summary + f"{project[0]}： \n{update_ids_output}；{error_ids_output}\n"
     logging.info(f"SUMMARY: {summary}")
@@ -47,27 +47,33 @@ def report_test_releaseday_pic_from_cms(release_day):
 
 # 发送检测报告：所有素材实验方案的配置
 def report_check_CMS_pic_config(release_day):
-    new_group_output, close_group_output, update_group_output, summary = '', '', '', ''
+    new_group_output, close_group_output, update_group_less_output, update_group_inconsistent, summary = '', '', '', '', ''
     address_list = ["PBN_Lib", "PBN_Daily", "ZC_Lib", "VC_Lib", "Vista_Lib"]
+    # address_list = ["ZC_Lib"]
     for address in address_list:
-        today_update_number = len(get_release_day_picid_from_cms(address, release_day))
         new_group, close_group, update_group = check_CMS_pic_config("", address, release_day)
-        update_group = {key: value for key, value in update_group.items() if value != today_update_number} # 找出素材变量不等于每日更新的方案
+        update_group_less = {key: value for key, value in update_group.items() if value < 0} # 找出素材变量不等于每日更新的方案
+        values = list(update_group.values())
+        most_common_value = max(set(values), key=values.count)
+        inconsistent_values = {key: value for key, value in update_group.items() if value != most_common_value}
+
         if new_group != {}:
-            new_group_output = f"有上新的素材方案及对应素材数量：{new_group}，请确认是否正确"
+            new_group_output = f"今日上新的素材方案及对应素材数量：{new_group}，请确认是否正确"
         else:
-            new_group_output = "没有上新素材方案"
+            new_group_output = "今日没有上新素材方案"
         if close_group != {}:
-            close_group_output = f"关闭的素材方案及素材数量：{close_group}，请确认是否正确"
+            close_group_output = f"今日关闭的素材方案及素材数量：{close_group}，请确认是否正确"
         else:
-            close_group_output = "没有关闭素材方案"
-        if update_group != {}:
-            update_group_output = f"素材变化数量如下：{update_group}，请确认是否正确【这里会排除：素材数量变化 = 每日更新素材 的素材方案】"
+            close_group_output = "今日没有关闭素材方案"
+        if update_group_less != {}:
+            update_group_less_output = f"今日以下素材方案内的数量总数比昨天少，请确认是否正确{update_group_less}"
         else:
-            update_group_output = f"所有素材方案正常更新素材！"
-
-
-        summary = summary + f"{address}：\n1、{new_group_output}；\n2、{close_group_output}；\n3、 {update_group_output}\n\n"
+            update_group_less_output = f"今日所有素材方案的总量没有异常"
+        if inconsistent_values != {}:
+            update_group_inconsistent = f"今日以下素材方案更新数量异常，请确认是否正确{inconsistent_values}"
+        else:
+            update_group_inconsistent = f"今日所有素材方案更新的素材是一致的"
+        summary = summary + f"{address}：\n1、{new_group_output}\n2、{close_group_output}\n3、{update_group_less_output}\n4、{update_group_inconsistent}\n\n"
     return summary
 
 # 飞书消息发送函数

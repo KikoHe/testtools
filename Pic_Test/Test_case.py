@@ -5,15 +5,17 @@ from Get_pic_data_from_api import *
 import multiprocessing
 from Common_Fun import *
 
-# folder_path = '/Users/ht/Desktop/PythonTools/Pic_Test/Pic/'
-# if os.path.exists(folder_path):
-#     delete_folder(folder_path)
+folder_path = '/Users/ht/Desktop/PythonTools/Pic_Test/Pic/'
+if os.path.exists(folder_path):
+    delete_folder(folder_path)
 
 # 测试单张素材（SVG + PDF）
 def test_single_pic(PicID, address):
     not_svg_zip_url, svg_zip_url = Get_id_Zipurl_from_picdetailapi(PicID, address)
     get_zip_detail(address, PicID, not_svg_zip_url)
     not_svg_test_result = test_zip_data(address, PicID)
+    logging.info(f"not_svg_zip_url:{not_svg_zip_url}")
+    logging.info(f"svg_zip_url:{svg_zip_url}")
     if svg_zip_url != '':
         get_zip_detail(address, PicID, svg_zip_url)
         svg_test_result = check_svg_by_cmd(PicID)
@@ -89,7 +91,7 @@ def test_releaseday_pic_from_cms(address_input='',test_day=None):
 
 # 通过CMS接口拉取测试素材，通过单素材接口获取测试资源（SVG+PDF）
 # 要调整拉取范围，需要修改pic_config中的url即可
-def test_pic_from_cms(address="PBN", offset=0, limit=100):
+def test_pic_from_cms(address="PBN", offset=0, limit=5000):
     id_list = get_all_picid_from_cms(address, offset, limit)
     logging.info("总测试素材数" + str(len(id_list)))
     fail_ids = []
@@ -106,14 +108,6 @@ def test_pic_from_cms(address="PBN", offset=0, limit=100):
                 file.write(output)  # 写入输出结果到文件中
         i = i + 1
     return fail_ids
-
-# 多任务同时执行
-def multi_action_test():
-    address = "PBN"
-    offsets = [20000, 21000, 22000, 23000, 24000]
-    args = [(address, offset) for offset in offsets]
-    with multiprocessing.Pool() as pool:
-        pool.map(test_pic_from_cms, args)
 
 # 读取本地文件中的ID，分开输出number异常和不是number异常的素材ID
 # 文件和脚本在同一个目录

@@ -1,11 +1,11 @@
 {
-    "eu-test1": 6872,
-    "eu-control": 6872,
-    "default": 6872,
-    "new_level_test": 6867,
-    "us-test2": 6872,
-    "temp": 8300,
-    "level_test": 6872,
-    "us-test1": 6872,
-    "eu-test2": 6872
+    "eu-test1": 6892,
+    "us-test2": 6892,
+    "default": 6892,
+    "new_level_test": 6887,
+    "level_test": 6892,
+    "eu-control": 6892,
+    "eu-test2": 6892,
+    "temp": 8320,
+    "us-test1": 6892
 }
