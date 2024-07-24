@@ -144,7 +144,6 @@ if __name__ == "__main__":
     summary_3 = report_test_update_pic_from_api()
     send_feishu_summary_message(summary_3, webhook_url, title_3)
 
-
     # title_debug = f"{formatted_date1}检测详细日志"
     # with open(f"{test_result_path}/test.log", 'r') as log:
     #     summary_debug = log.read()
