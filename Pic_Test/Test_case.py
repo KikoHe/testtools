@@ -93,13 +93,13 @@ def test_releaseday_pic_from_cms(address_input='',test_day=None):
 # 要调整拉取范围，需要修改pic_config中的url即可
 def test_pic_from_cms(address="PBN", offset=0, limit=5000):
     id_list = get_all_picid_from_cms(address, offset, limit)
+
     logging.info("总测试素材数" + str(len(id_list)))
     fail_ids = []
     i = 1
     for PicID in id_list:
         logging.info(f"第{i}个测试素材，ID： {PicID}")
         test_zip_data_result = test_single_pic(PicID, address)
-        # test_zip_data_result = test_single_pic_svg(PicID, address)
         if test_zip_data_result == False:
             fail_ids.append(PicID)
             logging.error("截止目前所有异常的素材ID： " + str(fail_ids))

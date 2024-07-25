@@ -37,7 +37,7 @@ def get_imagegroup_from_CMS(address):
         logging.error(f"An error occurred: {err}")
     return set(image_group)
 
-# 获取CMS上实验组中For you 未开启的方案：
+# 获取CMS上所有进行中素材方案中For you分类未开启的方案：
 def get_For_you_from_CMS():
     result_group = []
     grouplist = get_imagegroup_from_CMS("PBN")
@@ -57,7 +57,7 @@ def get_For_you_from_CMS():
             logging.error(f"An error occurred: {err}")
     return result_group
 
-# 获取CMS上全局素材库素材的素材ID
+# 获取CMS上全局素材库的所有素材ID
 def get_all_picid_from_cms(address,offset=0,limit=100):
     url_prefixes = {
         "PBN": f"https://pbn-cms.learnings.ai/paint/v1/cms/paint?limit={limit}&offset={offset}&category_id=&authors=&color_type=&size_type=&tags=&with_preformance=false&status_list=&sort_by=c_time%5E-1&is_resource_update=IGNORE",
@@ -66,6 +66,7 @@ def get_all_picid_from_cms(address,offset=0,limit=100):
         "Vista": f"https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/default/detail?limit={limit}&offset={offset}",
         "BP": f"https://bpbncms.idailybread.com/bpbn/v1/cms/abtest/logic_item/test_a/list/trending?limit={limit}&offset={offset}&category_key=trending&size=&is_colored=false&is_gif=false&status=0&show_type=0&id_or_filename=&with_scores=true"
     }
+    print(address)
     url = url_prefixes.get(address)
     logging.info("CMS_url: %s", url)
     try:
@@ -89,7 +90,7 @@ def get_all_picid_from_cms(address,offset=0,limit=100):
     except Exception as err:
         logging.error(f"An error occurred: {err}")
 
-# 获取CMS上素材方案中某天的运营素材，并进行资源检查
+# 获取CMS上素材方案中某天的运营素材
 def get_release_day_picid_from_cms(address, test_day=today):
     if address in ["BP_Lib", "BP_Daily"]:
         test_day = test_day.strftime("%Y%m%d")

@@ -39,7 +39,7 @@ def report_test_releaseday_pic_from_cms(release_day):
         if error_ids == []:
             error_ids_output = "没有发现异常素材"
         else:
-            error_ids_output = f"发现异常素材ID：{error_ids}，@何涛"
+            error_ids_output = f"发现异常素材ID：{error_ids}"
 
         summary = summary + f"{project[0]}： \n{update_ids_output}；{error_ids_output}\n"
     logging.info(f"SUMMARY: {summary}")
@@ -49,7 +49,6 @@ def report_test_releaseday_pic_from_cms(release_day):
 def report_check_CMS_pic_config(release_day):
     new_group_output, close_group_output, update_group_less_output, update_group_inconsistent, summary = '', '', '', '', ''
     address_list = ["PBN_Lib", "PBN_Daily", "ZC_Lib", "VC_Lib", "Vista_Lib"]
-    # address_list = ["ZC_Lib"]
     for address in address_list:
         new_group, close_group, update_group = check_CMS_pic_config("", address, release_day)
         update_group_less = {key: value for key, value in update_group.items() if value < 0} # 找出素材变量不等于每日更新的方案
@@ -72,7 +71,8 @@ def report_check_CMS_pic_config(release_day):
         if inconsistent_values != {}:
             update_group_inconsistent = f"今日以下素材方案更新数量异常，请确认是否正确{inconsistent_values}"
         else:
-            update_group_inconsistent = f"今日所有素材方案更新的素材是一致的"
+            update_pic_number = len(get_release_day_picid_from_cms(address, test_day=today))
+            update_group_inconsistent = f"今日所有素材方案更新的素材是一致的，共{update_pic_number}张:"
         summary = summary + f"{address}：\n1、{new_group_output}\n2、{close_group_output}\n3、{update_group_less_output}\n4、{update_group_inconsistent}\n\n"
     return summary
 
