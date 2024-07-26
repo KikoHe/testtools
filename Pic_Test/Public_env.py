@@ -41,7 +41,8 @@ phone_headers = {
         "user-agent": "ios/17.5.1 com.paint.bynumber/4.12.0",
         "product-info": "ios/17.5.1 PBN/4.12.0 US",
         "support-blend": "true",
-        "device-type": "phone"
+        "device-type": "phone",
+        "abtest_zip": "true"
     }
 
 # 设置重试次数以及回退策略

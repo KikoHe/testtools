@@ -75,8 +75,8 @@ def get_all_data_and_pdf(address,pic_id):
             block_group = block_group_data.split('#')[0].split(',')
             for block in block_group:
                 plans_data_block_list.append(block)
-                # if block in ['572']:
-                #     logging.info("【找色块】： "+str(block_group_number))
+                if block in ['160']:
+                    logging.info("【找色块】： "+str(block_group_number))
             block_group_number = block_group_number + 1
 
     area_data = get_single_data_from_detail_json(address, detail_json_data, "area")

@@ -9,34 +9,79 @@ folder_path = '/Users/ht/Desktop/PythonTools/Pic_Test/Pic/'
 if os.path.exists(folder_path):
     delete_folder(folder_path)
 
-# 测试单张素材（SVG + PDF）
-def test_single_pic(PicID, address):
-    not_svg_zip_url, svg_zip_url = Get_id_Zipurl_from_picdetailapi(PicID, address)
-    get_zip_detail(address, PicID, not_svg_zip_url)
-    not_svg_test_result = test_zip_data(address, PicID)
-    logging.info(f"not_svg_zip_url:{not_svg_zip_url}")
+# 测试单张素材
+# PicID
+# address 项目
+# zip_type：pdf/vector/vector/all
+def test_single_pic_old(PicID, address,zip_type=''):
+    pdf_zip_url, vector_zip_url, svg_zip_url = Get_id_Zipurl_from_picdetailapi(PicID, address)
+    logging.info(f"pdf_zip_url:{pdf_zip_url}")
+    logging.info(f"vector_zip_url:{vector_zip_url}")
     logging.info(f"svg_zip_url:{svg_zip_url}")
-    if svg_zip_url != '':
+
+    if zip_type == "pdf": # 仅测试pdf资源
+        get_zip_detail(address, PicID, pdf_zip_url)
+        pdf_test_result = test_zip_data(address, PicID)
+        return pdf_test_result
+    if zip_type == "vector":
+        get_zip_detail(address, PicID, vector_zip_url)
+        vector_test_result = test_zip_data(address, PicID)
+        return vector_test_result
+    if zip_type == "svg" and svg_zip_url != '':
         get_zip_detail(address, PicID, svg_zip_url)
         svg_test_result = check_svg_by_cmd(PicID)
-    else:
-        svg_test_result = True
-    if not_svg_test_result == False or svg_test_result == False:
-        return False
-    else:
+        if svg_test_result == False:
+            return False
+        else:
+            return True
+    else:  # 测试pdf和svg资源
+        get_zip_detail(address, PicID, pdf_zip_url)
+        pdf_test_result = test_zip_data(address, PicID)
+
+        if svg_zip_url != '':
+            get_zip_detail(address, PicID, svg_zip_url)
+            svg_test_result = check_svg_by_cmd(PicID)
+        else:
+            svg_test_result = True
+        if pdf_test_result == False or svg_test_result == False:
+            return False
+        else:
+            return True
+def test_single_pic(PicID, address, zip_type=''):
+    pdf_zip_url, vector_zip_url, svg_zip_url = Get_id_Zipurl_from_picdetailapi(PicID, address)
+    logging.info(f"pdf_zip_url:{pdf_zip_url}")
+    logging.info(f"vector_zip_url:{vector_zip_url}")
+    logging.info(f"svg_zip_url:{svg_zip_url}")
+
+    def test_zip(zip_url):
+        get_zip_detail(address, PicID, zip_url)
+        return test_zip_data(address, PicID)
+
+    if zip_type == "pdf":
+        logging.info("仅测试pdf资源：")
+        return test_zip(pdf_zip_url)
+
+    if zip_type == "vector":
+        logging.info("仅测试vector资源：")
+        return test_zip(vector_zip_url)
+
+    if zip_type == "svg" and svg_zip_url:
+        logging.info("仅测试svg资源：")
+        if not check_svg_by_cmd(PicID):
+            return False
         return True
 
-# 测试单张素材（SVG）
-def test_single_pic_svg(PicID, address):
-    not_svg_zip_url, svg_zip_url = Get_id_Zipurl_from_picdetailapi(PicID, address)
+    logging.info("测试pdf和svg资源：")
+    pdf_test_result = test_zip(pdf_zip_url)
     svg_test_result = True
-    if svg_zip_url != '':
-        get_zip_detail(address, PicID, svg_zip_url)
-        svg_test_result = check_svg_by_cmd(PicID)
-    return svg_test_result
 
-# 测试明天更新的素材（通过一张一张的请求素材详情的数据,包括SVG+PDF）
-def test_update_pic_from_api(address_input=''):
+    if svg_zip_url:
+        svg_test_result = check_svg_by_cmd(PicID)
+
+    return pdf_test_result and svg_test_result
+
+# 通过客户端api获取明天更新的素材，并测试资源
+def test_tomorrow_pic_from_api(address_input=''):
     test_result = []
     update_fail_groups = []
     if address_input == '':
@@ -57,8 +102,8 @@ def test_update_pic_from_api(address_input=''):
         fail_ids = []
         for pic_id in pid_ids:
             logging.info("开始测试素材:" + str(pic_id))
-            test_zip_data_result_pdf = test_single_pic(pic_id, address)
-            if test_zip_data_result_pdf == False:
+            test_zip_data_resul = test_single_pic(pic_id, address)
+            if test_zip_data_resul == False:
                 logging.error("资源测试异常的素材ID： " + str(pic_id))
                 fail_ids.append(pic_id)
         update_pic_number = len(pid_ids)
@@ -66,8 +111,10 @@ def test_update_pic_from_api(address_input=''):
         test_result.append(test_result_single_project)
     return test_result
 
-# 测试某天的更新的素材
-def test_releaseday_pic_from_cms(address_input='',test_day=None):
+# 通过CMS获取某天更新的素材，并测试资源
+#  address_input ：项目
+#  test_day：某天的运营素材
+def test_releaseday_pic_from_cms(address_input='',test_day=today):
     test_result = []
     if address_input == '':
         address_list = ["PBN_Lib", "PBN_Daily", "ZC_Lib", "ZC_Daily", "VC_Lib", "VC_Daily",\
@@ -80,8 +127,8 @@ def test_releaseday_pic_from_cms(address_input='',test_day=None):
         fail_ids = []
         for pic_id in pid_ids:
             logging.info("开始测试素材:" + str(pic_id))
-            test_zip_data_result_pdf = test_single_pic(pic_id, address)
-            if test_zip_data_result_pdf == False:
+            test_zip_data_result = test_single_pic(pic_id, address)
+            if test_zip_data_result == False:
                 logging.error("资源测试异常的素材ID： " + str(pic_id))
                 fail_ids.append(pic_id)
         update_pic_number = len(pid_ids)
@@ -89,21 +136,20 @@ def test_releaseday_pic_from_cms(address_input='',test_day=None):
         test_result.append(test_result_single_project)
     return test_result
 
-# 通过CMS接口拉取测试素材，通过单素材接口获取测试资源（SVG+PDF）
+# 通过CMS获取全局素材库所有素材，并进行测试
 # 要调整拉取范围，需要修改pic_config中的url即可
 def test_pic_from_cms(address="PBN", offset=0, limit=5000):
     id_list = get_all_picid_from_cms(address, offset, limit)
-
     logging.info("总测试素材数" + str(len(id_list)))
     fail_ids = []
     i = 1
-    for PicID in id_list:
-        logging.info(f"第{i}个测试素材，ID： {PicID}")
-        test_zip_data_result = test_single_pic(PicID, address)
+    for picid in id_list:
+        logging.info(f"第{i}个测试素材，ID： {picid}")
+        test_zip_data_result = test_single_pic(picid, address)
         if test_zip_data_result == False:
-            fail_ids.append(PicID)
+            fail_ids.append(picid)
             logging.error("截止目前所有异常的素材ID： " + str(fail_ids))
-            output = "测试结果：" + str(PicID) + "\n"
+            output = "测试结果：" + str(picid) + "\n"
             with open(f'output_{offset}.txt', 'a') as file:
                 file.write(output)  # 写入输出结果到文件中
         i = i + 1
@@ -120,7 +166,7 @@ def dist_error_id(filename):
         content = f.read()
         content = content.strip().split('\n')
         for PicID in content:
-            test_zip_data_result = test_single_pic_svg(PicID, address)
+            test_zip_data_result = test_single_pic(PicID, address)
             if test_zip_data_result != None:
                 number_fail_ids.append(test_zip_data_result)
         not_number_fail_ids = [x for x in content if x not in number_fail_ids]

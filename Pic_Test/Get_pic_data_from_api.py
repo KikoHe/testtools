@@ -91,6 +91,7 @@ def get_all_picid_from_cms(address,offset=0,limit=100):
         logging.error(f"An error occurred: {err}")
 
 # 获取CMS上素材方案中某天的运营素材
+# test_day：X天
 def get_release_day_picid_from_cms(address, test_day=today):
     if address in ["BP_Lib", "BP_Daily"]:
         test_day = test_day.strftime("%Y%m%d")

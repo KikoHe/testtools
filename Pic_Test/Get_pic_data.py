@@ -3,6 +3,8 @@ from Public_env import *
 from Get_pic_data_from_api import *
 
 # 通过单素材详情接口获取Zip_url
+# PicID:图片ID
+# address：项目代码
 def Get_id_Zipurl_from_picdetailapi(PicID,address):
     url_prefixes = {
         "PBN": f"https://paint-api.dailyinnovation.biz/paint/v1/paint/{PicID}",
@@ -13,23 +15,23 @@ def Get_id_Zipurl_from_picdetailapi(PicID,address):
         "Vista": f"https://colorpad-api.vitastudio.ai/colorpad/v1/paint/{PicID}"
     }
     url = url_prefixes.get(address.split('_')[0])
-    svg_zip_url, not_svg_zip_url = '', ''
+    svg_zip_url, pdf_zip_url, vector_zip_url = '', '', ''
     try:
         response = session.get(url, headers=phone_headers)
         response.raise_for_status()  # 如果请求返回的状态码不是200，则抛出异常
         response_data = response.json()["data"]
         if address.startswith("PBN"):
             if response_data["zip_file"]:
-                not_svg_zip_url = response_data["zip_file"]
-            elif response_data["vector_zip_file"]:
-                not_svg_zip_url = response_data["vector_zip_file"]
+                pdf_zip_url = response_data["zip_file"]
+            if response_data["vector_zip_file"]:
+                vector_zip_url = response_data["vector_zip_file"]
             if response_data["region_json_zip"]:
                 svg_zip_url = response_data["region_json_zip"]
         elif address.startswith(("VC", "ZC", "Vista")):
-            not_svg_zip_url = response_data["resource"]["zip"]
+            pdf_zip_url = response_data["resource"]["zip"]
         elif address.startswith("BP"):
-            not_svg_zip_url = response_data["zip_2048_pdf"]
-        return not_svg_zip_url, svg_zip_url
+            pdf_zip_url = response_data["zip_2048_pdf"]
+        return pdf_zip_url, vector_zip_url, svg_zip_url
     except requests.exceptions.HTTPError as http_err:
         logging.error(f"HTTP error occurred: {http_err}")
     except Exception as err:

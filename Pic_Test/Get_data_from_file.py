@@ -1,4 +1,4 @@
-import os, ast
+import os, ast, re
 from Test_case import *
 ##### Debug测试脚本合集
 
@@ -9,8 +9,7 @@ folder_path = '/Users/ht/Desktop/PythonTools/Pic_Test/Pic/'
 if os.path.exists(folder_path):
     delete_folder(folder_path)
 
-
-### 文件操作 ###
+### 合并output_操作 ###
 def merged_data():
     files = os.listdir(current_dir)
     merged_data = []
@@ -18,8 +17,7 @@ def merged_data():
         if file.startswith("output_"):
             with open(file, 'r') as f:
                 content = f.read()
-                result = ast.literal_eval(content.split("：")[1])
-                result = [item for item in result if item]
+                result = re.findall(r'[0-9a-fA-F]{24}', content)
                 merged_data.extend(result)
     # 将合并后的数据写入新文件
     with open("Test_Result/merged_output.txt", 'w') as new_file:
@@ -30,13 +28,12 @@ def merged_data():
 # 多任务同时执行
 def multi_action_test():
     address = "PBN"
-    offsets = [0, 5000, 10000, 15000, 20000]
-    limit = 5000
+    offsets = [13500, 15500, 17500, 19500, 21500]
+    limit = 2000
     args = [(address, offset, limit) for offset in offsets]
 
     with multiprocessing.Pool() as pool:
         pool.starmap(test_pic_from_cms, args)
-
 
 ### 从excel中获取ID
 def get_picid_from_excel(address, filename):
@@ -54,19 +51,34 @@ def get_picid_from_excel(address, filename):
         Pic_ids.append(pic_id)
     return Pic_ids
 
+
+### 从txt中获取ID，生成list
+def get_picid_from_text():
+    # 读取文件内容并将每行数据作为列表元素
+    with open('Test_Result/merged_output.txt', 'r') as file:
+        data = file.readlines()
+    # 去除每行末尾的换行符
+    data = [line.strip() for line in data]
+    # 输出读取的数据列表
+    print(data)
+    return data
+
 # 测试素材
 def test_ids():
-    # ids = ['63e4b86cd32ec78307fbb7f2', '638dbc678bbc0a11d3226a97', '63f5e359530c3bd9785385af', '63ef4967af7d576d8b1f3b02', '65f2e7d0296812e63bf122ab']
-    ids = ['66a07055199ee18ff49d5e52','669741b3db160c6f51366697','668b891ecd6bcc4ded4f5cd2']
+    # ids = get_picid_from_text()
+    ids = ['63ff23d512616f19aa19b65c']
     error_ids = []
     for id in ids:
         print(id)
-        test_result = test_single_pic(id, "PBN")
+        test_result = test_single_pic(id, "PBN", 'pdf')
         if test_result == False:
             error_ids.append(id)
+            with open(f'output_error_id.txt', 'a') as file:
+                file.write(id)  # 写入输出结果到文件中
     print("error!!!!!!!!!!"+str(error_ids))
 
 if __name__ == "__main__":
-    # multi_action_test()   # 测试到3544
-    test_ids()
-
+    multi_action_test()   # 测试到11500
+    # merged_data()
+    # get_picid_from_text()
+    # test_ids()

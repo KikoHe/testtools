@@ -1,15 +1,14 @@
 import sys
 from Test_case import *
+from Public_env import *
 # 参数检查和解析函数
 def parse_args():
     return sys.argv[2:]
 
 # 函数映射字典
 function_mappings = {
-    'test_single_pic': (test_single_pic, "用法: python Run.py test_single_pic <PicID> <address>"),
-    'test_single_pic_svg': (test_single_pic_svg, "用法: python Run.py test_single_pic_svg <PicID> <address>"),
-    'test_picupdate': (test_single_pic_svg, "用法: python Run.py test_single_pic_svg <PicID> <address>"),
-    'test_update_pic_from_api': (test_update_pic_from_api, "用法: python Run.py test_update_pic_from_api <address_list>"),
+    'test_single_pic': (test_single_pic, "用法: python Run.py test_single_pic <PicID> <address> <zip type>"),
+    'test_tomorrow_pic_from_api': (test_tomorrow_pic_from_api, "用法: python Run.py test_tomorrow_pic_from_api <address_list>"),
     'test_releaseday_pic_from_cms': (test_releaseday_pic_from_cms, "用法: python Run.py test_releaseday_pic_from_cms <address_list> <test_day>"),
     'test_pic_from_cms': (test_pic_from_cms, "用法: python Run.py test_pic_from_cms <address> <offset> <limit>"),
     'Dist_error_id': (dist_error_id, "用法: python Run.py Dist_error_id <filename>")

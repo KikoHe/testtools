@@ -3,7 +3,7 @@ from Public_env import *
 
 # 发送测试报告:PBN故事书、Vista素材包更新
 def report_test_update_pic_from_api():
-    output = test_update_pic_from_api(address_input=['PBN_Story', 'Vista_Pack'])
+    output = test_tomorrow_pic_from_api(address_input=['PBN_Story', 'Vista_Pack'])
     logging.info("output: %s", output)
     summary = ""
     for data in output:
