@@ -69,10 +69,10 @@ def report_check_CMS_pic_config(release_day):
         else:
             update_group_less_output = f"今日所有素材方案的总量没有异常"
         if inconsistent_values != {}:
-            update_group_inconsistent = f"今日以下素材方案更新数量异常，请确认是否正确{inconsistent_values}"
+            update_group_inconsistent = f"今日以下素材方案更新数量和其他方案不一致，请确认是否正确{inconsistent_values}"
         else:
             update_pic_number = len(get_release_day_picid_from_cms(address, test_day=today))
-            update_group_inconsistent = f"今日所有素材方案更新的素材是一致的，共{update_pic_number}张:"
+            update_group_inconsistent = f"今日所有素材方案更新的素材数量是一致的，共{update_pic_number}张:"
         summary = summary + f"{address}：\n1、{new_group_output}\n2、{close_group_output}\n3、{update_group_less_output}\n4、{update_group_inconsistent}\n\n"
     return summary
 

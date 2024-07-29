@@ -28,7 +28,7 @@ def merged_data():
 # 多任务同时执行
 def multi_action_test():
     address = "PBN"
-    offsets = [13500, 15500, 17500, 19500, 21500]
+    offsets = [6000, 8000, 10000, 12000, 14000]
     limit = 2000
     args = [(address, offset, limit) for offset in offsets]
 
@@ -66,7 +66,7 @@ def get_picid_from_text():
 # 测试素材
 def test_ids():
     # ids = get_picid_from_text()
-    ids = ['63ff23d512616f19aa19b65c']
+    ids = ['65f2e7d0296812e63bf122ab']
     error_ids = []
     for id in ids:
         print(id)

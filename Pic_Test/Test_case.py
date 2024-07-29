@@ -148,9 +148,9 @@ def test_pic_from_cms(address="PBN", offset=0, limit=5000):
         test_zip_data_result = test_single_pic(picid, address)
         if test_zip_data_result == False:
             fail_ids.append(picid)
-            logging.error("截止目前所有异常的素材ID： " + str(fail_ids))
+            logging.error(f"截止目前所有异常的素材ID： " + str(fail_ids))
             output = "测试结果：" + str(picid) + "\n"
-            with open(f'output_{offset}.txt', 'a') as file:
+            with open(f'Test_Result/output_{offset}.txt', 'a') as file:
                 file.write(output)  # 写入输出结果到文件中
         i = i + 1
     return fail_ids

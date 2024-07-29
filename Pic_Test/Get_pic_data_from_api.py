@@ -5,7 +5,6 @@ from Get_zip_data import *
 import pandas as pd
 from Public_env import *
 
-
 # 获取CMS上所有进行中的的素材实验方案
 def get_imagegroup_from_CMS(address):
     url_prefixes = {

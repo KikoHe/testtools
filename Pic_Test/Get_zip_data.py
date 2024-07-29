@@ -149,7 +149,7 @@ def test_zip_data(address, pic_id):
             logging.warning(f"{address}的 {pic_id}: area比plan色块多，不会报错，具体多的色块： " + str(area_numberr_more))   # area的色块比plan多的情况，客户端不会报错，就不返回False了
             pass
 
-    ### 检查floatcenter中的x,y坐标一定是落在area的色块矩形区域内，通过这个方法能检查出色号显示错乱的问题，比如色号1的色块显示的色号是5,PBN用的是center，而不是floatcenter
+    ### 检查floatcenter中的x,y坐标一定是落在area的色块矩形区域内，通过这个方法能检查出色号显示错乱的问题，比如色号1的色块显示的色号是5,PBN V4.X优先用的是floatcenter
     if address.startswith(("PBN", "VC", "ZC")):
         for center_data_block in centerfloat_data:
             center_data_block_detail = center_data_block.split(',')
@@ -224,14 +224,19 @@ def test_zip_data(address, pic_id):
                     if pixel_value < 255:    # 小于255，则不透明，有重叠
                         logging.warning(f"{address}的 {pic_id}: 这个色块和pdf资源有重叠风险，不会报错，具体的色块： "+str(number))
                         pass
+
+    # 使用客户端检测工具检查PDF资源中，画布上的数字和色块是否对应
+    if not check_svg_by_cmd(pic_id):
+        return False
+
     return True
 
-# 通过工具检查SVG资源
+# 通过工具检查SVG资源，还可以检查PDF资源中画布数字是否在对应的色块中
 def check_svg_by_cmd(picid):
     tool_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
     filename = home + f"/{picid}"
     try:
-        command = [f'{tool_dir}/LXSVGValidate', filename]
+        command = [f'{tool_dir}/LXColorCommandLine', filename]
         process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         stdout, stderr = process.communicate()
         if process.returncode == 0:
