@@ -150,8 +150,8 @@ def send_feishu_summary_message_by_leanings(summary, group_id, title):
 # 执行测试并发送
 def test_and_send():
     # webhook_url = "https://open.feishu.cn/open-apis/bot/v2/hook/2ba28d6d-6765-4e54-85ac-bbfef081bc83"  # 测试小组
-    # group_id = '65a790d8a67ee10ed604e278'  # 测试小组
-    group_id = '66a9e7389e8a9fef54829539'  # 性能警报监控群
+    group_id = '65a790d8a67ee10ed604e278'  # 测试小组
+    # group_id = '66a9e7389e8a9fef54829539'  # 性能警报监控群
     if today.weekday() <= 4:  # 周内仅执行当天的检查
 
         title_1 = f"{formatted_date1}素材实验方案配置检查 @13981738003"
