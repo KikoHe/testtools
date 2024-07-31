@@ -154,8 +154,20 @@ def send_feishu_summary_message_by_leanings(summary, group_id, title):
 def test_and_send():
     group_id = '65a790d8a67ee10ed604e278'  # 测试小组
     # group_id = '66a9e7389e8a9fef54829539'  # 性能警报监控群
-    if today.weekday() <= 4:  # 周内仅执行当天的检查
 
+    if today.weekday() == 5:  # 周6执行周6、周7两天的检查
+        for i in range(2):
+            next_day = today + timedelta(days=i)
+
+            title_1 = f"{formatted_date1}素材实验方案配置检查"
+            summary_1 = report_check_CMS_pic_config(next_day)
+            send_feishu_summary_message_by_leanings(summary_1, group_id, title_1)
+
+            title_2 = f'''{next_day.strftime("%Y-%m-%d")}素材方案检测'''
+            summary_2 = report_test_releaseday_pic_from_cms(next_day)
+            send_feishu_summary_message_by_leanings(summary_2, group_id, title_2)
+
+    else:  # 其他时间仅执行当天的检查
         title_1 = f"{formatted_date1}素材实验方案配置检查"
         summary_1 = report_check_CMS_pic_config(today)
         send_feishu_summary_message_by_leanings(summary_1, group_id, title_1)
@@ -164,20 +176,7 @@ def test_and_send():
         summary_2 = report_test_releaseday_pic_from_cms(today)
         send_feishu_summary_message_by_leanings(summary_2, group_id, title_2)
 
-    elif today.weekday() == 5:  # 周末执行两天的检查
-        for i in range(2):
-            next_day = today + timedelta(days=i)
-
-            title_1 = f"{formatted_date1}素材实验方案配置检查"
-            summary_1 = report_check_CMS_pic_config(next_day)
-            # send_feishu_summary_message(summary_1, webhook_url, title_1)
-            send_feishu_summary_message_by_leanings(summary_1, group_id, title_1)
-
-            title_2 = f'''{next_day.strftime("%Y-%m-%d")}素材方案检测'''
-            summary_2 = report_test_releaseday_pic_from_cms(next_day)
-            # send_feishu_summary_message(summary_2, webhook_url, title_2)
-            send_feishu_summary_message_by_leanings(summary_2, group_id, title_2)
-
+    # 不管那天都要执行这个检测
     title_3 = f"{formatted_date1}PBN故事书、Vista素材包更新内容检查"
     summary_3 = report_test_update_pic_from_api()
     send_feishu_summary_message_by_leanings(summary_3, group_id, title_3)
