@@ -51,10 +51,13 @@ def report_check_CMS_pic_config(release_day):
     address_list = ["PBN_Lib", "PBN_Daily", "ZC_Lib", "VC_Lib", "Vista_Lib", "BP_Lib"]
     for address in address_list:
         new_group, close_group, update_group = check_CMS_pic_config("", address, release_day)
-        update_group_less = {key: value for key, value in update_group.items() if value < 0} # 找出素材变量不等于每日更新的方案
-        values = list(update_group.values())
-        most_common_value = max(set(values), key=values.count)
-        inconsistent_values = {key: value for key, value in update_group.items() if value != most_common_value}
+        update_group_less, inconsistent_values = {}, {}
+        if update_group != {}:
+            update_group_less = {key: value for key, value in update_group.items() if value < 0}  # 找出素材比昨天还少的素材方案
+
+            values = list(update_group.values())
+            most_common_value = max(set(values), key=values.count)
+            inconsistent_values = {key: value for key, value in update_group.items() if value != most_common_value} # 找出不等于大部分方案素材变化量的素材方案
 
         if new_group != {}:
             new_group_output = f"今日上新的素材方案及对应素材数量：{new_group}，请@13981738003确认是否正确"
@@ -65,18 +68,18 @@ def report_check_CMS_pic_config(release_day):
         else:
             close_group_output = "今日没有关闭素材方案"
         if update_group_less != {}:
-            update_group_less_output = f"今日以下素材方案内的数量总数比昨天少，请@13981738003确认是否正确{update_group_less}"
+            update_group_less_output = f"今日以下素材方案内的素材总数比昨天少，请@13981738003确认是否正确{update_group_less}"
         else:
-            update_group_less_output = f"今日所有素材方案的总量没有异常"
+            update_group_less_output = f"今日所有素材方案的素材总量没有异常"
         if inconsistent_values != {}:
-            update_group_inconsistent = f"今日以下素材方案更新数量和其他方案不一致，请@13981738003确认是否正确{inconsistent_values}"
+            update_group_inconsistent = f"今日以下素材方案更新素材数量和其他方案不一致，请@13981738003确认是否正确{inconsistent_values}"
         else:
             update_pic_number = len(get_release_day_picid_from_cms(address, test_day=today))
             update_group_inconsistent = f"今日所有素材方案更新的素材数量是一致的，共{update_pic_number}张:"
         summary = summary + f"{address}：\n1、{new_group_output}\n2、{close_group_output}\n3、{update_group_less_output}\n4、{update_group_inconsistent}\n\n"
     return summary
 
-# 使用飞书自定义机器人发送消息，未使用
+# 使用飞书自定义机器人发送消息【未使用】
 def send_feishu_summary_message(summary, webhook_url, title):
     # 构建JSON格式的消息体
     json_payload = {

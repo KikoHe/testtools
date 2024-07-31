@@ -47,6 +47,7 @@ def test_single_pic_old(PicID, address,zip_type=''):
             return False
         else:
             return True
+
 def test_single_pic(PicID, address, zip_type=''):
     pdf_zip_url, vector_zip_url, svg_zip_url = Get_id_Zipurl_from_picdetailapi(PicID, address)
     logging.info(f"pdf_zip_url:{pdf_zip_url}")

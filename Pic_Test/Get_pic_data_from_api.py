@@ -175,7 +175,7 @@ def check_CMS_pic_config(group_id='',address='PBN_Lib', test_day=today):
             "ZC_Lib": f"https://zc-cms.learnings.ai/colorflow/v1/cms/abtest/{group}/detail?limit=1&offset=0&day=-100%5E100",
             "VC_Lib": f"https://vc-cms.learnings.ai/vitacolor/v1/cms/abtest/{group}/detail?limit=1&offset=0&day=-100%5E100",
             "Vista_Lib": f"https://colorpad-cms.learnings.ai/colorpad/v1/cms/abtest/{group}/detail?limit=1&offset=0&day=-100%5E100",
-            "BP_Daily": f"https://bpbncms.idailybread.com/bpbn/v1/cms/abtest/logic_item/{group}/list/trending?limit=20&offset=0&category_key=trending&size=&is_colored=false&is_gif=false&status=1&show_type=1&id_or_filename=&with_scores=true"
+            "BP_Lib": f"https://bpbncms.idailybread.com/bpbn/v1/cms/abtest/logic_item/{group}/list/trending?limit=20&offset=0&category_key=trending&size=&is_colored=false&is_gif=false&status=1&show_type=1&id_or_filename=&with_scores=true"
         }
         url_release_data = url_release_data_prefixes.get(address)
         url_day = url_day_prefixes.get(address)
@@ -208,7 +208,6 @@ def check_CMS_pic_config(group_id='',address='PBN_Lib', test_day=today):
             common_keys = set(today_test_result.keys()) & set(last_test_result.keys())
             update_pic_data = {key: today_test_result[key] - last_test_result[key] for key in common_keys}
             # update_pic_data = {key: value for key, value in update_pic_data.items() if value != 0}
-
 
             logging.info("new_group: %s", new_group)
             logging.info("close_group: %s", close_group)
