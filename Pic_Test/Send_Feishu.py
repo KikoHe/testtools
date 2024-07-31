@@ -48,7 +48,7 @@ def report_test_releaseday_pic_from_cms(release_day):
 # 发送检测报告：所有素材实验方案的配置
 def report_check_CMS_pic_config(release_day):
     new_group_output, close_group_output, update_group_less_output, update_group_inconsistent, summary = '', '', '', '', ''
-    address_list = ["PBN_Lib", "PBN_Daily", "ZC_Lib", "VC_Lib", "Vista_Lib"]
+    address_list = ["PBN_Lib", "PBN_Daily", "ZC_Lib", "VC_Lib", "Vista_Lib", "BP_Lib"]
     for address in address_list:
         new_group, close_group, update_group = check_CMS_pic_config("", address, release_day)
         update_group_less = {key: value for key, value in update_group.items() if value < 0} # 找出素材变量不等于每日更新的方案
@@ -76,7 +76,7 @@ def report_check_CMS_pic_config(release_day):
         summary = summary + f"{address}：\n1、{new_group_output}\n2、{close_group_output}\n3、{update_group_less_output}\n4、{update_group_inconsistent}\n\n"
     return summary
 
-# 使用飞书自定义机器人发送消息
+# 使用飞书自定义机器人发送消息，未使用
 def send_feishu_summary_message(summary, webhook_url, title):
     # 构建JSON格式的消息体
     json_payload = {
@@ -149,19 +149,16 @@ def send_feishu_summary_message_by_leanings(summary, group_id, title):
 
 # 执行测试并发送
 def test_and_send():
-    # webhook_url = "https://open.feishu.cn/open-apis/bot/v2/hook/2ba28d6d-6765-4e54-85ac-bbfef081bc83"  # 测试小组
     group_id = '65a790d8a67ee10ed604e278'  # 测试小组
     # group_id = '66a9e7389e8a9fef54829539'  # 性能警报监控群
     if today.weekday() <= 4:  # 周内仅执行当天的检查
 
-        title_1 = f"{formatted_date1}素材实验方案配置检查 @13981738003"
+        title_1 = f"{formatted_date1}素材实验方案配置检查"
         summary_1 = report_check_CMS_pic_config(today)
-        # send_feishu_summary_message(summary_1, webhook_url, title_1)
         send_feishu_summary_message_by_leanings(summary_1, group_id, title_1)
 
         title_2 = f"{formatted_date1}更新素材内容检查"
         summary_2 = report_test_releaseday_pic_from_cms(today)
-        # send_feishu_summary_message(summary_2, webhook_url, title_2)
         send_feishu_summary_message_by_leanings(summary_2, group_id, title_2)
 
     elif today.weekday() == 5:  # 周末执行两天的检查
@@ -180,7 +177,6 @@ def test_and_send():
 
     title_3 = f"{formatted_date1}PBN故事书、Vista素材包更新内容检查"
     summary_3 = report_test_update_pic_from_api()
-    # send_feishu_summary_message(summary_3, webhook_url, title_3)
     send_feishu_summary_message_by_leanings(summary_3, group_id, title_3)
 
 if __name__ == "__main__":
