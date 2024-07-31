@@ -28,8 +28,8 @@ def merged_data():
 # 多任务同时执行
 def multi_action_test():
     address = "PBN"
-    offsets = [6000, 8000, 10000, 12000, 14000]
-    limit = 2000
+    offsets = [0]
+    limit = 100
     args = [(address, offset, limit) for offset in offsets]
 
     with multiprocessing.Pool() as pool:
@@ -66,11 +66,11 @@ def get_picid_from_text():
 # 测试素材
 def test_ids():
     # ids = get_picid_from_text()
-    ids = ['65f2e7d0296812e63bf122ab']
+    ids = ['6407ef5a18b1678c8d6f6fe4']
     error_ids = []
     for id in ids:
         print(id)
-        test_result = test_single_pic(id, "PBN", 'pdf')
+        test_result = test_single_pic(id, "PBN")
         if test_result == False:
             error_ids.append(id)
             with open(f'output_error_id.txt', 'a') as file:
