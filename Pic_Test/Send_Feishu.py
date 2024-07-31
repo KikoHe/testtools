@@ -152,8 +152,8 @@ def send_feishu_summary_message_by_leanings(summary, group_id, title):
 
 # 执行测试并发送
 def test_and_send():
-    group_id = '65a790d8a67ee10ed604e278'  # 测试小组
-    # group_id = '66a9e7389e8a9fef54829539'  # 性能警报监控群
+    # group_id = '65a790d8a67ee10ed604e278'  # 测试小组
+    group_id = '66a9e7389e8a9fef54829539'  # 性能警报监控群
 
     if today.weekday() == 5:  # 周6执行周6、周7两天的检查
         for i in range(2):
