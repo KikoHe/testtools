@@ -159,25 +159,25 @@ def test_and_send():
         for i in range(2):
             next_day = today + timedelta(days=i)
 
-            title_1 = f"{formatted_date1}素材实验方案配置检查"
+            title_1 = f'''{next_day.strftime("%Y-%m-%d")}素材实验方案配置检测：'''
             summary_1 = report_check_CMS_pic_config(next_day)
             send_feishu_summary_message_by_leanings(summary_1, group_id, title_1)
 
-            title_2 = f'''{next_day.strftime("%Y-%m-%d")}素材方案检测'''
+            title_2 = f'''{next_day.strftime("%Y-%m-%d")}更新素材检测：'''
             summary_2 = report_test_releaseday_pic_from_cms(next_day)
             send_feishu_summary_message_by_leanings(summary_2, group_id, title_2)
 
     else:  # 其他时间仅执行当天的检查
-        title_1 = f"{formatted_date1}素材实验方案配置检查"
+        title_1 = f"{formatted_date1}素材实验方案配置检测："
         summary_1 = report_check_CMS_pic_config(today)
         send_feishu_summary_message_by_leanings(summary_1, group_id, title_1)
 
-        title_2 = f"{formatted_date1}更新素材内容检查"
+        title_2 = f"{formatted_date1}更新素材检测："
         summary_2 = report_test_releaseday_pic_from_cms(today)
         send_feishu_summary_message_by_leanings(summary_2, group_id, title_2)
 
     # 不管那天都要执行这个检测
-    title_3 = f"{formatted_date1}PBN故事书、Vista素材包更新内容检查"
+    title_3 = f"{formatted_date1}PBN故事书、Vista素材包更新素材检测："
     summary_3 = report_test_update_pic_from_api()
     send_feishu_summary_message_by_leanings(summary_3, group_id, title_3)
 
