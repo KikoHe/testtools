@@ -57,6 +57,7 @@ def report_check_CMS_pic_config(release_day):
 
             values = list(update_group.values())
             most_common_value = max(set(values), key=values.count)
+            logging.info("most_common_value: %s", most_common_value)
             inconsistent_values = {key: value for key, value in update_group.items() if value != most_common_value} # 找出不等于大部分方案素材变化量的素材方案
 
         if new_group != {}:
